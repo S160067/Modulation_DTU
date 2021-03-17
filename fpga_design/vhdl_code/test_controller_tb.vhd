@@ -1,31 +1,24 @@
 library ieee;
 use ieee.std_logic_1164.all;
 
--- TEST FILE 
 
-ENTITY tb_up_down IS
-END tb_up_down;
+ENTITY test_controller_tb IS
+END test_controller_tb;
  
-ARCHITECTURE behavior OF tb_up_down IS
+ARCHITECTURE behavior OF test_controller_tb IS
  
  -- Component Declaration for the Unit Under Test (UUT)
- 
-COMPONENT AND_ent
+COMPONENT test_controller
 PORT(
-    x: in std_logic;
-	y: in std_logic;
-	F: out std_logic
+    clk: in std_logic;
+	reset: in std_logic
 );
 END COMPONENT;
  
---Inputs
-signal x : std_logic := '0';
-signal y : std_logic := '0';
+signal clk : std_logic := '0';
+signal reset : std_logic := '0';
 
---Outputs
-signal F : std_logic := '0';
 
-signal clock : std_logic := '0';
 
  -- Clock period definitions
 constant clock_period : time := 20 ns;
@@ -33,19 +26,18 @@ constant clock_period : time := 20 ns;
 BEGIN
 
  -- Instantiate the Unit Under Test (UUT)
-uut: AND_ent PORT MAP (
-    x => x,
-	y => y,
-	F => F
+uut: test_controller PORT MAP (
+    clk => clk,
+	reset => reset
 );
  
 
 -- Clock process definitions
 clock_process :process
 begin
-clock <= '0';
+clk <= '0';
 wait for clock_period/2;
-clock <= '1';
+clk <= '1';
 wait for clock_period/2;
 end process;
  
@@ -54,9 +46,8 @@ stim_proc: process
 begin
  -- hold reset state for 100 ns.
 wait for 20 ns;
-x <= '1';
-wait for 20 ns;
-y <= '1';
+
+-- Test things
 
 wait for 200 ns;
 
