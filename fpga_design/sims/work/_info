@@ -1,0 +1,93 @@
+m255
+K4
+z2
+!s11e vcom 2020.3 2020.07, Jul 22 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+d/home/haraldbid/Projects/TestQuartus
+Eand_ent
+Z0 w1615984685
+Z1 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z2 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 2
+Z3 d/home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/sims
+Z4 8/home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/vhdl_code/testing.vhd
+Z5 F/home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/vhdl_code/testing.vhd
+l0
+L11 1
+VP0haTh0EnliC9e06To^XJ2
+!s100 LZ]50Ki6?A<iVW1;>JlfA2
+Z6 OV;C;2020.3;71
+32
+Z7 !s110 1615984964
+!i10b 1
+Z8 !s108 1615984964.000000
+Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/vhdl_code/testing.vhd|
+Z10 !s107 /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/vhdl_code/testing.vhd|
+!i113 1
+Z11 o-work work -2002 -explicit
+Z12 tExplicit 1 CvgOpt 0
+Abehav2
+R1
+R2
+Z13 DEx4 work 7 and_ent 0 22 P0haTh0EnliC9e06To^XJ2
+!i122 2
+l36
+L35 6
+V3Jg65GUX:hc];AE>FI;>S0
+!s100 BnC<AUZjoh<INK339CS[e1
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Abehav1
+R1
+R2
+R13
+!i122 2
+l21
+L20 14
+V9=UCSO4AM;:>z5Q>X:<^L0
+!s100 Im56V81AGUcY9F_fIEjem2
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Etb_up_down
+w1615984892
+R1
+R2
+!i122 5
+R3
+8/home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/vhdl_code/testing_tb.vhd
+F/home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/vhdl_code/testing_tb.vhd
+l0
+L4 1
+VoS`0`BoOOZed16IF6FZzK1
+!s100 8MVWQS4;Ha7F]MT04cBdU2
+R6
+32
+!s110 1615985807
+!i10b 1
+!s108 1615985807.000000
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/vhdl_code/testing_tb.vhd|
+!s107 /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/vhdl_code/testing_tb.vhd|
+!i113 1
+R11
+R12
