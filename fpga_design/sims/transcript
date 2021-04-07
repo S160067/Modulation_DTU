@@ -1,47 +1,98 @@
-# Loading project simmerlimmer
-# Compile of testing_tb.vhd failed with 3 errors.
-# Compile of testing_tb.vhd failed with 1 errors.
-# Compile of testing_tb.vhd failed with 3 errors.
-# Compile of testing_tb.vhd failed with 4 errors.
-# Compile of testing_tb.vhd failed with 1 errors.
-# Compile of testing_tb.vhd failed with 1 errors.
-# Compile of testing.vhd was successful.
-# Compile of testing_tb.vhd failed with 1 errors.
-# Compile of testing.vhd was successful.
-# Compile of testing_tb.vhd failed with 1 errors.
-# 2 compiles, 1 failed with 1 error.
-# Compile of testing_tb.vhd failed with 1 errors.
-# Compile of testing_tb.vhd failed with 1 errors.
-# Compile of testing_tb.vhd failed with 1 errors.
-# Compile of testing_tb.vhd was successful.
-vsim work.and_ent(behav2) work.tb_up_down(behavior)
-# vsim work.and_ent(behav2) work.tb_up_down(behavior) 
-# Start time: 14:17:10 on Mar 17,2021
+# Compile of control_manager.vhd was successful.
+# Compile of DE1_SoC_ReferenceTop.vhd was successful.
+# Compile of fpga_top.vhd was successful.
+# Compile of framing_top.vhd failed with 1 errors.
+# Compile of modulation_top.vhd was successful.
+# 5 compiles, 1 failed with 1 error.
+vsim -gui work.de1_soc_referencetop work.fpga_top work.framing_top work.modulation_top work.status_control_manager
+# vsim -gui work.de1_soc_referencetop work.fpga_top work.framing_top work.modulation_top work.status_control_manager 
+# Start time: 16:11:33 on Apr 07,2021
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
-# Loading work.and_ent(behav2)
-# Loading work.tb_up_down(behavior)
-add wave -position insertpoint sim:/tb_up_down/uut/line__23/*
-# ** UI-Msg: (vish-4014) No objects found matching '/tb_up_down/uut/line__23/*'.
-add wave -position insertpoint sim:/tb_up_down/uut/line__23/*
-# ** UI-Msg: (vish-4014) No objects found matching '/tb_up_down/uut/line__23/*'.
-run
-add wave -position insertpoint sim:/tb_up_down/*
-run
-run
-run
-run
-run
-# Compile of testing.vhd was successful.
-# Compile of testing_tb.vhd was successful.
-# 2 compiles, 0 failed with no errors.
-run
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.and_ent(behav2)
-# Loading work.tb_up_down(behavior)
-run
-# Compile of test_controller.vhd was successful.
-# Compile of test_controller_tb.vhd was successful.
-# 2 compiles, 0 failed with no errors.
+# Loading work.de1_soc_referencetop(reference_arch)
+# Loading work.fpga_top(fpga_arch)
+# ** Error: (vsim-3173) Entity 'C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/sims/work.framing_top' has no architecture.
+# Error loading design
+# End time: 16:11:34 on Apr 07,2021, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 6
+vsim -gui work.de1_soc_referencetop work.fpga_top work.modulation_top work.status_control_manager
+# vsim -gui work.de1_soc_referencetop work.fpga_top work.modulation_top work.status_control_manager 
+# Start time: 16:12:08 on Apr 07,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.de1_soc_referencetop(reference_arch)
+# Loading work.fpga_top(fpga_arch)
+# Loading work.modulation_top(loopback_arch)
+# Loading work.status_control_manager(manager_arch)
+# ** Warning: (vsim-3473) Component instance "soc_inst : soc_system" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /de1_soc_referencetop File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd
+# ** Warning: (vsim-3473) Component instance "fifo_tx_video : fifo8_8" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /de1_soc_referencetop/fpga_top_inst File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/fpga_top.vhd
+# ** Warning: (vsim-3473) Component instance "fifo_rx_video : fifo8_8" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /de1_soc_referencetop/fpga_top_inst File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/fpga_top.vhd
+# ** Warning: (vsim-3473) Component instance "fifo_conv_tx_video : fifo_convert_avalon_to_classic" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /de1_soc_referencetop/fpga_top_inst File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/fpga_top.vhd
+# ** Warning: (vsim-3473) Component instance "fifo_conv_rx_video : fifo_convert_classic_to_avalon" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /de1_soc_referencetop/fpga_top_inst File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/fpga_top.vhd
+# ** Warning: (vsim-3473) Component instance "fifo_conv_command : fifo_convert_avalon_to_classic" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /de1_soc_referencetop/fpga_top_inst File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/fpga_top.vhd
+# ** Warning: (vsim-3473) Component instance "fifo_command : fifo8_8" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /de1_soc_referencetop/fpga_top_inst File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/fpga_top.vhd
+# ** Warning: (vsim-3473) Component instance "fifo_conv_status : fifo_convert_classic_to_avalon" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /de1_soc_referencetop/fpga_top_inst File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/fpga_top.vhd
+# ** Warning: (vsim-3473) Component instance "fifo_status : fifo32_8" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /de1_soc_referencetop/fpga_top_inst File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/fpga_top.vhd
+# ** Warning: (vsim-3473) Component instance "fifo_status_encryption : fifo24_8" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /de1_soc_referencetop/fpga_top_inst File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/fpga_top.vhd
+# ** Warning: (vsim-3473) Component instance "fifo_status_error : fifo24_8" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /de1_soc_referencetop/fpga_top_inst File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/fpga_top.vhd
+# ** Warning: (vsim-3473) Component instance "fifo_status_modulation : fifo24_8" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /de1_soc_referencetop/fpga_top_inst File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/fpga_top.vhd
+# ** Error: (vsim-3173) Entity 'C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/sims/work.framing_top' has no architecture.
+# Load interrupted
+# Error loading design
+# End time: 16:12:09 on Apr 07,2021, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 13
+# Compile of control_manager.vhd was successful.
+# Compile of DE1_SoC_ReferenceTop.vhd failed with 1 errors.
+# Compile of modulation_top.vhd was successful.
+# Compile of fpga_top.vhd was successful.
+# 4 compiles, 1 failed with 1 error.
+# Compile of control_manager.vhd was successful.
+# Compile of DE1_SoC_ReferenceTop.vhd was successful.
+# Compile of modulation_top.vhd was successful.
+# Compile of fpga_top.vhd was successful.
+# 4 compiles, 0 failed with no errors.
+vsim -gui work.de1_soc_referencetop work.fpga_top work.modulation_top
+# vsim -gui work.de1_soc_referencetop work.fpga_top work.modulation_top 
+# Start time: 16:18:23 on Apr 07,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.de1_soc_referencetop(reference_arch)
+# Loading work.fpga_top(fpga_arch)
+# Loading work.modulation_top(loopback_arch)
+# ** Warning: (vsim-8683) Uninitialized out port /de1_soc_referencetop/fpga_top_inst/modulation_inst/GPIO_0(35 downto 0) has no driver.
+# This port will contribute value (UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /de1_soc_referencetop/fpga_top_inst/tx_video_rdreq has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /de1_soc_referencetop/fpga_top_inst/rx_video_data(7 downto 0) has no driver.
+# This port will contribute value (UUUUUUUU) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /de1_soc_referencetop/fpga_top_inst/rx_video_wrreq has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /de1_soc_referencetop/fpga_top_inst/ctrl_tx_rdreq has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /de1_soc_referencetop/fpga_top_inst/ctrl_rx_data(31 downto 0) has no driver.
+# This port will contribute value (UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /de1_soc_referencetop/fpga_top_inst/ctrl_rx_wrreq has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized inout port /de1_soc_referencetop/fpga_top_inst/GPIO_0(35 downto 0) has no driver.
+# This port will contribute value (UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized inout port /de1_soc_referencetop/fpga_top_inst/GPIO_1(35 downto 0) has no driver.
+# This port will contribute value (UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /fpga_top/modulation_inst/GPIO_0(35 downto 0) has no driver.
+# This port will contribute value (UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU) to the signal network.
+# End time: 16:18:49 on Apr 07,2021, Elapsed time: 0:00:26
+# Errors: 0, Warnings: 15

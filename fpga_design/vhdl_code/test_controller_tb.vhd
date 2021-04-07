@@ -11,13 +11,16 @@ ARCHITECTURE behavior OF test_controller_tb IS
 COMPONENT test_controller
 PORT(
     clk: in std_logic;
-	reset: in std_logic
+	reset: in std_logic; 
+   stream_in: in std_logic;
+	stream_out: out std_logic
+
 );
 END COMPONENT;
  
 signal clk : std_logic := '0';
 signal reset : std_logic := '0';
-
+signal stream_in,stream_out : std_logic;
 
 
  -- Clock period definitions
@@ -27,9 +30,10 @@ BEGIN
 
  -- Instantiate the Unit Under Test (UUT)
 uut: test_controller PORT MAP (
-    clk => clk,
-	reset => reset
-);
+     clk => clk,
+	reset => reset, 
+   stream_in => stream_in,
+	stream_out => stream_out);
  
 
 -- Clock process definitions
@@ -44,12 +48,16 @@ end process;
 -- Stimulus process
 stim_proc: process
 begin
- -- hold reset state for 100 ns.
-wait for 20 ns;
-
+ -- hold reset state for 100 ns. 
+ reset<='1';
+ wait for 20 ns;
+ reset <= '0';
 -- Test things
-
-wait for 200 ns;
+wait for 5 ns;
+stream_in <= '1';
+wait for clock_period;
+stream_in <= '0';
+wait for 20 ns;
 
 end process;
  
