@@ -1,0 +1,17 @@
+Analysis & Synthesis Status : Successful - Mon Oct 12 19:51:54 2015
+Quartus II 64-Bit Version : 15.0.2 Build 153 07/15/2015 SJ Full Version
+Revision Name : SoCKit_ADA
+Top-level Entity Name : SoCKit_ADA
+Family : Cyclone V
+Logic utilization (in ALMs) : N/A
+Total registers : 1621
+Total pins : 133
+Total virtual pins : 0
+Total block memory bits : 163,328
+Total DSP Blocks : 2
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI PMA TX Serializers : 0
+Total PLLs : 1
+Total DLLs : 0

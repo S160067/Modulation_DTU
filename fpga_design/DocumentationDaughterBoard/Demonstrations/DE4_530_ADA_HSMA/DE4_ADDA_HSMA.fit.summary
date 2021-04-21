@@ -1,0 +1,22 @@
+Fitter Status : Successful - Mon Sep 13 14:17:47 2010
+Quartus II Version : 10.0 Build 262 08/18/2010 SP 1 SJ Full Version
+Revision Name : DE4_ADDA_HSMA
+Top-level Entity Name : DE4_ADDA_HSMA
+Family : Stratix IV
+Device : EP4SGX530KH40C2
+Timing Models : Final
+Logic utilization : < 1 %
+    Combinational ALUTs : 443 / 424,960 ( < 1 % )
+    Memory ALUTs : 0 / 212,480 ( 0 % )
+    Dedicated logic registers : 1,384 / 424,960 ( < 1 % )
+Total registers : 1384
+Total pins : 81 / 888 ( 9 % )
+Total virtual pins : 0
+Total block memory bits : 163,328 / 21,233,664 ( < 1 % )
+DSP block 18-bit elements : 4 / 1,024 ( < 1 % )
+Total GXB Receiver Channel PCS : 0 / 24 ( 0 % )
+Total GXB Receiver Channel PMA : 0 / 36 ( 0 % )
+Total GXB Transmitter Channel PCS : 0 / 24 ( 0 % )
+Total GXB Transmitter Channel PMA : 0 / 36 ( 0 % )
+Total PLLs : 1 / 8 ( 13 % )
+Total DLLs : 0 / 4 ( 0 % )

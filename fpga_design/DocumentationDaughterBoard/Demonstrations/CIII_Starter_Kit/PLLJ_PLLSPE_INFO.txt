@@ -1,0 +1,5 @@
+PLL_Name	QB3_ADA_TOP:U1|pll:pll_100|altpll:altpll_component|pll_altpll:auto_generated|pll1
+PLLJITTER	35
+PLLSPEmax	84
+PLLSPEmin	-53
+

@@ -1,0 +1,377 @@
+<session jtag_chain="USB-Blaster [USB-0]" jtag_device="@1: EP2C15/20 (0x020B30DD)" sof_file="../DE1_TOP.sof" top_level_entity="DE1_TOP">
+  <display_tree gui_logging_enabled="0">
+    <display_branch instance="auto_signaltap_0" log="USE_GLOBAL_TEMP" signal_set="USE_GLOBAL_TEMP" trigger="USE_GLOBAL_TEMP"/>
+  </display_tree>
+  <instance compilation_mode="full" enabled="true" entity_name="sld_signaltap" is_auto_node="yes" is_expanded="true" name="auto_signaltap_0" source_file="sld_signaltap.vhd">
+    <node_ip_info instance_id="0" mfg_id="110" node_id="0" version="6"/>
+    <signal_set global_temp="1" is_expanded="true" name="signal_set: 2008/10/15 16:20:44  #0">
+      <clock name="pll:pll_100|c0" polarity="posedge" tap_mode="classic"/>
+      <config ram_type="M4K" reserved_data_nodes="0" reserved_trigger_nodes="0" sample_depth="2048" trigger_in_enable="yes" trigger_in_pin="auto_stp_trigger_in_0" trigger_out_enable="no"/>
+      <top_entity/>
+      <signal_vec>
+        <trigger_input_vec>
+          <wire name="a2dba[0]" tap_mode="classic" type="output pin"/>
+          <wire name="a2dba[10]" tap_mode="classic" type="output pin"/>
+          <wire name="a2dba[11]" tap_mode="classic" type="output pin"/>
+          <wire name="a2dba[12]" tap_mode="classic" type="output pin"/>
+          <wire name="a2dba[13]" tap_mode="classic" type="output pin"/>
+          <wire name="a2dba[1]" tap_mode="classic" type="output pin"/>
+          <wire name="a2dba[2]" tap_mode="classic" type="output pin"/>
+          <wire name="a2dba[3]" tap_mode="classic" type="output pin"/>
+          <wire name="a2dba[4]" tap_mode="classic" type="output pin"/>
+          <wire name="a2dba[5]" tap_mode="classic" type="output pin"/>
+          <wire name="a2dba[6]" tap_mode="classic" type="output pin"/>
+          <wire name="a2dba[7]" tap_mode="classic" type="output pin"/>
+          <wire name="a2dba[8]" tap_mode="classic" type="output pin"/>
+          <wire name="a2dba[9]" tap_mode="classic" type="output pin"/>
+          <wire name="a2dbb[0]" tap_mode="classic" type="output pin"/>
+          <wire name="a2dbb[10]" tap_mode="classic" type="output pin"/>
+          <wire name="a2dbb[11]" tap_mode="classic" type="output pin"/>
+          <wire name="a2dbb[12]" tap_mode="classic" type="output pin"/>
+          <wire name="a2dbb[13]" tap_mode="classic" type="output pin"/>
+          <wire name="a2dbb[1]" tap_mode="classic" type="output pin"/>
+          <wire name="a2dbb[2]" tap_mode="classic" type="output pin"/>
+          <wire name="a2dbb[3]" tap_mode="classic" type="output pin"/>
+          <wire name="a2dbb[4]" tap_mode="classic" type="output pin"/>
+          <wire name="a2dbb[5]" tap_mode="classic" type="output pin"/>
+          <wire name="a2dbb[6]" tap_mode="classic" type="output pin"/>
+          <wire name="a2dbb[7]" tap_mode="classic" type="output pin"/>
+          <wire name="a2dbb[8]" tap_mode="classic" type="output pin"/>
+          <wire name="a2dbb[9]" tap_mode="classic" type="output pin"/>
+          <wire name="comb[0]" tap_mode="classic" type="output pin"/>
+          <wire name="comb[10]" tap_mode="classic" type="output pin"/>
+          <wire name="comb[11]" tap_mode="classic" type="output pin"/>
+          <wire name="comb[12]" tap_mode="classic" type="output pin"/>
+          <wire name="comb[13]" tap_mode="classic" type="output pin"/>
+          <wire name="comb[1]" tap_mode="classic" type="output pin"/>
+          <wire name="comb[2]" tap_mode="classic" type="output pin"/>
+          <wire name="comb[3]" tap_mode="classic" type="output pin"/>
+          <wire name="comb[4]" tap_mode="classic" type="output pin"/>
+          <wire name="comb[5]" tap_mode="classic" type="output pin"/>
+          <wire name="comb[6]" tap_mode="classic" type="output pin"/>
+          <wire name="comb[7]" tap_mode="classic" type="output pin"/>
+          <wire name="comb[8]" tap_mode="classic" type="output pin"/>
+          <wire name="comb[9]" tap_mode="classic" type="output pin"/>
+          <wire name="lpm_add:lpm|dataa[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_add:lpm|dataa[10]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_add:lpm|dataa[11]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_add:lpm|dataa[12]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_add:lpm|dataa[13]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_add:lpm|dataa[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_add:lpm|dataa[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_add:lpm|dataa[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_add:lpm|dataa[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_add:lpm|dataa[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_add:lpm|dataa[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_add:lpm|dataa[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_add:lpm|dataa[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_add:lpm|dataa[9]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_add:lpm|datab[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_add:lpm|datab[10]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_add:lpm|datab[11]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_add:lpm|datab[12]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_add:lpm|datab[13]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_add:lpm|datab[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_add:lpm|datab[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_add:lpm|datab[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_add:lpm|datab[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_add:lpm|datab[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_add:lpm|datab[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_add:lpm|datab[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_add:lpm|datab[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_add:lpm|datab[9]" tap_mode="classic" type="combinatorial"/>
+        </trigger_input_vec>
+        <data_input_vec>
+          <wire name="a2dba[0]" tap_mode="classic" type="output pin"/>
+          <wire name="a2dba[10]" tap_mode="classic" type="output pin"/>
+          <wire name="a2dba[11]" tap_mode="classic" type="output pin"/>
+          <wire name="a2dba[12]" tap_mode="classic" type="output pin"/>
+          <wire name="a2dba[13]" tap_mode="classic" type="output pin"/>
+          <wire name="a2dba[1]" tap_mode="classic" type="output pin"/>
+          <wire name="a2dba[2]" tap_mode="classic" type="output pin"/>
+          <wire name="a2dba[3]" tap_mode="classic" type="output pin"/>
+          <wire name="a2dba[4]" tap_mode="classic" type="output pin"/>
+          <wire name="a2dba[5]" tap_mode="classic" type="output pin"/>
+          <wire name="a2dba[6]" tap_mode="classic" type="output pin"/>
+          <wire name="a2dba[7]" tap_mode="classic" type="output pin"/>
+          <wire name="a2dba[8]" tap_mode="classic" type="output pin"/>
+          <wire name="a2dba[9]" tap_mode="classic" type="output pin"/>
+          <wire name="a2dbb[0]" tap_mode="classic" type="output pin"/>
+          <wire name="a2dbb[10]" tap_mode="classic" type="output pin"/>
+          <wire name="a2dbb[11]" tap_mode="classic" type="output pin"/>
+          <wire name="a2dbb[12]" tap_mode="classic" type="output pin"/>
+          <wire name="a2dbb[13]" tap_mode="classic" type="output pin"/>
+          <wire name="a2dbb[1]" tap_mode="classic" type="output pin"/>
+          <wire name="a2dbb[2]" tap_mode="classic" type="output pin"/>
+          <wire name="a2dbb[3]" tap_mode="classic" type="output pin"/>
+          <wire name="a2dbb[4]" tap_mode="classic" type="output pin"/>
+          <wire name="a2dbb[5]" tap_mode="classic" type="output pin"/>
+          <wire name="a2dbb[6]" tap_mode="classic" type="output pin"/>
+          <wire name="a2dbb[7]" tap_mode="classic" type="output pin"/>
+          <wire name="a2dbb[8]" tap_mode="classic" type="output pin"/>
+          <wire name="a2dbb[9]" tap_mode="classic" type="output pin"/>
+          <wire name="comb[0]" tap_mode="classic" type="output pin"/>
+          <wire name="comb[10]" tap_mode="classic" type="output pin"/>
+          <wire name="comb[11]" tap_mode="classic" type="output pin"/>
+          <wire name="comb[12]" tap_mode="classic" type="output pin"/>
+          <wire name="comb[13]" tap_mode="classic" type="output pin"/>
+          <wire name="comb[1]" tap_mode="classic" type="output pin"/>
+          <wire name="comb[2]" tap_mode="classic" type="output pin"/>
+          <wire name="comb[3]" tap_mode="classic" type="output pin"/>
+          <wire name="comb[4]" tap_mode="classic" type="output pin"/>
+          <wire name="comb[5]" tap_mode="classic" type="output pin"/>
+          <wire name="comb[6]" tap_mode="classic" type="output pin"/>
+          <wire name="comb[7]" tap_mode="classic" type="output pin"/>
+          <wire name="comb[8]" tap_mode="classic" type="output pin"/>
+          <wire name="comb[9]" tap_mode="classic" type="output pin"/>
+          <wire name="lpm_add:lpm|dataa[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_add:lpm|dataa[10]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_add:lpm|dataa[11]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_add:lpm|dataa[12]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_add:lpm|dataa[13]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_add:lpm|dataa[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_add:lpm|dataa[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_add:lpm|dataa[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_add:lpm|dataa[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_add:lpm|dataa[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_add:lpm|dataa[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_add:lpm|dataa[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_add:lpm|dataa[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_add:lpm|dataa[9]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_add:lpm|datab[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_add:lpm|datab[10]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_add:lpm|datab[11]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_add:lpm|datab[12]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_add:lpm|datab[13]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_add:lpm|datab[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_add:lpm|datab[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_add:lpm|datab[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_add:lpm|datab[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_add:lpm|datab[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_add:lpm|datab[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_add:lpm|datab[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_add:lpm|datab[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_add:lpm|datab[9]" tap_mode="classic" type="combinatorial"/>
+        </data_input_vec>
+        <storage_qualifier_input_vec/>
+      </signal_vec>
+      <presentation>
+        <data_view>
+          <bus is_signal_inverted="no" link="all" name="a2dba" order="lsb_to_msb" radix="line" state="collapse" type="output pin">
+            <net is_signal_inverted="no" name="a2dba[0]"/>
+            <net is_signal_inverted="no" name="a2dba[1]"/>
+            <net is_signal_inverted="no" name="a2dba[2]"/>
+            <net is_signal_inverted="no" name="a2dba[3]"/>
+            <net is_signal_inverted="no" name="a2dba[4]"/>
+            <net is_signal_inverted="no" name="a2dba[5]"/>
+            <net is_signal_inverted="no" name="a2dba[6]"/>
+            <net is_signal_inverted="no" name="a2dba[7]"/>
+            <net is_signal_inverted="no" name="a2dba[8]"/>
+            <net is_signal_inverted="no" name="a2dba[9]"/>
+            <net is_signal_inverted="no" name="a2dba[10]"/>
+            <net is_signal_inverted="no" name="a2dba[11]"/>
+            <net is_signal_inverted="no" name="a2dba[12]"/>
+            <net is_signal_inverted="no" name="a2dba[13]"/>
+          </bus>
+          <bus is_signal_inverted="no" link="all" name="a2dbb" order="lsb_to_msb" radix="line" state="collapse" type="output pin">
+            <net is_signal_inverted="no" name="a2dbb[0]"/>
+            <net is_signal_inverted="no" name="a2dbb[1]"/>
+            <net is_signal_inverted="no" name="a2dbb[2]"/>
+            <net is_signal_inverted="no" name="a2dbb[3]"/>
+            <net is_signal_inverted="no" name="a2dbb[4]"/>
+            <net is_signal_inverted="no" name="a2dbb[5]"/>
+            <net is_signal_inverted="no" name="a2dbb[6]"/>
+            <net is_signal_inverted="no" name="a2dbb[7]"/>
+            <net is_signal_inverted="no" name="a2dbb[8]"/>
+            <net is_signal_inverted="no" name="a2dbb[9]"/>
+            <net is_signal_inverted="no" name="a2dbb[10]"/>
+            <net is_signal_inverted="no" name="a2dbb[11]"/>
+            <net is_signal_inverted="no" name="a2dbb[12]"/>
+            <net is_signal_inverted="no" name="a2dbb[13]"/>
+          </bus>
+          <bus is_signal_inverted="no" link="all" name="comb" order="lsb_to_msb" radix="line" state="collapse" type="output pin">
+            <net is_signal_inverted="no" name="comb[0]"/>
+            <net is_signal_inverted="no" name="comb[1]"/>
+            <net is_signal_inverted="no" name="comb[2]"/>
+            <net is_signal_inverted="no" name="comb[3]"/>
+            <net is_signal_inverted="no" name="comb[4]"/>
+            <net is_signal_inverted="no" name="comb[5]"/>
+            <net is_signal_inverted="no" name="comb[6]"/>
+            <net is_signal_inverted="no" name="comb[7]"/>
+            <net is_signal_inverted="no" name="comb[8]"/>
+            <net is_signal_inverted="no" name="comb[9]"/>
+            <net is_signal_inverted="no" name="comb[10]"/>
+            <net is_signal_inverted="no" name="comb[11]"/>
+            <net is_signal_inverted="no" name="comb[12]"/>
+            <net is_signal_inverted="no" name="comb[13]"/>
+          </bus>
+          <bus is_signal_inverted="no" link="all" name="sin1" order="lsb_to_msb" radix="line" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="lpm_add:lpm|dataa[0]"/>
+            <net is_signal_inverted="no" name="lpm_add:lpm|dataa[1]"/>
+            <net is_signal_inverted="no" name="lpm_add:lpm|dataa[2]"/>
+            <net is_signal_inverted="no" name="lpm_add:lpm|dataa[3]"/>
+            <net is_signal_inverted="no" name="lpm_add:lpm|dataa[4]"/>
+            <net is_signal_inverted="no" name="lpm_add:lpm|dataa[5]"/>
+            <net is_signal_inverted="no" name="lpm_add:lpm|dataa[6]"/>
+            <net is_signal_inverted="no" name="lpm_add:lpm|dataa[7]"/>
+            <net is_signal_inverted="no" name="lpm_add:lpm|dataa[8]"/>
+            <net is_signal_inverted="no" name="lpm_add:lpm|dataa[9]"/>
+            <net is_signal_inverted="no" name="lpm_add:lpm|dataa[10]"/>
+            <net is_signal_inverted="no" name="lpm_add:lpm|dataa[11]"/>
+            <net is_signal_inverted="no" name="lpm_add:lpm|dataa[12]"/>
+            <net is_signal_inverted="no" name="lpm_add:lpm|dataa[13]"/>
+          </bus>
+          <bus is_signal_inverted="no" link="all" name="sin2" order="lsb_to_msb" radix="line" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="lpm_add:lpm|datab[0]"/>
+            <net is_signal_inverted="no" name="lpm_add:lpm|datab[1]"/>
+            <net is_signal_inverted="no" name="lpm_add:lpm|datab[2]"/>
+            <net is_signal_inverted="no" name="lpm_add:lpm|datab[3]"/>
+            <net is_signal_inverted="no" name="lpm_add:lpm|datab[4]"/>
+            <net is_signal_inverted="no" name="lpm_add:lpm|datab[5]"/>
+            <net is_signal_inverted="no" name="lpm_add:lpm|datab[6]"/>
+            <net is_signal_inverted="no" name="lpm_add:lpm|datab[7]"/>
+            <net is_signal_inverted="no" name="lpm_add:lpm|datab[8]"/>
+            <net is_signal_inverted="no" name="lpm_add:lpm|datab[9]"/>
+            <net is_signal_inverted="no" name="lpm_add:lpm|datab[10]"/>
+            <net is_signal_inverted="no" name="lpm_add:lpm|datab[11]"/>
+            <net is_signal_inverted="no" name="lpm_add:lpm|datab[12]"/>
+            <net is_signal_inverted="no" name="lpm_add:lpm|datab[13]"/>
+          </bus>
+        </data_view>
+        <setup_view>
+          <bus is_signal_inverted="no" link="all" name="a2dba" order="lsb_to_msb" radix="line" state="collapse" type="output pin">
+            <net is_signal_inverted="no" name="a2dba[0]"/>
+            <net is_signal_inverted="no" name="a2dba[1]"/>
+            <net is_signal_inverted="no" name="a2dba[2]"/>
+            <net is_signal_inverted="no" name="a2dba[3]"/>
+            <net is_signal_inverted="no" name="a2dba[4]"/>
+            <net is_signal_inverted="no" name="a2dba[5]"/>
+            <net is_signal_inverted="no" name="a2dba[6]"/>
+            <net is_signal_inverted="no" name="a2dba[7]"/>
+            <net is_signal_inverted="no" name="a2dba[8]"/>
+            <net is_signal_inverted="no" name="a2dba[9]"/>
+            <net is_signal_inverted="no" name="a2dba[10]"/>
+            <net is_signal_inverted="no" name="a2dba[11]"/>
+            <net is_signal_inverted="no" name="a2dba[12]"/>
+            <net is_signal_inverted="no" name="a2dba[13]"/>
+          </bus>
+          <bus is_signal_inverted="no" link="all" name="a2dbb" order="lsb_to_msb" radix="line" state="collapse" type="output pin">
+            <net is_signal_inverted="no" name="a2dbb[0]"/>
+            <net is_signal_inverted="no" name="a2dbb[1]"/>
+            <net is_signal_inverted="no" name="a2dbb[2]"/>
+            <net is_signal_inverted="no" name="a2dbb[3]"/>
+            <net is_signal_inverted="no" name="a2dbb[4]"/>
+            <net is_signal_inverted="no" name="a2dbb[5]"/>
+            <net is_signal_inverted="no" name="a2dbb[6]"/>
+            <net is_signal_inverted="no" name="a2dbb[7]"/>
+            <net is_signal_inverted="no" name="a2dbb[8]"/>
+            <net is_signal_inverted="no" name="a2dbb[9]"/>
+            <net is_signal_inverted="no" name="a2dbb[10]"/>
+            <net is_signal_inverted="no" name="a2dbb[11]"/>
+            <net is_signal_inverted="no" name="a2dbb[12]"/>
+            <net is_signal_inverted="no" name="a2dbb[13]"/>
+          </bus>
+          <bus is_signal_inverted="no" link="all" name="comb" order="lsb_to_msb" radix="line" state="collapse" type="output pin">
+            <net is_signal_inverted="no" name="comb[0]"/>
+            <net is_signal_inverted="no" name="comb[1]"/>
+            <net is_signal_inverted="no" name="comb[2]"/>
+            <net is_signal_inverted="no" name="comb[3]"/>
+            <net is_signal_inverted="no" name="comb[4]"/>
+            <net is_signal_inverted="no" name="comb[5]"/>
+            <net is_signal_inverted="no" name="comb[6]"/>
+            <net is_signal_inverted="no" name="comb[7]"/>
+            <net is_signal_inverted="no" name="comb[8]"/>
+            <net is_signal_inverted="no" name="comb[9]"/>
+            <net is_signal_inverted="no" name="comb[10]"/>
+            <net is_signal_inverted="no" name="comb[11]"/>
+            <net is_signal_inverted="no" name="comb[12]"/>
+            <net is_signal_inverted="no" name="comb[13]"/>
+          </bus>
+          <bus is_signal_inverted="no" link="all" name="sin1" order="lsb_to_msb" radix="line" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="lpm_add:lpm|dataa[0]"/>
+            <net is_signal_inverted="no" name="lpm_add:lpm|dataa[1]"/>
+            <net is_signal_inverted="no" name="lpm_add:lpm|dataa[2]"/>
+            <net is_signal_inverted="no" name="lpm_add:lpm|dataa[3]"/>
+            <net is_signal_inverted="no" name="lpm_add:lpm|dataa[4]"/>
+            <net is_signal_inverted="no" name="lpm_add:lpm|dataa[5]"/>
+            <net is_signal_inverted="no" name="lpm_add:lpm|dataa[6]"/>
+            <net is_signal_inverted="no" name="lpm_add:lpm|dataa[7]"/>
+            <net is_signal_inverted="no" name="lpm_add:lpm|dataa[8]"/>
+            <net is_signal_inverted="no" name="lpm_add:lpm|dataa[9]"/>
+            <net is_signal_inverted="no" name="lpm_add:lpm|dataa[10]"/>
+            <net is_signal_inverted="no" name="lpm_add:lpm|dataa[11]"/>
+            <net is_signal_inverted="no" name="lpm_add:lpm|dataa[12]"/>
+            <net is_signal_inverted="no" name="lpm_add:lpm|dataa[13]"/>
+          </bus>
+          <bus is_signal_inverted="no" link="all" name="sin2" order="lsb_to_msb" radix="line" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="lpm_add:lpm|datab[0]"/>
+            <net is_signal_inverted="no" name="lpm_add:lpm|datab[1]"/>
+            <net is_signal_inverted="no" name="lpm_add:lpm|datab[2]"/>
+            <net is_signal_inverted="no" name="lpm_add:lpm|datab[3]"/>
+            <net is_signal_inverted="no" name="lpm_add:lpm|datab[4]"/>
+            <net is_signal_inverted="no" name="lpm_add:lpm|datab[5]"/>
+            <net is_signal_inverted="no" name="lpm_add:lpm|datab[6]"/>
+            <net is_signal_inverted="no" name="lpm_add:lpm|datab[7]"/>
+            <net is_signal_inverted="no" name="lpm_add:lpm|datab[8]"/>
+            <net is_signal_inverted="no" name="lpm_add:lpm|datab[9]"/>
+            <net is_signal_inverted="no" name="lpm_add:lpm|datab[10]"/>
+            <net is_signal_inverted="no" name="lpm_add:lpm|datab[11]"/>
+            <net is_signal_inverted="no" name="lpm_add:lpm|datab[12]"/>
+            <net is_signal_inverted="no" name="lpm_add:lpm|datab[13]"/>
+          </bus>
+        </setup_view>
+      </presentation>
+      <trigger CRC="E76B2CF5" attribute_mem_mode="false" gap_record="true" global_temp="1" is_expanded="true" name="trigger: 2008/10/15 16:20:44  #1" position="pre" power_up_trigger_mode="false" segment_size="1" storage_mode="off" storage_qualifier_port_is_pin="true" storage_qualifier_port_tap_mode="classic" trigger_in="dont_care" trigger_out="active high" trigger_type="circular">
+        <power_up_trigger position="pre" trigger_in="dont_care" trigger_out="active high"/>
+        <events use_custom_flow_control="no">
+          <level enabled="yes" name="condition1" type="basic">
+            <power_up enabled="yes">
+            </power_up><op_node/>
+          </level>
+        </events>
+        <storage_qualifier_events>
+          <storage_qualifier_level>
+            <power_up>
+            </power_up>
+            <op_node/>
+          </storage_qualifier_level>
+          <storage_qualifier_level>
+            <power_up>
+            </power_up>
+            <op_node/>
+          </storage_qualifier_level>
+          <storage_qualifier_level>
+            <power_up>
+            </power_up>
+            <op_node/>
+          </storage_qualifier_level>
+          <transitional><pwr_up_transitional/>
+          </transitional>
+        </storage_qualifier_events>
+      </trigger>
+    </signal_set>
+    <position_info>
+      <single attribute="active tab" value="0"/>
+      <single attribute="data horizontal scroll position" value="313"/>
+      <single attribute="data vertical scroll position" value="0"/>
+      <single attribute="setup horizontal scroll position" value="0"/>
+      <single attribute="setup vertical scroll position" value="0"/>
+      <single attribute="zoom level denominator" value="1"/>
+      <single attribute="zoom level numerator" value="4"/>
+      <single attribute="zoom offset denominator" value="1"/>
+      <single attribute="zoom offset numerator" value="32256"/>
+      <multi attribute="timebars" size="1" value="455"/>
+    </position_info>
+  </instance>
+  <mnemonics/>
+  <static_plugin_mnemonics/>
+  <embedded_sof_files>
+  </embedded_sof_files>
+  <global_info>
+    <single attribute="active instance" value="0"/>
+    <single attribute="lock mode" value="36110"/>
+    <single attribute="sof manager hidden" value="0"/>
+    <multi attribute="column width" size="18" value="34,34,165,74,68,70,88,100,101,101,101,101,101,101,101,101,107,78"/>
+    <multi attribute="window position" size="9" value="1280,959,398,212,0,50,124,0,0"/>
+  </global_info>
+</session>

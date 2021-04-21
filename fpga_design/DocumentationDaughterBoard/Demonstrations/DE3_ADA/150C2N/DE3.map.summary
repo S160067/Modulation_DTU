@@ -1,0 +1,16 @@
+Analysis & Synthesis Status : Successful - Tue May 06 14:05:53 2014
+Quartus II 64-Bit Version : 8.1 Build 163 10/28/2008 SJ Full Version
+Revision Name : DE3
+Top-level Entity Name : DE3
+Family : Stratix III
+Logic utilization : N/A
+    Combinational ALUTs : 626
+    Memory ALUTs : 0
+    Dedicated logic registers : 1,613
+Total registers : 1613
+Total pins : 200
+Total virtual pins : 0
+Total block memory bits : 163,328
+DSP block 18-bit elements : 8
+Total PLLs : 1
+Total DLLs : 0
