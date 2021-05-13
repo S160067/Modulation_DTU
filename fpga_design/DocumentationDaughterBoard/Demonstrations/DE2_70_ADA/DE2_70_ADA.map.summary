@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Sun Oct 09 13:01:36 2011
+Quartus II Version : 11.0 Build 157 04/27/2011 SJ Full Version
+Revision Name : DE2_70_ADA
+Top-level Entity Name : DE2_70_ADDA_GPIO
+Family : Cyclone II
+Total logic elements : 1,869
+    Total combinational functions : 819
+    Dedicated logic registers : 1,579
+Total registers : 1579
+Total pins : 71
+Total virtual pins : 0
+Total memory bits : 192,000
+Embedded Multiplier 9-bit elements : 8
+Total PLLs : 1

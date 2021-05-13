@@ -1,0 +1,5 @@
+PLL_Name	DE4_ADDA_HSMB_TOP:U1|pll:pll_100|altpll:altpll_component|pll_altpll:auto_generated|pll1
+PLLJITTER	26
+PLLSPEmax	40
+PLLSPEmin	-40
+

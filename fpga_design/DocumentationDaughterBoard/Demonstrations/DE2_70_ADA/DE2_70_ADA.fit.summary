@@ -1,0 +1,16 @@
+Fitter Status : Successful - Sun Oct 09 13:01:56 2011
+Quartus II Version : 11.0 Build 157 04/27/2011 SJ Full Version
+Revision Name : DE2_70_ADA
+Top-level Entity Name : DE2_70_ADDA_GPIO
+Family : Cyclone II
+Device : EP2C70F896C6
+Timing Models : Final
+Total logic elements : 1,763 / 68,416 ( 3 % )
+    Total combinational functions : 821 / 68,416 ( 1 % )
+    Dedicated logic registers : 1,579 / 68,416 ( 2 % )
+Total registers : 1579
+Total pins : 71 / 622 ( 11 % )
+Total virtual pins : 0
+Total memory bits : 192,000 / 1,152,000 ( 17 % )
+Embedded Multiplier 9-bit elements : 8 / 300 ( 3 % )
+Total PLLs : 1 / 4 ( 25 % )

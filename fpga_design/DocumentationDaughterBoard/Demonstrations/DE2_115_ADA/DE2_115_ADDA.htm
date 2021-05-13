@@ -1,0 +1,567 @@
+<html>
+<body>
+<h1 align="center">DE2-115 FPGA Board Configuration</h1>
+<br />
+<br />
+<h2 align="left">Pin Assignments:</h2>
+<ul>
+<a href="#CLOCK"><li>CLOCK</li></a>
+<br />
+<a href="#I2C for HSMC "><li>I2C for HSMC </li></a>
+<br />
+<a href="#HSMC"><li>HSMC</li></a>
+<br />
+</ul>
+<br />
+<br />
+<br />
+<h2 align="left">Pin Assignment Table:</h2>
+<h2><a name="CLOCK"></a></h2><table border="3">
+<caption  align="left">CLOCK</caption>
+<br />
+<br />
+<tr>
+   <th align="left" bgcolor="Khaki">Name</th>
+   <th align="left" bgcolor="Khaki">Location</th>
+   <th align="left" bgcolor="Khaki">Direction</th>
+   <th align="left" bgcolor="Khaki">Standard</th>
+</tr>
+<tr>
+   <td align="left">CLOCK_50</td>
+   <td align="left">Y2</td>
+   <td align="left">input</td>
+   <td align="left">3.3-V LVTTL</td>
+</tr>
+<tr>
+   <td align="left">CLOCK2_50</td>
+   <td align="left">AG14</td>
+   <td align="left">input</td>
+   <td align="left">3.3-V LVTTL</td>
+</tr>
+<tr>
+   <td align="left">CLOCK3_50</td>
+   <td align="left">AG15</td>
+   <td align="left">input</td>
+   <td align="left">3.3-V LVTTL</td>
+</tr>
+</table>
+<h2><a name="I2C for HSMC "></a></h2><table border="3">
+<caption  align="left">I2C for HSMC </caption>
+<br />
+<br />
+<tr>
+   <th align="left" bgcolor="Khaki">Name</th>
+   <th align="left" bgcolor="Khaki">Location</th>
+   <th align="left" bgcolor="Khaki">Direction</th>
+   <th align="left" bgcolor="Khaki">Standard</th>
+</tr>
+<tr>
+   <td align="left">I2C_SCLK</td>
+   <td align="left">B7</td>
+   <td align="left">output</td>
+   <td align="left">3.3-V LVTTL</td>
+</tr>
+<tr>
+   <td align="left">I2C_SDAT</td>
+   <td align="left">A8</td>
+   <td align="left">inout</td>
+   <td align="left">3.3-V LVTTL</td>
+</tr>
+</table>
+<h2><a name="HSMC"></a></h2><table border="3">
+<caption  align="left">HSMC connect to ADA - High Speed ADC/DAC</caption>
+<br />
+<br />
+<tr>
+   <th align="left" bgcolor="Khaki">Name</th>
+   <th align="left" bgcolor="Khaki">Location</th>
+   <th align="left" bgcolor="Khaki">Direction</th>
+   <th align="left" bgcolor="Khaki">Standard</th>
+   <th align="left" bgcolor="Khaki">HSMC Pin Index</th>
+</tr>
+<tr>
+   <td align="left">DAC_DA[0]</td>
+   <td align="left">D27</td>
+   <td align="left">output</td>
+   <td align="left">2.5 V</td>
+   <td align="left">47</td>
+</tr>
+<tr>
+   <td align="left">DAC_DB[0]</td>
+   <td align="left">F24</td>
+   <td align="left">output</td>
+   <td align="left">2.5 V</td>
+   <td align="left">48</td>
+</tr>
+<tr>
+   <td align="left">DAC_DA[1]</td>
+   <td align="left">D28</td>
+   <td align="left">output</td>
+   <td align="left">2.5 V</td>
+   <td align="left">49</td>
+</tr>
+<tr>
+   <td align="left">DAC_DB[1]</td>
+   <td align="left">F25</td>
+   <td align="left">output</td>
+   <td align="left">2.5 V</td>
+   <td align="left">50</td>
+</tr>
+<tr>
+   <td align="left">DAC_DA[2]</td>
+   <td align="left">E27</td>
+   <td align="left">output</td>
+   <td align="left">2.5 V</td>
+   <td align="left">53</td>
+</tr>
+<tr>
+   <td align="left">DAC_DB[2]</td>
+   <td align="left">D26</td>
+   <td align="left">output</td>
+   <td align="left">2.5 V</td>
+   <td align="left">54</td>
+</tr>
+<tr>
+   <td align="left">DAC_DA[3]</td>
+   <td align="left">E28</td>
+   <td align="left">output</td>
+   <td align="left">2.5 V</td>
+   <td align="left">55</td>
+</tr>
+<tr>
+   <td align="left">DAC_DB[3]</td>
+   <td align="left">C27</td>
+   <td align="left">output</td>
+   <td align="left">2.5 V</td>
+   <td align="left">56</td>
+</tr>
+<tr>
+   <td align="left">DAC_DA[4]</td>
+   <td align="left">F27</td>
+   <td align="left">output</td>
+   <td align="left">2.5 V</td>
+   <td align="left">59</td>
+</tr>
+<tr>
+   <td align="left">DAC_DB[4]</td>
+   <td align="left">F26</td>
+   <td align="left">output</td>
+   <td align="left">2.5 V</td>
+   <td align="left">60</td>
+</tr>
+<tr>
+   <td align="left">DAC_DA[5]</td>
+   <td align="left">F28</td>
+   <td align="left">output</td>
+   <td align="left">2.5 V</td>
+   <td align="left">61</td>
+</tr>
+<tr>
+   <td align="left">DAC_DB[5]</td>
+   <td align="left">E26</td>
+   <td align="left">output</td>
+   <td align="left">2.5 V</td>
+   <td align="left">62</td>
+</tr>
+<tr>
+   <td align="left">DAC_DA[6]</td>
+   <td align="left">G27</td>
+   <td align="left">output</td>
+   <td align="left">2.5 V</td>
+   <td align="left">65</td>
+</tr>
+<tr>
+   <td align="left">DAC_DB[6]</td>
+   <td align="left">G25</td>
+   <td align="left">output</td>
+   <td align="left">2.5 V</td>
+   <td align="left">66</td>
+</tr>
+<tr>
+   <td align="left">DAC_DA[7]</td>
+   <td align="left">G28</td>
+   <td align="left">output</td>
+   <td align="left">2.5 V</td>
+   <td align="left">67</td>
+</tr>
+<tr>
+   <td align="left">DAC_DB[7]</td>
+   <td align="left">G26</td>
+   <td align="left">output</td>
+   <td align="left">2.5 V</td>
+   <td align="left">68</td>
+</tr>
+<tr>
+   <td align="left">DAC_DA[8]</td>
+   <td align="left">K27</td>
+   <td align="left">output</td>
+   <td align="left">2.5 V</td>
+   <td align="left">71</td>
+</tr>
+<tr>
+   <td align="left">DAC_DB[8]</td>
+   <td align="left">H25</td>
+   <td align="left">output</td>
+   <td align="left">2.5 V</td>
+   <td align="left">72</td>
+</tr>
+<tr>
+   <td align="left">DAC_DA[9]</td>
+   <td align="left">K28</td>
+   <td align="left">output</td>
+   <td align="left">2.5 V</td>
+   <td align="left">73</td>
+</tr>
+<tr>
+   <td align="left">DAC_DB[9]</td>
+   <td align="left">H26</td>
+   <td align="left">output</td>
+   <td align="left">2.5 V</td>
+   <td align="left">74</td>
+</tr>
+<tr>
+   <td align="left">DAC_DA[10]</td>
+   <td align="left">M27</td>
+   <td align="left">output</td>
+   <td align="left">2.5 V</td>
+   <td align="left">77</td>
+</tr>
+<tr>
+   <td align="left">DAC_DB[10]</td>
+   <td align="left">K25</td>
+   <td align="left">output</td>
+   <td align="left">2.5 V</td>
+   <td align="left">78</td>
+</tr>
+<tr>
+   <td align="left">DAC_DA[11]</td>
+   <td align="left">M28</td>
+   <td align="left">output</td>
+   <td align="left">2.5 V</td>
+   <td align="left">79</td>
+</tr>
+<tr>
+   <td align="left">DAC_DB[11]</td>
+   <td align="left">K26</td>
+   <td align="left">output</td>
+   <td align="left">2.5 V</td>
+   <td align="left">80</td>
+</tr>
+<tr>
+   <td align="left">DAC_DA[12]</td>
+   <td align="left">K21</td>
+   <td align="left">output</td>
+   <td align="left">2.5 V</td>
+   <td align="left">83</td>
+</tr>
+<tr>
+   <td align="left">DAC_DB[12]</td>
+   <td align="left">L23</td>
+   <td align="left">output</td>
+   <td align="left">2.5 V</td>
+   <td align="left">84</td>
+</tr>
+<tr>
+   <td align="left">DAC_DA[13]</td>
+   <td align="left">K22</td>
+   <td align="left">output</td>
+   <td align="left">2.5 V</td>
+   <td align="left">85</td>
+</tr>
+<tr>
+   <td align="left">DAC_DB[13]</td>
+   <td align="left">L24</td>
+   <td align="left">output</td>
+   <td align="left">2.5 V</td>
+   <td align="left">86</td>
+</tr>
+<tr>
+   <td align="left">DAC_WRT_A</td>
+   <td align="left">H23</td>
+   <td align="left">output</td>
+   <td align="left">2.5 V</td>
+   <td align="left">89</td>
+</tr>
+<tr>
+   <td align="left">DAC_WRT_B</td>
+   <td align="left">M25</td>
+   <td align="left">output</td>
+   <td align="left">2.5 V</td>
+   <td align="left">90</td>
+</tr>
+<tr>
+   <td align="left">DAC_MODE</td>
+   <td align="left">H24</td>
+   <td align="left">output</td>
+   <td align="left">2.5 V</td>
+   <td align="left">91</td>
+</tr>
+<tr>
+   <td align="left">DAC_CLK_A</td>
+   <td align="left">G23</td>
+   <td align="left">output</td>
+   <td align="left">2.5 V</td>
+   <td align="left">95</td>
+</tr>
+<tr>
+   <td align="left">OSC_SMA_ADC4</td>
+   <td align="left">J27</td>
+   <td align="left">input</td>
+   <td align="left">2.5 V</td>
+   <td align="left">96</td>
+</tr>
+<tr>
+   <td align="left">DAC_CLK_B</td>
+   <td align="left">G24</td>
+   <td align="left">output</td>
+   <td align="left">2.5 V</td>
+   <td align="left">97</td>
+</tr>
+<tr>
+   <td align="left">SMA_DAC4</td>
+   <td align="left">J28</td>
+   <td align="left">input</td>
+   <td align="left">2.5 V</td>
+   <td align="left">98</td>
+</tr>
+<tr>
+   <td align="left">ADC_OEB_A</td>
+   <td align="left">T25</td>
+   <td align="left">output</td>
+   <td align="left">2.5 V</td>
+   <td align="left">108</td>
+</tr>
+<tr>
+   <td align="left">ADC_OEB_B</td>
+   <td align="left">T26</td>
+   <td align="left">output</td>
+   <td align="left">2.5 V</td>
+   <td align="left">110</td>
+</tr>
+<tr>
+   <td align="left">ADC_DB[13]</td>
+   <td align="left">J25</td>
+   <td align="left">input</td>
+   <td align="left">2.5 V</td>
+   <td align="left">113</td>
+</tr>
+<tr>
+   <td align="left">ADC_DA[13]</td>
+   <td align="left">U25</td>
+   <td align="left">input</td>
+   <td align="left">2.5 V</td>
+   <td align="left">114</td>
+</tr>
+<tr>
+   <td align="left">ADC_DB[12]</td>
+   <td align="left">J26</td>
+   <td align="left">input</td>
+   <td align="left">2.5 V</td>
+   <td align="left">115</td>
+</tr>
+<tr>
+   <td align="left">ADC_DA[12]</td>
+   <td align="left">U26</td>
+   <td align="left">input</td>
+   <td align="left">2.5 V</td>
+   <td align="left">116</td>
+</tr>
+<tr>
+   <td align="left">ADC_DB[11]</td>
+   <td align="left">L27</td>
+   <td align="left">input</td>
+   <td align="left">2.5 V</td>
+   <td align="left">119</td>
+</tr>
+<tr>
+   <td align="left">ADC_DA[11]</td>
+   <td align="left">L21</td>
+   <td align="left">input</td>
+   <td align="left">2.5 V</td>
+   <td align="left">120</td>
+</tr>
+<tr>
+   <td align="left">ADC_DB[10]</td>
+   <td align="left">L28</td>
+   <td align="left">input</td>
+   <td align="left">2.5 V</td>
+   <td align="left">121</td>
+</tr>
+<tr>
+   <td align="left">ADC_DA[10]</td>
+   <td align="left">L22</td>
+   <td align="left">input</td>
+   <td align="left">2.5 V</td>
+   <td align="left">122</td>
+</tr>
+<tr>
+   <td align="left">ADC_DB[9]</td>
+   <td align="left">V25</td>
+   <td align="left">input</td>
+   <td align="left">2.5 V</td>
+   <td align="left">125</td>
+</tr>
+<tr>
+   <td align="left">ADC_DA[9]</td>
+   <td align="left">N25</td>
+   <td align="left">input</td>
+   <td align="left">2.5 V</td>
+   <td align="left">126</td>
+</tr>
+<tr>
+   <td align="left">ADC_DB[8]</td>
+   <td align="left">V26</td>
+   <td align="left">input</td>
+   <td align="left">2.5 V</td>
+   <td align="left">127</td>
+</tr>
+<tr>
+   <td align="left">ADC_DA[8]</td>
+   <td align="left">N26</td>
+   <td align="left">input</td>
+   <td align="left">2.5 V</td>
+   <td align="left">128</td>
+</tr>
+<tr>
+   <td align="left">ADC_DB[7]</td>
+   <td align="left">R27</td>
+   <td align="left">input</td>
+   <td align="left">2.5 V</td>
+   <td align="left">131</td>
+</tr>
+<tr>
+   <td align="left">ADC_DA[7]</td>
+   <td align="left">P25</td>
+   <td align="left">input</td>
+   <td align="left">2.5 V</td>
+   <td align="left">132</td>
+</tr>
+<tr>
+   <td align="left">ADC_DB[6]</td>
+   <td align="left">R28</td>
+   <td align="left">input</td>
+   <td align="left">2.5 V</td>
+   <td align="left">133</td>
+</tr>
+<tr>
+   <td align="left">ADC_DA[6]</td>
+   <td align="left">P26</td>
+   <td align="left">input</td>
+   <td align="left">2.5 V</td>
+   <td align="left">134</td>
+</tr>
+<tr>
+   <td align="left">ADC_DB[5]</td>
+   <td align="left">U27</td>
+   <td align="left">input</td>
+   <td align="left">2.5 V</td>
+   <td align="left">137</td>
+</tr>
+<tr>
+   <td align="left">ADC_DA[5]</td>
+   <td align="left">P21</td>
+   <td align="left">input</td>
+   <td align="left">2.5 V</td>
+   <td align="left">138</td>
+</tr>
+<tr>
+   <td align="left">ADC_DB[4]</td>
+   <td align="left">U28</td>
+   <td align="left">input</td>
+   <td align="left">2.5 V</td>
+   <td align="left">139</td>
+</tr>
+<tr>
+   <td align="left">ADC_DA[4]</td>
+   <td align="left">R21</td>
+   <td align="left">input</td>
+   <td align="left">2.5 V</td>
+   <td align="left">140</td>
+</tr>
+<tr>
+   <td align="left">ADC_DB[3]</td>
+   <td align="left">V27</td>
+   <td align="left">input</td>
+   <td align="left">2.5 V</td>
+   <td align="left">143</td>
+</tr>
+<tr>
+   <td align="left">ADC_DA[3]</td>
+   <td align="left">R22</td>
+   <td align="left">input</td>
+   <td align="left">2.5 V</td>
+   <td align="left">144</td>
+</tr>
+<tr>
+   <td align="left">ADC_DB[2]</td>
+   <td align="left">V28</td>
+   <td align="left">input</td>
+   <td align="left">2.5 V</td>
+   <td align="left">145</td>
+</tr>
+<tr>
+   <td align="left">ADC_DA[2]</td>
+   <td align="left">R23</td>
+   <td align="left">input</td>
+   <td align="left">2.5 V</td>
+   <td align="left">146</td>
+</tr>
+<tr>
+   <td align="left">ADC_DB[1]</td>
+   <td align="left">U22</td>
+   <td align="left">input</td>
+   <td align="left">2.5 V</td>
+   <td align="left">149</td>
+</tr>
+<tr>
+   <td align="left">ADC_DA[1]</td>
+   <td align="left">T21</td>
+   <td align="left">input</td>
+   <td align="left">2.5 V</td>
+   <td align="left">150</td>
+</tr>
+<tr>
+   <td align="left">ADC_DB[0]</td>
+   <td align="left">V22</td>
+   <td align="left">input</td>
+   <td align="left">2.5 V</td>
+   <td align="left">151</td>
+</tr>
+<tr>
+   <td align="left">ADC_DA[0]</td>
+   <td align="left">T22</td>
+   <td align="left">input</td>
+   <td align="left">2.5 V</td>
+   <td align="left">152</td>
+</tr>
+<tr>
+   <td align="left">ADC_CLK_B</td>
+   <td align="left">V23</td>
+   <td align="left">output</td>
+   <td align="left">2.5 V</td>
+   <td align="left">155</td>
+</tr>
+<tr>
+   <td align="left">ADC_OTR_B</td>
+   <td align="left">Y27</td>
+   <td align="left">input</td>
+   <td align="left">2.5 V</td>
+   <td align="left">156</td>
+</tr>
+<tr>
+   <td align="left">ADC_CLK_A</td>
+   <td align="left">V24</td>
+   <td align="left">output</td>
+   <td align="left">2.5 V</td>
+   <td align="left">157</td>
+</tr>
+<tr>
+   <td align="left">ADC_OTR_A</td>
+   <td align="left">Y28</td>
+   <td align="left">input</td>
+   <td align="left">2.5 V</td>
+   <td align="left">158</td>
+</tr>
+</table>
+</html>
+</body>

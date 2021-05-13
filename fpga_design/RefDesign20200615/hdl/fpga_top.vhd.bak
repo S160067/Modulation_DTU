@@ -1,0 +1,239 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity fpga_top is
+port (
+		clk						: in std_logic;
+		reset						: in std_logic;
+		
+		-- tx video
+		tx_video_data 			: in std_logic_vector(7 downto 0);
+		tx_video_rdreq			: out std_logic;
+		tx_video_empty			: in std_logic;
+		
+		-- rx video
+		rx_video_data 			: out std_logic_vector(7 downto 0);
+		rx_video_wrreq			: out std_logic;
+		rx_video_full			: in std_logic;
+
+		
+		-- ctrl tx
+		ctrl_tx_data 			: in std_logic_vector(7 downto 0);
+		ctrl_tx_rdreq			: out std_logic;
+		ctrl_tx_empty			: in std_logic;
+		
+		-- ctrl tx
+		ctrl_rx_data 			: out std_logic_vector(31 downto 0);
+		ctrl_rx_wrreq			: out std_logic;
+		ctrl_rx_full			: in std_logic;
+		
+		-- GPIO INterface to modulation
+		GPIO_0					: inout std_logic_vector(35 downto 0);
+		GPIO_1					: inout std_logic_vector(35 downto 0)
+		);
+end fpga_top;
+
+architecture fpga_arch of fpga_top is
+
+component framing_top is
+port (
+		clk,reset						: in std_logic;
+		
+		-- tx video (read side of IP cores FIFO)
+		tx_video_data 			: in std_logic_vector(7 downto 0);
+		tx_video_rdreq			: out std_logic;
+		tx_video_empty			: in std_logic;
+		
+			
+		-- tx drone (read side of IP cores FIFO)
+		tx_drone_data 			: in std_logic_vector(7 downto 0) := "00000000";
+		tx_drone_rdreq			: out std_logic;
+		tx_drone_empty			: in std_logic := '0';
+		
+
+		-- tx audio (read side of IP cores FIFO)
+		tx_audio_data 			: in std_logic_vector(7 downto 0) := "00000000";
+		tx_audio_rdreq			: out std_logic;
+		tx_audio_empty			: in std_logic := '0';
+
+
+		-- rx video (write side of IP cores FIFO)
+		rx_video_data 			: out std_logic_vector(7 downto 0);
+		rx_video_wrreq			: out std_logic;
+		rx_video_full			: in std_logic;
+		
+			
+		-- rx drone (write side of IP cores FIFO)
+		rx_drone_data 			: out std_logic_vector(7 downto 0);
+		rx_drone_wrreq			: out std_logic;
+		rx_drone_full			: in std_logic := '1';
+
+		-- rx audio (write side of IP cores FIFO)
+		rx_audio_data 			: out std_logic_vector(7 downto 0);
+		rx_audio_wrreq			: out std_logic;
+		rx_audio_full			: in std_logic := '1';
+		
+		-- Interface to modulation block
+		modulation_data_in	: in std_logic_vector(7 downto 0);
+		modulation_data_out	: out std_logic_vector(7 downto 0);
+		
+	
+		-- command encryption (read side of IP cores FIFO)
+		command_encr_data 			: in std_logic_vector(7 downto 0) := "00000000";
+		command_encr_rdreq			: out std_logic;
+		command_encr_empty			: in std_logic := '1';
+		
+		-- status encryption (write side of IP core FIFO)
+		status_encr_data 			: out std_logic_vector(23 downto 0);
+		status_encr_wrreq			: out std_logic;
+		status_encr_full			: in std_logic := '1';
+		
+				
+		-- status encryption (write side of IP core FIFO)
+		status_error_data 		: out std_logic_vector(23 downto 0);
+		status_error_wrreq		: out std_logic;
+		status_error_full			: in std_logic := '1'
+
+		
+		);
+end component framing_top;
+
+component modulation_top is
+port (
+	clk, reset			: in std_logic;
+	
+	-- Data interface from framing and encryption
+	framing_tx_data 	: in std_logic_vector(7 downto 0);
+	framing_rx_data   : out std_logic_vector(7 downto 0);
+	
+	-- Datout to GPIO
+	GPIO_0 : inout std_logic_vector(35 downto 0);
+	GPIO_1 : inout std_logic_vector(35 downto 0)
+	);
+end component modulation_top;
+		
+
+component fifo8_8 is
+port (
+	data		: IN STD_LOGIC_VECTOR (7 DOWNTO 0);
+	rdclk		: IN STD_LOGIC ;
+	rdreq		: IN STD_LOGIC ;
+	wrclk		: IN STD_LOGIC ;
+	wrreq		: IN STD_LOGIC ;
+   q			: OUT STD_LOGIC_VECTOR (7 DOWNTO 0);
+   rdempty	: OUT STD_LOGIC ;
+	wrfull	: OUT STD_LOGIC 
+);
+end component fifo8_8;
+
+
+component fifo_convert_avalon_to_classic is
+generic ( width : integer) ;
+port(
+		clk, reset	: in  std_logic;
+		
+		-- Avalon FIFO read side port
+		avalon_data		: in std_logic_vector(width-1 downto 0);
+		avalon_rdreq	: out std_logic;
+		avalon_empty	: in std_logic;
+		
+		-- IP cores FIFO write port
+		classic_data	: out std_logic_vector(width-1 downto 0);
+		classic_wrreq	: out std_logic;
+		classic_full	: in std_logic);
+end component fifo_convert_avalon_to_classic;
+
+component fifo_convert_classic_to_avalon is
+generic (width	: integer);
+port
+	(
+		clk, reset	: in std_logic;
+		
+		-- IP cores FIFO write port
+		classic_data	: in std_logic_vector(width-1 downto 0);
+		classic_rdreq	: out std_logic;
+		classic_empty	: in std_logic;
+		
+		-- Avalon FIFO write side port
+		avalon_data		: out std_logic_vector(width-1 downto 0);
+		avalon_wrreq	: out std_logic;
+		avalon_full		: in std_logic);		
+end component fifo_convert_classic_to_avalon;
+
+
+
+signal fifo_tx_dataout			: std_logic_vector(7 downto 0);
+signal fifo_tx_rdclk, fifo_tx_rdreq, fifo_tx_wrclk, fifo_tx_wrreq, fifo_tx_rdempty, fifo_tx_wrfull : std_logic;
+
+
+--framing: component framing_top
+--port map (
+--);	
+
+signal video_fifo_tx_data, video_fifo_rx_data, video_fifo_tx_q, video_fifo_rx_q	: std_logic_vector(7 downto 0);
+signal video_fifo_tx_wrreq, video_fifo_tx_full, video_fifo_tx_rdreq, video_fifo_tx_empty: std_logic;
+signal video_fifo_rx_wrreq, video_fifo_rx_full, video_fifo_rx_rdreq, video_fifo_rx_empty: std_logic;
+
+signal framing_modulation_tx, modulation_framing_rx : std_logic_vector(7 downto 0);
+signal GPIO_loopback : std_logic_vector(35 downto 0);
+
+
+begin
+
+
+fifo_tx_video : component fifo8_8
+port map (video_fifo_tx_data, clk, video_fifo_tx_rdreq, clk, video_fifo_tx_wrreq, video_fifo_tx_q, video_fifo_tx_empty, video_fifo_tx_full); 
+
+fifo_rx_video : component fifo8_8
+port map (video_fifo_rx_data, clk, video_fifo_rx_rdreq, clk, video_fifo_rx_wrreq, video_fifo_rx_q, video_fifo_rx_empty, video_fifo_rx_full); 
+
+fifo_conv_tx_video : component fifo_convert_avalon_to_classic
+generic map (width => 8)
+port map (
+	clk		=> clk, reset => reset,
+	avalon_data => tx_video_data,
+	avalon_rdreq => tx_video_rdreq,
+	avalon_empty => tx_video_empty,
+	classic_data => video_fifo_tx_data,
+	classic_wrreq => video_fifo_tx_wrreq,
+	classic_full => video_fifo_tx_full);
+
+fifo_conv_rx_video : component fifo_convert_classic_to_avalon
+generic map (width => 8)
+port map (
+	clk		=> clk, reset => reset,
+	classic_data => video_fifo_rx_q,
+	classic_rdreq => video_fifo_rx_rdreq,
+	classic_empty => video_fifo_rx_empty,
+	avalon_data => rx_video_data,
+	avalon_wrreq => rx_video_wrreq,
+	avalon_full => rx_video_full);
+
+framing_inst : component framing_top 
+port map (
+	clk 	=> clk, reset => reset,
+	tx_video_data 	=> video_fifo_tx_q,		
+	tx_video_rdreq	=> video_fifo_tx_rdreq,	
+	tx_video_empty	=> video_fifo_tx_empty,
+	
+	rx_video_data 	=> video_fifo_rx_data,		
+	rx_video_wrreq	=> video_fifo_rx_wrreq,	
+	rx_video_full	=> video_fifo_rx_empty,
+	
+	modulation_data_in	=> modulation_framing_rx,
+	modulation_data_out	=> framing_modulation_tx);
+	
+
+modulation_inst : component modulation_top
+port map (
+	clk => clk, reset => reset,
+	framing_tx_data => framing_modulation_tx,
+	framing_rx_data => modulation_framing_rx,
+	GPIO_0 => GPIO_loopback,
+	GPIO_1 => GPIO_loopback);
+	
+	
+		
+end fpga_arch;
+
+

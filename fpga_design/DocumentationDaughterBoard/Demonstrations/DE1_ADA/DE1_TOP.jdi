@@ -1,0 +1,201 @@
+<sld_project_info>
+  <hub_info ir_width="8" node_count="1"/>
+  <node_info>
+    <node hpath="sld_signaltap:auto_signaltap_0" instance_id="0" mfg_id="110" node_id="0" sld_node_info="0x30006E00" version="6">
+      <parameters>
+        <parameter name="lpm_type" type="string" value="sld_signaltap"/>
+        <parameter name="sld_node_info" type="unknown" value="805334528"/>
+        <parameter name="SLD_IP_VERSION" type="dec" value="6"/>
+        <parameter name="SLD_IP_MINOR_VERSION" type="dec" value="0"/>
+        <parameter name="SLD_COMMON_IP_VERSION" type="dec" value="0"/>
+        <parameter name="sld_data_bits" type="unknown" value="70"/>
+        <parameter name="sld_trigger_bits" type="unknown" value="70"/>
+        <parameter name="SLD_NODE_CRC_BITS" type="dec" value="32"/>
+        <parameter name="sld_node_crc_hiword" type="unknown" value="59243"/>
+        <parameter name="sld_node_crc_loword" type="unknown" value="11509"/>
+        <parameter name="SLD_INCREMENTAL_ROUTING" type="dec" value="0"/>
+        <parameter name="sld_sample_depth" type="unknown" value="2048"/>
+        <parameter name="sld_segment_size" type="unknown" value="2048"/>
+        <parameter name="SLD_RAM_BLOCK_TYPE" type="string" value="AUTO"/>
+        <parameter name="sld_state_bits" type="unknown" value="11"/>
+        <parameter name="sld_buffer_full_stop" type="unknown" value="1"/>
+        <parameter name="SLD_MEM_ADDRESS_BITS" type="dec" value="7"/>
+        <parameter name="SLD_DATA_BIT_CNTR_BITS" type="dec" value="4"/>
+        <parameter name="sld_trigger_level" type="unknown" value="1"/>
+        <parameter name="sld_trigger_in_enabled" type="unknown" value="1"/>
+        <parameter name="sld_advanced_trigger_entity" type="unknown" value="basic,1,"/>
+        <parameter name="sld_trigger_level_pipeline" type="unknown" value="1"/>
+        <parameter name="sld_enable_advanced_trigger" type="unknown" value="0"/>
+        <parameter name="SLD_ADVANCED_TRIGGER_1" type="string" value="NONE"/>
+        <parameter name="SLD_ADVANCED_TRIGGER_2" type="string" value="NONE"/>
+        <parameter name="SLD_ADVANCED_TRIGGER_3" type="string" value="NONE"/>
+        <parameter name="SLD_ADVANCED_TRIGGER_4" type="string" value="NONE"/>
+        <parameter name="SLD_ADVANCED_TRIGGER_5" type="string" value="NONE"/>
+        <parameter name="SLD_ADVANCED_TRIGGER_6" type="string" value="NONE"/>
+        <parameter name="SLD_ADVANCED_TRIGGER_7" type="string" value="NONE"/>
+        <parameter name="SLD_ADVANCED_TRIGGER_8" type="string" value="NONE"/>
+        <parameter name="SLD_ADVANCED_TRIGGER_9" type="string" value="NONE"/>
+        <parameter name="SLD_ADVANCED_TRIGGER_10" type="string" value="NONE"/>
+        <parameter name="sld_inversion_mask_length" type="unknown" value="235"/>
+        <parameter name="sld_inversion_mask" type="unknown" value="0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"/>
+        <parameter name="sld_power_up_trigger" type="unknown" value="0"/>
+        <parameter name="SLD_STATE_FLOW_MGR_ENTITY" type="string" value="state_flow_mgr_entity.vhd"/>
+        <parameter name="sld_state_flow_use_generated" type="unknown" value="0"/>
+        <parameter name="sld_current_resource_width" type="unknown" value="1"/>
+        <parameter name="sld_attribute_mem_mode" type="unknown" value="OFF"/>
+        <parameter name="SLD_STORAGE_QUALIFIER_BITS" type="dec" value="1"/>
+        <parameter name="SLD_STORAGE_QUALIFIER_GAP_RECORD" type="dec" value="0"/>
+        <parameter name="SLD_STORAGE_QUALIFIER_MODE" type="string" value="OFF"/>
+        <parameter name="SLD_STORAGE_QUALIFIER_ENABLE_ADVANCED_CONDITION" type="dec" value="0"/>
+        <parameter name="sld_storage_qualifier_inversion_mask_length" type="unknown" value="0"/>
+        <parameter name="SLD_STORAGE_QUALIFIER_ADVANCED_CONDITION_ENTITY" type="string" value="basic"/>
+        <parameter name="SLD_STORAGE_QUALIFIER_PIPELINE" type="dec" value="0"/>
+      </parameters>
+      <inputs>
+        <port name="acq_trigger_in[0]" source="a2dba[0]"/>
+        <port name="acq_data_in[0]" source="a2dba[0]"/>
+        <port name="acq_trigger_in[1]" source="a2dba[10]"/>
+        <port name="acq_data_in[1]" source="a2dba[10]"/>
+        <port name="acq_trigger_in[2]" source="a2dba[11]"/>
+        <port name="acq_data_in[2]" source="a2dba[11]"/>
+        <port name="acq_trigger_in[3]" source="a2dba[12]"/>
+        <port name="acq_data_in[3]" source="a2dba[12]"/>
+        <port name="acq_trigger_in[4]" source="a2dba[13]"/>
+        <port name="acq_data_in[4]" source="a2dba[13]"/>
+        <port name="acq_trigger_in[5]" source="a2dba[1]"/>
+        <port name="acq_data_in[5]" source="a2dba[1]"/>
+        <port name="acq_trigger_in[6]" source="a2dba[2]"/>
+        <port name="acq_data_in[6]" source="a2dba[2]"/>
+        <port name="acq_trigger_in[7]" source="a2dba[3]"/>
+        <port name="acq_data_in[7]" source="a2dba[3]"/>
+        <port name="acq_trigger_in[8]" source="a2dba[4]"/>
+        <port name="acq_data_in[8]" source="a2dba[4]"/>
+        <port name="acq_trigger_in[9]" source="a2dba[5]"/>
+        <port name="acq_data_in[9]" source="a2dba[5]"/>
+        <port name="acq_trigger_in[10]" source="a2dba[6]"/>
+        <port name="acq_data_in[10]" source="a2dba[6]"/>
+        <port name="acq_trigger_in[11]" source="a2dba[7]"/>
+        <port name="acq_data_in[11]" source="a2dba[7]"/>
+        <port name="acq_trigger_in[12]" source="a2dba[8]"/>
+        <port name="acq_data_in[12]" source="a2dba[8]"/>
+        <port name="acq_trigger_in[13]" source="a2dba[9]"/>
+        <port name="acq_data_in[13]" source="a2dba[9]"/>
+        <port name="acq_trigger_in[14]" source="a2dbb[0]"/>
+        <port name="acq_data_in[14]" source="a2dbb[0]"/>
+        <port name="acq_trigger_in[15]" source="a2dbb[10]"/>
+        <port name="acq_data_in[15]" source="a2dbb[10]"/>
+        <port name="acq_trigger_in[16]" source="a2dbb[11]"/>
+        <port name="acq_data_in[16]" source="a2dbb[11]"/>
+        <port name="acq_trigger_in[17]" source="a2dbb[12]"/>
+        <port name="acq_data_in[17]" source="a2dbb[12]"/>
+        <port name="acq_trigger_in[18]" source="a2dbb[13]"/>
+        <port name="acq_data_in[18]" source="a2dbb[13]"/>
+        <port name="acq_trigger_in[19]" source="a2dbb[1]"/>
+        <port name="acq_data_in[19]" source="a2dbb[1]"/>
+        <port name="acq_trigger_in[20]" source="a2dbb[2]"/>
+        <port name="acq_data_in[20]" source="a2dbb[2]"/>
+        <port name="acq_trigger_in[21]" source="a2dbb[3]"/>
+        <port name="acq_data_in[21]" source="a2dbb[3]"/>
+        <port name="acq_trigger_in[22]" source="a2dbb[4]"/>
+        <port name="acq_data_in[22]" source="a2dbb[4]"/>
+        <port name="acq_trigger_in[23]" source="a2dbb[5]"/>
+        <port name="acq_data_in[23]" source="a2dbb[5]"/>
+        <port name="acq_trigger_in[24]" source="a2dbb[6]"/>
+        <port name="acq_data_in[24]" source="a2dbb[6]"/>
+        <port name="acq_trigger_in[25]" source="a2dbb[7]"/>
+        <port name="acq_data_in[25]" source="a2dbb[7]"/>
+        <port name="acq_trigger_in[26]" source="a2dbb[8]"/>
+        <port name="acq_data_in[26]" source="a2dbb[8]"/>
+        <port name="acq_trigger_in[27]" source="a2dbb[9]"/>
+        <port name="acq_data_in[27]" source="a2dbb[9]"/>
+        <port name="acq_trigger_in[28]" source="comb[0]"/>
+        <port name="acq_data_in[28]" source="comb[0]"/>
+        <port name="acq_trigger_in[29]" source="comb[10]"/>
+        <port name="acq_data_in[29]" source="comb[10]"/>
+        <port name="acq_trigger_in[30]" source="comb[11]"/>
+        <port name="acq_data_in[30]" source="comb[11]"/>
+        <port name="acq_trigger_in[31]" source="comb[12]"/>
+        <port name="acq_data_in[31]" source="comb[12]"/>
+        <port name="acq_trigger_in[32]" source="comb[13]"/>
+        <port name="acq_data_in[32]" source="comb[13]"/>
+        <port name="acq_trigger_in[33]" source="comb[1]"/>
+        <port name="acq_data_in[33]" source="comb[1]"/>
+        <port name="acq_trigger_in[34]" source="comb[2]"/>
+        <port name="acq_data_in[34]" source="comb[2]"/>
+        <port name="acq_trigger_in[35]" source="comb[3]"/>
+        <port name="acq_data_in[35]" source="comb[3]"/>
+        <port name="acq_trigger_in[36]" source="comb[4]"/>
+        <port name="acq_data_in[36]" source="comb[4]"/>
+        <port name="acq_trigger_in[37]" source="comb[5]"/>
+        <port name="acq_data_in[37]" source="comb[5]"/>
+        <port name="acq_trigger_in[38]" source="comb[6]"/>
+        <port name="acq_data_in[38]" source="comb[6]"/>
+        <port name="acq_trigger_in[39]" source="comb[7]"/>
+        <port name="acq_data_in[39]" source="comb[7]"/>
+        <port name="acq_trigger_in[40]" source="comb[8]"/>
+        <port name="acq_data_in[40]" source="comb[8]"/>
+        <port name="acq_trigger_in[41]" source="comb[9]"/>
+        <port name="acq_data_in[41]" source="comb[9]"/>
+        <port name="acq_trigger_in[42]" source="lpm_add:lpm|dataa[0]"/>
+        <port name="acq_data_in[42]" source="lpm_add:lpm|dataa[0]"/>
+        <port name="acq_trigger_in[43]" source="lpm_add:lpm|dataa[10]"/>
+        <port name="acq_data_in[43]" source="lpm_add:lpm|dataa[10]"/>
+        <port name="acq_trigger_in[44]" source="lpm_add:lpm|dataa[11]"/>
+        <port name="acq_data_in[44]" source="lpm_add:lpm|dataa[11]"/>
+        <port name="acq_trigger_in[45]" source="lpm_add:lpm|dataa[12]"/>
+        <port name="acq_data_in[45]" source="lpm_add:lpm|dataa[12]"/>
+        <port name="acq_trigger_in[46]" source="lpm_add:lpm|dataa[13]"/>
+        <port name="acq_data_in[46]" source="lpm_add:lpm|dataa[13]"/>
+        <port name="acq_trigger_in[47]" source="lpm_add:lpm|dataa[1]"/>
+        <port name="acq_data_in[47]" source="lpm_add:lpm|dataa[1]"/>
+        <port name="acq_trigger_in[48]" source="lpm_add:lpm|dataa[2]"/>
+        <port name="acq_data_in[48]" source="lpm_add:lpm|dataa[2]"/>
+        <port name="acq_trigger_in[49]" source="lpm_add:lpm|dataa[3]"/>
+        <port name="acq_data_in[49]" source="lpm_add:lpm|dataa[3]"/>
+        <port name="acq_trigger_in[50]" source="lpm_add:lpm|dataa[4]"/>
+        <port name="acq_data_in[50]" source="lpm_add:lpm|dataa[4]"/>
+        <port name="acq_trigger_in[51]" source="lpm_add:lpm|dataa[5]"/>
+        <port name="acq_data_in[51]" source="lpm_add:lpm|dataa[5]"/>
+        <port name="acq_trigger_in[52]" source="lpm_add:lpm|dataa[6]"/>
+        <port name="acq_data_in[52]" source="lpm_add:lpm|dataa[6]"/>
+        <port name="acq_trigger_in[53]" source="lpm_add:lpm|dataa[7]"/>
+        <port name="acq_data_in[53]" source="lpm_add:lpm|dataa[7]"/>
+        <port name="acq_trigger_in[54]" source="lpm_add:lpm|dataa[8]"/>
+        <port name="acq_data_in[54]" source="lpm_add:lpm|dataa[8]"/>
+        <port name="acq_trigger_in[55]" source="lpm_add:lpm|dataa[9]"/>
+        <port name="acq_data_in[55]" source="lpm_add:lpm|dataa[9]"/>
+        <port name="acq_trigger_in[56]" source="lpm_add:lpm|datab[0]"/>
+        <port name="acq_data_in[56]" source="lpm_add:lpm|datab[0]"/>
+        <port name="acq_trigger_in[57]" source="lpm_add:lpm|datab[10]"/>
+        <port name="acq_data_in[57]" source="lpm_add:lpm|datab[10]"/>
+        <port name="acq_trigger_in[58]" source="lpm_add:lpm|datab[11]"/>
+        <port name="acq_data_in[58]" source="lpm_add:lpm|datab[11]"/>
+        <port name="acq_trigger_in[59]" source="lpm_add:lpm|datab[12]"/>
+        <port name="acq_data_in[59]" source="lpm_add:lpm|datab[12]"/>
+        <port name="acq_trigger_in[60]" source="lpm_add:lpm|datab[13]"/>
+        <port name="acq_data_in[60]" source="lpm_add:lpm|datab[13]"/>
+        <port name="acq_trigger_in[61]" source="lpm_add:lpm|datab[1]"/>
+        <port name="acq_data_in[61]" source="lpm_add:lpm|datab[1]"/>
+        <port name="acq_trigger_in[62]" source="lpm_add:lpm|datab[2]"/>
+        <port name="acq_data_in[62]" source="lpm_add:lpm|datab[2]"/>
+        <port name="acq_trigger_in[63]" source="lpm_add:lpm|datab[3]"/>
+        <port name="acq_data_in[63]" source="lpm_add:lpm|datab[3]"/>
+        <port name="acq_trigger_in[64]" source="lpm_add:lpm|datab[4]"/>
+        <port name="acq_data_in[64]" source="lpm_add:lpm|datab[4]"/>
+        <port name="acq_trigger_in[65]" source="lpm_add:lpm|datab[5]"/>
+        <port name="acq_data_in[65]" source="lpm_add:lpm|datab[5]"/>
+        <port name="acq_trigger_in[66]" source="lpm_add:lpm|datab[6]"/>
+        <port name="acq_data_in[66]" source="lpm_add:lpm|datab[6]"/>
+        <port name="acq_trigger_in[67]" source="lpm_add:lpm|datab[7]"/>
+        <port name="acq_data_in[67]" source="lpm_add:lpm|datab[7]"/>
+        <port name="acq_trigger_in[68]" source="lpm_add:lpm|datab[8]"/>
+        <port name="acq_data_in[68]" source="lpm_add:lpm|datab[8]"/>
+        <port name="acq_trigger_in[69]" source="lpm_add:lpm|datab[9]"/>
+        <port name="acq_data_in[69]" source="lpm_add:lpm|datab[9]"/>
+        <port name="acq_clk" source="pll:pll_100|c0"/>
+        <port name="trigger_in" source="auto_stp_trigger_in_0"/>
+      </inputs>
+      <outputs/>
+    </node>
+  </node_info>
+</sld_project_info>

@@ -1,0 +1,20 @@
+<internal_error>
+	<executable>quartus.exe</executable>
+	<sub_system>ERR</sub_system>
+	<file>/quartus/ccl/msg/msg_internal_error.cpp</file>
+	<line>758</line>
+	<callstack>
+	0x005d46c0: ccl_mem + 0x46c0 (?add_to_interthread_delete_queue@MEM_SEGMENT_INTERNAL@@QAIXPAX@Z + 0x0)
+	</callstack>
+	<error>*** Fatal Error: Access Violation at 0X005D46C0
+Current editor: PGMW, STED, RPW, STED
+Module: quartus.exe</error>
+	<date>Thu Oct 09 18:50:46 2008</date>
+	<version>Quartus II Version 8.0 Build 231 07/10/2008 Service Pack 1 SJ Full Version</version>
+	<full_error>
+*** Fatal Error: Access Violation at 0X005D46C0
+Current editor: PGMW, STED, RPW, STED
+Module: quartus.exe
+Quartus II Version 8.0 Build 231 07/10/2008 Service Pack 1 SJ Full Version </full_error>
+</internal_error>
+

@@ -1,0 +1,5 @@
+PLL_Name	DE2_115_ADDA_TOP:U1|pll:pll_100|altpll:altpll_component|pll
+PLLJITTER	35
+PLLSPEmax	84
+PLLSPEmin	-53
+

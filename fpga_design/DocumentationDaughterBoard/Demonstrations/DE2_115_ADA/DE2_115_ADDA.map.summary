@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Tue Aug 24 17:23:18 2010
+Quartus II Version : 10.0 Build 218 06/27/2010 SJ Full Version
+Revision Name : DE2_115_ADDA
+Top-level Entity Name : DE2_115_ADDA
+Family : Cyclone IV E
+Total logic elements : 1,700
+    Total combinational functions : 774
+    Dedicated logic registers : 1,435
+Total registers : 1435
+Total pins : 74
+Total virtual pins : 0
+Total memory bits : 462,848
+Embedded Multiplier 9-bit elements : 8
+Total PLLs : 1

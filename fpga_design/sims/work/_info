@@ -1,45 +1,45 @@
 m255
 K4
 z2
-!s11e vcom 2020.3 2020.07, Jul 22 2020
+!s11e vcom 2020.1 2020.02, Feb 28 2020
 13
 !s112 1.1
 !i10d 8192
 !i10e 25
 !i10f 100
 cModel Technology
-d/home/haraldbid/Projects/TestQuartus
-Eand_ent
-Z0 w1615987385
+dC:/intelFPGA_lite/20.1
+Ede1_soc_referencetop
+Z0 w1617805076
 Z1 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z2 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
-!i122 19
-Z3 d/home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/sims
-Z4 8/home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/vhdl_code/testing.vhd
-Z5 F/home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/vhdl_code/testing.vhd
+!i122 9
+Z3 dC:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/sims
+Z4 8C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd
+Z5 FC:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd
 l0
-L11 1
-VP0haTh0EnliC9e06To^XJ2
-!s100 LZ]50Ki6?A<iVW1;>JlfA2
-Z6 OV;C;2020.3;71
+L4 1
+Vb91>^jeVNW6OSUbo=zz3J0
+!s100 =cT7@^KX3BfIfHALK76T>1
+Z6 OV;C;2020.1;71
 32
-Z7 !s110 1615987396
+Z7 !s110 1617805083
 !i10b 1
-Z8 !s108 1615987396.000000
-Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/vhdl_code/testing.vhd|
-Z10 !s107 /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/vhdl_code/testing.vhd|
+Z8 !s108 1617805083.000000
+Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd|
+Z10 !s107 C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd|
 !i113 1
 Z11 o-work work -2002 -explicit
 Z12 tExplicit 1 CvgOpt 0
-Abehav2
+Areference_arch
 R1
 R2
-Z13 DEx4 work 7 and_ent 0 22 P0haTh0EnliC9e06To^XJ2
-!i122 19
-l21
-L20 6
-VKQm>>BoliQRg[X_AaI8@D2
-!s100 _dR;f1b[aWcE_lS:K<iYh3
+DEx4 work 20 de1_soc_referencetop 0 22 b91>^jeVNW6OSUbo=zz3J0
+!i122 9
+l115
+L71 84
+VZgMb9z5]b[A7D66nj5ic<3
+!s100 >W=K`3M7CRMC2CW?VmXfN3
 R6
 32
 R7
@@ -50,146 +50,148 @@ R10
 !i113 1
 R11
 R12
-Abehav1
+Efpga_top
+Z13 w1617805030
 R1
 R2
-R13
 !i122 11
-l21
-L20 14
-V9=UCSO4AM;:>z5Q>X:<^L0
-!s100 Im56V81AGUcY9F_fIEjem2
-R6
-32
-!s110 1615986514
-!i10b 1
-!s108 1615986514.000000
-R9
-R10
-!i113 1
-R11
-R12
-w1615984685
-Etb_up_down
-Z14 w1615986835
-R1
-R2
-!i122 20
 R3
-Z15 8/home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/vhdl_code/testing_tb.vhd
-Z16 F/home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/vhdl_code/testing_tb.vhd
+Z14 8C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/fpga_top.vhd
+Z15 FC:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/fpga_top.vhd
 l0
 L4 1
-VoS`0`BoOOZed16IF6FZzK1
-!s100 8MVWQS4;Ha7F]MT04cBdU2
+V8^Uj>YK7Iz<[6X6oH]R<g1
+!s100 >XEcNebbeY0zE?CVZV56X0
 R6
 32
 R7
 !i10b 1
 R8
-Z17 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/vhdl_code/testing_tb.vhd|
-Z18 !s107 /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/vhdl_code/testing_tb.vhd|
+Z16 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/fpga_top.vhd|
+Z17 !s107 C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/fpga_top.vhd|
 !i113 1
 R11
 R12
-Abehavior
+Afpga_arch
 R1
 R2
-DEx4 work 10 tb_up_down 0 22 oS`0`BoOOZed16IF6FZzK1
-!i122 20
-l31
-L7 57
-V3NLH;E[@]?OFN4Y;U7@Lj1
-!s100 D6O?<zBXC:;G^I07dz3^;0
+Z18 DEx4 work 8 fpga_top 0 22 8^Uj>YK7Iz<[6X6oH]R<g1
+!i122 11
+l91
+Z19 L36 74
+Z20 V`OPEB<AIP4GcmF12jF;Qd1
+Z21 !s100 _f`fQOgg76Tc_Tj;Z0C[P1
 R6
 32
 R7
 !i10b 1
 R8
+R16
 R17
-R18
 !i113 1
 R11
 R12
-Etest_controller
-Z19 w1615990419
+Eframing_top
+w1617804448
 R1
 R2
-!i122 21
+!i122 3
 R3
-Z20 8/home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/vhdl_code/test_controller.vhd
-Z21 F/home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/vhdl_code/test_controller.vhd
+8C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/framing_top.vhd
+FC:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/framing_top.vhd
 l0
-L10 1
-VoRN80:NR0IGS<R9enc31F2
-!s100 C;j3<Ji7n^]ZGBoKlTZ7;2
+L4 1
+VdWgiZlL3F<bRSl_9TO`ki0
+!s100 BeZMOU9ch4dSSS:;:WSz60
 R6
 32
-Z22 !s110 1615990612
+!s110 1617804664
 !i10b 1
-Z23 !s108 1615990611.000000
-Z24 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/vhdl_code/test_controller.vhd|
-Z25 !s107 /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/vhdl_code/test_controller.vhd|
+!s108 1617804664.000000
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/framing_top.vhd|
+!s107 C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/framing_top.vhd|
 !i113 1
 R11
 R12
-Aarc_controller
+Emodulation_top
+Z22 w1617795000
 R1
 R2
-DEx4 work 15 test_controller 0 22 oRN80:NR0IGS<R9enc31F2
-!i122 21
-l26
-L18 12
-V[TOlc@Qo1nVl05eYGTAO43
-!s100 cf>6fli79K[7]hX<R<<_i1
+!i122 10
+R3
+Z23 8C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/modulation_top.vhd
+Z24 FC:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/modulation_top.vhd
+l0
+L4 1
+V79M4M;0@ga@6alH`4TV6K0
+!s100 jTbg4VWnUFW3:WPMCQS`=1
 R6
 32
-R22
+R7
 !i10b 1
-R23
-R24
+R8
+Z25 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/modulation_top.vhd|
+Z26 !s107 C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/modulation_top.vhd|
+!i113 1
+R11
+R12
+Aloopback_arch
+R1
+R2
+DEx4 work 14 modulation_top 0 22 79M4M;0@ga@6alH`4TV6K0
+!i122 10
+l22
+L21 7
+V^e`G2CG32X=@UA>DG3Bn`1
+!s100 1f8]ZoPdOn7_bmnNzA9cH0
+R6
+32
+R7
+!i10b 1
+R8
 R25
+R26
 !i113 1
 R11
 R12
-Etest_controller_tb
-Z26 w1615990493
+Estatus_control_manager
+R22
 R1
 R2
-!i122 22
+!i122 8
 R3
-Z27 8/home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/vhdl_code/test_controller_tb.vhd
-Z28 F/home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/vhdl_code/test_controller_tb.vhd
+Z27 8C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/control_manager.vhd
+Z28 FC:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/control_manager.vhd
 l0
-L5 1
-VgJj]_@g9W?3UiDWYo5dXo1
-!s100 bV^iR3HC:i1IzU9R71=Ue0
+L4 1
+VF314oCOY7_z_cBn0Dm74T3
+!s100 S;R9mBd:CChke@DkY?kB53
 R6
 32
-R22
+R7
 !i10b 1
-Z29 !s108 1615990612.000000
-Z30 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/vhdl_code/test_controller_tb.vhd|
-!s107 /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/vhdl_code/test_controller_tb.vhd|
+R8
+Z29 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/control_manager.vhd|
+Z30 !s107 C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/control_manager.vhd|
 !i113 1
 R11
 R12
-Abehavior
+Amanager_arch
 R1
 R2
-DEx4 work 18 test_controller_tb 0 22 gJj]_@g9W?3UiDWYo5dXo1
-!i122 22
-l26
-L8 49
-VE;=c^NDJ?H6N<5lKc2I?61
-!s100 TIZd1?CoJ2SmEmLE3:>D53
+DEx4 work 22 status_control_manager 0 22 F314oCOY7_z_cBn0Dm74T3
+!i122 8
+l36
+L30 59
+V05X<7>AHAL7aQFc6i78eE0
+!s100 K1gg1RcAH<<E?=iSD:Z9P2
 R6
 32
-R22
+R7
 !i10b 1
+R8
 R29
 R30
-Z31 !s107 /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/vhdl_code/test_controller_tb.vhd|
 !i113 1
 R11
 R12
