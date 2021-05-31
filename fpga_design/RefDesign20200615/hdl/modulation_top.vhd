@@ -43,9 +43,9 @@ begin
 						GPIO_1 (8 ) & GPIO_1 (10 ) & GPIO_1 (9 ) & GPIO_1 (11 ) & GPIO_1 (12 ) & GPIO_1 (14 ) & 
 						GPIO_1 (13 ) & GPIO_1 (15 );
 
-	data_out_b(9 downto 0) <= LEDR;
-	data_in_a(9 downto 0) <= SW;
-						
+	--data_out_b(9 downto 0) <= LEDR;
+	--data_in_a(9 downto 0) <= SW;
+	LEDR <= SW;				
 	GPIO_0(33) <= '0'; --Enable B
 	GPIO_0(35) <= '0'; --Enable A
 
@@ -62,7 +62,7 @@ begin
   GPIO_1(34) <= clk; --Input write signal for PORT B
   GPIO_1(17) <= clk; --Input write signal for PORT A
 	
-	framing_rx_data <= framing_tx_data;
+	--framing_rx_data <= framing_tx_data;
 	--GPIO_0(7 downto 0) <= framing_tx_data;
 	--framing_rx_data <= GPIO_1(7 downto 0);
 end loopback_arch;

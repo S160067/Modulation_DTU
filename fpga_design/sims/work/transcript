@@ -1,0 +1,340 @@
+# Compile of modulation_top_simmer.vhd failed with 5 errors.
+# Compile of reciever.vhd failed with 4 errors.
+# Compile of sender.vhd failed with 4 errors.
+# Compile of test_controller_tb.vhd was successful.
+# 4 compiles, 3 failed with 13 errors.
+# Compile of modulation_top_simmer.vhd failed with 3 errors.
+# Compile of reciever.vhd failed with 1 errors.
+# Compile of sender.vhd failed with 1 errors.
+# Compile of test_controller_tb.vhd was successful.
+# 4 compiles, 3 failed with 5 errors.
+# Compile of modulation_top_simmer.vhd failed with 2 errors.
+# Compile of reciever.vhd failed with 1 errors.
+# Compile of sender.vhd failed with 1 errors.
+# Compile of test_controller_tb.vhd was successful.
+# 4 compiles, 3 failed with 4 errors.
+# Compile of modulation_top_simmer.vhd was successful.
+# Compile of reciever.vhd failed with 1 errors.
+# Compile of sender.vhd failed with 1 errors.
+# Compile of test_controller_tb.vhd was successful.
+# 4 compiles, 2 failed with 2 errors.
+# Compile of reciever.vhd was successful.
+# Compile of sender.vhd was successful.
+# 2 compiles, 0 failed with no errors.
+vsim -gui work.modulation_top work.reciever work.sender work.test_controller_tb
+# vsim -gui work.modulation_top work.reciever work.sender work.test_controller_tb 
+# Start time: 20:44:55 on May 29,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.modulation_top(loopback_arch)
+# Loading work.reciever(loopback_arch)
+# Loading work.sender(loopback_arch)
+# Loading work.test_controller_tb(behavior)
+# ** Fatal: (vsim-3808) Incompatible modes for port "data_out".
+#    Time: 0 ps  Iteration: 0  Instance: /modulation_top/reciever_inst File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/modulation_top_simmer.vhd Line: 43
+# FATAL ERROR while loading design
+# Error loading design
+# End time: 20:44:56 on May 29,2021, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 10
+# Compile of modulation_top_simmer.vhd was successful.
+# Compile of reciever.vhd was successful.
+# Compile of sender.vhd was successful.
+# Compile of test_controller_tb.vhd was successful.
+# 4 compiles, 0 failed with no errors.
+vsim -gui work.modulation_top work.reciever work.sender work.test_controller_tb
+# vsim -gui work.modulation_top work.reciever work.sender work.test_controller_tb 
+# Start time: 20:45:38 on May 29,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.modulation_top(loopback_arch)
+# Loading work.reciever(loopback_arch)
+# Loading work.sender(loopback_arch)
+# Loading work.test_controller_tb(behavior)
+# ** Fatal: (vsim-3808) Incompatible modes for port "data_out".
+#    Time: 0 ps  Iteration: 0  Instance: /modulation_top/reciever_inst File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/modulation_top_simmer.vhd Line: 43
+# FATAL ERROR while loading design
+# Error loading design
+# End time: 20:45:39 on May 29,2021, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 2
+# Compile of modulation_top_simmer.vhd failed with 1 errors.
+# Compile of modulation_top_simmer.vhd was successful.
+# Compile of reciever.vhd was successful.
+# Compile of sender.vhd was successful.
+# Compile of test_controller_tb.vhd was successful.
+# 4 compiles, 0 failed with no errors.
+vsim -gui work.modulation_top work.reciever work.sender work.test_controller_tb
+# vsim -gui work.modulation_top work.reciever work.sender work.test_controller_tb 
+# Start time: 20:47:01 on May 29,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.modulation_top(loopback_arch)
+# Loading work.reciever(loopback_arch)
+# Loading work.sender(loopback_arch)
+# Loading work.test_controller_tb(behavior)
+# ** Fatal: (vsim-3808) Incompatible modes for port "data_out".
+#    Time: 0 ps  Iteration: 0  Instance: /test_controller_tb/uut File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/test_controller_tb.vhd Line: 31
+# FATAL ERROR while loading design
+# Error loading design
+# End time: 20:47:01 on May 29,2021, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 3
+# Compile of modulation_top_simmer.vhd was successful.
+# Compile of reciever.vhd was successful.
+# Compile of sender.vhd was successful.
+# Compile of test_controller_tb.vhd was successful.
+# 4 compiles, 0 failed with no errors.
+vsim -gui work.modulation_top work.reciever work.sender work.test_controller_tb
+# vsim -gui work.modulation_top work.reciever work.sender work.test_controller_tb 
+# Start time: 20:48:11 on May 29,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.modulation_top(loopback_arch)
+# Loading work.reciever(loopback_arch)
+# Loading work.sender(loopback_arch)
+# Loading work.test_controller_tb(behavior)
+add wave -position insertpoint sim:/test_controller_tb/uut/reciever_inst/*
+add wave -position insertpoint sim:/test_controller_tb/uut/sender_inst/*
+# Load canceled
+run
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Compile of test_controller_tb.vhd was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.test_controller_tb(behavior)
+run
+add wave -position insertpoint sim:/modulation_top/reciever_inst/*
+add wave -position insertpoint sim:/modulation_top/sender_inst/*
+run
+run
+run
+restart -f
+run
+add wave -position insertpoint sim:/test_controller_tb/uut/reciever_inst/*
+add wave -position insertpoint sim:/test_controller_tb/uut/sender_inst/*
+run
+# Break key hit
+run
+restart -f
+run
+add wave -position insertpoint sim:/modulation_top/*
+run
+add wave -position insertpoint sim:/test_controller_tb/*
+add wave -position insertpoint sim:/test_controller_tb/*
+restart -f
+run
+# Compile of modulation_top_simmer.vhd was successful.
+# Compile of reciever.vhd was successful.
+# Compile of sender.vhd was successful.
+# Compile of test_controller_tb.vhd was successful.
+# 4 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.modulation_top(loopback_arch)
+# Loading work.reciever(loopback_arch)
+# Loading work.sender(loopback_arch)
+# Loading work.test_controller_tb(behavior)
+run
+run -continue
+run
+# Break key hit
+run
+restart
+run
+# Compile of test_controller_tb.vhd was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.test_controller_tb(behavior)
+run
+# Compile of modulation_top_simmer.vhd was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.modulation_top(loopback_arch)
+run
+run
+add wave -position insertpoint sim:/test_controller_tb/uut/reciever_inst/*
+vsim -gui work.modulation_top work.reciever work.sender work.test_controller_tb
+# End time: 21:00:31 on May 29,2021, Elapsed time: 0:12:20
+# Errors: 0, Warnings: 1
+# vsim -gui work.modulation_top work.reciever work.sender work.test_controller_tb 
+# Start time: 21:00:31 on May 29,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.modulation_top(loopback_arch)
+# Loading work.reciever(loopback_arch)
+# Loading work.sender(loopback_arch)
+# Loading work.test_controller_tb(behavior)
+add wave -position insertpoint sim:/test_controller_tb/*
+run
+vsim -gui work.modulation_top work.reciever work.sender work.test_controller_tb
+# End time: 21:00:58 on May 29,2021, Elapsed time: 0:00:27
+# Errors: 0, Warnings: 1
+# vsim -gui work.modulation_top work.reciever work.sender work.test_controller_tb 
+# Start time: 21:00:58 on May 29,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.modulation_top(loopback_arch)
+# Loading work.reciever(loopback_arch)
+# Loading work.sender(loopback_arch)
+# Loading work.test_controller_tb(behavior)
+run
+add wave -position insertpoint sim:/test_controller_tb/*
+run
+restart
+run
+add wave -position insertpoint sim:/reciever/*
+add wave -position insertpoint sim:/test_controller_tb/uut/reciever_inst/*
+add wave -position insertpoint sim:/test_controller_tb/uut/sender_inst/*
+# Compile of modulation_top_simmer.vhd was successful.
+# Compile of reciever.vhd was successful.
+# Compile of sender.vhd was successful.
+# Compile of test_controller_tb.vhd was successful.
+# 4 compiles, 0 failed with no errors.
+vsim -gui work.modulation_top work.reciever work.sender work.test_controller_tb
+# End time: 21:03:19 on May 29,2021, Elapsed time: 0:02:21
+# Errors: 0, Warnings: 2
+# vsim -gui work.modulation_top work.reciever work.sender work.test_controller_tb 
+# Start time: 21:03:19 on May 29,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.modulation_top(loopback_arch)
+# Loading work.reciever(loopback_arch)
+# Loading work.sender(loopback_arch)
+# Loading work.test_controller_tb(behavior)
+add wave -position insertpoint sim:/test_controller_tb/*
+run
+add wave -position insertpoint sim:/test_controller_tb/uut/sender_inst/*
+add wave -position insertpoint sim:/test_controller_tb/uut/reciever_inst/*
+# Compile of modulation_top_simmer.vhd was successful.
+# Compile of reciever.vhd was successful.
+# Compile of sender.vhd was successful.
+# Compile of test_controller_tb.vhd was successful.
+# 4 compiles, 0 failed with no errors.
+vsim -gui work.modulation_top work.reciever work.sender work.test_controller_tb
+# End time: 21:05:21 on May 29,2021, Elapsed time: 0:02:02
+# Errors: 0, Warnings: 2
+# vsim -gui work.modulation_top work.reciever work.sender work.test_controller_tb 
+# Start time: 21:05:21 on May 29,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.modulation_top(loopback_arch)
+# Loading work.reciever(loopback_arch)
+# Loading work.sender(loopback_arch)
+# Loading work.test_controller_tb(behavior)
+add wave -position insertpoint sim:/test_controller_tb/uut/sender_inst/*
+run
+add wave -position insertpoint sim:/test_controller_tb/*
+add wave -position insertpoint sim:/test_controller_tb/*
+restart
+run
+add wave -position insertpoint sim:/test_controller_tb/uut/reciever_inst/*
+add wave -position insertpoint sim:/test_controller_tb/uut/sender_inst/*
+restart
+run
+# Compile of sender.vhd was successful.
+vsim -gui work.modulation_top work.reciever work.sender work.test_controller_tb
+# End time: 21:10:06 on May 29,2021, Elapsed time: 0:04:45
+# Errors: 0, Warnings: 2
+# vsim -gui work.modulation_top work.reciever work.sender work.test_controller_tb 
+# Start time: 21:10:06 on May 29,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.modulation_top(loopback_arch)
+# Loading work.reciever(loopback_arch)
+# Loading work.sender(loopback_arch)
+# Loading work.test_controller_tb(behavior)
+add wave -position insertpoint sim:/test_controller_tb/uut/reciever_inst/*
+add wave -position insertpoint sim:/test_controller_tb/uut/sender_inst/*
+add wave -position insertpoint sim:/test_controller_tb/*
+run
+# Compile of sender.vhd was successful.
+vsim -gui work.modulation_top work.reciever work.sender work.test_controller_tb
+# End time: 21:13:08 on May 29,2021, Elapsed time: 0:03:02
+# Errors: 0, Warnings: 2
+# vsim -gui work.modulation_top work.reciever work.sender work.test_controller_tb 
+# Start time: 21:13:08 on May 29,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.modulation_top(loopback_arch)
+# Loading work.reciever(loopback_arch)
+# Loading work.sender(loopback_arch)
+# Loading work.test_controller_tb(behavior)
+add wave -position insertpoint sim:/test_controller_tb/uut/reciever_inst/*
+add wave -position insertpoint sim:/test_controller_tb/uut/sender_inst/*
+run
+# Compile of sender.vhd was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.sender(loopback_arch)
+run
+add wave -position insertpoint sim:/test_controller_tb/*
+# Compile of reciever.vhd was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.reciever(loopback_arch)
+run
+# Compile of test_controller_tb.vhd was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.test_controller_tb(behavior)
+run
+# Compile of reciever.vhd was successful.
+# Compile of sender.vhd failed with 1 errors.
+# 2 compiles, 1 failed with 1 error.
+# Compile of reciever.vhd was successful.
+# Compile of sender.vhd was successful.
+# 2 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.reciever(loopback_arch)
+# Loading work.sender(loopback_arch)
+run
+add wave -position insertpoint sim:/test_controller_tb/uut/sender_inst/*
+add wave -position insertpoint sim:/test_controller_tb/uut/reciever_inst/*
+# Compile of reciever.vhd was successful.
+# Compile of sender.vhd was successful.
+# 2 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.reciever(loopback_arch)
+# Loading work.sender(loopback_arch)
+run
+add wave -position insertpoint sim:/test_controller_tb/uut/reciever_inst/*
+# Compile of test_controller_tb.vhd was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.test_controller_tb(behavior)
+run
+# Compile of test_controller_tb.vhd was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.test_controller_tb(behavior)
+run
+restart
+run
+# Compile of test_controller_tb.vhd was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.test_controller_tb(behavior)
+run
+# Compile of test_controller_tb.vhd was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.test_controller_tb(behavior)
+run
+# Compile of test_controller_tb.vhd was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.test_controller_tb(behavior)
+run
+# End time: 21:49:00 on May 29,2021, Elapsed time: 0:35:52
+# Errors: 0, Warnings: 1

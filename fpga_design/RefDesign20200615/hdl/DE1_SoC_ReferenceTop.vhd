@@ -79,10 +79,10 @@ begin
 		-- GPIO Interface to DA AD board
 		GPIO_0					=> GPIO_0,
 		GPIO_1					=> GPIO_1,
-		SW => sw,
+		SW => SW,
       LEDR => LEDR
 	);
-	
+	CLOCK_1 <= CLOCK_50;
 
 	
 end;
