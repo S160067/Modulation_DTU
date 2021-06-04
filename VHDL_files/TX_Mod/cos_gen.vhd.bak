@@ -1,0 +1,48 @@
+-- Quartus Prime VHDL Template
+-- Basic Shift Register
+
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+
+ENTITY cos_gen IS
+	GENERIC (
+		data_width : NATURAL := 14;
+		pulse_width : NATURAL := 17;
+		phase_width : NATURAL := 5
+	);
+
+	PORT (
+		phase_i : IN std_logic_vector(phase_width - 1 DOWNTO 0);
+		cos_out : OUT std_logic_vector(data_width - 1 DOWNTO 0)
+	);
+
+END ENTITY;
+
+ARCHITECTURE rtl OF cos_gen IS
+
+BEGIN
+process(phase_i)
+begin
+	CASE phase_i IS
+		WHEN x"00" => cos_out <= x"4000";
+		WHEN x"01" => cos_out <= x"3B21";
+		WHEN x"02" => cos_out <= x"2D41";
+		WHEN x"03" => cos_out <= x"187E";
+		WHEN x"04" => cos_out <= x"0000";
+		WHEN x"05" => cos_out <= x"E782";
+		WHEN x"06" => cos_out <= x"D2BF";
+		WHEN x"07" => cos_out <= x"C4DF";
+		WHEN x"08" => cos_out <= x"C000";
+		WHEN x"09" => cos_out <= x"C4DF";
+		WHEN x"0A" => cos_out <= x"D2BF";
+		WHEN x"0B" => cos_out <= x"E782";
+		WHEN x"0C" => cos_out <= x"0000";
+		WHEN x"0D" => cos_out <= x"187E";
+		WHEN x"0E" => cos_out <= x"2D41";
+		WHEN x"0F" => cos_out <= x"3B21";
+		WHEN x"10" => cos_out <= x"4000";
+		WHEN OTHERS => cos_out <= x"FFFF";
+	END CASE;
+end process;
+
+END rtl;

@@ -1,0 +1,25 @@
+-- Quartus Prime VHDL Template
+-- Basic Shift Register
+
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+
+ENTITY sin_gen IS
+	GENERIC (
+		data_width : NATURAL := 14
+		pulse_width : NATURAL := 17
+		phase_width : NATURAL := pulse_width >> 3
+	);
+
+	PORT (
+		phase_i : IN std_logic(phase_width - 1 DOWNTO 0);
+		sin_o : OUT std_logic_vector(data_width - 1 DOWNTO 0)
+	);
+
+END ENTITY;
+
+ARCHITECTURE rtl OF TX_modulation_top IS
+
+BEGIN
+
+END rtl;

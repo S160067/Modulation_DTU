@@ -44,6 +44,7 @@ omegac=pi/4/Ts;
 t=0:Ts:(length(f)-1)*Ts; %time scale
 v=f.*(cos(omegac*t)*sqrt(2))+g.*(sin(omegac*t)*sqrt(2)); %to be sent to DAC
 errate = [];
+
 for i= sigmasq %iterate over different variances of the noise
     vnoi = v + sqrt(i)*randn(1, length(v)); %adding noise
     frnoi = vnoi.*(cos(omegac*t)*sqrt(2));
@@ -56,13 +57,10 @@ for i= sigmasq %iterate over different variances of the noise
     for k = 1:length(arnoi) % demapping
         if ((angle(arnoi(k)) >= -pi/4) & (angle(arnoi(k)) <= pi/4))
             arnoi(k) = 1; 
-
         elseif ((angle(arnoi(k)) > pi/4) & (angle(arnoi(k)) < 3*pi/4))
             arnoi(k) = 1j;
-
         elseif ((angle(arnoi(k)) < -pi/4) & (angle(arnoi(k)) > -3*pi/4))
             arnoi(k) = -1j;
-
         elseif ((angle(arnoi(k)) >= 3*pi/4) | (angle(arnoi(k)) <= -3*pi/4))
             arnoi(k) = -1;
         end 

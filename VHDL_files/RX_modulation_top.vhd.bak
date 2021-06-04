@@ -1,0 +1,39 @@
+-- Quartus Prime VHDL Template
+-- Basic Shift Register
+
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+
+ENTITY TX_modulation_top IS
+	GENERIC (
+		DAC_data_width : NATURAL := 14
+		pulse_width : NATURAL := 17
+		phase_width : NATURAL := pulse_width >> 3
+	);
+
+	PORT (
+		data_o : IN std_logic_vector(1 DOWNTO 0);
+		clk : IN std_logic;
+		reset  : IN
+		ctrl_o : out std_logic_vector(15 downto 0);
+		re_sample_i : IN std_logic_vector(data_width - 1 DOWNTO 0);
+		im_sample_i : IN std_logic_vector(data_width - 1 DOWNTO 0)
+	);
+
+END ENTITY;
+
+ARCHITECTURE rtl OF RX_modulation_top IS
+component sin_gen is
+	port(phase_i : in std_logic;
+	     sin_o : OUT std_logic_vector(DAC_data_width - 1 DOWNTO 0); 
+end component;
+component cos_gen is
+	port(phase_i : in std_logic;
+	     sin_o : OUT std_logic_vector(DAC_data_width - 1 DOWNTO 0);
+end component;
+
+
+BEGIN
+
+
+END rtl;

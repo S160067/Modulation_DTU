@@ -1,0 +1,37 @@
+|TX_modulation_top
+data_i[0] => ~NO_FANOUT~
+data_i[1] => ~NO_FANOUT~
+clk_i => ~NO_FANOUT~
+reset_i => ~NO_FANOUT~
+ctrl_o[0] << <GND>
+ctrl_o[1] << <GND>
+ctrl_o[2] << <GND>
+ctrl_o[3] << <GND>
+ctrl_o[4] << <GND>
+ctrl_o[5] << <GND>
+ctrl_o[6] << <GND>
+ctrl_o[7] << <GND>
+ctrl_o[8] << <GND>
+ctrl_o[9] << <GND>
+ctrl_o[10] << <GND>
+ctrl_o[11] << <GND>
+ctrl_o[12] << <GND>
+ctrl_o[13] << <GND>
+ctrl_o[14] << <GND>
+ctrl_o[15] << <GND>
+sample[0] << comb.DB_MAX_OUTPUT_PORT_TYPE
+sample[1] << sample[1].DB_MAX_OUTPUT_PORT_TYPE
+sample[2] << sample[2].DB_MAX_OUTPUT_PORT_TYPE
+sample[3] << sample[3].DB_MAX_OUTPUT_PORT_TYPE
+sample[4] << sample[4].DB_MAX_OUTPUT_PORT_TYPE
+sample[5] << sample[5].DB_MAX_OUTPUT_PORT_TYPE
+sample[6] << sample[6].DB_MAX_OUTPUT_PORT_TYPE
+sample[7] << sample[7].DB_MAX_OUTPUT_PORT_TYPE
+sample[8] << sample[8].DB_MAX_OUTPUT_PORT_TYPE
+sample[9] << sample[9].DB_MAX_OUTPUT_PORT_TYPE
+sample[10] << sample[10].DB_MAX_OUTPUT_PORT_TYPE
+sample[11] << sample[11].DB_MAX_OUTPUT_PORT_TYPE
+sample[12] << sample[12].DB_MAX_OUTPUT_PORT_TYPE
+sample[13] << sample[13].DB_MAX_OUTPUT_PORT_TYPE
+
+

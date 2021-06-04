@@ -63,7 +63,7 @@ architecture rtl of mod_convolution is
 	signal s_ones				: std_logic_vector(G_SHIFTREG_SIZE-1 downto 0) := (others=>'1');
 	signal s_mult				: fbarray := (others=>(others=>'0'));
 	signal s_pulse 			: fbarray := (others=>(others=>'0'));
-	signal s_sum				: signed(G_MANTISSA_SIZE+4 downto 0)
+	signal s_sum				: signed(G_MANTISSA_SIZE+4 downto 0);
 	
 	begin
 	
@@ -142,8 +142,7 @@ architecture rtl of mod_convolution is
 			o_result := (others => '0');
 			o_valid := '0';
 			end if;
-				
-		end if;
+
 			
 	end process;
 	
