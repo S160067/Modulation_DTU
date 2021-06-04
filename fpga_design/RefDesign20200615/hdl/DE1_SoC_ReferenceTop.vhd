@@ -72,14 +72,14 @@ begin
 
 	fpga_top_inst : component fpga_top
 	port map (
-		clk						=> CLOCK_1,
+		clk						=> CLOCK_50,
 		reset						=> KEY_N(0),
 	
 		
 		-- GPIO Interface to DA AD board
 		GPIO_0					=> GPIO_0,
 		GPIO_1					=> GPIO_1,
-		SW => sw,
+		SW => SW,
       LEDR => LEDR
 	);
 	

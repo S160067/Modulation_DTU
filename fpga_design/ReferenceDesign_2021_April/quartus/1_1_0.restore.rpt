@@ -1,0 +1,202 @@
+Restore Archived Project report for 1_1_0
+Mon Jun 15 22:13:33 2020
+Quartus Prime Version 18.1.1 Build 646 04/11/2019 SJ Standard Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Restore Archived Project Summary
+  3. Restore Archived Project Messages
+  4. Files Restored
+  5. Files Not Restored
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2019  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-------------------------------------------------------------------------+
+; Restore Archived Project Summary                                        ;
++---------------------------------+---------------------------------------+
+; Restore Archived Project Status ; Successful - Mon Jun 15 22:13:33 2020 ;
+; Revision Name                   ; 1_1_0                                 ;
+; Top-level Entity Name           ; DE1_SoC_ReferenceTop                  ;
+; Family                          ; Cyclone V                             ;
++---------------------------------+---------------------------------------+
+
+
++-----------------------------------+
+; Restore Archived Project Messages ;
++-----------------------------------+
+Info: Successfully restored 'C:/Users/hwess/Danmarks Tekniske Universitet/342x9 Project Work NetIT Synthesis for Telecom - ReferenceDesign/quartus/DE1-SOC-342x9.qar' into the 'C:\\VHDL\\342x9\\RefDesign20200615/' directory
+Info: Generated report '1_1_0.restore.rpt'
+Info (23030): Evaluation of Tcl script c:/intelfpga/18.1/quartus/common/tcl/apps/qpm/qar.tcl was successful
+Info: Quartus Prime Shell was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4874 megabytes
+    Info: Processing ended: Mon Jun 15 22:13:36 2020
+    Info: Elapsed time: 00:00:24
+    Info: Total CPU time (on all processors): 00:00:22
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Files Restored                                                                                                ;
++---------------------------------------------------------------------------------------------------------------+
+; File Name                                                                                                     ;
++---------------------------------------------------------------------------------------------------------------+
+; qar_info.json                                                                                                 ;
+; hdl/DE1_SoC_ReferenceTop.vhd                                                                                  ;
+; hdl/fifoconverter.vhd                                                                                         ;
+; hdl/fpga_top.vhd                                                                                              ;
+; hdl/framing_top.vhd                                                                                           ;
+; hdl/modulation_top.vhd                                                                                        ;
+; quartus/1_0_0.qsf                                                                                             ;
+; quartus/1_1_0.out.sdc                                                                                         ;
+; quartus/1_1_0.qsf                                                                                             ;
+; quartus/DE1-SOC-342x9.qpf                                                                                     ;
+; quartus/DE1-SOC-342x9.qsf                                                                                     ;
+; quartus/DE1-SOC-342x9_assignment_defaults.qdf                                                                 ;
+; quartus/assignment_defaults.qdf                                                                               ;
+; quartus/db/refstp_auto_stripped.stp                                                                           ;
+; quartus/fifo8_8.cmp                                                                                           ;
+; quartus/fifo8_8.qip                                                                                           ;
+; quartus/fifo8_8.vhd                                                                                           ;
+; quartus/fifo8_8_inst.vhd                                                                                      ;
+; quartus/pin_assignment_DE1_SoC.tcl                                                                            ;
+; quartus/refstp.stp                                                                                            ;
+; quartus/soc_system.qsys                                                                                       ;
+; quartus/soc_system.sopcinfo                                                                                   ;
+; quartus/soc_system/soc_system.cmp                                                                             ;
+; quartus/soc_system/synthesis/soc_system.debuginfo                                                             ;
+; quartus/soc_system/synthesis/soc_system.qip                                                                   ;
+; quartus/soc_system/synthesis/soc_system.regmap                                                                ;
+; quartus/soc_system/synthesis/soc_system.vhd                                                                   ;
+; quartus/soc_system/synthesis/soc_system_hps_0_hps.svd                                                         ;
+; quartus/soc_system/synthesis/soc_system_rst_controller.vhd                                                    ;
+; quartus/soc_system/synthesis/soc_system_rst_controller_002.vhd                                                ;
+; quartus/soc_system/synthesis/submodules/altdq_dqs2_acv_connect_to_hard_phy_cyclonev.sv                        ;
+; quartus/soc_system/synthesis/submodules/altera_avalon_sc_fifo.v                                               ;
+; quartus/soc_system/synthesis/submodules/altera_avalon_st_pipeline_base.v                                      ;
+; quartus/soc_system/synthesis/submodules/altera_avalon_st_pipeline_stage.sv                                    ;
+; quartus/soc_system/synthesis/submodules/altera_default_burst_converter.sv                                     ;
+; quartus/soc_system/synthesis/submodules/altera_incr_burst_converter.sv                                        ;
+; quartus/soc_system/synthesis/submodules/altera_mem_if_dll_cyclonev.sv                                         ;
+; quartus/soc_system/synthesis/submodules/altera_mem_if_hard_memory_controller_top_cyclonev.sv                  ;
+; quartus/soc_system/synthesis/submodules/altera_mem_if_hhp_qseq_synth_top.v                                    ;
+; quartus/soc_system/synthesis/submodules/altera_mem_if_oct_cyclonev.sv                                         ;
+; quartus/soc_system/synthesis/submodules/altera_merlin_address_alignment.sv                                    ;
+; quartus/soc_system/synthesis/submodules/altera_merlin_arbitrator.sv                                           ;
+; quartus/soc_system/synthesis/submodules/altera_merlin_axi_master_ni.sv                                        ;
+; quartus/soc_system/synthesis/submodules/altera_merlin_burst_adapter.sv                                        ;
+; quartus/soc_system/synthesis/submodules/altera_merlin_burst_adapter_13_1.sv                                   ;
+; quartus/soc_system/synthesis/submodules/altera_merlin_burst_adapter_new.sv                                    ;
+; quartus/soc_system/synthesis/submodules/altera_merlin_burst_adapter_uncmpr.sv                                 ;
+; quartus/soc_system/synthesis/submodules/altera_merlin_burst_uncompressor.sv                                   ;
+; quartus/soc_system/synthesis/submodules/altera_merlin_reorder_memory.sv                                       ;
+; quartus/soc_system/synthesis/submodules/altera_merlin_slave_agent.sv                                          ;
+; quartus/soc_system/synthesis/submodules/altera_merlin_slave_translator.sv                                     ;
+; quartus/soc_system/synthesis/submodules/altera_merlin_traffic_limiter.sv                                      ;
+; quartus/soc_system/synthesis/submodules/altera_merlin_width_adapter.sv                                        ;
+; quartus/soc_system/synthesis/submodules/altera_reset_controller.sdc                                           ;
+; quartus/soc_system/synthesis/submodules/altera_reset_controller.v                                             ;
+; quartus/soc_system/synthesis/submodules/altera_reset_synchronizer.v                                           ;
+; quartus/soc_system/synthesis/submodules/altera_wrap_burst_converter.sv                                        ;
+; quartus/soc_system/synthesis/submodules/hps.pre.xml                                                           ;
+; quartus/soc_system/synthesis/submodules/hps_AC_ROM.hex                                                        ;
+; quartus/soc_system/synthesis/submodules/hps_inst_ROM.hex                                                      ;
+; quartus/soc_system/synthesis/submodules/hps_sdram.v                                                           ;
+; quartus/soc_system/synthesis/submodules/hps_sdram_p0.ppf                                                      ;
+; quartus/soc_system/synthesis/submodules/hps_sdram_p0.sdc                                                      ;
+; quartus/soc_system/synthesis/submodules/hps_sdram_p0.sv                                                       ;
+; quartus/soc_system/synthesis/submodules/hps_sdram_p0_acv_hard_addr_cmd_pads.v                                 ;
+; quartus/soc_system/synthesis/submodules/hps_sdram_p0_acv_hard_io_pads.v                                       ;
+; quartus/soc_system/synthesis/submodules/hps_sdram_p0_acv_hard_memphy.v                                        ;
+; quartus/soc_system/synthesis/submodules/hps_sdram_p0_acv_ldc.v                                                ;
+; quartus/soc_system/synthesis/submodules/hps_sdram_p0_altdqdqs.v                                               ;
+; quartus/soc_system/synthesis/submodules/hps_sdram_p0_clock_pair_generator.v                                   ;
+; quartus/soc_system/synthesis/submodules/hps_sdram_p0_generic_ddio.v                                           ;
+; quartus/soc_system/synthesis/submodules/hps_sdram_p0_iss_probe.v                                              ;
+; quartus/soc_system/synthesis/submodules/hps_sdram_p0_parameters.tcl                                           ;
+; quartus/soc_system/synthesis/submodules/hps_sdram_p0_phy_csr.sv                                               ;
+; quartus/soc_system/synthesis/submodules/hps_sdram_p0_pin_assignments.tcl                                      ;
+; quartus/soc_system/synthesis/submodules/hps_sdram_p0_pin_map.tcl                                              ;
+; quartus/soc_system/synthesis/submodules/hps_sdram_p0_report_timing.tcl                                        ;
+; quartus/soc_system/synthesis/submodules/hps_sdram_p0_report_timing_core.tcl                                   ;
+; quartus/soc_system/synthesis/submodules/hps_sdram_p0_reset.v                                                  ;
+; quartus/soc_system/synthesis/submodules/hps_sdram_p0_reset_sync.v                                             ;
+; quartus/soc_system/synthesis/submodules/hps_sdram_p0_timing.tcl                                               ;
+; quartus/soc_system/synthesis/submodules/hps_sdram_pll.sv                                                      ;
+; quartus/soc_system/synthesis/submodules/sequencer/alt_types.pre.h                                             ;
+; quartus/soc_system/synthesis/submodules/sequencer/emif.pre.xml                                                ;
+; quartus/soc_system/synthesis/submodules/sequencer/sdram_io.pre.h                                              ;
+; quartus/soc_system/synthesis/submodules/sequencer/sequencer.pre.c                                             ;
+; quartus/soc_system/synthesis/submodules/sequencer/sequencer.pre.h                                             ;
+; quartus/soc_system/synthesis/submodules/sequencer/sequencer_auto.pre.h                                        ;
+; quartus/soc_system/synthesis/submodules/sequencer/sequencer_auto_ac_init.pre.c                                ;
+; quartus/soc_system/synthesis/submodules/sequencer/sequencer_auto_inst_init.pre.c                              ;
+; quartus/soc_system/synthesis/submodules/sequencer/sequencer_defines.pre.h                                     ;
+; quartus/soc_system/synthesis/submodules/sequencer/system.pre.h                                                ;
+; quartus/soc_system/synthesis/submodules/sequencer/tclrpt.pre.c                                                ;
+; quartus/soc_system/synthesis/submodules/sequencer/tclrpt.pre.h                                                ;
+; quartus/soc_system/synthesis/submodules/soc_system_fifo_control_rx.sdc                                        ;
+; quartus/soc_system/synthesis/submodules/soc_system_fifo_control_rx.v                                          ;
+; quartus/soc_system/synthesis/submodules/soc_system_fifo_control_tx.sdc                                        ;
+; quartus/soc_system/synthesis/submodules/soc_system_fifo_control_tx.v                                          ;
+; quartus/soc_system/synthesis/submodules/soc_system_fifo_rx_video.sdc                                          ;
+; quartus/soc_system/synthesis/submodules/soc_system_fifo_rx_video.v                                            ;
+; quartus/soc_system/synthesis/submodules/soc_system_hps_0.v                                                    ;
+; quartus/soc_system/synthesis/submodules/soc_system_hps_0_fpga_interfaces.sv                                   ;
+; quartus/soc_system/synthesis/submodules/soc_system_hps_0_hps_io.v                                             ;
+; quartus/soc_system/synthesis/submodules/soc_system_hps_0_hps_io_border.sdc                                    ;
+; quartus/soc_system/synthesis/submodules/soc_system_hps_0_hps_io_border.sv                                     ;
+; quartus/soc_system/synthesis/submodules/soc_system_hps_fpga_leds.v                                            ;
+; quartus/soc_system/synthesis/submodules/soc_system_hps_fpga_switches.v                                        ;
+; quartus/soc_system/synthesis/submodules/soc_system_mm_interconnect_0.v                                        ;
+; quartus/soc_system/synthesis/submodules/soc_system_mm_interconnect_0_avalon_st_adapter.v                      ;
+; quartus/soc_system/synthesis/submodules/soc_system_mm_interconnect_0_avalon_st_adapter_error_adapter_0.sv     ;
+; quartus/soc_system/synthesis/submodules/soc_system_mm_interconnect_0_cmd_demux.sv                             ;
+; quartus/soc_system/synthesis/submodules/soc_system_mm_interconnect_0_cmd_mux.sv                               ;
+; quartus/soc_system/synthesis/submodules/soc_system_mm_interconnect_0_router.sv                                ;
+; quartus/soc_system/synthesis/submodules/soc_system_mm_interconnect_0_router_002.sv                            ;
+; quartus/soc_system/synthesis/submodules/soc_system_mm_interconnect_0_rsp_demux.sv                             ;
+; quartus/soc_system/synthesis/submodules/soc_system_mm_interconnect_0_rsp_mux.sv                               ;
+; quartus/soc_system/synthesis/submodules/soc_system_mm_interconnect_1.v                                        ;
+; quartus/soc_system/synthesis/submodules/soc_system_mm_interconnect_1_avalon_st_adapter_001.v                  ;
+; quartus/soc_system/synthesis/submodules/soc_system_mm_interconnect_1_avalon_st_adapter_001_error_adapter_0.sv ;
+; quartus/soc_system/synthesis/submodules/soc_system_mm_interconnect_1_cmd_demux.sv                             ;
+; quartus/soc_system/synthesis/submodules/soc_system_mm_interconnect_1_cmd_mux.sv                               ;
+; quartus/soc_system/synthesis/submodules/soc_system_mm_interconnect_1_router.sv                                ;
+; quartus/soc_system/synthesis/submodules/soc_system_mm_interconnect_1_router_002.sv                            ;
+; quartus/soc_system/synthesis/submodules/soc_system_mm_interconnect_1_router_003.sv                            ;
+; quartus/soc_system/synthesis/submodules/soc_system_mm_interconnect_1_rsp_demux.sv                             ;
+; quartus/soc_system/synthesis/submodules/soc_system_mm_interconnect_1_rsp_mux.sv                               ;
+; quartus/soc_system/synthesis/submodules/soc_system_pll_0.qip                                                  ;
+; quartus/soc_system/synthesis/submodules/soc_system_pll_0.v                                                    ;
++---------------------------------------------------------------------------------------------------------------+
+
+
++--------------------+
+; Files Not Restored ;
++--------------------+
+; File Name          ;
++--------------------+
+
+

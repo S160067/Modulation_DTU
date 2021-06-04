@@ -1,5 +1,5 @@
 Analysis & Synthesis report for 1_1_0
-Wed Apr 14 13:27:34 2021
+Wed Apr 28 13:56:42 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -51,7 +51,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Apr 14 13:27:34 2021       ;
+; Analysis & Synthesis Status     ; Successful - Wed Apr 28 13:56:42 2021       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; 1_1_0                                       ;
 ; Top-level Entity Name           ; DE1_SoC_ReferenceTop                        ;
@@ -164,8 +164,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 12          ;
-; Maximum allowed            ; 12          ;
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
@@ -175,100 +175,100 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                                                                       ;
-+--------------------------------------------------------------------+-----------------+----------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------+-------------+
-; File Name with User-Entered Path                                   ; Used in Netlist ; File Type                                    ; File Name with Absolute Path                                                                                                                             ; Library     ;
-+--------------------------------------------------------------------+-----------------+----------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------+-------------+
-; ../hdl/DE1_SoC_ReferenceTop.vhd                                    ; yes             ; User VHDL File                               ; C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd                                               ;             ;
-; ../hdl/fpga_top.vhd                                                ; yes             ; User VHDL File                               ; C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/fpga_top.vhd                                                           ;             ;
-; ../hdl/modulation_top.vhd                                          ; yes             ; User VHDL File                               ; C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/modulation_top.vhd                                                     ;             ;
-; sld_signaltap.vhd                                                  ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_signaltap.vhd                                                                                 ;             ;
-; sld_signaltap_impl.vhd                                             ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_signaltap_impl.vhd                                                                            ;             ;
-; sld_ela_control.vhd                                                ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_ela_control.vhd                                                                               ;             ;
-; lpm_shiftreg.tdf                                                   ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_shiftreg.tdf                                                                                  ;             ;
-; lpm_constant.inc                                                   ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_constant.inc                                                                                  ;             ;
-; dffeea.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/dffeea.inc                                                                                        ;             ;
-; aglobal201.inc                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc                                                                                    ;             ;
-; sld_mbpmg.vhd                                                      ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_mbpmg.vhd                                                                                     ;             ;
-; sld_ela_trigger_flow_mgr.vhd                                       ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_ela_trigger_flow_mgr.vhd                                                                      ;             ;
-; sld_buffer_manager.vhd                                             ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_buffer_manager.vhd                                                                            ;             ;
-; altsyncram.tdf                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altsyncram.tdf                                                                                    ;             ;
-; stratix_ram_block.inc                                              ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/stratix_ram_block.inc                                                                             ;             ;
-; lpm_mux.inc                                                        ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_mux.inc                                                                                       ;             ;
-; lpm_decode.inc                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_decode.inc                                                                                    ;             ;
-; a_rdenreg.inc                                                      ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/a_rdenreg.inc                                                                                     ;             ;
-; altrom.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altrom.inc                                                                                        ;             ;
-; altram.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altram.inc                                                                                        ;             ;
-; altdpram.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altdpram.inc                                                                                      ;             ;
-; db/altsyncram_0c84.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/quartus/db/altsyncram_0c84.tdf                                             ;             ;
-; altdpram.tdf                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altdpram.tdf                                                                                      ;             ;
-; memmodes.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/others/maxplus2/memmodes.inc                                                                                    ;             ;
-; a_hdffe.inc                                                        ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/a_hdffe.inc                                                                                       ;             ;
-; alt_le_rden_reg.inc                                                ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/alt_le_rden_reg.inc                                                                               ;             ;
-; altsyncram.inc                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altsyncram.inc                                                                                    ;             ;
-; lpm_mux.tdf                                                        ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_mux.tdf                                                                                       ;             ;
-; muxlut.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/muxlut.inc                                                                                        ;             ;
-; bypassff.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/bypassff.inc                                                                                      ;             ;
-; altshift.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altshift.inc                                                                                      ;             ;
-; db/mux_elc.tdf                                                     ; yes             ; Auto-Generated Megafunction                  ; C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/quartus/db/mux_elc.tdf                                                     ;             ;
-; lpm_decode.tdf                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_decode.tdf                                                                                    ;             ;
-; declut.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/declut.inc                                                                                        ;             ;
-; lpm_compare.inc                                                    ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_compare.inc                                                                                   ;             ;
-; db/decode_vnf.tdf                                                  ; yes             ; Auto-Generated Megafunction                  ; C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/quartus/db/decode_vnf.tdf                                                  ;             ;
-; lpm_counter.tdf                                                    ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_counter.tdf                                                                                   ;             ;
-; lpm_add_sub.inc                                                    ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_add_sub.inc                                                                                   ;             ;
-; cmpconst.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/cmpconst.inc                                                                                      ;             ;
-; lpm_counter.inc                                                    ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_counter.inc                                                                                   ;             ;
-; alt_counter_stratix.inc                                            ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/alt_counter_stratix.inc                                                                           ;             ;
-; db/cntr_a9i.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/quartus/db/cntr_a9i.tdf                                                    ;             ;
-; db/cmpr_f9c.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/quartus/db/cmpr_f9c.tdf                                                    ;             ;
-; db/cntr_4vi.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/quartus/db/cntr_4vi.tdf                                                    ;             ;
-; db/cntr_09i.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/quartus/db/cntr_09i.tdf                                                    ;             ;
-; db/cmpr_c9c.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/quartus/db/cmpr_c9c.tdf                                                    ;             ;
-; db/cntr_kri.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/quartus/db/cntr_kri.tdf                                                    ;             ;
-; db/cmpr_99c.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/quartus/db/cmpr_99c.tdf                                                    ;             ;
-; sld_rom_sr.vhd                                                     ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_rom_sr.vhd                                                                                    ;             ;
-; sld_jtag_endpoint_adapter.vhd                                      ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter.vhd                                                                     ;             ;
-; sld_jtag_endpoint_adapter_impl.sv                                  ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter_impl.sv                                                                 ;             ;
-; sld_hub.vhd                                                        ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_hub.vhd                                                                                       ; altera_sld  ;
-; db/ip/sld78a6c0c4/alt_sld_fab.v                                    ; yes             ; Encrypted Auto-Found Verilog HDL File        ; C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/quartus/db/ip/sld78a6c0c4/alt_sld_fab.v                                    ; alt_sld_fab ;
-; db/ip/sld78a6c0c4/submodules/alt_sld_fab_alt_sld_fab.v             ; yes             ; Encrypted Auto-Found Verilog HDL File        ; C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/quartus/db/ip/sld78a6c0c4/submodules/alt_sld_fab_alt_sld_fab.v             ; alt_sld_fab ;
-; db/ip/sld78a6c0c4/submodules/alt_sld_fab_alt_sld_fab_ident.sv      ; yes             ; Auto-Found SystemVerilog HDL File            ; C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/quartus/db/ip/sld78a6c0c4/submodules/alt_sld_fab_alt_sld_fab_ident.sv      ; alt_sld_fab ;
-; db/ip/sld78a6c0c4/submodules/alt_sld_fab_alt_sld_fab_presplit.sv   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/quartus/db/ip/sld78a6c0c4/submodules/alt_sld_fab_alt_sld_fab_presplit.sv   ; alt_sld_fab ;
-; db/ip/sld78a6c0c4/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; yes             ; Encrypted Auto-Found VHDL File               ; C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/quartus/db/ip/sld78a6c0c4/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; alt_sld_fab ;
-; db/ip/sld78a6c0c4/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/quartus/db/ip/sld78a6c0c4/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; alt_sld_fab ;
-; sld_jtag_hub.vhd                                                   ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_jtag_hub.vhd                                                                                  ;             ;
-+--------------------------------------------------------------------+-----------------+----------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------+-------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                                                                   ;
++--------------------------------------------------------------------+-----------------+----------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------+-------------+
+; File Name with User-Entered Path                                   ; Used in Netlist ; File Type                                    ; File Name with Absolute Path                                                                                                                         ; Library     ;
++--------------------------------------------------------------------+-----------------+----------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------+-------------+
+; ../hdl/DE1_SoC_ReferenceTop.vhd                                    ; yes             ; User VHDL File                               ; /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd                                               ;             ;
+; ../hdl/fpga_top.vhd                                                ; yes             ; User VHDL File                               ; /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/fpga_top.vhd                                                           ;             ;
+; ../hdl/modulation_top.vhd                                          ; yes             ; User VHDL File                               ; /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/modulation_top.vhd                                                     ;             ;
+; sld_signaltap.vhd                                                  ; yes             ; Megafunction                                 ; /home/haraldbid/intelFPGA_lite/20.1/quartus/libraries/megafunctions/sld_signaltap.vhd                                                                ;             ;
+; sld_signaltap_impl.vhd                                             ; yes             ; Encrypted Megafunction                       ; /home/haraldbid/intelFPGA_lite/20.1/quartus/libraries/megafunctions/sld_signaltap_impl.vhd                                                           ;             ;
+; sld_ela_control.vhd                                                ; yes             ; Encrypted Megafunction                       ; /home/haraldbid/intelFPGA_lite/20.1/quartus/libraries/megafunctions/sld_ela_control.vhd                                                              ;             ;
+; lpm_shiftreg.tdf                                                   ; yes             ; Megafunction                                 ; /home/haraldbid/intelFPGA_lite/20.1/quartus/libraries/megafunctions/lpm_shiftreg.tdf                                                                 ;             ;
+; lpm_constant.inc                                                   ; yes             ; Megafunction                                 ; /home/haraldbid/intelFPGA_lite/20.1/quartus/libraries/megafunctions/lpm_constant.inc                                                                 ;             ;
+; dffeea.inc                                                         ; yes             ; Megafunction                                 ; /home/haraldbid/intelFPGA_lite/20.1/quartus/libraries/megafunctions/dffeea.inc                                                                       ;             ;
+; aglobal201.inc                                                     ; yes             ; Megafunction                                 ; /home/haraldbid/intelFPGA_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc                                                                   ;             ;
+; sld_mbpmg.vhd                                                      ; yes             ; Encrypted Megafunction                       ; /home/haraldbid/intelFPGA_lite/20.1/quartus/libraries/megafunctions/sld_mbpmg.vhd                                                                    ;             ;
+; sld_ela_trigger_flow_mgr.vhd                                       ; yes             ; Encrypted Megafunction                       ; /home/haraldbid/intelFPGA_lite/20.1/quartus/libraries/megafunctions/sld_ela_trigger_flow_mgr.vhd                                                     ;             ;
+; sld_buffer_manager.vhd                                             ; yes             ; Encrypted Megafunction                       ; /home/haraldbid/intelFPGA_lite/20.1/quartus/libraries/megafunctions/sld_buffer_manager.vhd                                                           ;             ;
+; altsyncram.tdf                                                     ; yes             ; Megafunction                                 ; /home/haraldbid/intelFPGA_lite/20.1/quartus/libraries/megafunctions/altsyncram.tdf                                                                   ;             ;
+; stratix_ram_block.inc                                              ; yes             ; Megafunction                                 ; /home/haraldbid/intelFPGA_lite/20.1/quartus/libraries/megafunctions/stratix_ram_block.inc                                                            ;             ;
+; lpm_mux.inc                                                        ; yes             ; Megafunction                                 ; /home/haraldbid/intelFPGA_lite/20.1/quartus/libraries/megafunctions/lpm_mux.inc                                                                      ;             ;
+; lpm_decode.inc                                                     ; yes             ; Megafunction                                 ; /home/haraldbid/intelFPGA_lite/20.1/quartus/libraries/megafunctions/lpm_decode.inc                                                                   ;             ;
+; a_rdenreg.inc                                                      ; yes             ; Megafunction                                 ; /home/haraldbid/intelFPGA_lite/20.1/quartus/libraries/megafunctions/a_rdenreg.inc                                                                    ;             ;
+; altrom.inc                                                         ; yes             ; Megafunction                                 ; /home/haraldbid/intelFPGA_lite/20.1/quartus/libraries/megafunctions/altrom.inc                                                                       ;             ;
+; altram.inc                                                         ; yes             ; Megafunction                                 ; /home/haraldbid/intelFPGA_lite/20.1/quartus/libraries/megafunctions/altram.inc                                                                       ;             ;
+; altdpram.inc                                                       ; yes             ; Megafunction                                 ; /home/haraldbid/intelFPGA_lite/20.1/quartus/libraries/megafunctions/altdpram.inc                                                                     ;             ;
+; db/altsyncram_0c84.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/quartus/db/altsyncram_0c84.tdf                                             ;             ;
+; altdpram.tdf                                                       ; yes             ; Megafunction                                 ; /home/haraldbid/intelFPGA_lite/20.1/quartus/libraries/megafunctions/altdpram.tdf                                                                     ;             ;
+; memmodes.inc                                                       ; yes             ; Megafunction                                 ; /home/haraldbid/intelFPGA_lite/20.1/quartus/libraries/others/maxplus2/memmodes.inc                                                                   ;             ;
+; a_hdffe.inc                                                        ; yes             ; Megafunction                                 ; /home/haraldbid/intelFPGA_lite/20.1/quartus/libraries/megafunctions/a_hdffe.inc                                                                      ;             ;
+; alt_le_rden_reg.inc                                                ; yes             ; Megafunction                                 ; /home/haraldbid/intelFPGA_lite/20.1/quartus/libraries/megafunctions/alt_le_rden_reg.inc                                                              ;             ;
+; altsyncram.inc                                                     ; yes             ; Megafunction                                 ; /home/haraldbid/intelFPGA_lite/20.1/quartus/libraries/megafunctions/altsyncram.inc                                                                   ;             ;
+; lpm_mux.tdf                                                        ; yes             ; Megafunction                                 ; /home/haraldbid/intelFPGA_lite/20.1/quartus/libraries/megafunctions/lpm_mux.tdf                                                                      ;             ;
+; muxlut.inc                                                         ; yes             ; Megafunction                                 ; /home/haraldbid/intelFPGA_lite/20.1/quartus/libraries/megafunctions/muxlut.inc                                                                       ;             ;
+; bypassff.inc                                                       ; yes             ; Megafunction                                 ; /home/haraldbid/intelFPGA_lite/20.1/quartus/libraries/megafunctions/bypassff.inc                                                                     ;             ;
+; altshift.inc                                                       ; yes             ; Megafunction                                 ; /home/haraldbid/intelFPGA_lite/20.1/quartus/libraries/megafunctions/altshift.inc                                                                     ;             ;
+; db/mux_elc.tdf                                                     ; yes             ; Auto-Generated Megafunction                  ; /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/quartus/db/mux_elc.tdf                                                     ;             ;
+; lpm_decode.tdf                                                     ; yes             ; Megafunction                                 ; /home/haraldbid/intelFPGA_lite/20.1/quartus/libraries/megafunctions/lpm_decode.tdf                                                                   ;             ;
+; declut.inc                                                         ; yes             ; Megafunction                                 ; /home/haraldbid/intelFPGA_lite/20.1/quartus/libraries/megafunctions/declut.inc                                                                       ;             ;
+; lpm_compare.inc                                                    ; yes             ; Megafunction                                 ; /home/haraldbid/intelFPGA_lite/20.1/quartus/libraries/megafunctions/lpm_compare.inc                                                                  ;             ;
+; db/decode_vnf.tdf                                                  ; yes             ; Auto-Generated Megafunction                  ; /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/quartus/db/decode_vnf.tdf                                                  ;             ;
+; lpm_counter.tdf                                                    ; yes             ; Megafunction                                 ; /home/haraldbid/intelFPGA_lite/20.1/quartus/libraries/megafunctions/lpm_counter.tdf                                                                  ;             ;
+; lpm_add_sub.inc                                                    ; yes             ; Megafunction                                 ; /home/haraldbid/intelFPGA_lite/20.1/quartus/libraries/megafunctions/lpm_add_sub.inc                                                                  ;             ;
+; cmpconst.inc                                                       ; yes             ; Megafunction                                 ; /home/haraldbid/intelFPGA_lite/20.1/quartus/libraries/megafunctions/cmpconst.inc                                                                     ;             ;
+; lpm_counter.inc                                                    ; yes             ; Megafunction                                 ; /home/haraldbid/intelFPGA_lite/20.1/quartus/libraries/megafunctions/lpm_counter.inc                                                                  ;             ;
+; alt_counter_stratix.inc                                            ; yes             ; Megafunction                                 ; /home/haraldbid/intelFPGA_lite/20.1/quartus/libraries/megafunctions/alt_counter_stratix.inc                                                          ;             ;
+; db/cntr_a9i.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/quartus/db/cntr_a9i.tdf                                                    ;             ;
+; db/cmpr_f9c.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/quartus/db/cmpr_f9c.tdf                                                    ;             ;
+; db/cntr_4vi.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/quartus/db/cntr_4vi.tdf                                                    ;             ;
+; db/cntr_09i.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/quartus/db/cntr_09i.tdf                                                    ;             ;
+; db/cmpr_c9c.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/quartus/db/cmpr_c9c.tdf                                                    ;             ;
+; db/cntr_kri.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/quartus/db/cntr_kri.tdf                                                    ;             ;
+; db/cmpr_99c.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/quartus/db/cmpr_99c.tdf                                                    ;             ;
+; sld_rom_sr.vhd                                                     ; yes             ; Encrypted Megafunction                       ; /home/haraldbid/intelFPGA_lite/20.1/quartus/libraries/megafunctions/sld_rom_sr.vhd                                                                   ;             ;
+; sld_jtag_endpoint_adapter.vhd                                      ; yes             ; Encrypted Megafunction                       ; /home/haraldbid/intelFPGA_lite/20.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter.vhd                                                    ;             ;
+; sld_jtag_endpoint_adapter_impl.sv                                  ; yes             ; Encrypted Megafunction                       ; /home/haraldbid/intelFPGA_lite/20.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter_impl.sv                                                ;             ;
+; sld_hub.vhd                                                        ; yes             ; Encrypted Megafunction                       ; /home/haraldbid/intelFPGA_lite/20.1/quartus/libraries/megafunctions/sld_hub.vhd                                                                      ; altera_sld  ;
+; db/ip/sld78a6c0c4/alt_sld_fab.v                                    ; yes             ; Encrypted Auto-Found Verilog HDL File        ; /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/quartus/db/ip/sld78a6c0c4/alt_sld_fab.v                                    ; alt_sld_fab ;
+; db/ip/sld78a6c0c4/submodules/alt_sld_fab_alt_sld_fab.v             ; yes             ; Encrypted Auto-Found Verilog HDL File        ; /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/quartus/db/ip/sld78a6c0c4/submodules/alt_sld_fab_alt_sld_fab.v             ; alt_sld_fab ;
+; db/ip/sld78a6c0c4/submodules/alt_sld_fab_alt_sld_fab_ident.sv      ; yes             ; Auto-Found SystemVerilog HDL File            ; /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/quartus/db/ip/sld78a6c0c4/submodules/alt_sld_fab_alt_sld_fab_ident.sv      ; alt_sld_fab ;
+; db/ip/sld78a6c0c4/submodules/alt_sld_fab_alt_sld_fab_presplit.sv   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/quartus/db/ip/sld78a6c0c4/submodules/alt_sld_fab_alt_sld_fab_presplit.sv   ; alt_sld_fab ;
+; db/ip/sld78a6c0c4/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; yes             ; Encrypted Auto-Found VHDL File               ; /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/quartus/db/ip/sld78a6c0c4/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; alt_sld_fab ;
+; db/ip/sld78a6c0c4/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/quartus/db/ip/sld78a6c0c4/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; alt_sld_fab ;
+; sld_jtag_hub.vhd                                                   ; yes             ; Encrypted Megafunction                       ; /home/haraldbid/intelFPGA_lite/20.1/quartus/libraries/megafunctions/sld_jtag_hub.vhd                                                                 ;             ;
++--------------------------------------------------------------------+-----------------+----------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------+-------------+
 
 
-+-----------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary         ;
-+---------------------------------------------+-------+
-; Resource                                    ; Usage ;
-+---------------------------------------------+-------+
-; Estimate of Logic utilization (ALMs needed) ; 613   ;
-;                                             ;       ;
-; Combinational ALUT usage for logic          ; 364   ;
-;     -- 7 input functions                    ; 1     ;
-;     -- 6 input functions                    ; 78    ;
-;     -- 5 input functions                    ; 104   ;
-;     -- 4 input functions                    ; 37    ;
-;     -- <=3 input functions                  ; 144   ;
-;                                             ;       ;
-; Dedicated logic registers                   ; 1132  ;
-;                                             ;       ;
-; I/O pins                                    ; 97    ;
-; Total MLAB memory bits                      ; 0     ;
-; Total block memory bits                     ; 9728  ;
-;                                             ;       ;
-; Total DSP Blocks                            ; 0     ;
-;                                             ;       ;
-; Maximum fan-out node                        ; ~GND  ;
-; Maximum fan-out                             ; 712   ;
-; Total fan-out                               ; 6516  ;
-; Average fan-out                             ; 3.53  ;
-+---------------------------------------------+-------+
++--------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                  ;
++---------------------------------------------+----------------+
+; Resource                                    ; Usage          ;
++---------------------------------------------+----------------+
+; Estimate of Logic utilization (ALMs needed) ; 613            ;
+;                                             ;                ;
+; Combinational ALUT usage for logic          ; 364            ;
+;     -- 7 input functions                    ; 1              ;
+;     -- 6 input functions                    ; 78             ;
+;     -- 5 input functions                    ; 104            ;
+;     -- 4 input functions                    ; 37             ;
+;     -- <=3 input functions                  ; 144            ;
+;                                             ;                ;
+; Dedicated logic registers                   ; 1132           ;
+;                                             ;                ;
+; I/O pins                                    ; 97             ;
+; Total MLAB memory bits                      ; 0              ;
+; Total block memory bits                     ; 9728           ;
+;                                             ;                ;
+; Total DSP Blocks                            ; 0              ;
+;                                             ;                ;
+; Maximum fan-out node                        ; CLOCK_50~input ;
+; Maximum fan-out                             ; 718            ;
+; Total fan-out                               ; 6538           ;
+; Average fan-out                             ; 3.54           ;
++---------------------------------------------+----------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -530,9 +530,9 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; arriav_io_obuf        ; 72                          ;
-; arriav_lcell_comb     ; 1                           ;
-;     normal            ; 1                           ;
-;         0 data inputs ; 1                           ;
+; arriav_lcell_comb     ; 2                           ;
+;     normal            ; 2                           ;
+;         0 data inputs ; 2                           ;
 ; boundary_port         ; 114                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 0.00                        ;
@@ -554,7 +554,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------------------------------------------------------------------------+---------------+-----------+--------------------------------+-------------------+-------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Name                                                                                    ; Type          ; Status    ; Partition Name                 ; Netlist Type Used ; Actual Connection                   ; Details                                                                                                                                                        ;
 +-----------------------------------------------------------------------------------------+---------------+-----------+--------------------------------+-------------------+-------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; fpga_top:fpga_top_inst|clk                                                              ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; GND                                 ; N/A                                                                                                                                                            ;
+; fpga_top:fpga_top_inst|clk                                                              ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; CLOCK_50                            ; N/A                                                                                                                                                            ;
 ; fpga_top:fpga_top_inst|fifo8_8:fifo_rx_video|rdclk                                      ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
 ; fpga_top:fpga_top_inst|fifo8_8:fifo_rx_video|rdclk                                      ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
 ; fpga_top:fpga_top_inst|fifo8_8:fifo_rx_video|rdempty                                    ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
@@ -724,68 +724,67 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Wed Apr 14 13:27:12 2021
+    Info: Processing started: Wed Apr 28 13:56:05 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DE1-SOC-342x9 -c 1_1_0
 Warning (125092): Tcl Script File soc_system/synthesis/soc_system.qip not found
     Info (125063): set_global_assignment -name QIP_FILE soc_system/synthesis/soc_system.qip
 Warning (125092): Tcl Script File fifo24_8.qip not found
     Info (125063): set_global_assignment -name QIP_FILE fifo24_8.qip
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file fifo8_8.vhd
-    Info (12022): Found design unit 1: fifo8_8-SYN File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/quartus/fifo8_8.vhd Line: 57
-    Info (12023): Found entity 1: fifo8_8 File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/quartus/fifo8_8.vhd Line: 42
-Info (12021): Found 2 design units, including 1 entities, in source file /users/harald/documents/github/modulation_dtu/fpga_design/refdesign20200615/hdl/de1_soc_referencetop.vhd
-    Info (12022): Found design unit 1: DE1_SoC_ReferenceTop-reference_arch File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 48
-    Info (12023): Found entity 1: DE1_SoC_ReferenceTop File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 4
-Info (12021): Found 2 design units, including 1 entities, in source file /users/harald/documents/github/modulation_dtu/fpga_design/refdesign20200615/hdl/fpga_top.vhd
-    Info (12022): Found design unit 1: fpga_top-fpga_arch File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/fpga_top.vhd Line: 18
-    Info (12023): Found entity 1: fpga_top File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/fpga_top.vhd Line: 4
-Info (12021): Found 2 design units, including 1 entities, in source file /users/harald/documents/github/modulation_dtu/fpga_design/refdesign20200615/hdl/modulation_top.vhd
-    Info (12022): Found design unit 1: modulation_top-loopback_arch File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/modulation_top.vhd Line: 23
-    Info (12023): Found entity 1: modulation_top File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/modulation_top.vhd Line: 4
+    Info (12022): Found design unit 1: fifo8_8-SYN File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/quartus/fifo8_8.vhd Line: 57
+    Info (12023): Found entity 1: fifo8_8 File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/quartus/fifo8_8.vhd Line: 42
+Info (12021): Found 2 design units, including 1 entities, in source file /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd
+    Info (12022): Found design unit 1: DE1_SoC_ReferenceTop-reference_arch File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 48
+    Info (12023): Found entity 1: DE1_SoC_ReferenceTop File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/fpga_top.vhd
+    Info (12022): Found design unit 1: fpga_top-fpga_arch File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/fpga_top.vhd Line: 18
+    Info (12023): Found entity 1: fpga_top File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/fpga_top.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/modulation_top.vhd
+    Info (12022): Found design unit 1: modulation_top-loopback_arch File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/modulation_top.vhd Line: 23
+    Info (12023): Found entity 1: modulation_top File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/modulation_top.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file fifo32_8.vhd
-    Info (12022): Found design unit 1: fifo32_8-SYN File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/quartus/fifo32_8.vhd Line: 58
-    Info (12023): Found entity 1: fifo32_8 File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/quartus/fifo32_8.vhd Line: 43
+    Info (12022): Found design unit 1: fifo32_8-SYN File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/quartus/fifo32_8.vhd Line: 58
+    Info (12023): Found entity 1: fifo32_8 File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/quartus/fifo32_8.vhd Line: 43
 Info (12127): Elaborating entity "DE1_SoC_ReferenceTop" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at DE1_SoC_ReferenceTop.vhd(66): used implicit default value for signal "CLOCK_1" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 66
-Info (12128): Elaborating entity "fpga_top" for hierarchy "fpga_top:fpga_top_inst" File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 73
-Warning (10541): VHDL Signal Declaration warning at fpga_top.vhd(42): used implicit default value for signal "framing_modulation_tx" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/fpga_top.vhd Line: 42
-Warning (10036): Verilog HDL or VHDL warning at fpga_top.vhd(42): object "modulation_framing_rx" assigned a value but never read File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/fpga_top.vhd Line: 42
-Warning (10036): Verilog HDL or VHDL warning at fpga_top.vhd(45): object "status_modulation_wr_data" assigned a value but never read File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/fpga_top.vhd Line: 45
-Warning (10036): Verilog HDL or VHDL warning at fpga_top.vhd(46): object "status_modulation_wrreq" assigned a value but never read File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/fpga_top.vhd Line: 46
-Warning (10541): VHDL Signal Declaration warning at fpga_top.vhd(46): used implicit default value for signal "status_modulation_full" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/fpga_top.vhd Line: 46
-Info (12128): Elaborating entity "modulation_top" for hierarchy "fpga_top:fpga_top_inst|modulation_top:modulation_inst" File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/fpga_top.vhd Line: 53
-Warning (10540): VHDL Signal Declaration warning at modulation_top.vhd(15): used explicit default value for signal "status_modulation_data" because signal was never assigned a value File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/modulation_top.vhd Line: 15
-Warning (10540): VHDL Signal Declaration warning at modulation_top.vhd(16): used explicit default value for signal "status_modulation_wrreq" because signal was never assigned a value File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/modulation_top.vhd Line: 16
-Warning (10541): VHDL Signal Declaration warning at modulation_top.vhd(19): used implicit default value for signal "LEDR" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/modulation_top.vhd Line: 19
-Warning (10036): Verilog HDL or VHDL warning at modulation_top.vhd(25): object "data_out_a" assigned a value but never read File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/modulation_top.vhd Line: 25
-Warning (10036): Verilog HDL or VHDL warning at modulation_top.vhd(25): object "data_out_b" assigned a value but never read File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/modulation_top.vhd Line: 25
-Warning (10036): Verilog HDL or VHDL warning at modulation_top.vhd(25): object "data_in_a" assigned a value but never read File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/modulation_top.vhd Line: 25
-Warning (10036): Verilog HDL or VHDL warning at modulation_top.vhd(25): object "data_in_b" assigned a value but never read File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/modulation_top.vhd Line: 25
+Info (12128): Elaborating entity "fpga_top" for hierarchy "fpga_top:fpga_top_inst" File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 73
+Warning (10541): VHDL Signal Declaration warning at fpga_top.vhd(42): used implicit default value for signal "framing_modulation_tx" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/fpga_top.vhd Line: 42
+Warning (10036): Verilog HDL or VHDL warning at fpga_top.vhd(42): object "modulation_framing_rx" assigned a value but never read File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/fpga_top.vhd Line: 42
+Warning (10036): Verilog HDL or VHDL warning at fpga_top.vhd(45): object "status_modulation_wr_data" assigned a value but never read File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/fpga_top.vhd Line: 45
+Warning (10036): Verilog HDL or VHDL warning at fpga_top.vhd(46): object "status_modulation_wrreq" assigned a value but never read File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/fpga_top.vhd Line: 46
+Warning (10541): VHDL Signal Declaration warning at fpga_top.vhd(46): used implicit default value for signal "status_modulation_full" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/fpga_top.vhd Line: 46
+Info (12128): Elaborating entity "modulation_top" for hierarchy "fpga_top:fpga_top_inst|modulation_top:modulation_inst" File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/fpga_top.vhd Line: 53
+Warning (10541): VHDL Signal Declaration warning at modulation_top.vhd(10): used implicit default value for signal "framing_rx_data" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/modulation_top.vhd Line: 10
+Warning (10540): VHDL Signal Declaration warning at modulation_top.vhd(15): used explicit default value for signal "status_modulation_data" because signal was never assigned a value File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/modulation_top.vhd Line: 15
+Warning (10540): VHDL Signal Declaration warning at modulation_top.vhd(16): used explicit default value for signal "status_modulation_wrreq" because signal was never assigned a value File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/modulation_top.vhd Line: 16
+Warning (10036): Verilog HDL or VHDL warning at modulation_top.vhd(25): object "data_out_a" assigned a value but never read File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/modulation_top.vhd Line: 25
+Warning (10036): Verilog HDL or VHDL warning at modulation_top.vhd(25): object "data_out_b" assigned a value but never read File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/modulation_top.vhd Line: 25
+Warning (10036): Verilog HDL or VHDL warning at modulation_top.vhd(25): object "data_in_a" assigned a value but never read File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/modulation_top.vhd Line: 25
+Warning (10036): Verilog HDL or VHDL warning at modulation_top.vhd(25): object "data_in_b" assigned a value but never read File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/modulation_top.vhd Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_0c84.tdf
-    Info (12023): Found entity 1: altsyncram_0c84 File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/quartus/db/altsyncram_0c84.tdf Line: 28
+    Info (12023): Found entity 1: altsyncram_0c84 File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/quartus/db/altsyncram_0c84.tdf Line: 28
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_elc.tdf
-    Info (12023): Found entity 1: mux_elc File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/quartus/db/mux_elc.tdf Line: 23
+    Info (12023): Found entity 1: mux_elc File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/quartus/db/mux_elc.tdf Line: 23
 Info (12021): Found 1 design units, including 1 entities, in source file db/decode_vnf.tdf
-    Info (12023): Found entity 1: decode_vnf File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/quartus/db/decode_vnf.tdf Line: 23
+    Info (12023): Found entity 1: decode_vnf File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/quartus/db/decode_vnf.tdf Line: 23
 Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_a9i.tdf
-    Info (12023): Found entity 1: cntr_a9i File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/quartus/db/cntr_a9i.tdf Line: 28
+    Info (12023): Found entity 1: cntr_a9i File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/quartus/db/cntr_a9i.tdf Line: 28
 Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_f9c.tdf
-    Info (12023): Found entity 1: cmpr_f9c File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/quartus/db/cmpr_f9c.tdf Line: 23
+    Info (12023): Found entity 1: cmpr_f9c File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/quartus/db/cmpr_f9c.tdf Line: 23
 Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_4vi.tdf
-    Info (12023): Found entity 1: cntr_4vi File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/quartus/db/cntr_4vi.tdf Line: 26
+    Info (12023): Found entity 1: cntr_4vi File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/quartus/db/cntr_4vi.tdf Line: 26
 Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_09i.tdf
-    Info (12023): Found entity 1: cntr_09i File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/quartus/db/cntr_09i.tdf Line: 28
+    Info (12023): Found entity 1: cntr_09i File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/quartus/db/cntr_09i.tdf Line: 28
 Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_c9c.tdf
-    Info (12023): Found entity 1: cmpr_c9c File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/quartus/db/cmpr_c9c.tdf Line: 23
+    Info (12023): Found entity 1: cmpr_c9c File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/quartus/db/cmpr_c9c.tdf Line: 23
 Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_kri.tdf
-    Info (12023): Found entity 1: cntr_kri File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/quartus/db/cntr_kri.tdf Line: 28
+    Info (12023): Found entity 1: cntr_kri File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/quartus/db/cntr_kri.tdf Line: 28
 Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_99c.tdf
-    Info (12023): Found entity 1: cmpr_99c File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/quartus/db/cmpr_99c.tdf Line: 23
+    Info (12023): Found entity 1: cmpr_99c File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/quartus/db/cmpr_99c.tdf Line: 23
 Info (12033): Analysis and Synthesis generated Signal Tap or debug node instance "auto_signaltap_1"
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
-Info (11172): 2021.04.14.13:27:26 Progress: Loading sld78a6c0c4/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2021.04.28.13:56:29 Progress: Loading sld78a6c0c4/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -796,135 +795,141 @@ Info (11172): Ident: "alt_sld_fab" instantiated altera_connection_identification
 Info (11172): Alt_sld_fab: Done "alt_sld_fab" with 6 modules, 6 files
 Info (11171): Finished IP generation for the debug fabric: alt_sld_fab.
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld78a6c0c4/alt_sld_fab.v
-    Info (12023): Found entity 1: alt_sld_fab File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/quartus/db/ip/sld78a6c0c4/alt_sld_fab.v Line: 9
+    Info (12023): Found entity 1: alt_sld_fab File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/quartus/db/ip/sld78a6c0c4/alt_sld_fab.v Line: 9
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld78a6c0c4/submodules/alt_sld_fab_alt_sld_fab.v
-    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/quartus/db/ip/sld78a6c0c4/submodules/alt_sld_fab_alt_sld_fab.v Line: 9
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/quartus/db/ip/sld78a6c0c4/submodules/alt_sld_fab_alt_sld_fab.v Line: 9
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld78a6c0c4/submodules/alt_sld_fab_alt_sld_fab_ident.sv
-    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_ident File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/quartus/db/ip/sld78a6c0c4/submodules/alt_sld_fab_alt_sld_fab_ident.sv Line: 33
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_ident File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/quartus/db/ip/sld78a6c0c4/submodules/alt_sld_fab_alt_sld_fab_ident.sv Line: 33
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld78a6c0c4/submodules/alt_sld_fab_alt_sld_fab_presplit.sv
-    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_presplit File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/quartus/db/ip/sld78a6c0c4/submodules/alt_sld_fab_alt_sld_fab_presplit.sv Line: 3
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_presplit File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/quartus/db/ip/sld78a6c0c4/submodules/alt_sld_fab_alt_sld_fab_presplit.sv Line: 3
 Info (12021): Found 2 design units, including 1 entities, in source file db/ip/sld78a6c0c4/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd
-    Info (12022): Found design unit 1: alt_sld_fab_alt_sld_fab_sldfabric-rtl File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/quartus/db/ip/sld78a6c0c4/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 102
-    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_sldfabric File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/quartus/db/ip/sld78a6c0c4/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 11
+    Info (12022): Found design unit 1: alt_sld_fab_alt_sld_fab_sldfabric-rtl File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/quartus/db/ip/sld78a6c0c4/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 102
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_sldfabric File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/quartus/db/ip/sld78a6c0c4/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 11
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld78a6c0c4/submodules/alt_sld_fab_alt_sld_fab_splitter.sv
-    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_splitter File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/quartus/db/ip/sld78a6c0c4/submodules/alt_sld_fab_alt_sld_fab_splitter.sv Line: 3
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_splitter File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/quartus/db/ip/sld78a6c0c4/submodules/alt_sld_fab_alt_sld_fab_splitter.sv Line: 3
+Warning (13034): The following nodes have both tri-state and non-tri-state drivers
+    Warning (13035): Inserted always-enabled tri-state buffer between "GPIO_0[18]" and its non-tri-state driver. File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
+    Warning (13035): Inserted always-enabled tri-state buffer between "GPIO_0[16]" and its non-tri-state driver. File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
+    Warning (13035): Inserted always-enabled tri-state buffer between "GPIO_1[34]" and its non-tri-state driver. File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 42
+    Warning (13035): Inserted always-enabled tri-state buffer between "GPIO_1[18]" and its non-tri-state driver. File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 42
+    Warning (13035): Inserted always-enabled tri-state buffer between "GPIO_1[17]" and its non-tri-state driver. File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 42
+    Warning (13035): Inserted always-enabled tri-state buffer between "GPIO_1[16]" and its non-tri-state driver. File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 42
 Warning (13039): The following bidirectional pins have no drivers
-    Warning (13040): bidirectional pin "GPIO_0[34]" has no driver File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
-    Warning (13040): bidirectional pin "GPIO_0[31]" has no driver File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
-    Warning (13040): bidirectional pin "GPIO_0[30]" has no driver File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
-    Warning (13040): bidirectional pin "GPIO_0[29]" has no driver File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
-    Warning (13040): bidirectional pin "GPIO_0[28]" has no driver File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
-    Warning (13040): bidirectional pin "GPIO_0[27]" has no driver File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
-    Warning (13040): bidirectional pin "GPIO_0[26]" has no driver File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
-    Warning (13040): bidirectional pin "GPIO_0[25]" has no driver File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
-    Warning (13040): bidirectional pin "GPIO_0[24]" has no driver File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
-    Warning (13040): bidirectional pin "GPIO_0[23]" has no driver File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
-    Warning (13040): bidirectional pin "GPIO_0[22]" has no driver File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
-    Warning (13040): bidirectional pin "GPIO_0[21]" has no driver File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
-    Warning (13040): bidirectional pin "GPIO_0[20]" has no driver File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
-    Warning (13040): bidirectional pin "GPIO_0[19]" has no driver File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
-    Warning (13040): bidirectional pin "GPIO_0[17]" has no driver File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
-    Warning (13040): bidirectional pin "GPIO_0[15]" has no driver File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
-    Warning (13040): bidirectional pin "GPIO_0[14]" has no driver File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
-    Warning (13040): bidirectional pin "GPIO_0[13]" has no driver File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
-    Warning (13040): bidirectional pin "GPIO_0[12]" has no driver File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
-    Warning (13040): bidirectional pin "GPIO_0[11]" has no driver File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
-    Warning (13040): bidirectional pin "GPIO_0[10]" has no driver File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
-    Warning (13040): bidirectional pin "GPIO_0[9]" has no driver File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
-    Warning (13040): bidirectional pin "GPIO_0[8]" has no driver File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
-    Warning (13040): bidirectional pin "GPIO_0[7]" has no driver File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
-    Warning (13040): bidirectional pin "GPIO_0[6]" has no driver File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
-    Warning (13040): bidirectional pin "GPIO_0[5]" has no driver File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
-    Warning (13040): bidirectional pin "GPIO_0[4]" has no driver File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
-    Warning (13040): bidirectional pin "GPIO_0[3]" has no driver File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
-    Warning (13040): bidirectional pin "GPIO_0[2]" has no driver File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
-    Warning (13040): bidirectional pin "GPIO_0[1]" has no driver File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
-    Warning (13040): bidirectional pin "GPIO_0[0]" has no driver File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
-    Warning (13040): bidirectional pin "GPIO_1[33]" has no driver File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 42
-    Warning (13040): bidirectional pin "GPIO_1[32]" has no driver File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 42
-    Warning (13040): bidirectional pin "GPIO_1[31]" has no driver File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 42
-    Warning (13040): bidirectional pin "GPIO_1[30]" has no driver File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 42
-    Warning (13040): bidirectional pin "GPIO_1[29]" has no driver File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 42
-    Warning (13040): bidirectional pin "GPIO_1[28]" has no driver File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 42
-    Warning (13040): bidirectional pin "GPIO_1[27]" has no driver File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 42
-    Warning (13040): bidirectional pin "GPIO_1[26]" has no driver File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 42
-    Warning (13040): bidirectional pin "GPIO_1[25]" has no driver File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 42
-    Warning (13040): bidirectional pin "GPIO_1[24]" has no driver File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 42
-    Warning (13040): bidirectional pin "GPIO_1[23]" has no driver File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 42
-    Warning (13040): bidirectional pin "GPIO_1[22]" has no driver File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 42
-    Warning (13040): bidirectional pin "GPIO_1[21]" has no driver File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 42
-    Warning (13040): bidirectional pin "GPIO_1[20]" has no driver File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 42
-    Warning (13040): bidirectional pin "GPIO_1[19]" has no driver File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 42
-    Warning (13040): bidirectional pin "GPIO_1[15]" has no driver File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 42
-    Warning (13040): bidirectional pin "GPIO_1[14]" has no driver File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 42
-    Warning (13040): bidirectional pin "GPIO_1[13]" has no driver File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 42
-    Warning (13040): bidirectional pin "GPIO_1[12]" has no driver File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 42
-    Warning (13040): bidirectional pin "GPIO_1[11]" has no driver File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 42
-    Warning (13040): bidirectional pin "GPIO_1[10]" has no driver File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 42
-    Warning (13040): bidirectional pin "GPIO_1[9]" has no driver File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 42
-    Warning (13040): bidirectional pin "GPIO_1[8]" has no driver File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 42
-    Warning (13040): bidirectional pin "GPIO_1[7]" has no driver File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 42
-    Warning (13040): bidirectional pin "GPIO_1[6]" has no driver File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 42
-    Warning (13040): bidirectional pin "GPIO_1[5]" has no driver File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 42
-    Warning (13040): bidirectional pin "GPIO_1[4]" has no driver File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 42
-    Warning (13040): bidirectional pin "GPIO_1[3]" has no driver File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 42
-    Warning (13040): bidirectional pin "GPIO_1[2]" has no driver File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 42
-    Warning (13040): bidirectional pin "GPIO_1[1]" has no driver File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 42
-    Warning (13040): bidirectional pin "GPIO_1[0]" has no driver File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 42
+    Warning (13040): bidirectional pin "GPIO_0[34]" has no driver File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
+    Warning (13040): bidirectional pin "GPIO_0[31]" has no driver File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
+    Warning (13040): bidirectional pin "GPIO_0[30]" has no driver File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
+    Warning (13040): bidirectional pin "GPIO_0[29]" has no driver File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
+    Warning (13040): bidirectional pin "GPIO_0[28]" has no driver File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
+    Warning (13040): bidirectional pin "GPIO_0[27]" has no driver File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
+    Warning (13040): bidirectional pin "GPIO_0[26]" has no driver File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
+    Warning (13040): bidirectional pin "GPIO_0[25]" has no driver File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
+    Warning (13040): bidirectional pin "GPIO_0[24]" has no driver File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
+    Warning (13040): bidirectional pin "GPIO_0[23]" has no driver File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
+    Warning (13040): bidirectional pin "GPIO_0[22]" has no driver File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
+    Warning (13040): bidirectional pin "GPIO_0[21]" has no driver File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
+    Warning (13040): bidirectional pin "GPIO_0[20]" has no driver File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
+    Warning (13040): bidirectional pin "GPIO_0[19]" has no driver File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
+    Warning (13040): bidirectional pin "GPIO_0[17]" has no driver File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
+    Warning (13040): bidirectional pin "GPIO_0[15]" has no driver File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
+    Warning (13040): bidirectional pin "GPIO_0[14]" has no driver File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
+    Warning (13040): bidirectional pin "GPIO_0[13]" has no driver File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
+    Warning (13040): bidirectional pin "GPIO_0[12]" has no driver File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
+    Warning (13040): bidirectional pin "GPIO_0[11]" has no driver File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
+    Warning (13040): bidirectional pin "GPIO_0[10]" has no driver File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
+    Warning (13040): bidirectional pin "GPIO_0[9]" has no driver File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
+    Warning (13040): bidirectional pin "GPIO_0[8]" has no driver File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
+    Warning (13040): bidirectional pin "GPIO_0[7]" has no driver File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
+    Warning (13040): bidirectional pin "GPIO_0[6]" has no driver File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
+    Warning (13040): bidirectional pin "GPIO_0[5]" has no driver File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
+    Warning (13040): bidirectional pin "GPIO_0[4]" has no driver File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
+    Warning (13040): bidirectional pin "GPIO_0[3]" has no driver File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
+    Warning (13040): bidirectional pin "GPIO_0[2]" has no driver File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
+    Warning (13040): bidirectional pin "GPIO_0[1]" has no driver File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
+    Warning (13040): bidirectional pin "GPIO_0[0]" has no driver File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
+    Warning (13040): bidirectional pin "GPIO_1[33]" has no driver File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 42
+    Warning (13040): bidirectional pin "GPIO_1[32]" has no driver File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 42
+    Warning (13040): bidirectional pin "GPIO_1[31]" has no driver File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 42
+    Warning (13040): bidirectional pin "GPIO_1[30]" has no driver File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 42
+    Warning (13040): bidirectional pin "GPIO_1[29]" has no driver File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 42
+    Warning (13040): bidirectional pin "GPIO_1[28]" has no driver File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 42
+    Warning (13040): bidirectional pin "GPIO_1[27]" has no driver File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 42
+    Warning (13040): bidirectional pin "GPIO_1[26]" has no driver File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 42
+    Warning (13040): bidirectional pin "GPIO_1[25]" has no driver File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 42
+    Warning (13040): bidirectional pin "GPIO_1[24]" has no driver File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 42
+    Warning (13040): bidirectional pin "GPIO_1[23]" has no driver File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 42
+    Warning (13040): bidirectional pin "GPIO_1[22]" has no driver File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 42
+    Warning (13040): bidirectional pin "GPIO_1[21]" has no driver File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 42
+    Warning (13040): bidirectional pin "GPIO_1[20]" has no driver File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 42
+    Warning (13040): bidirectional pin "GPIO_1[19]" has no driver File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 42
+    Warning (13040): bidirectional pin "GPIO_1[15]" has no driver File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 42
+    Warning (13040): bidirectional pin "GPIO_1[14]" has no driver File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 42
+    Warning (13040): bidirectional pin "GPIO_1[13]" has no driver File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 42
+    Warning (13040): bidirectional pin "GPIO_1[12]" has no driver File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 42
+    Warning (13040): bidirectional pin "GPIO_1[11]" has no driver File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 42
+    Warning (13040): bidirectional pin "GPIO_1[10]" has no driver File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 42
+    Warning (13040): bidirectional pin "GPIO_1[9]" has no driver File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 42
+    Warning (13040): bidirectional pin "GPIO_1[8]" has no driver File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 42
+    Warning (13040): bidirectional pin "GPIO_1[7]" has no driver File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 42
+    Warning (13040): bidirectional pin "GPIO_1[6]" has no driver File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 42
+    Warning (13040): bidirectional pin "GPIO_1[5]" has no driver File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 42
+    Warning (13040): bidirectional pin "GPIO_1[4]" has no driver File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 42
+    Warning (13040): bidirectional pin "GPIO_1[3]" has no driver File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 42
+    Warning (13040): bidirectional pin "GPIO_1[2]" has no driver File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 42
+    Warning (13040): bidirectional pin "GPIO_1[1]" has no driver File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 42
+    Warning (13040): bidirectional pin "GPIO_1[0]" has no driver File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 42
 Warning (13032): The following tri-state nodes are fed by constants
-    Warning (13033): The pin "GPIO_0[35]" is fed by GND File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
-    Warning (13033): The pin "GPIO_0[33]" is fed by GND File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
-    Warning (13033): The pin "GPIO_0[32]" is fed by VCC File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
-    Warning (13033): The pin "GPIO_0[18]" is fed by GND File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
-    Warning (13033): The pin "GPIO_0[16]" is fed by GND File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
-    Warning (13033): The pin "GPIO_1[35]" is fed by VCC File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 42
-    Warning (13033): The pin "GPIO_1[34]" is fed by GND File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 42
-    Warning (13033): The pin "GPIO_1[18]" is fed by GND File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 42
-    Warning (13033): The pin "GPIO_1[17]" is fed by GND File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 42
-    Warning (13033): The pin "GPIO_1[16]" is fed by GND File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 42
+    Warning (13033): The pin "GPIO_0[35]" is fed by GND File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
+    Warning (13033): The pin "GPIO_0[33]" is fed by GND File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
+    Warning (13033): The pin "GPIO_0[32]" is fed by VCC File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
+    Warning (13033): The pin "GPIO_1[35]" is fed by VCC File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 42
 Warning (13009): TRI or OPNDRN buffers permanently enabled
-    Warning (13010): Node "GPIO_0[32]~synth" File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
-    Warning (13010): Node "GPIO_1[35]~synth" File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 42
+    Warning (13010): Node "GPIO_0[16]~synth" File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
+    Warning (13010): Node "GPIO_0[18]~synth" File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
+    Warning (13010): Node "GPIO_0[32]~synth" File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
+    Warning (13010): Node "GPIO_1[16]~synth" File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 42
+    Warning (13010): Node "GPIO_1[17]~synth" File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 42
+    Warning (13010): Node "GPIO_1[18]~synth" File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 42
+    Warning (13010): Node "GPIO_1[34]~synth" File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 42
+    Warning (13010): Node "GPIO_1[35]~synth" File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 42
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "LEDR[0]" is stuck at GND File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 32
-    Warning (13410): Pin "LEDR[1]" is stuck at GND File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 32
-    Warning (13410): Pin "LEDR[2]" is stuck at GND File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 32
-    Warning (13410): Pin "LEDR[3]" is stuck at GND File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 32
-    Warning (13410): Pin "LEDR[4]" is stuck at GND File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 32
-    Warning (13410): Pin "LEDR[5]" is stuck at GND File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 32
-    Warning (13410): Pin "LEDR[6]" is stuck at GND File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 32
-    Warning (13410): Pin "LEDR[7]" is stuck at GND File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 32
-    Warning (13410): Pin "LEDR[8]" is stuck at GND File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 32
-    Warning (13410): Pin "LEDR[9]" is stuck at GND File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 32
+    Warning (13410): Pin "LEDR[0]" is stuck at VCC File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 32
+    Warning (13410): Pin "LEDR[1]" is stuck at GND File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 32
+    Warning (13410): Pin "LEDR[2]" is stuck at GND File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 32
+    Warning (13410): Pin "LEDR[3]" is stuck at GND File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 32
+    Warning (13410): Pin "LEDR[4]" is stuck at GND File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 32
+    Warning (13410): Pin "LEDR[5]" is stuck at GND File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 32
+    Warning (13410): Pin "LEDR[6]" is stuck at GND File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 32
+    Warning (13410): Pin "LEDR[7]" is stuck at GND File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 32
+    Warning (13410): Pin "LEDR[8]" is stuck at GND File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 32
+    Warning (13410): Pin "LEDR[9]" is stuck at GND File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 32
 Critical Warning (35025): Partially connected in-system debug instance "auto_signaltap_1" to 49 of its 161 required data inputs, trigger inputs, acquisition clocks, and dynamic pins.  There were 0 illegal, 0 inaccessible, and 112 missing sources or connections.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 9 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 15 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "CLOCK_50" File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 13
-    Warning (15610): No output dependent on input pin "KEY_N[0]" File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 29
-    Warning (15610): No output dependent on input pin "KEY_N[1]" File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 29
-    Warning (15610): No output dependent on input pin "KEY_N[2]" File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 29
-    Warning (15610): No output dependent on input pin "KEY_N[3]" File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 29
-    Warning (15610): No output dependent on input pin "SW[0]" File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 35
-    Warning (15610): No output dependent on input pin "SW[1]" File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 35
-    Warning (15610): No output dependent on input pin "SW[2]" File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 35
-    Warning (15610): No output dependent on input pin "SW[3]" File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 35
-    Warning (15610): No output dependent on input pin "SW[4]" File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 35
-    Warning (15610): No output dependent on input pin "SW[5]" File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 35
-    Warning (15610): No output dependent on input pin "SW[6]" File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 35
-    Warning (15610): No output dependent on input pin "SW[7]" File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 35
-    Warning (15610): No output dependent on input pin "SW[8]" File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 35
-    Warning (15610): No output dependent on input pin "SW[9]" File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 35
+Warning (21074): Design contains 14 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "KEY_N[0]" File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 29
+    Warning (15610): No output dependent on input pin "KEY_N[1]" File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 29
+    Warning (15610): No output dependent on input pin "KEY_N[2]" File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 29
+    Warning (15610): No output dependent on input pin "KEY_N[3]" File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 29
+    Warning (15610): No output dependent on input pin "SW[0]" File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 35
+    Warning (15610): No output dependent on input pin "SW[1]" File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 35
+    Warning (15610): No output dependent on input pin "SW[2]" File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 35
+    Warning (15610): No output dependent on input pin "SW[3]" File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 35
+    Warning (15610): No output dependent on input pin "SW[4]" File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 35
+    Warning (15610): No output dependent on input pin "SW[5]" File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 35
+    Warning (15610): No output dependent on input pin "SW[6]" File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 35
+    Warning (15610): No output dependent on input pin "SW[7]" File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 35
+    Warning (15610): No output dependent on input pin "SW[8]" File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 35
+    Warning (15610): No output dependent on input pin "SW[9]" File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/RefDesign20200615/hdl/DE1_SoC_ReferenceTop.vhd Line: 35
 Info (21057): Implemented 1459 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 18 input pins
     Info (21059): Implemented 11 output pins
     Info (21060): Implemented 72 bidirectional pins
     Info (21061): Implemented 1281 logic cells
     Info (21064): Implemented 76 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 121 warnings
-    Info: Peak virtual memory: 4905 megabytes
-    Info: Processing ended: Wed Apr 14 13:27:34 2021
-    Info: Elapsed time: 00:00:22
-    Info: Total CPU time (on all processors): 00:00:43
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 126 warnings
+    Info: Peak virtual memory: 536 megabytes
+    Info: Processing ended: Wed Apr 28 13:56:42 2021
+    Info: Elapsed time: 00:00:37
+    Info: Total CPU time (on all processors): 00:01:14
 
 
