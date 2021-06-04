@@ -59,11 +59,11 @@ architecture rtl of mod_convolution is
 
 	type fbarray is array (0 to G_SHIFTREG_SIZE) of signed(G_MANTISSA_SIZE downto 0);
 	signal s_sregis 			: fbarray := (others=>(others=>'0'));
-	signal s_validregis		: std_logic_vector(G_SHIFTREG_SIZE-1 downto 0);
+	signal s_validregis		: std_logic_vector(0 to G_SHIFTREG_SIZE-1);
 	signal s_ones				: std_logic_vector(G_SHIFTREG_SIZE-1 downto 0) := (others=>'1');
 	signal s_mult				: fbarray := (others=>(others=>'0'));
 	signal s_pulse 			: fbarray := (others=>(others=>'0'));
-	signal s_sum				: signed(G_MANTISSA_SIZE+4 downto 0)
+	signal s_sum				: signed(G_MANTISSA_SIZE+4 downto 0);
 	
 	begin
 	
@@ -107,29 +107,31 @@ architecture rtl of mod_convolution is
 			
 	end process;
 	
-	arith: process(i_data_window, sregis, validregis) 
+	arith: process(i_data_window, s_sregis, s_validregis, s_mult, s_pulse, s_sum, i_rst) 
 	begin
 	
+		s_mult <= (others =>(others => '0'));
+		
 		for i in 0 to G_SHIFTREG_SIZE-1 loop
 			
-			s_mult(i) := mult(s_sregis(i), s_pulse(i));
+			s_mult(i) <= mult(s_sregis(i), s_pulse(i));
 			
 		end loop;
 		
-		s_sum := (others=> '0');
+		s_sum <= (others=> '0');
 		
 		for i in 0 to G_SHIFTREG_SIZE loop
 			
-			s_sum := s_sum + resize(s_mult, s_sum'length);
+			s_sum <= s_sum + (resize(s_mult(i), s_sum'length));
 			
 		end loop;
 		
-		o_result := rshift(s_sum);
-		o_valid := 0;
+		o_result <= rshift(s_sum);
+		o_valid <= '0';
 		
 		if(s_validregis = s_ones) then
 		
-			o_valid := 1;
+			o_valid <= '1';
 			
 		end if;
 		
@@ -137,11 +139,10 @@ architecture rtl of mod_convolution is
 				
 				
 		if(i_rst = '1') then
-			s_mult := (others => '0');
-			s_sum := (others => '0');
-			o_result := (others => '0');
-			o_valid := '0';
-			end if;
+			s_mult <= (others =>(others => '0'));
+			s_sum <= (others => '0');
+			o_result <= (others => '0');
+			o_valid <= '0';
 				
 		end if;
 			

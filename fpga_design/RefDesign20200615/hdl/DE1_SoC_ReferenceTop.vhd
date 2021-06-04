@@ -82,7 +82,7 @@ begin
 		SW => SW,
       LEDR => LEDR
 	);
-	
+	CLOCK_1 <= CLOCK_50;
 
 	
 end;
