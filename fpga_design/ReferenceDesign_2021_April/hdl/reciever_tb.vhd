@@ -1,6 +1,7 @@
 library ieee;
 use ieee.std_logic_1164.all;
-
+use STD.textio.all;
+use ieee.std_logic_textio.all;
 
 ENTITY test_controller_tb IS
 END test_controller_tb;
@@ -8,21 +9,24 @@ END test_controller_tb;
 ARCHITECTURE behavior OF test_controller_tb IS
  
  -- Component Declaration for the Unit Under Test (UUT)
-COMPONENT modulation_top is
+COMPONENT reciever_top is
    port (
-      clk, reset, en	: in std_logic;
-      data_in : in std_logic_vector(13 downto 0);
-      data_out : out std_logic_vector(13 downto 0);
-      data_write, data_read : in std_logic
-      );
+      clk, reset : in std_logic;
+      data_i, data_q  : in std_logic_vector(13 downto 0);
+      fifo_full : in std_logic;
+      bitstream, fifo_wr : out std_logic
 end component;
  
-signal clk : std_logic := '0';
-signal reset : std_logic := '0';
-signal data_write, data_read, en : std_logic := '0';
-signal data_in, data_out : std_logic_vector(13 downto 0) :=  ( others => '0');
+signal clk, reset, fifo_full : std_logic := '0';
+signal bitstream, fifo_wr : std_logic;
+signal data_i, data_q : std_logic_vector(13 downto 0) :=  ( others => '0');
  -- Clock period definitions
 constant clock_period : time := 20 ns;
+
+file file_dataI : text;
+file file_dataQ : text;
+ 
+constant c_WIDTH : natural := 4;
 
 BEGIN
 
@@ -40,29 +44,38 @@ clk <= '1';
 wait for clock_period/2;
 end process;
  
+
 -- Stimulus process
 stim_proc: process
+
+   variable v_ILINE     : line;
+   variable v_QLINE     : line;
+
 begin
-   reset <= '1';
- -- hold reset state for 100 ns. 
- wait for 20 ns;
-   reset <= '0';
--- Test things
-wait for 5 ns;
-data_in <= "01010101010101";
-en <= '1';
-data_write <= '1';
 
-wait for clock_period;
-data_read <= '1';
-wait for clock_period;
-wait for clock_period;
-data_write <= '0';
-data_in <= "10101010101010";
-data_read <= '0';
+   file_open(file_dataI, "datastreamI.txt",  read_mode);
+   file_open(file_dataQ, "datastreamQ.txt", read_mode);
+
+   while not endfile(file_dataI) loop
+     readline(file_dataI, v_ILINE);
+     readline(file_dataQ, v_QLINE);
+
+     
+     -- Pass the line to signal
+     data_in_i <= v_ILINE;
+     data_in_q <= v_QLINE;
 
 
+     wait for clock_period;
 
+ 
+   end loop;
+
+   file_close(file_dataI);
+   file_close(file_dataI);
+
+   
+´
 
 wait for 50 ns;
 

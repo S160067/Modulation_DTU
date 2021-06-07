@@ -14,5 +14,6 @@ architecture arch of demodulator is
 
 begin
 
+	data_out <= data_i(0) & data_q(0);
 
 end arch;

@@ -20,6 +20,6 @@ architecture arch of buffer is
 
 begin
 
-	
+	bitstream <= data_mod(0);
 
 end arch;
