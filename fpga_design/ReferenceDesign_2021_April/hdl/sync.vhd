@@ -3,7 +3,7 @@ use ieee.std_logic_1164.all;
 
 entity sync is
 port (
-	clk, reset : in std_logic
+	clk, reset : in std_logic;
 	data_i, data_q : in std_logic_vector(13 downto 0);
 	valid : out std_logic;
 	data_i_mod, data_q_mod : out std_logic_vector(13 downto 0)
@@ -14,6 +14,6 @@ architecture arch of sync is
 
 
 begin
-
-
+	data_i_mod <= data_i;
+	data_q_mod <= data_q;
 end arch;

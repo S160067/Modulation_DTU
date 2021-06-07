@@ -15,11 +15,11 @@ port (
 	);
 end buffer_tx;
 
- architecture arch of buffer is 
+ architecture arch of buffer_tx is 
 
 
 begin
 
-	data_out <= bitstream & '1' when fifo_empty = '1' else "00";
+	data_out <= bitstream & '1' when fifo_empty = '0' else "00";
 
 end arch;

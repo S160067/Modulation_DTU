@@ -7,6 +7,7 @@ port (
 	data_i, data_q  : in std_logic_vector(13 downto 0);
 	fifo_full : in std_logic;
 	bitstream, fifo_wr : out std_logic
+);
 end reciever_top;
 
 architecture loopback_arch of reciever_top is 
@@ -23,7 +24,7 @@ end component;
 
 component demodulator is
 	port (
-		clk, reset, valid_sync : in std_logic
+		clk, reset, valid_sync : in std_logic;
 		data_i, data_q : in std_logic_vector(13 downto 0);
 		valid : out std_logic;
 		data_out : out std_logic_vector(1 downto 0)
@@ -32,7 +33,7 @@ end component;
 
 component sync is
 	port (
-		clk, reset : in std_logic
+		clk, reset : in std_logic;
 		data_i, data_q : in std_logic_vector(13 downto 0);
 		valid : out std_logic;
 		data_i_mod, data_q_mod : out std_logic_vector(13 downto 0)
@@ -53,10 +54,11 @@ end component;
 	signal data_from_mod : std_logic_vector(1 downto 0);
 	signal demod_valid, sync_valid, reciev_valid : std_logic;
 begin
+
 	buff_inst : component buffer_rx port map(
-		clk, reset, data_from_mod, fifo_full, demod_valid, bitsream, fifo_wr
+		clk, reset, data_from_mod, fifo_full, demod_valid, bitstream, fifo_wr
 	);
-	demod_inst : component demodulation port map(
+	demod_inst : component demodulator port map(
 		clk, reset, sync_valid, data_from_sync_i, data_from_sync_q, demod_valid, data_from_mod
 	);
 	sync_inst : component sync port map(

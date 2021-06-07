@@ -41,7 +41,7 @@ architecture rtl of mod_deshaper is
 					s_lock <= '1';
 					o_valid <= '0';
 				
-				elsif (s_lock = '1') then
+				elsif (i_data_valid = '1' and s_lock = '1') then
 				
 					if (cnt > 5 and cnt < 11) then
 					
@@ -50,7 +50,7 @@ architecture rtl of mod_deshaper is
 					end if;
 					
 					
-					if (cnt = 16) then
+					if (i_data_valid = '1' and cnt = 16) then
 					
 						s_lock <= '0';
 						o_valid <= '1';
@@ -58,8 +58,10 @@ architecture rtl of mod_deshaper is
 				
 					else
 					
-					cnt <= cnt + 1;	
-					
+						if(i_data_valid = '1') then
+							cnt <= cnt + 1;	
+						end if;
+						
 					end if;
 					
 				end if;
