@@ -15,7 +15,8 @@ port (
 	);
 end buffer_rx;
 
-architecture arch of buffer is 
+architecture arch of buffer_rx is 
+
 
 
 begin

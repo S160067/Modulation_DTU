@@ -1,0 +1,41 @@
+/home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/demodulator.vhd {1 {vcom -work work_sendertop -2002 -explicit -stats=none /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/demodulator.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity demodulator
+-- Compiling architecture arch of demodulator
+
+} {} {}} /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/sync.vhd {1 {vcom -work work_sendertop -2002 -explicit -stats=none /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/sync.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity sync
+-- Compiling architecture arch of sync
+
+} {} {}} /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/reciever.vhd {1 {vcom -work work_sendertop -2002 -explicit -stats=none /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/reciever.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity reciever
+-- Compiling architecture loopback_arch of reciever
+
+} {} {}} /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/reciever_top.vhd {1 {vcom -work work_sendertop -2002 -explicit -stats=none /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/reciever_top.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity reciever_top
+-- Compiling architecture loopback_arch of reciever_top
+
+} {} {}} /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/buffer_rx.vhd {1 {vcom -work work_sendertop -2002 -explicit -stats=none /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/buffer_rx.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity buffer_rx
+-- Compiling architecture arch of buffer_rx
+
+} {} {}}

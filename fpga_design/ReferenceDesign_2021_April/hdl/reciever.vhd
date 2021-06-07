@@ -13,7 +13,7 @@ end reciever;
 architecture loopback_arch of reciever is 
 
 begin
-	data_sync_i <= data_i
-	data_sync_q <= data_q
-	
+	data_sync_i <= data_i;
+	data_sync_q <= data_q;
+
 end loopback_arch;

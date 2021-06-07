@@ -28,7 +28,6 @@ constant clock_period : time := 20 ns;
 file file_dataI : text;
 file file_dataQ : text;
  
-constant c_WIDTH : natural := 4;
 
 BEGIN
 
