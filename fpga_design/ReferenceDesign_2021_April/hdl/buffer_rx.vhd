@@ -19,7 +19,7 @@ architecture arch of buffer is
 
 
 begin
-
+test
 	
 
 end arch;
