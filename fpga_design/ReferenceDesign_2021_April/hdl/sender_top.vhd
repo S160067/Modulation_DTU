@@ -4,66 +4,56 @@ use ieee.std_logic_1164.all;
 entity sender_top is
 port (
 	clk, reset : in std_logic;
-	pll_clk_skew : in std_logic;
-	write : out std_logic;
-	data_out : out std_logic_vector(13 downto 0);
-	-- Should be FIFO signals here instead of data_in
-	read_en, bitstream, empty : in std_logic
+	fifo_bitstream, fifo_empty : in std_logic;
+	write, read_en : out std_logic;
+	data_i, data_q : out std_logic_vector(13 downto 0)
 	);
 end sender_top;
 
 architecture arch of sender_top is 
 
-	-- BUFFER
-	signal buffer_out : std_logic_vector(1 downto 0);
-	signal buffer_data_rdy : std_logic;
+-- COMPONENT DECLARATION
 
-	signal pulse : std_logic_vector(13 downto 0);
-	-- Modulation block
-	signal valid : std_logic;
-	signal pulse_I, pulse_Q : std_logic_vector(13 downto 0);
+component buffer_tx is
+	port (
+		clk, reset, ready : in std_logic;
+		bitstream, fifo_empty : in std_logic;
+		read_en : out std_logic;
+		data_out : out std_logic_vector(1 downto 0)
+		);
+end component;
+
+component modulator is
+	port (
+		clk, reset : in std_logic
+		data_in : in std_logic_vector(1 downto 0);
+		data_i, data_q : out std_logic_vector(13 downto 0);
+		valid, ready : out std_logic
+		);
+end component;
+
+component sender is
+	port (
+		clk, reset, valid : in std_logic;
+		data_i, data_q : in std_logic_vector(13 downto 0);
+		write : out std_logic:
+		data_out_i, data_out_q : out std_logic_vector(13 downto 0)
+		);
+end component;
+
+-- SIGNAL DECLARATION
+	signal mod_ready, mod_valid : std_logic;
+	signal buff_data : std_logic_vector(1 downto 0);
+	signal data_mod_i, data_mod_q : std_logic_vector(13 downto 0);
 
 begin
-	data_out <= reg;
-	-- FSM process
-	PROCESS (state,next_state,en,pll_clk_da,data_in)
-	BEGIN
-		next_state <= wait_state;
-	   CASE state IS
-		  WHEN wait_state =>
-		  	next_reg <= ( others => '0');
-				if(en = '1') THEN
-					if(pll_clk_da = '1') then
-						next_state <= send_state;
-				end if;
-			end if;
 
-		  WHEN send_state =>
-			next_reg <= data_in;
-				if(en = '1') THEN
-					if(pll_clk_da = '1') then
-						next_state <= send_state;
-					end if;
-				end if;
-		END CASE;
-	END PROCESS;
-   
-   -- Register with active-high clock & asynchronous clear
-   
-   -- FOR BOARD KEY/RESET MIGHT BE INVERTED...
-	PROCESS (clk, en,reset)                      
-	BEGIN
-			 IF reset = '1' THEN
-				 -- Reset
-				 --data_out <= ( others => '0');
-				 state <= wait_state;
-				 --state <= wait_state;
-				 reg <= ( others => '0');
+	buff_inst : component buffer_tx port map(clk,reset, mod_ready, fifo_bitstream, fifo_empty, read_en, buff_data );
+	
+	mod_inst : component modulator port map(clk, reset, buff_data, data_mod_i, data_mod_q, mod_valid, mod_ready);
 
-			 ELSIF clk'EVENT AND clk = '1' THEN
-				 state <= next_state;
-				 reg <= next_reg;		 
-			END IF;
-		  
-	END PROCESS;
+	sender_inst : component sender port map(clk, reset, mod_valid, data_mod_i, data_mod_q, write, data_i, data_q);
+
+
+	
 end arch;

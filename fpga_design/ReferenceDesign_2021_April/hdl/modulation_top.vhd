@@ -1,7 +1,7 @@
 library ieee;
 use ieee.std_logic_1164.all;
 
-entity modulation_top is
+	entity modulation_top is
 port (
 	clk, reset			: in std_logic;
 	

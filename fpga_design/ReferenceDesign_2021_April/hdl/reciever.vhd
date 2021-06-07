@@ -4,8 +4,8 @@ use ieee.std_logic_1164.all;
 entity reciever is
 port (
 	clk, reset : in std_logic;
-	data_in : in std_logic_vector(13 downto 0);
-	data_out : out std_logic_vector(13 downto 0);
+	data_i, data_q : in std_logic_vector(13 downto 0);
+	data_sync_i, data_sync_q : out std_logic_vector(13 downto 0);
 	valid : out std_logic
 	);
 end reciever;
