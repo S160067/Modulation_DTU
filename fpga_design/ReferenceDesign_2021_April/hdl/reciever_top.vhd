@@ -25,14 +25,14 @@ component demodulator is
 	port (
 		clk, reset, valid_sync : in std_logic
 		data_i, data_q : in std_logic_vector(13 downto 0);
-		valid, ready : out std_logic;
+		valid : out std_logic;
 		data_out : out std_logic_vector(1 downto 0)
 		);
 end component;
 
 component sync is
 	port (
-		clk, reset, ready : in std_logic
+		clk, reset : in std_logic
 		data_i, data_q : in std_logic_vector(13 downto 0);
 		valid : out std_logic;
 		data_i_mod, data_q_mod : out std_logic_vector(13 downto 0)
@@ -49,13 +49,21 @@ component reciever is
 end component;
 
 -- SIGNALS
-	signal data_out_mod : std_logic_vector(1 downto 0);
-	signal mod_valid : std_logic;
+	signal data_from_sync_i,data_from_sync_q, data_from_reciever_i, data_from_reciever_q : std_logic_vector(13 downto 0);
+	signal data_from_mod : std_logic_vector(1 downto 0);
+	signal demod_valid, sync_valid, reciev_valid : std_logic;
 begin
 	buff_inst : component buffer_rx port map(
-		clk, reset, data_out_mod, fifo_full, mod_valid, bitsream, fifo_wr
+		clk, reset, data_from_mod, fifo_full, demod_valid, bitsream, fifo_wr
 	);
-	demod_inst : component sync port map(
-		clk, reset, 
-	)
+	demod_inst : component demodulation port map(
+		clk, reset, sync_valid, data_from_sync_i, data_from_sync_q, demod_valid, data_from_mod
+	);
+	sync_inst : component sync port map(
+		clk, reset, data_from_reciever_i, data_from_reciever_q, sync_valid, data_from_sync_i, data_from_sync_q
+	);
+	receiv_ins : component reciever port map(
+		clk, reset, data_i, data_q, data_from_reciever_i, data_from_reciever_q, reciev_valid
+	);
+
 end loopback_arch;

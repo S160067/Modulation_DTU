@@ -5,7 +5,7 @@ entity demodulator is
 	port (
 		clk, reset, valid_sync : in std_logic
 		data_i, data_q : in std_logic_vector(13 downto 0);
-		valid, ready : out std_logic;
+		valid : out std_logic;
 		data_out : out std_logic_vector(1 downto 0)
 		);
 	end demodulator;

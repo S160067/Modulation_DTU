@@ -8,7 +8,7 @@ use ieee.std_logic_1164.all;
 
 entity buffer_tx is
 port (
-	clk, reset, ready : in std_logic;
+	clk, reset : in std_logic;
 	bitstream, fifo_empty : in std_logic;
 	read_en : out std_logic;
 	data_out : out std_logic_vector(1 downto 0)
@@ -20,5 +20,6 @@ architecture arch of buffer is
 
 begin
 
+	data_out <= bitstream & '1' when fifo_empty = '1' else "00";
 
 end arch;

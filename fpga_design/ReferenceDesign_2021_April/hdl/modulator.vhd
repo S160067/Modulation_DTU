@@ -14,6 +14,7 @@ architecture arch of demodulator is
 
 
 begin
-
-
+	data_i <= "00000000000000" when data_in = "00" else "11111111111111";
+	data_q <= "00000000000000" when data_in = "00" else "11111111111111";
+	valid <= '0' when data_in = "00" else "1";
 end arch;

@@ -20,5 +20,6 @@ architecture arch of buffer is
 
 begin
 
+	
 
 end arch;
