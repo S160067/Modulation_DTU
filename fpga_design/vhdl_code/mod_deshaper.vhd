@@ -36,7 +36,6 @@ architecture rtl of mod_deshaper is
 		if(i_clk'event and i_clk = '1') then
 		
 				if(i_data_valid = '1' and s_lock= '0') then	
-				
 					cnt <= 0;
 					s_sum <= (others =>'0');
 					s_lock <= '1';
@@ -49,26 +48,28 @@ architecture rtl of mod_deshaper is
 						s_sum <= s_sum + i_sample;
 						
 					end if;
-					o_valid <= '1';
+					
+					
+					if (cnt = 16) then
+					
+						s_lock <= '0';
+						o_valid <= '1';
+						o_symbol <= s_sum(G_MANTISSA_SIZE+4);
+				
+					else
+					
 					cnt <= cnt + 1;	
 					
-				end if;
-					
-				if (cnt = 16) then
-				
-					o_symbol <= s_sum(G_MANTISSA_SIZE+4);
-					s_lock <= '0';
-					cnt <= 0;
+					end if;
 					
 				end if;
-					
 					
 				if(i_rst = '1') then
 				
 					cnt <= 0;
+					o_symbol <= '0';
 					s_lock <= '0';
 					s_sum <= (others =>'0');
-					o_symbol <= '0';
 					o_valid <= '0';
 					
 				end if;
