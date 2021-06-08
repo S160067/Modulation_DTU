@@ -8,26 +8,19 @@ use ieee.std_logic_1164.all;
 
 entity buffer_tx is
 port (
-	clk, reset : in std_logic;
+	clk, reset, valid : in std_logic;
 	bitstream, fifo_empty : in std_logic;
 	read_en : out std_logic;
 	data_out : out std_logic_vector(1 downto 0)
 	);
 end buffer_tx;
 
-<<<<<<< Updated upstream
- architecture arch of buffer_tx is 
-=======
 architecture arch of buffer_tx is 
->>>>>>> Stashed changes
 
 signal reg1,reg2,regC,regV,regV_next, reg1_next,reg2_next, regC_next, reg1_en, reg2_en : std_logic;
 
 begin
 
-<<<<<<< Updated upstream
-	data_out <= bitstream & '1' when fifo_empty = '0' else "00";
-=======
 data_out <= reg1 & reg2;
 
 reg1_next <= bitstream; 
@@ -70,5 +63,4 @@ regC_next <= '1' when regC ='0'
 	end if;
 	end process;
 end arch;
->>>>>>> Stashed changes
 

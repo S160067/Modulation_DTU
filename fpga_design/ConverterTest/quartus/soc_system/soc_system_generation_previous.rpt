@@ -1,0 +1,117 @@
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate C:\VHDL\342x9\RefDesign20200615\quartus\soc_system.qsys --synthesis=VHDL --output-directory=C:\VHDL\342x9\RefDesign20200615\quartus\soc_system\synthesis --family="Cyclone V" --part=5CSEMA5F31C6
+Progress: Loading quartus/soc_system.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 18.1]
+Progress: Parameterizing module clk_0
+Progress: Adding fifo_control_rx [altera_avalon_fifo 18.1]
+Progress: Parameterizing module fifo_control_rx
+Progress: Adding fifo_control_tx [altera_avalon_fifo 18.1]
+Progress: Parameterizing module fifo_control_tx
+Progress: Adding fifo_rx_video [altera_avalon_fifo 18.1]
+Progress: Parameterizing module fifo_rx_video
+Progress: Adding fifo_tx_video [altera_avalon_fifo 18.1]
+Progress: Parameterizing module fifo_tx_video
+Progress: Adding hps_0 [altera_hps 18.1]
+Progress: Parameterizing module hps_0
+Progress: Adding hps_fpga_leds [altera_avalon_pio 18.1]
+Progress: Parameterizing module hps_fpga_leds
+Progress: Adding hps_fpga_switches [altera_avalon_pio 18.1]
+Progress: Parameterizing module hps_fpga_switches
+Progress: Adding pll_0 [altera_pll 18.1]
+Progress: Parameterizing module pll_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Warning: soc_system.fifo_control_tx: The Nios II HAL drivers for the Altera Avalon FIFO support only 32-bit data width.         If you connect this FIFO to a Nios II CPU, you will need to access the registers directly.
+Warning: soc_system.fifo_rx_video: The Nios II HAL drivers for the Altera Avalon FIFO support only 32-bit data width.         If you connect this FIFO to a Nios II CPU, you will need to access the registers directly.
+Warning: soc_system.fifo_tx_video: The Nios II HAL drivers for the Altera Avalon FIFO support only 32-bit data width.         If you connect this FIFO to a Nios II CPU, you will need to access the registers directly.
+Info: soc_system.hps_0: HPS Main PLL counter settings: n = 0  m = 73
+Info: soc_system.hps_0: HPS peripherial PLL counter settings: n = 0  m = 39
+Warning: soc_system.hps_0: "Configuration/HPS-to-FPGA user 0 clock frequency" (desired_cfg_clk_mhz) requested 100.0 MHz, but only achieved 97.368421 MHz
+Warning: soc_system.hps_0: "QSPI clock frequency" (desired_qspi_clk_mhz) requested 400.0 MHz, but only achieved 370.0 MHz
+Warning: soc_system.hps_0: 1 or more output clock frequencies cannot be achieved precisely, consider revising desired output clock frequencies.
+Info: soc_system.hps_fpga_switches: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: soc_system.pll_0: The legal reference clock frequency is 5.0 MHz..800.0 MHz
+Info: soc_system.pll_0: Able to implement PLL with user settings
+Info: soc_system: Generating soc_system "soc_system" for QUARTUS_SYNTH
+Info: fifo_control_rx: Starting RTL generation for module 'soc_system_fifo_control_rx'
+Info: fifo_control_rx:   Generation command is [exec C:/intelfpga/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga/18.1/quartus/bin64/perl/lib -I C:/intelfpga/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga/18.1/quartus/sopc_builder/bin -I C:/intelfpga/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_fifo -- C:/intelfpga/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_fifo/generate_rtl.pl --name=soc_system_fifo_control_rx --dir=C:/Users/hwess/AppData/Local/Temp/alt8725_6741205578003467762.dir/0033_fifo_control_rx_gen/ --quartus_dir=C:/intelfpga/18.1/quartus --verilog --config=C:/Users/hwess/AppData/Local/Temp/alt8725_6741205578003467762.dir/0033_fifo_control_rx_gen//soc_system_fifo_control_rx_component_configuration.pl  --do_build_sim=0  ]
+Info: fifo_control_rx: Done RTL generation for module 'soc_system_fifo_control_rx'
+Info: fifo_control_rx: "soc_system" instantiated altera_avalon_fifo "fifo_control_rx"
+Info: fifo_control_tx: Starting RTL generation for module 'soc_system_fifo_control_tx'
+Info: fifo_control_tx:   Generation command is [exec C:/intelfpga/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga/18.1/quartus/bin64/perl/lib -I C:/intelfpga/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga/18.1/quartus/sopc_builder/bin -I C:/intelfpga/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_fifo -- C:/intelfpga/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_fifo/generate_rtl.pl --name=soc_system_fifo_control_tx --dir=C:/Users/hwess/AppData/Local/Temp/alt8725_6741205578003467762.dir/0034_fifo_control_tx_gen/ --quartus_dir=C:/intelfpga/18.1/quartus --verilog --config=C:/Users/hwess/AppData/Local/Temp/alt8725_6741205578003467762.dir/0034_fifo_control_tx_gen//soc_system_fifo_control_tx_component_configuration.pl  --do_build_sim=0  ]
+Info: fifo_control_tx: Done RTL generation for module 'soc_system_fifo_control_tx'
+Info: fifo_control_tx: "soc_system" instantiated altera_avalon_fifo "fifo_control_tx"
+Info: fifo_rx_video: Starting RTL generation for module 'soc_system_fifo_rx_video'
+Info: fifo_rx_video:   Generation command is [exec C:/intelfpga/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga/18.1/quartus/bin64/perl/lib -I C:/intelfpga/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga/18.1/quartus/sopc_builder/bin -I C:/intelfpga/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_fifo -- C:/intelfpga/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_fifo/generate_rtl.pl --name=soc_system_fifo_rx_video --dir=C:/Users/hwess/AppData/Local/Temp/alt8725_6741205578003467762.dir/0035_fifo_rx_video_gen/ --quartus_dir=C:/intelfpga/18.1/quartus --verilog --config=C:/Users/hwess/AppData/Local/Temp/alt8725_6741205578003467762.dir/0035_fifo_rx_video_gen//soc_system_fifo_rx_video_component_configuration.pl  --do_build_sim=0  ]
+Info: fifo_rx_video: Done RTL generation for module 'soc_system_fifo_rx_video'
+Info: fifo_rx_video: "soc_system" instantiated altera_avalon_fifo "fifo_rx_video"
+Info: hps_0: "Running  for module: hps_0"
+Info: hps_0: HPS Main PLL counter settings: n = 0  m = 73
+Info: hps_0: HPS peripherial PLL counter settings: n = 0  m = 39
+Warning: hps_0: "Configuration/HPS-to-FPGA user 0 clock frequency" (desired_cfg_clk_mhz) requested 100.0 MHz, but only achieved 97.368421 MHz
+Warning: hps_0: "QSPI clock frequency" (desired_qspi_clk_mhz) requested 400.0 MHz, but only achieved 370.0 MHz
+Warning: hps_0: 1 or more output clock frequencies cannot be achieved precisely, consider revising desired output clock frequencies.
+Info: hps_0: "soc_system" instantiated altera_hps "hps_0"
+Info: hps_fpga_leds: Starting RTL generation for module 'soc_system_hps_fpga_leds'
+Info: hps_fpga_leds:   Generation command is [exec C:/intelfpga/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga/18.1/quartus/bin64/perl/lib -I C:/intelfpga/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga/18.1/quartus/sopc_builder/bin -I C:/intelfpga/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=soc_system_hps_fpga_leds --dir=C:/Users/hwess/AppData/Local/Temp/alt8725_6741205578003467762.dir/0036_hps_fpga_leds_gen/ --quartus_dir=C:/intelfpga/18.1/quartus --verilog --config=C:/Users/hwess/AppData/Local/Temp/alt8725_6741205578003467762.dir/0036_hps_fpga_leds_gen//soc_system_hps_fpga_leds_component_configuration.pl  --do_build_sim=0  ]
+Info: hps_fpga_leds: Done RTL generation for module 'soc_system_hps_fpga_leds'
+Info: hps_fpga_leds: "soc_system" instantiated altera_avalon_pio "hps_fpga_leds"
+Info: hps_fpga_switches: Starting RTL generation for module 'soc_system_hps_fpga_switches'
+Info: hps_fpga_switches:   Generation command is [exec C:/intelfpga/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga/18.1/quartus/bin64/perl/lib -I C:/intelfpga/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga/18.1/quartus/sopc_builder/bin -I C:/intelfpga/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=soc_system_hps_fpga_switches --dir=C:/Users/hwess/AppData/Local/Temp/alt8725_6741205578003467762.dir/0037_hps_fpga_switches_gen/ --quartus_dir=C:/intelfpga/18.1/quartus --verilog --config=C:/Users/hwess/AppData/Local/Temp/alt8725_6741205578003467762.dir/0037_hps_fpga_switches_gen//soc_system_hps_fpga_switches_component_configuration.pl  --do_build_sim=0  ]
+Info: hps_fpga_switches: Done RTL generation for module 'soc_system_hps_fpga_switches'
+Info: hps_fpga_switches: "soc_system" instantiated altera_avalon_pio "hps_fpga_switches"
+Info: pll_0: "soc_system" instantiated altera_pll "pll_0"
+Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_001: Inserting error_adapter: error_adapter_0
+Info: mm_interconnect_0: "soc_system" instantiated altera_mm_interconnect "mm_interconnect_0"
+Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_001: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_002: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_003: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_004: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_005: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_006: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_007: Inserting error_adapter: error_adapter_0
+Info: mm_interconnect_1: "soc_system" instantiated altera_mm_interconnect "mm_interconnect_1"
+Info: rst_controller: "soc_system" instantiated altera_reset_controller "rst_controller"
+Info: fpga_interfaces: "hps_0" instantiated altera_interface_generator "fpga_interfaces"
+Info: hps_io: "hps_0" instantiated altera_hps_io "hps_io"
+Info: fifo_tx_video_in_translator: "mm_interconnect_0" instantiated altera_merlin_slave_translator "fifo_tx_video_in_translator"
+Info: hps_0_h2f_axi_master_agent: "mm_interconnect_0" instantiated altera_merlin_axi_master_ni "hps_0_h2f_axi_master_agent"
+Info: fifo_tx_video_in_agent: "mm_interconnect_0" instantiated altera_merlin_slave_agent "fifo_tx_video_in_agent"
+Info: fifo_tx_video_in_agent_rsp_fifo: "mm_interconnect_0" instantiated altera_avalon_sc_fifo "fifo_tx_video_in_agent_rsp_fifo"
+Info: router: "mm_interconnect_0" instantiated altera_merlin_router "router"
+Info: router_002: "mm_interconnect_0" instantiated altera_merlin_router "router_002"
+Info: hps_0_h2f_axi_master_wr_limiter: "mm_interconnect_0" instantiated altera_merlin_traffic_limiter "hps_0_h2f_axi_master_wr_limiter"
+Info: Reusing file C:/VHDL/342x9/RefDesign20200615/quartus/soc_system/synthesis/submodules/altera_avalon_sc_fifo.v
+Info: fifo_tx_video_in_burst_adapter: "mm_interconnect_0" instantiated altera_merlin_burst_adapter "fifo_tx_video_in_burst_adapter"
+Info: Reusing file C:/VHDL/342x9/RefDesign20200615/quartus/soc_system/synthesis/submodules/altera_merlin_address_alignment.sv
+Info: Reusing file C:/VHDL/342x9/RefDesign20200615/quartus/soc_system/synthesis/submodules/altera_avalon_st_pipeline_base.v
+Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: rsp_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux"
+Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: Reusing file C:/VHDL/342x9/RefDesign20200615/quartus/soc_system/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: fifo_tx_video_in_rsp_width_adapter: "mm_interconnect_0" instantiated altera_merlin_width_adapter "fifo_tx_video_in_rsp_width_adapter"
+Info: Reusing file C:/VHDL/342x9/RefDesign20200615/quartus/soc_system/synthesis/submodules/altera_merlin_address_alignment.sv
+Info: Reusing file C:/VHDL/342x9/RefDesign20200615/quartus/soc_system/synthesis/submodules/altera_merlin_burst_uncompressor.sv
+Info: avalon_st_adapter: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter"
+Info: router: "mm_interconnect_1" instantiated altera_merlin_router "router"
+Info: router_002: "mm_interconnect_1" instantiated altera_merlin_router "router_002"
+Info: router_003: "mm_interconnect_1" instantiated altera_merlin_router "router_003"
+Info: cmd_demux: "mm_interconnect_1" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: cmd_mux: "mm_interconnect_1" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: Reusing file C:/VHDL/342x9/RefDesign20200615/quartus/soc_system/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_demux: "mm_interconnect_1" instantiated altera_merlin_demultiplexer "rsp_demux"
+Info: rsp_mux: "mm_interconnect_1" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: Reusing file C:/VHDL/342x9/RefDesign20200615/quartus/soc_system/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: avalon_st_adapter_001: "mm_interconnect_1" instantiated altera_avalon_st_adapter "avalon_st_adapter_001"
+Info: border: "hps_io" instantiated altera_interface_generator "border"
+Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
+Info: error_adapter_0: "avalon_st_adapter_001" instantiated error_adapter "error_adapter_0"
+Info: soc_system: Done "soc_system" with 38 modules, 101 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

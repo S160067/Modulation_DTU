@@ -1,6 +1,6 @@
 <mxfile>
     <diagram id="okyHbANt9XHcZrDEkdiz" name="Page-1">
-        <mxGraphModel dx="766" dy="626" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="428" dy="626" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -68,7 +68,7 @@
                     <mxGeometry x="590" y="390" width="120" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="83" value="data&lt;br&gt;2 bit" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="1" vertex="1">
-                    <mxGeometry x="680" y="350" width="40" height="30" as="geometry"/>
+                    <mxGeometry x="630" y="350" width="40" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="85" value="valid&lt;br&gt;1 bit" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="1" vertex="1">
                     <mxGeometry x="570" y="355" width="40" height="30" as="geometry"/>
@@ -164,6 +164,15 @@
                 </mxCell>
                 <mxCell id="120" value="valid" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
                     <mxGeometry x="90" y="580" width="40" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="121" value="" style="endArrow=classic;html=1;exitX=1;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="81" target="79">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="560" y="420" as="sourcePoint"/>
+                        <mxPoint x="610" y="370" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="122" value="ready" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+                    <mxGeometry x="710" y="360" width="50" height="20" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>

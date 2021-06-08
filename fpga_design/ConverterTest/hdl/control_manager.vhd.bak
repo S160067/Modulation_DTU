@@ -1,0 +1,28 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+component status_control_manager is
+port (
+	clk, reset 	: in std_logic;
+	
+	-- IP cores FIFO 32 bit status output
+	status_data 	: out std_logic_vector(31 downto 0);
+	status_full		: in std_logic;
+	status_wrreq	: out std_logic;
+	
+	--Status FIFO from encryption
+	status_encr_data 	: in std_logic_vector(23 downto 0);
+	status_encr_rdreq	: out std_logic;
+	status_encr_empty	: in std_logic;
+
+	--Status FIFO from error correction
+	status_error_data 	: in std_logic_vector(23 downto 0);
+	status_error_rdreq	: out std_logic;
+	status_error_empty	: in std_logic;
+
+	--Status FIFO from modulation
+	status_modulation_data 	: in std_logic_vector(23 downto 0);
+	status_modulation_rdreq	: out std_logic;
+	status_modulation_empty	: in std_logic
+);
+end component status_control_manager;

@@ -13,7 +13,7 @@ COMPONENT buffer_rx_tb is
       clk, reset, en	: in std_logic;
       data_in : in std_logic_vector(13 downto 0);
       data_write, data_read : in std_logic
-      data_out : out std_logic_vector(13 downto 0);
+      data_out : out std_logic_vector(13 downto 0)
       );
 end component;
  

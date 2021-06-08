@@ -1,0 +1,117 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "LEDR[0]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDR[1]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDR[2]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDR[3]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDR[4]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDR[5]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDR[6]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDR[7]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDR[8]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDR[9]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO_0[1]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO_0[3]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO_0[4]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO_0[5]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO_0[6]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO_0[7]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO_0[8]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO_0[9]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO_0[10]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO_0[11]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO_0[33]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO_0[35]",
+					"strict" : false
+				},
+				{
+					"name" : "CLOCK_50",
+					"strict" : false
+				},
+				{
+					"name" : "KEY_N[0]",
+					"strict" : false
+				},
+				{
+					"name" : "KEY_N[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[1]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

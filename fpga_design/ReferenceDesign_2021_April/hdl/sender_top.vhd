@@ -16,7 +16,7 @@ architecture arch of sender_top is
 
 component buffer_tx is
 	port (
-		clk, reset : in std_logic;
+		clk, reset, valid : in std_logic;
 		bitstream, fifo_empty : in std_logic;
 		read_en : out std_logic;
 		data_out : out std_logic_vector(1 downto 0)
