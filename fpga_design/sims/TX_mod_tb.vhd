@@ -81,7 +81,7 @@ wait for 30 ns;
 wait until CLK='1';
 buffer_valid_i <=  '1';
 data_i <= b"00";
-wait until buffer_ready_o='1';
+wait until CLK='1';
 buffer_valid_i <=  '0';
 wait until CLK='1';
 --
@@ -98,6 +98,7 @@ buffer_valid_i <=  '1';
 data_i <= b"10";
 wait until buffer_ready_o='1';
 wait until CLK='1';
+
 buffer_valid_i <=  '0';
 wait until CLK='1';
 --

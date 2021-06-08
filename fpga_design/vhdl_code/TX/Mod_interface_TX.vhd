@@ -38,8 +38,6 @@ BEGIN
   BEGIN
     IF (rising_edge(clk)) THEN
       IF (reset = '1') THEN
-        data_available <= '0';
-        data_reg <=( others=>'0');
         time_cnt <= (others=>'0');
       ELSE
         IF (state = sending) THEN
@@ -47,12 +45,6 @@ BEGIN
         ELSE
           time_cnt <= (others=>'0');
         END IF;
-        if(ready='1' AND buffer_valid = '1') THEN
-          data_available <= '1';
-          data_reg <= data_i;
-        else
-          data_available <= '0';
-        end if;
        END IF;
      END IF; 
    END PROCESS;
@@ -62,14 +54,17 @@ BEGIN
      IF (rising_edge(clk)) THEN
         IF (reset = '1') THEN
           state <= idle;
+          data_reg <=( others=>'0');
         END IF;
         enable_o <= '0'; 
         ready <= '0';
         CASE state IS 
           WHEN idle => 
             ready <= '1';
-            IF (data_available = '1') THEN
+            IF (ready='1' AND buffer_valid = '1') THEN
               state <= sending;
+              data_reg <=( others=>'0');
+              ready <= '0';
             END IF;
           WHEN sending => 
             enable_o <= '1'; 
