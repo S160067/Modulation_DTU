@@ -15,16 +15,14 @@ port (
 	);
 end buffer_rx;
 
-architecture arch of buffer_rx is 
-
+architecture arch of buffer is 
 
 
 begin
 
-<<<<<<< Updated upstream
-	bitstream <= data_mod(0);
-=======
 	
->>>>>>> Stashed changes
 
 end arch;
+
+
+

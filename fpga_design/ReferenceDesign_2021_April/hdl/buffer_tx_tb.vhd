@@ -10,9 +10,9 @@ ARCHITECTURE behavior OF buffer_tx_tb IS
  -- Component Declaration for the Unit Under Test (UUT)
 COMPONENT buffer_tx is
 port (
-	clk, reset, valid : in std_logic;
+	clk, reset,ready : in std_logic;
 	bitstream, fifo_empty : in std_logic;
-	read_en : out std_logic;
+	read_en, valid: out std_logic;
 	data_out : out std_logic_vector(1 downto 0)
 	);
 end component;
@@ -20,7 +20,7 @@ end component;
 signal clk : std_logic := '0';
 signal reset : std_logic := '0';
 signal bitstream, fifo_empty : std_logic := '0';
-signal read_en, valid : std_logic := '0';
+signal read_en, valid,ready : std_logic := '0';
 signal data_out : std_logic_vector(1 downto 0);
  -- Clock period definitions
 constant clock_period : time := 20 ns;
@@ -29,7 +29,7 @@ BEGIN
 
  -- Instantiate the Unit Under Test (UUT)
 uut: buffer_tx PORT MAP (
-   clk, reset, valid, bitstream, fifo_empty, read_en, data_out);
+   clk, reset, valid, bitstream, fifo_empty, read_en,ready, data_out);
  
 
 -- Clock process definitions
