@@ -14,36 +14,49 @@ architecture arch of sender_top is
 
 -- COMPONENT DECLARATION
 
-component modulator is
-	port (
-		clk, reset : in std_logic;
-		data_in : in std_logic_vector(1 downto 0);
-		data_i, data_q : out std_logic_vector(13 downto 0);
-		valid : out std_logic
-	);
-end component;
-
-component sender is
-	port (
-		clk, reset, valid : in std_logic;
-		data_i, data_q : in std_logic_vector(13 downto 0);
-		write : out std_logic;
-		data_out_i, data_out_q : out std_logic_vector(13 downto 0)
-		);
-end component;
-
 -- SIGNAL DECLARATION
-	signal mod_ready, mod_valid : std_logic;
-	signal buff_data : std_logic_vector(1 downto 0);
 	signal data_mod_i, data_mod_q : std_logic_vector(13 downto 0);
 
+	TYPE STATE_TYPE IS (idle_state,send_state);
+	signal state, next_state : STATE_TYPE ;
+
+
 begin
+data_i <= data_mod_i;
+data_q <= data_mod_q;
 
-	buff_inst : component buffer_tx port map(clk,reset, fifo_bitstream, fifo_empty, read_en, buff_data );
-	mod_inst : component modulator port map(clk, reset, buff_data, data_mod_i, data_mod_q, mod_valid);
+--FSM process
+PROCESS (state, next_state, data_mod_i, data_mod_q)
+	BEGIN
+		
+	   CASE state IS
+		  WHEN idle_state =>
+		  	write <='1';
+			data_mod_i <= "00000000000000";
+			data_mod_q <= "11111111111111";
+			next_state <= send_state;
+		  WHEN send_state =>
+			write <= '1';
+			data_mod_q <= "00000000000000";
+			data_mod_i <= "11111111111111";
+			next_state <= idle_state;
+		END CASE;
+	END PROCESS;
 
-	sender_inst : component sender port map(clk, reset, mod_valid, data_mod_i, data_mod_q, write, data_i, data_q);
-
+ -- Register with active-high clock & asynchronous clear
+   
+   -- FOR BOARD KEY/RESET MIGHT BE INVERTED...
+	PROCESS (clk, reset)                      
+	BEGIN
+			 IF reset = '1' THEN
+				 
+				state <= idle_state;
+			
+			 ELSIF rising_edge(clk) THEN
+				state <= next_state;
+				
+				END IF;		  
+	END PROCESS;
 
 	
 end arch;

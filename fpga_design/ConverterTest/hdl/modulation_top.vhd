@@ -33,18 +33,10 @@ architecture loopback_arch of modulation_top is
 			);
 	end component;
 
-	component reciever_top is
-		port (
-			clk, reset : in std_logic;
-			data_i, data_q  : in std_logic_vector(13 downto 0);
-			fifo_full : in std_logic;
-			bitstream, fifo_wr : out std_logic
-		);
-	end component;
-
 	signal data_AD_a, data_AD_b, data_DA_a, data_DA_b : std_logic_vector(13 downto 0);
 	signal pll_clk, pll_clk_skew : std_logic;
 	signal sender_write : std_logic;
+	
 begin
 	
 	pll_inst : component ip_pll
@@ -56,9 +48,6 @@ begin
 			);
 	sender_inst : component sender_top port map(
 		clk, reset, fifo_bitstream_in, fifo_empty, sender_write, fifo_read_en, data_DA_a, data_DA_b
-	);
-	reciever_inst : component reciever_top port map(
-		clk, reset, data_AD_a, data_AD_b, fifo_full, fifo_bitstream_out, fifo_wr
 	);
 	data_AD_a <= GPIO_0(31) & GPIO_0(29) & GPIO_0(30) & GPIO_0(28) & GPIO_0(27) & GPIO_0(25) & 
 						GPIO_0(26) & GPIO_0(24) & GPIO_0(23) & GPIO_0(21) & GPIO_0(22) & GPIO_0(20) & 
@@ -86,15 +75,15 @@ begin
   GPIO_0(32) <= '1'; --POWER ON
   GPIO_1(35) <= '1'; --Mode Select. 1 = dual port &  0 = interleaved.
 
-  --GPIO_1(18) <= pll_clk; --PLL Clock to DAC_B
-  --GPIO_1(16) <= pll_clk; --PLL Clock to DAC_A
-  GPIO_1(18) <= clk; --PLL Clock to DAC_B
-  GPIO_1(16) <= clk; --PLL Clock to DAC_A
+  GPIO_1(18) <= pll_clk; --PLL Clock to DAC_B
+  GPIO_1(16) <= pll_clk; --PLL Clock to DAC_A
+  --GPIO_1(18) <= clk; --PLL Clock to DAC_B
+  --GPIO_1(16) <= clk; --PLL Clock to DAC_A
 
-  --GPIO_1(34) <= pll_clk_skew; --Input write signal for PORT B
-  --GPIO_1(17) <= pll_clk_skew; --Input write signal for PORT A
-  GPIO_1(34) <= clk; --Input write signal for PORT B
-  GPIO_1(17) <= clk; --Input write signal for PORT A
+  GPIO_1(34) <= pll_clk_skew; --Input write signal for PORT B
+  GPIO_1(17) <= pll_clk_skew; --Input write signal for PORT A
+  --GPIO_1(34) <= clk; --Input write signal for PORT B
+  --GPIO_1(17) <= clk; --Input write signal for PORT A
   
 	
 end loopback_arch;

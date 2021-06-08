@@ -24,12 +24,11 @@ end component;
 
 signal clk, reset : std_logic := '0';
 signal bitstream_in, bitstream_out, fifo_wr, fifo_full, fifo_read_en, fifo_empty : std_logic := '0';
-signal data_i, data_q : std_logic_vector(13 downto 0) :=  ( others => '0');
-signal GPIO_0, GPIO_1 : std_logic_vector(35 downto 0) :=  ( others => '0');
+signal data_i, data_q : std_logic_vector(13 downto 0);
+signal GPIO_0, GPIO_1 : std_logic_vector(35 downto 0);
  -- Clock period definitions
 constant clock_period : time := 20 ns;
 
-file file_dataI : text;
  
 BEGIN
 
@@ -51,29 +50,12 @@ end process;
 -- Stimulus process
 stim_proc: process
 
-   variable v_ILINE     : line;
-   variable r_ILINE : std_logic;
-   
 begin
 
-   file_open(file_dataI, "/home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/fifoinputs.txt",  read_mode);
-   
-   while not endfile(file_dataI) loop
-     readline(file_dataI, v_ILINE);
-      read(v_ILINE, r_ILINE);
-     
-     -- Pass the line to signal
-     bitstream_in <= r_ILINE;
-
-
-     wait for clock_period;
-    --wait for 10 ns;
- 
-   end loop;
-
-   file_close(file_dataI);
-   
-   
+   reset <= '0';
+   wait for 40 ns;
+   reset <= '1';
+   wait for 40 ns;
 
 wait for 50 ns;
 
