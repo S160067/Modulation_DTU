@@ -20,7 +20,7 @@ end component;
 signal clk : std_logic := '0';
 signal reset : std_logic := '0';
 signal bitstream, fifo_empty : std_logic := '0';
-signal read_en, valid,ready : std_logic := '0';
+signal read_en, valid,ready : std_logic;
 signal data_out : std_logic_vector(1 downto 0);
  -- Clock period definitions
 constant clock_period : time := 20 ns;
@@ -28,8 +28,8 @@ constant clock_period : time := 20 ns;
 BEGIN
 
  -- Instantiate the Unit Under Test (UUT)
-uut: buffer_tx PORT MAP (
-   clk, reset, valid, bitstream, fifo_empty, read_en,ready, data_out);
+uut: component buffer_tx PORT MAP (
+   clk, reset, ready, bitstream, fifo_empty, read_en,valid, data_out);
  
 
 -- Clock process definitions
@@ -44,19 +44,23 @@ end process;
 -- Stimulus process
 stim_proc: process
 begin
-   reset <= '1';
- -- hold reset state for 100 ns. 
- wait for 20 ns;
-   reset <= '0';
--- Test things
-wait for 5 ns;
-bitstream <= '1';
+	reset <= '1';
+	fifo_empty <= '1';	
+	-- hold reset state for 100 ns. 
+	wait for 30 ns;
+	ready <= '0';
+	reset <= '0';
+	bitstream <= '1';
+	wait for 40 ns;
+	-- Test things
+	--wait for 5 ns;
 fifo_empty <='0';
 wait for clock_period;
 bitstream <='1';
+wait for clock_period;
+ready <= '1';
 
-
-wait for 50 ns;
+wait for 80 ns;
 
 end process;
  

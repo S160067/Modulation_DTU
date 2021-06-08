@@ -19,16 +19,20 @@ architecture arch of buffer_tx is
 
 signal reg1,reg2, reg1_next,reg2_next, reg1_en, reg2_en : std_logic;
 
+TYPE STATE_TYPE IS (idle_state,middle_state,valid_state);
+	signal state, next_state : STATE_TYPE ;
 
-TYPE STATE_TYPE IS (valid_state,idle_state,middle_state);
-	signal state, next_state : STATE_TYPE := wait_state;
-	signal reg, next_reg : std_logic_vector(13 downto 0);
+
 begin
 
 --FSM process
-PROCESS (fifo_empty,valid,state,next_state,en,pll_clk_da,data_in)
+PROCESS (fifo_empty, ready,state, next_state)
 	BEGIN
-		next_state <= wait_state;
+		reg1_en <= '0';
+		reg2_en <= '0';
+		--valid <= '0';
+		read_en <= '0';
+		next_state <= idle_state;
 	   CASE state IS
 		  WHEN idle_state =>
 		  	valid <='0';
@@ -36,28 +40,24 @@ PROCESS (fifo_empty,valid,state,next_state,en,pll_clk_da,data_in)
 					reg1_en <='1';
 					read_en <='1';				
 					next_state <= middle_state;
-				elsif(fifo_empty ='1' THEN
+				else 
 					next_state <= idle_state;
 				end if;
 
 		  WHEN middle_state =>
-				next_reg <= data_in;
 				valid <='0';
 				if(fifo_empty = '0') THEN
 					read_en <='1';
 					reg2_en <='1';
 					next_state <= valid_state;
-				elsif(fifo_empty ='1' THEN
+				else
 					next_state <= middle_state;
-					
-					end if;
-					
+				end if;	
 		  WHEN valid_state =>
-				next_reg <= data_in;
 				valid <='1';
 			if(ready = '1') THEN
 				next_state <= idle_state;
-			elsif(ready ='0' THEN
+			elsif(ready ='0') THEN
 				next_state <= valid_state;
 					end if;
 		END CASE;
@@ -66,46 +66,30 @@ PROCESS (fifo_empty,valid,state,next_state,en,pll_clk_da,data_in)
  -- Register with active-high clock & asynchronous clear
    
    -- FOR BOARD KEY/RESET MIGHT BE INVERTED...
-	PROCESS (clk, en,reset)                      
+	PROCESS (clk, reset)                      
 	BEGIN
 			 IF reset = '1' THEN
-				 -- Reset
-				 --data_out <= ( others => '0');
-				 state <= wait_state;
-				 --state <= wait_state;
-				 	reg1 <= '0';
-					reg2 <= '0';
-	
-			 ELSIF clk'EVENT AND clk = '1' THEN
-				 state <= next_state;
-				 reg <= next_reg;		 
+				 
+				state <= idle_state;
+				reg1 <= '0';
+				reg2 <= '0';
+				
+			 ELSIF rising_edge(clk) THEN
+				state <= next_state;
 				if reg1_en ='1' then
 					reg1 <= reg1_next;
 				end if;
 		
 				if reg2_en ='1' then
 					reg2 <= reg2_next;
-					
 				end if;
-				END IF;
-		  
-		  
+				END IF;		  
 	END PROCESS;
 	
-	
-	
-	
-
-
-
 data_out <= reg1 & reg2;
 
 reg1_next <= bitstream; 
 reg2_next<= bitstream;
-
-
-
-
 
 	
 	
