@@ -52,17 +52,22 @@ architecture rtl of mod_deshaper is
 					
 					if (i_data_valid = '1' and cnt = 16) then
 					
-						s_lock <= '0';
+						cnt <= 0;
 						o_valid <= '1';
 						o_symbol <= s_sum(G_MANTISSA_SIZE+4);
+						s_sum <= (others =>'0');
 				
-					else
+					elsif(i_data_valid = '1') then
 					
-						if(i_data_valid = '1') then
-							cnt <= cnt + 1;	
-						end if;
+						cnt <= cnt + 1;	
 						
 					end if;
+						
+				end if;
+				
+				if (i_data_valid = '0') then
+					
+					o_valid <= '0';
 					
 				end if;
 					

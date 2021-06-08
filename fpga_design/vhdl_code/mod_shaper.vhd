@@ -59,24 +59,27 @@ architecture rtl of mod_shaper is
 					s_symbol <= i_symbol;
 				
 				elsif (i_data_valid = '1' and s_lock = '1' and s_symbol = '0') then
-					o_result <= s_pulse(cnt);
 					if cnt < 16 then
 						cnt <= cnt + 1;
 					end if;
+					o_result <= s_pulse(cnt);
+					
 				
 				elsif (i_data_valid = '1' and s_lock = '1' and s_symbol = '1') then
-					o_result <= -s_pulse(cnt);
-					cnt <= cnt + 1;
 					if cnt < 16 then
 						cnt <= cnt + 1;
 					end if;
+					o_result <= -s_pulse(cnt);
 				end if;
 					
 				if (i_data_valid = '1' and cnt = 16) then
-					s_lock <= '0';
 					cnt <= 0;
+					s_symbol <= i_symbol;
+				end if;	
+				
+				if(cnt = 0 and i_data_valid = '0') then
 					o_valid <= '0';
-				end if;			
+				end if;
 					
 				if(i_rst = '1') then
 					cnt <= 0;
