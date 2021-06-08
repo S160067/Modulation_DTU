@@ -39,15 +39,14 @@ component TX_modulation_top IS
 	);
 end component;
 signal re_sample_o, im_sample_o :  std_logic_vector(DAC_data_width - 1 DOWNTO 0);
-signal clk_i,reset_i,buffer_valid_i,buffer_ready_o,im_valid_o,re_valid_o :std_logic;
+signal clk,reset_i,buffer_valid_i,buffer_ready_o,im_valid_o,re_valid_o :std_logic;
 signal ctrl_o : std_logic_vector(15 downto 0);
 signal data_i : std_logic_vector(1 downto 0);
 BEGIN
 
-
 DUT : TX_modulation_top port MAP(
 	data_i =>data_i,
-	clk_i => clk_i,
+	clk_i => clk,
 	reset_i => reset_i,
 	buffer_valid_i => buffer_valid_i,
 	buffer_ready_o => buffer_ready_o,
@@ -57,6 +56,32 @@ DUT : TX_modulation_top port MAP(
 	re_valid_o => re_valid_o,
 	re_sample_o => re_sample_o
 	);
+
+
+
+
+process
+BEGIN
+wait for 5 ns;
+clk <= '0';
+wait for 5 ns;
+clk <= '1';
+end process;
+
+
+stim: process
+BEGIN
+reset_i <= '1';
+data_i <= (others=>'0');
+buffer_valid_i <= '1';
+wait for 20 ns;
+wait until CLK='1';
+buffer_valid_i <=  '1';
+data_i <= b"11";
+wait until CLK='1';
+buffer_valid_i <=  '0';
+wait;
+end process;
 
 
 
