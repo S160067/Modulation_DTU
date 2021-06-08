@@ -63,16 +63,16 @@ signal io_valid_o : std_logic;
 BEGIN
 
 re_shaper : mod_shaper PORT 	MAP (
-	 i_rst => clk_i,
-	 i_clk => reset_i,
+	 i_rst =>  reset_i,
+	 i_clk => clk_i ,
 	 i_data_valid => io_valid_o,
 	 i_symbol => io_re_o,
 	 o_result => re_sample_o,
 	 o_valid => re_valid_o
 );
 im_shaper : mod_shaper PORT MAP (
-	 i_rst => clk_i,
-	 i_clk => reset_i,
+	 i_rst => reset_i,
+	 i_clk => clk_i,
 	 i_data_valid => io_valid_o,
 	 i_symbol => io_im_o,
 	 o_result => im_sample_o,
