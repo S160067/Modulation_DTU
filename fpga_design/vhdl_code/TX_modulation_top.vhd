@@ -13,7 +13,7 @@ ENTITY TX_modulation_top IS
 	);
 
 	PORT (
-		data_i : IN std_logic;
+		data_i : IN std_logic_vector(1 downto 0);
 		clk_i : IN std_logic;
 		
 		reset_i  : IN std_logic;
@@ -48,7 +48,7 @@ component Mod_interface_TX is
    port (
    	clk 			: in std_logic;
    	reset			: in std_logic;
-   	data_i 			: in std_logic;
+   	data_i 			: in std_logic_vector(1 downto 0);
    	buffer_valid : in std_logic;
    	buffer_ready : out std_logic;
    	re_o			: out std_logic;
