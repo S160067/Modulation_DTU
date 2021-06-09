@@ -33,32 +33,32 @@ architecture loopback_arch of modulation_top is
 		);
 	end component;
 
-			--COMPONENT cos_gen IS
-			--	GENERIC (
-			--		data_width : NATURAL := 14;
-			--		pulse_width : NATURAL := 17;
-			--		phase_width : NATURAL := 5
-			--	);
-			--	PORT (
-			--		clk_i 	: std_logic;
-			--		reset_i : std_logic;
-			--		--phase_i : IN std_logic(phase_width - 1 DOWNTO 0);
-			--		cos_o : OUT std_logic_vector(data_width - 1 DOWNTO 0)
-			--	);
-			--END COMPONENT;
-			--COMPONENT sin_gen IS
-			--	GENERIC (
-			--		data_width : NATURAL := 14;
-			--		pulse_width : NATURAL := 17;
-			--		phase_width : NATURAL := 5
-			--	);
-			--	PORT (
-			--		clk_i 	: std_logic;
-			--		reset_i : std_logic;
-			--		--phase_i : IN std_logic(phase_width - 1 DOWNTO 0);
-			--		sin_o : OUT std_logic_vector(data_width - 1 DOWNTO 0)
-			--	);
-			--END COMPONENT;
+			COMPONENT cos_gen IS
+				GENERIC (
+					data_width : NATURAL := 14;
+					pulse_width : NATURAL := 17;
+					phase_width : NATURAL := 5
+				);
+				PORT (
+					clk_i 	: std_logic;
+					reset_i : std_logic;
+					--phase_i : IN std_logic(phase_width - 1 DOWNTO 0);
+					cos_o : OUT std_logic_vector(data_width - 1 DOWNTO 0)
+				);
+			END COMPONENT;
+			COMPONENT sin_gen IS
+				GENERIC (
+					data_width : NATURAL := 14;
+					pulse_width : NATURAL := 17;
+					phase_width : NATURAL := 5
+				);
+				PORT (
+					clk_i 	: std_logic;
+					reset_i : std_logic;
+					--phase_i : IN std_logic(phase_width - 1 DOWNTO 0);
+					sin_o : OUT std_logic_vector(data_width - 1 DOWNTO 0)
+				);
+			END COMPONENT;
 
 	signal data_AD_a, data_AD_b, data_DA_a, data_DA_b : std_logic_vector(13 downto 0);
 	signal pll_clk_125, pll_clk_125_skew, pll_clk_65, rst_inv : std_logic;
@@ -74,15 +74,15 @@ begin
 			outclk_1 => pll_clk_125_skew,        -- outclk1.clk
 			outclk_2 => pll_clk_65
 			);
-	sender_inst : component sender_top port map(
-		clk, rst_inv, fifo_bitstream_in, fifo_empty, write, fifo_read_en, test_i, test_q
-	);	
-	--sin_inst : component sin_gen port map(
-	--	clk, rst_inv, test_q
-	--);
-	--cos_inst : component cos_gen port map(
-	--	clk, rst_inv, test_i
-	--);
+	--sender_inst : component sender_top port map(
+   --		clk, rst_inv, fifo_bitstream_in, fifo_empty, write, fifo_read_en, test_i, test_q
+	--);	
+	sin_inst : component sin_gen port map(
+		clk, rst_inv, test_q
+	);
+	cos_inst : component cos_gen port map(
+		clk, rst_inv, test_i
+	);
 
 	--data_DA_a <= test_i;
 	--data_DA_b <= test_q;

@@ -1,16 +1,15 @@
 function cnt = CosGen(pulse_width,data_width)
-    s=(pi)/(floor((pulse_width)/2))    
+    s=(pi)/(floor((pulse_width)/2));    
     disp("case phase_i is") 
     cnt = 0;
-    
+    bitlength=length(dec2bin(pulse_width-1));
     for x = 0:s:(2*pi)
-       y=cos(x);    
-       y=round(y*(2^data_width)); %convert to FPGA readable version, equilevant to a data_width bit shift
-       y = dec2hex(y,ceil(data_width/4));   %convert to hex for VHDL readability
-       test =['when x"',dec2hex(cnt,bitshift(pulse_width,-3)),'" => cos_out <=x"',y,'";'];
-       disp(test)
-       
+       y=sin(x)*8192+8191;
+       y=uint32(y);
+       y=dec2bin(y,data_width);
+       output_string =['when b"',dec2bin(cnt,bitlength),'" => cos_temp <="',y,'";'];
+       disp(output_string)
        cnt = cnt+1;
-    end 
-    disp('when others => c_out <=x"FFFF";');
+    end
+    disp('when others => cos_temp <=x"11111111111111";'); 
 end
