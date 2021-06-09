@@ -46,26 +46,27 @@ end process;
 process(phase_cnt)
 begin
 	CASE phase_cnt IS
-when b"00000" => sin_temp <=x"0000";
-when b"00001" => sin_temp <=x"061F";
-when b"00010" => sin_temp <=x"0B50";
-when b"00011" => sin_temp <=x"0EC8";
-when b"00100" => sin_temp <=x"1000";
-when b"00101" => sin_temp <=x"0EC8";
-when b"00110" => sin_temp <=x"0B50";
-when b"00111" => sin_temp <=x"061F";
-when b"01000" => sin_temp <=x"0000";
-when b"01001" => sin_temp <=x"F9E1";
-when b"01010" => sin_temp <=x"F4B0";
-when b"01011" => sin_temp <=x"F138";
-when b"01100" => sin_temp <=x"F000";
-when b"01101" => sin_temp <=x"F138";
-when b"01110" => sin_temp <=x"F4B0";
-when b"01111" => sin_temp <=x"F9E1";
-when b"10000" => sin_temp <=x"0000";
+when b"00000" => sin_temp <=x"2000";
+when b"00001" => sin_temp <=x"261F";
+when b"00010" => sin_temp <=x"2B50";
+when b"00011" => sin_temp <=x"2EC8";
+when b"00100" => sin_temp <=x"3000";
+when b"00101" => sin_temp <=x"2EC8";
+when b"00110" => sin_temp <=x"2B50";
+when b"00111" => sin_temp <=x"261F";
+when b"01000" => sin_temp <=x"2000";
+when b"01001" => sin_temp <=x"19E1";
+when b"01010" => sin_temp <=x"14B0";
+when b"01011" => sin_temp <=x"1138";
+when b"01100" => sin_temp <=x"1000";
+when b"01101" => sin_temp <=x"1138";
+when b"01110" => sin_temp <=x"14B0";
+when b"01111" => sin_temp <=x"19E1";
+when b"10000" => sin_temp <=x"2000";
 when others => sin_temp <=x"FFFF";
 end case;
 end process;
 sin_o <= sin_temp(13 downto 0);	
 
 END rtl;
+
