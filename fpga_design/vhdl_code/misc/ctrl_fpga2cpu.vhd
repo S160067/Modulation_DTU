@@ -1,7 +1,7 @@
 
 entity ctrl_fpga2cpu is
 	generic (
-  	msg_width: integer :=16
+  	msg_width: integer :=32
    	);
    port (
    	clk 			: in  std_logic;
@@ -9,16 +9,17 @@ entity ctrl_fpga2cpu is
    	--To blocks
    	crypto_full		: out std_logic;
    	framing_full	: out std_logic;
-   	mod_full		: out std_logic;
+   	mod_full		  : out std_logic;
    	Crypto_write 	: in  std_logic;
-   	Framing_write 	: in  std_logic;
-   	mod_write		: in  std_logic;
+   	Framing_write : in  std_logic;
+   	mod_write	  	: in  std_logic;
    	Crypto_msg		: in  std_logic_vector(msg_width-1 downto 0);
    	Framing_msg		: in  std_logic_vector(msg_width-1 downto 0);
-   	mod_msg			: in  std_logic_vector(msg_width-1 downto 0);
+   	mod_msg		   	: in  std_logic_vector(msg_width-1 downto 0);
    	--Avalon interface
-   	Avalon_data		: out std_logic;
+   	Avalon_data		: out std_logic_vector(msg_width-1 downto 0);
    	Avalon_write	: out std_logic;
+
     ready_i			: in  std_logic		--note: valid_i is  re_valid && im_valid	
     );
 end ctrl_fpga2cpu;
@@ -27,7 +28,7 @@ architecture rtl of ctrl_fpga2cpu is
 --declarations
 signal empty_vector_array, scheduling_mask, scheduling_array : std_logic_vector(2 downto 0);
 signal crypto_empty, framing_empty, mod_empty : std_logic;
-
+signal std
 begin
 --assignments
 empty_vector_array <= crypto_empty & framing_empty & mod_empty;
