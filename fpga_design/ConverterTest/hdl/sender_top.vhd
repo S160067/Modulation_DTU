@@ -17,29 +17,69 @@ architecture arch of sender_top is
 -- SIGNAL DECLARATION
 	signal data_mod_i, data_mod_q : std_logic_vector(13 downto 0);
 
-	TYPE STATE_TYPE IS (idle_state,send_state);
+	TYPE STATE_TYPE IS (idle_state1,idle_state2,idle_state3,idle_state4,idle_state5,send_state1,send_state2,send_state3,send_state4,send_state5);
 	signal state, next_state : STATE_TYPE ;
 
 
 begin
-data_i <= data_mod_i;
-data_q <= data_mod_q;
+--data_i <= data_mod_i;
+--data_q <= data_mod_q;
 
 --FSM process
 PROCESS (state, next_state, data_mod_i, data_mod_q)
 	BEGIN
 		
 	   CASE state IS
-		  WHEN idle_state =>
+		  WHEN idle_state1 =>
 		  	write <='1';
-			data_mod_i <= "00000000000000";
-			data_mod_q <= "11111111111111";
-			next_state <= send_state;
-		  WHEN send_state =>
+			data_i <= "11111111111111";
+			data_q <= "00000000000000";
+			next_state <= idle_state2;
+		WHEN idle_state2 =>
+			write <='1';
+			data_i <= "11111111111111";
+			data_q <= "00000000000000";
+			next_state <= idle_state3;
+		  WHEN idle_state3 =>
+			write <='1';
+			data_i <= "11111111111111";
+			data_q <= "00000000000000";
+			next_state <= idle_state4;
+		WHEN idle_state4 =>
+			write <='1';
+			data_i <= "11111111111111";
+			data_q <= "00000000000000";
+			next_state <= idle_state5;
+		WHEN idle_state5 =>
+			write <='1';
+			data_i <= "11111111111111";
+			data_q <= "00000000000000";
+			next_state <= send_state1;
+		  WHEN send_state1 =>
 			write <= '1';
-			data_mod_q <= "00000000000000";
-			data_mod_i <= "11111111111111";
-			next_state <= idle_state;
+			data_q <= "11111111111111";
+			data_i <= "00000000000000";
+			next_state <= send_state2;
+			WHEN send_state2 =>
+			write <= '1';
+			data_q <= "11111111111111";
+			data_i <= "00000000000000";
+			next_state <= send_state3;
+			WHEN send_state3 =>
+			write <= '1';
+			data_q <= "11111111111111";
+			data_i <= "00000000000000";
+			next_state <= send_state4;
+			WHEN send_state4 =>
+			write <= '1';
+			data_q <= "11111111111111";
+			data_i <= "00000000000000";
+			next_state <= send_state5;
+			WHEN send_state5 =>
+			write <= '1';
+			data_q <= "11111111111111";
+			data_i <= "00000000000000";
+			next_state <= idle_state1;
 		END CASE;
 	END PROCESS;
 
@@ -50,7 +90,7 @@ PROCESS (state, next_state, data_mod_i, data_mod_q)
 	BEGIN
 			 IF reset = '1' THEN
 				 
-				state <= idle_state;
+				state <= idle_state1;
 			
 			 ELSIF rising_edge(clk) THEN
 				state <= next_state;

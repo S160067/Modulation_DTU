@@ -1,5 +1,5 @@
 Timing Analyzer report for 1_1_0
-Wed May  5 15:58:29 2021
+Wed Jun  9 13:36:37 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -103,12 +103,12 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 4           ;
 ; Maximum allowed            ; 2           ;
 ;                            ;             ;
-; Average used               ; 1.15        ;
+; Average used               ; 1.18        ;
 ; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  15.3%      ;
+;     Processor 2            ;  17.6%      ;
 +----------------------------+-------------+
 
 
@@ -117,7 +117,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------+--------+--------------------------+
 ; SDC File Path ; Status ; Read at                  ;
 +---------------+--------+--------------------------+
-; 1_1_0.out.sdc ; OK     ; Wed May  5 15:58:13 2021 ;
+; 1_1_0.out.sdc ; OK     ; Wed Jun  9 13:36:17 2021 ;
 +---------------+--------+--------------------------+
 
 
@@ -136,8 +136,8 @@ https://fpgasoftware.intel.com/eula.
 +------------+-----------------+---------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name          ; Note ;
 +------------+-----------------+---------------------+------+
-; 87.8 MHz   ; 87.8 MHz        ; altera_reserved_tck ;      ;
-; 212.81 MHz ; 212.81 MHz      ; CLOCK_50            ;      ;
+; 93.5 MHz   ; 93.5 MHz        ; altera_reserved_tck ;      ;
+; 193.42 MHz ; 193.42 MHz      ; CLOCK_50            ;      ;
 +------------+-----------------+---------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -153,8 +153,8 @@ HTML report is unavailable in plain text report export.
 +---------------------+--------+---------------+
 ; Clock               ; Slack  ; End Point TNS ;
 +---------------------+--------+---------------+
-; altera_reserved_tck ; 10.972 ; 0.000         ;
-; CLOCK_50            ; 15.301 ; 0.000         ;
+; altera_reserved_tck ; 11.319 ; 0.000         ;
+; CLOCK_50            ; 14.830 ; 0.000         ;
 +---------------------+--------+---------------+
 
 
@@ -163,8 +163,8 @@ HTML report is unavailable in plain text report export.
 +---------------------+-------+---------------+
 ; Clock               ; Slack ; End Point TNS ;
 +---------------------+-------+---------------+
-; CLOCK_50            ; 0.338 ; 0.000         ;
-; altera_reserved_tck ; 0.517 ; 0.000         ;
+; altera_reserved_tck ; 0.157 ; 0.000         ;
+; CLOCK_50            ; 0.344 ; 0.000         ;
 +---------------------+-------+---------------+
 
 
@@ -173,7 +173,7 @@ HTML report is unavailable in plain text report export.
 +---------------------+--------+---------------+
 ; Clock               ; Slack  ; End Point TNS ;
 +---------------------+--------+---------------+
-; altera_reserved_tck ; 29.595 ; 0.000         ;
+; altera_reserved_tck ; 29.447 ; 0.000         ;
 +---------------------+--------+---------------+
 
 
@@ -182,7 +182,7 @@ HTML report is unavailable in plain text report export.
 +---------------------+-------+---------------+
 ; Clock               ; Slack ; End Point TNS ;
 +---------------------+-------+---------------+
-; altera_reserved_tck ; 0.945 ; 0.000         ;
+; altera_reserved_tck ; 0.849 ; 0.000         ;
 +---------------------+-------+---------------+
 
 
@@ -191,8 +191,8 @@ HTML report is unavailable in plain text report export.
 +---------------------+--------+--------------------+
 ; Clock               ; Slack  ; End Point TNS      ;
 +---------------------+--------+--------------------+
-; CLOCK_50            ; 8.881  ; 0.000              ;
-; altera_reserved_tck ; 15.171 ; 0.000              ;
+; CLOCK_50            ; 8.891  ; 0.000              ;
+; altera_reserved_tck ; 15.184 ; 0.000              ;
 +---------------------+--------+--------------------+
 
 
@@ -200,10 +200,10 @@ HTML report is unavailable in plain text report export.
 ; Slow 1100mV 85C Model Metastability Summary ;
 -----------------------------------------------
 The design MTBF is not calculated because there are no specified synchronizers in the design.
-Number of Synchronizer Chains Found: 14
+Number of Synchronizer Chains Found: 96
 Shortest Synchronizer Chain: 2 Registers
 Fraction of Chains for which MTBFs Could Not be Calculated: 1.000
-Worst Case Available Settling Time: 43.524 ns
+Worst Case Available Settling Time: 18.620 ns
 
 
 
@@ -213,8 +213,8 @@ Worst Case Available Settling Time: 43.524 ns
 +------------+-----------------+---------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name          ; Note ;
 +------------+-----------------+---------------------+------+
-; 89.02 MHz  ; 89.02 MHz       ; altera_reserved_tck ;      ;
-; 216.64 MHz ; 216.64 MHz      ; CLOCK_50            ;      ;
+; 96.09 MHz  ; 96.09 MHz       ; altera_reserved_tck ;      ;
+; 196.08 MHz ; 196.08 MHz      ; CLOCK_50            ;      ;
 +------------+-----------------+---------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -224,8 +224,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------+--------+---------------+
 ; Clock               ; Slack  ; End Point TNS ;
 +---------------------+--------+---------------+
-; altera_reserved_tck ; 11.050 ; 0.000         ;
-; CLOCK_50            ; 15.384 ; 0.000         ;
+; altera_reserved_tck ; 11.463 ; 0.000         ;
+; CLOCK_50            ; 14.900 ; 0.000         ;
 +---------------------+--------+---------------+
 
 
@@ -234,8 +234,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------+-------+---------------+
 ; Clock               ; Slack ; End Point TNS ;
 +---------------------+-------+---------------+
-; CLOCK_50            ; 0.312 ; 0.000         ;
-; altera_reserved_tck ; 0.520 ; 0.000         ;
+; altera_reserved_tck ; 0.143 ; 0.000         ;
+; CLOCK_50            ; 0.320 ; 0.000         ;
 +---------------------+-------+---------------+
 
 
@@ -244,7 +244,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------+--------+---------------+
 ; Clock               ; Slack  ; End Point TNS ;
 +---------------------+--------+---------------+
-; altera_reserved_tck ; 29.724 ; 0.000         ;
+; altera_reserved_tck ; 29.559 ; 0.000         ;
 +---------------------+--------+---------------+
 
 
@@ -253,7 +253,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------+-------+---------------+
 ; Clock               ; Slack ; End Point TNS ;
 +---------------------+-------+---------------+
-; altera_reserved_tck ; 0.890 ; 0.000         ;
+; altera_reserved_tck ; 0.837 ; 0.000         ;
 +---------------------+-------+---------------+
 
 
@@ -262,8 +262,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------+--------+-------------------+
 ; Clock               ; Slack  ; End Point TNS     ;
 +---------------------+--------+-------------------+
-; CLOCK_50            ; 8.915  ; 0.000             ;
-; altera_reserved_tck ; 15.179 ; 0.000             ;
+; CLOCK_50            ; 8.920  ; 0.000             ;
+; altera_reserved_tck ; 15.189 ; 0.000             ;
 +---------------------+--------+-------------------+
 
 
@@ -271,10 +271,10 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 ; Slow 1100mV 0C Model Metastability Summary ;
 ----------------------------------------------
 The design MTBF is not calculated because there are no specified synchronizers in the design.
-Number of Synchronizer Chains Found: 14
+Number of Synchronizer Chains Found: 96
 Shortest Synchronizer Chain: 2 Registers
 Fraction of Chains for which MTBFs Could Not be Calculated: 1.000
-Worst Case Available Settling Time: 43.612 ns
+Worst Case Available Settling Time: 18.714 ns
 
 
 
@@ -284,8 +284,8 @@ Worst Case Available Settling Time: 43.612 ns
 +---------------------+--------+---------------+
 ; Clock               ; Slack  ; End Point TNS ;
 +---------------------+--------+---------------+
-; altera_reserved_tck ; 13.629 ; 0.000         ;
-; CLOCK_50            ; 17.247 ; 0.000         ;
+; altera_reserved_tck ; 13.813 ; 0.000         ;
+; CLOCK_50            ; 17.038 ; 0.000         ;
 +---------------------+--------+---------------+
 
 
@@ -294,8 +294,8 @@ Worst Case Available Settling Time: 43.612 ns
 +---------------------+-------+---------------+
 ; Clock               ; Slack ; End Point TNS ;
 +---------------------+-------+---------------+
-; CLOCK_50            ; 0.179 ; 0.000         ;
-; altera_reserved_tck ; 0.217 ; 0.000         ;
+; altera_reserved_tck ; 0.043 ; 0.000         ;
+; CLOCK_50            ; 0.177 ; 0.000         ;
 +---------------------+-------+---------------+
 
 
@@ -304,7 +304,7 @@ Worst Case Available Settling Time: 43.612 ns
 +---------------------+--------+---------------+
 ; Clock               ; Slack  ; End Point TNS ;
 +---------------------+--------+---------------+
-; altera_reserved_tck ; 30.776 ; 0.000         ;
+; altera_reserved_tck ; 30.601 ; 0.000         ;
 +---------------------+--------+---------------+
 
 
@@ -313,7 +313,7 @@ Worst Case Available Settling Time: 43.612 ns
 +---------------------+-------+---------------+
 ; Clock               ; Slack ; End Point TNS ;
 +---------------------+-------+---------------+
-; altera_reserved_tck ; 0.432 ; 0.000         ;
+; altera_reserved_tck ; 0.452 ; 0.000         ;
 +---------------------+-------+---------------+
 
 
@@ -322,8 +322,8 @@ Worst Case Available Settling Time: 43.612 ns
 +---------------------+--------+--------------------+
 ; Clock               ; Slack  ; End Point TNS      ;
 +---------------------+--------+--------------------+
-; CLOCK_50            ; 8.478  ; 0.000              ;
-; altera_reserved_tck ; 14.843 ; 0.000              ;
+; CLOCK_50            ; 8.482  ; 0.000              ;
+; altera_reserved_tck ; 14.849 ; 0.000              ;
 +---------------------+--------+--------------------+
 
 
@@ -331,10 +331,10 @@ Worst Case Available Settling Time: 43.612 ns
 ; Fast 1100mV 85C Model Metastability Summary ;
 -----------------------------------------------
 The design MTBF is not calculated because there are no specified synchronizers in the design.
-Number of Synchronizer Chains Found: 14
+Number of Synchronizer Chains Found: 96
 Shortest Synchronizer Chain: 2 Registers
 Fraction of Chains for which MTBFs Could Not be Calculated: 1.000
-Worst Case Available Settling Time: 46.363 ns
+Worst Case Available Settling Time: 19.112 ns
 
 
 
@@ -344,8 +344,8 @@ Worst Case Available Settling Time: 46.363 ns
 +---------------------+--------+---------------+
 ; Clock               ; Slack  ; End Point TNS ;
 +---------------------+--------+---------------+
-; altera_reserved_tck ; 14.016 ; 0.000         ;
-; CLOCK_50            ; 17.476 ; 0.000         ;
+; altera_reserved_tck ; 14.191 ; 0.000         ;
+; CLOCK_50            ; 17.279 ; 0.000         ;
 +---------------------+--------+---------------+
 
 
@@ -354,8 +354,8 @@ Worst Case Available Settling Time: 46.363 ns
 +---------------------+-------+---------------+
 ; Clock               ; Slack ; End Point TNS ;
 +---------------------+-------+---------------+
-; CLOCK_50            ; 0.168 ; 0.000         ;
-; altera_reserved_tck ; 0.201 ; 0.000         ;
+; altera_reserved_tck ; 0.029 ; 0.000         ;
+; CLOCK_50            ; 0.159 ; 0.000         ;
 +---------------------+-------+---------------+
 
 
@@ -364,7 +364,7 @@ Worst Case Available Settling Time: 46.363 ns
 +---------------------+--------+---------------+
 ; Clock               ; Slack  ; End Point TNS ;
 +---------------------+--------+---------------+
-; altera_reserved_tck ; 31.043 ; 0.000         ;
+; altera_reserved_tck ; 30.881 ; 0.000         ;
 +---------------------+--------+---------------+
 
 
@@ -373,7 +373,7 @@ Worst Case Available Settling Time: 46.363 ns
 +---------------------+-------+---------------+
 ; Clock               ; Slack ; End Point TNS ;
 +---------------------+-------+---------------+
-; altera_reserved_tck ; 0.364 ; 0.000         ;
+; altera_reserved_tck ; 0.416 ; 0.000         ;
 +---------------------+-------+---------------+
 
 
@@ -382,8 +382,8 @@ Worst Case Available Settling Time: 46.363 ns
 +---------------------+--------+-------------------+
 ; Clock               ; Slack  ; End Point TNS     ;
 +---------------------+--------+-------------------+
-; CLOCK_50            ; 8.435  ; 0.000             ;
-; altera_reserved_tck ; 14.832 ; 0.000             ;
+; CLOCK_50            ; 8.438  ; 0.000             ;
+; altera_reserved_tck ; 14.836 ; 0.000             ;
 +---------------------+--------+-------------------+
 
 
@@ -391,10 +391,10 @@ Worst Case Available Settling Time: 46.363 ns
 ; Fast 1100mV 0C Model Metastability Summary ;
 ----------------------------------------------
 The design MTBF is not calculated because there are no specified synchronizers in the design.
-Number of Synchronizer Chains Found: 14
+Number of Synchronizer Chains Found: 96
 Shortest Synchronizer Chain: 2 Registers
 Fraction of Chains for which MTBFs Could Not be Calculated: 1.000
-Worst Case Available Settling Time: 46.743 ns
+Worst Case Available Settling Time: 19.218 ns
 
 
 
@@ -404,9 +404,9 @@ Worst Case Available Settling Time: 46.743 ns
 +----------------------+--------+-------+----------+---------+---------------------+
 ; Clock                ; Setup  ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
 +----------------------+--------+-------+----------+---------+---------------------+
-; Worst-case Slack     ; 10.972 ; 0.168 ; 29.595   ; 0.364   ; 8.435               ;
-;  CLOCK_50            ; 15.301 ; 0.168 ; N/A      ; N/A     ; 8.435               ;
-;  altera_reserved_tck ; 10.972 ; 0.201 ; 29.595   ; 0.364   ; 14.832              ;
+; Worst-case Slack     ; 11.319 ; 0.029 ; 29.447   ; 0.416   ; 8.438               ;
+;  CLOCK_50            ; 14.830 ; 0.159 ; N/A      ; N/A     ; 8.438               ;
+;  altera_reserved_tck ; 11.319 ; 0.029 ; 29.447   ; 0.416   ; 14.836              ;
 ; Design-wide TNS      ; 0.0    ; 0.0   ; 0.0      ; 0.0     ; 0.0                 ;
 ;  CLOCK_50            ; 0.000  ; 0.000 ; N/A      ; N/A     ; 0.000               ;
 ;  altera_reserved_tck ; 0.000  ; 0.000 ; 0.000    ; 0.000   ; 0.000               ;
@@ -509,16 +509,9 @@ Worst Case Available Settling Time: 46.743 ns
 +---------------------+--------------+-----------------+-----------------+
 ; Pin                 ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
 +---------------------+--------------+-----------------+-----------------+
+; KEY_N[1]            ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
 ; KEY_N[2]            ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
 ; KEY_N[3]            ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
-; SW[2]               ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
-; SW[3]               ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
-; SW[4]               ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
-; SW[5]               ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
-; SW[6]               ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
-; SW[7]               ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
-; SW[8]               ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
-; SW[9]               ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
 ; GPIO_0[0]           ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
 ; GPIO_0[1]           ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
 ; GPIO_0[2]           ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
@@ -591,11 +584,18 @@ Worst Case Available Settling Time: 46.743 ns
 ; GPIO_1[33]          ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
 ; GPIO_1[34]          ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
 ; GPIO_1[35]          ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
-; CLOCK_50            ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
-; KEY_N[0]            ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
-; KEY_N[1]            ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
 ; SW[0]               ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
 ; SW[1]               ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
+; SW[2]               ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
+; SW[3]               ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
+; SW[4]               ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
+; SW[5]               ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
+; SW[6]               ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
+; SW[7]               ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
+; SW[8]               ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
+; SW[9]               ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
+; CLOCK_50            ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
+; KEY_N[0]            ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
 ; altera_reserved_tms ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
 ; altera_reserved_tck ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
 ; altera_reserved_tdi ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
@@ -971,10 +971,10 @@ Worst Case Available Settling Time: 46.743 ns
 +---------------------+---------------------+------------+----------+----------+----------+
 ; From Clock          ; To Clock            ; RR Paths   ; FR Paths ; RF Paths ; FF Paths ;
 +---------------------+---------------------+------------+----------+----------+----------+
-; altera_reserved_tck ; altera_reserved_tck ; 6620       ; 0        ; 55       ; 0        ;
+; altera_reserved_tck ; altera_reserved_tck ; 7301       ; 0        ; 55       ; 0        ;
 ; CLOCK_50            ; altera_reserved_tck ; false path ; 0        ; 0        ; 0        ;
 ; altera_reserved_tck ; CLOCK_50            ; false path ; 0        ; 0        ; 0        ;
-; CLOCK_50            ; CLOCK_50            ; 2102       ; 0        ; 0        ; 0        ;
+; CLOCK_50            ; CLOCK_50            ; 2315       ; 0        ; 0        ; 0        ;
 +---------------------+---------------------+------------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -984,10 +984,10 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +---------------------+---------------------+------------+----------+----------+----------+
 ; From Clock          ; To Clock            ; RR Paths   ; FR Paths ; RF Paths ; FF Paths ;
 +---------------------+---------------------+------------+----------+----------+----------+
-; altera_reserved_tck ; altera_reserved_tck ; 6620       ; 0        ; 55       ; 0        ;
+; altera_reserved_tck ; altera_reserved_tck ; 7301       ; 0        ; 55       ; 0        ;
 ; CLOCK_50            ; altera_reserved_tck ; false path ; 0        ; 0        ; 0        ;
 ; altera_reserved_tck ; CLOCK_50            ; false path ; 0        ; 0        ; 0        ;
-; CLOCK_50            ; CLOCK_50            ; 2102       ; 0        ; 0        ; 0        ;
+; CLOCK_50            ; CLOCK_50            ; 2315       ; 0        ; 0        ; 0        ;
 +---------------------+---------------------+------------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -997,7 +997,7 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +---------------------+---------------------+------------+----------+----------+----------+
 ; From Clock          ; To Clock            ; RR Paths   ; FR Paths ; RF Paths ; FF Paths ;
 +---------------------+---------------------+------------+----------+----------+----------+
-; altera_reserved_tck ; altera_reserved_tck ; 338        ; 0        ; 0        ; 0        ;
+; altera_reserved_tck ; altera_reserved_tck ; 508        ; 0        ; 0        ; 0        ;
 ; altera_reserved_tck ; CLOCK_50            ; false path ; 0        ; 0        ; 0        ;
 +---------------------+---------------------+------------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
@@ -1008,7 +1008,7 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +---------------------+---------------------+------------+----------+----------+----------+
 ; From Clock          ; To Clock            ; RR Paths   ; FR Paths ; RF Paths ; FF Paths ;
 +---------------------+---------------------+------------+----------+----------+----------+
-; altera_reserved_tck ; altera_reserved_tck ; 338        ; 0        ; 0        ; 0        ;
+; altera_reserved_tck ; altera_reserved_tck ; 508        ; 0        ; 0        ; 0        ;
 ; altera_reserved_tck ; CLOCK_50            ; false path ; 0        ; 0        ; 0        ;
 +---------------------+---------------------+------------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
@@ -1033,10 +1033,10 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +---------------------------------+-------+------+
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
-; Unconstrained Input Ports       ; 17    ; 17   ;
-; Unconstrained Input Port Paths  ; 91    ; 91   ;
-; Unconstrained Output Ports      ; 19    ; 19   ;
-; Unconstrained Output Port Paths ; 23    ; 23   ;
+; Unconstrained Input Ports       ; 85    ; 85   ;
+; Unconstrained Input Port Paths  ; 398   ; 398  ;
+; Unconstrained Output Ports      ; 45    ; 45   ;
+; Unconstrained Output Port Paths ; 161   ; 161  ;
 +---------------------------------+-------+------+
 
 
@@ -1056,7 +1056,9 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Input Port          ; Comment                                                                              ;
 +---------------------+--------------------------------------------------------------------------------------+
 ; CLOCK_50            ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_0[0]           ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; GPIO_0[1]           ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_0[2]           ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; GPIO_0[3]           ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; GPIO_0[4]           ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; GPIO_0[5]           ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -1066,10 +1068,76 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; GPIO_0[9]           ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; GPIO_0[10]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; GPIO_0[11]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_0[12]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_0[13]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_0[14]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_0[15]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_0[16]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_0[17]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_0[18]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_0[19]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_0[20]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_0[21]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_0[22]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_0[23]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_0[24]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_0[25]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_0[26]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_0[27]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_0[28]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_0[29]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_0[30]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_0[31]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_0[32]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_0[33]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_0[34]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_0[35]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[0]           ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[1]           ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[2]           ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[3]           ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[4]           ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[5]           ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[6]           ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[7]           ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[8]           ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[9]           ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[10]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[11]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[12]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[13]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[14]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[15]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[16]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[17]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[19]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[20]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[21]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[22]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[23]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[24]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[25]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[26]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[27]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[28]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[29]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[30]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[31]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[32]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[33]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[34]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[35]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; KEY_N[0]            ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; KEY_N[1]            ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; SW[0]               ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; SW[1]               ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; SW[2]               ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; SW[3]               ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; SW[4]               ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; SW[5]               ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; SW[6]               ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; SW[7]               ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; SW[8]               ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; SW[9]               ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; altera_reserved_tdi ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; altera_reserved_tms ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +---------------------+--------------------------------------------------------------------------------------+
@@ -1082,11 +1150,37 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +---------------------+---------------------------------------------------------------------------------------+
 ; GPIO_0[16]          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; GPIO_0[18]          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; GPIO_0[33]          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; GPIO_0[35]          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[1]           ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[3]           ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[4]           ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[5]           ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[6]           ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[7]           ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[8]           ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[9]           ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[10]          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[11]          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[12]          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[13]          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[14]          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[15]          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; GPIO_1[16]          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; GPIO_1[17]          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; GPIO_1[18]          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[19]          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[21]          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[22]          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[23]          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[24]          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[25]          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[26]          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[27]          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[28]          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[29]          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[30]          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[31]          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[32]          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[33]          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; GPIO_1[34]          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; LEDR[0]             ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; LEDR[1]             ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -1108,7 +1202,9 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Input Port          ; Comment                                                                              ;
 +---------------------+--------------------------------------------------------------------------------------+
 ; CLOCK_50            ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_0[0]           ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; GPIO_0[1]           ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_0[2]           ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; GPIO_0[3]           ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; GPIO_0[4]           ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; GPIO_0[5]           ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -1118,10 +1214,76 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; GPIO_0[9]           ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; GPIO_0[10]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; GPIO_0[11]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_0[12]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_0[13]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_0[14]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_0[15]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_0[16]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_0[17]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_0[18]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_0[19]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_0[20]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_0[21]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_0[22]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_0[23]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_0[24]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_0[25]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_0[26]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_0[27]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_0[28]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_0[29]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_0[30]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_0[31]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_0[32]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_0[33]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_0[34]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_0[35]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[0]           ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[1]           ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[2]           ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[3]           ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[4]           ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[5]           ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[6]           ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[7]           ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[8]           ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[9]           ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[10]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[11]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[12]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[13]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[14]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[15]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[16]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[17]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[19]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[20]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[21]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[22]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[23]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[24]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[25]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[26]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[27]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[28]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[29]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[30]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[31]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[32]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[33]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[34]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[35]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; KEY_N[0]            ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; KEY_N[1]            ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; SW[0]               ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; SW[1]               ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; SW[2]               ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; SW[3]               ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; SW[4]               ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; SW[5]               ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; SW[6]               ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; SW[7]               ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; SW[8]               ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; SW[9]               ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; altera_reserved_tdi ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; altera_reserved_tms ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +---------------------+--------------------------------------------------------------------------------------+
@@ -1134,11 +1296,37 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +---------------------+---------------------------------------------------------------------------------------+
 ; GPIO_0[16]          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; GPIO_0[18]          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; GPIO_0[33]          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; GPIO_0[35]          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[1]           ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[3]           ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[4]           ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[5]           ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[6]           ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[7]           ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[8]           ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[9]           ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[10]          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[11]          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[12]          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[13]          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[14]          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[15]          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; GPIO_1[16]          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; GPIO_1[17]          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; GPIO_1[18]          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[19]          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[21]          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[22]          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[23]          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[24]          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[25]          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[26]          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[27]          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[28]          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[29]          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[30]          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[31]          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[32]          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO_1[33]          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; GPIO_1[34]          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; LEDR[0]             ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; LEDR[1]             ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -1160,7 +1348,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Wed May  5 15:58:11 2021
+    Info: Processing started: Wed Jun  9 13:36:14 2021
 Info: Command: quartus_sta DE1-SOC-342x9 -c 1_1_0
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -1173,154 +1361,154 @@ Info (332164): Evaluating HDL-embedded SDC commands
         Info (332166): if { [string equal quartus_fit $::TimeQuestInfo(nameofexecutable)] } { set_max_delay -to [get_ports { altera_reserved_tdo } ] 0 }
         Info (332166): set_clock_groups -asynchronous -group {altera_reserved_tck}
 Info (332104): Reading SDC File: '1_1_0.out.sdc'
-Warning (332174): Ignored filter at 1_1_0.out.sdc(49): soc_inst|pll_0|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|refclkin could not be matched with a pin File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 49
-Warning (332174): Ignored filter at 1_1_0.out.sdc(49): soc_inst|pll_0|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0] could not be matched with a pin File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 49
-Critical Warning (332049): Ignored create_generated_clock at 1_1_0.out.sdc(49): Argument <targets> is an empty collection File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 49
-    Info (332050): create_generated_clock -name {soc_inst|pll_0|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]} -source [get_pins {soc_inst|pll_0|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|refclkin}] -duty_cycle 50/1 -multiply_by 12 -divide_by 2 -master_clock {CLOCK_50} [get_pins {soc_inst|pll_0|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]}]  File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 49
-Warning (332049): Ignored create_generated_clock at 1_1_0.out.sdc(49): Argument -source is an empty collection File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 49
-Warning (332174): Ignored filter at 1_1_0.out.sdc(50): soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|vco0ph[0] could not be matched with a pin File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 50
-Warning (332174): Ignored filter at 1_1_0.out.sdc(50): soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk could not be matched with a pin File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 50
-Critical Warning (332049): Ignored create_generated_clock at 1_1_0.out.sdc(50): Argument <targets> is an empty collection File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 50
-    Info (332050): create_generated_clock -name {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk} -source [get_pins {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|vco0ph[0]}] -duty_cycle 50/1 -multiply_by 1 -divide_by 6 -master_clock {soc_inst|pll_0|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]} [get_pins {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}]  File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 50
-Warning (332049): Ignored create_generated_clock at 1_1_0.out.sdc(50): Argument -source is an empty collection File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 50
-Warning (332174): Ignored filter at 1_1_0.out.sdc(51): soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|vco0ph[0] could not be matched with a pin File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 51
-Warning (332174): Ignored filter at 1_1_0.out.sdc(51): soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk could not be matched with a pin File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 51
-Critical Warning (332049): Ignored create_generated_clock at 1_1_0.out.sdc(51): Argument <targets> is an empty collection File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 51
-    Info (332050): create_generated_clock -name {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk} -source [get_pins {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|vco0ph[0]}] -duty_cycle 50/1 -multiply_by 1 -divide_by 30 -master_clock {soc_inst|pll_0|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]} [get_pins {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}]  File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 51
-Warning (332049): Ignored create_generated_clock at 1_1_0.out.sdc(51): Argument -source is an empty collection File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 51
-Warning (332174): Ignored filter at 1_1_0.out.sdc(64): soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk could not be matched with a clock File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 64
-Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(64): Argument -rise_from with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 64
-    Info (332050): set_clock_uncertainty -rise_from [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] -rise_to [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] -setup 0.080   File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 64
-Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(64): Argument -rise_to with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 64
-Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(65): Argument -rise_from with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 65
-    Info (332050): set_clock_uncertainty -rise_from [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] -rise_to [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] -hold 0.060   File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 65
-Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(65): Argument -rise_to with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 65
-Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(66): Argument -rise_from with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 66
-    Info (332050): set_clock_uncertainty -rise_from [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] -fall_to [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] -setup 0.080   File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 66
-Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(66): Argument -fall_to with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 66
-Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(67): Argument -rise_from with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 67
-    Info (332050): set_clock_uncertainty -rise_from [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] -fall_to [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] -hold 0.060   File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 67
-Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(67): Argument -fall_to with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 67
-Warning (332174): Ignored filter at 1_1_0.out.sdc(68): soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk could not be matched with a clock File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 68
-Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(68): Argument -rise_from with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 68
-    Info (332050): set_clock_uncertainty -rise_from [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] -rise_to [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] -setup 0.080   File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 68
-Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(68): Argument -rise_to with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 68
-Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(69): Argument -rise_from with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 69
-    Info (332050): set_clock_uncertainty -rise_from [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] -rise_to [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] -hold 0.060   File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 69
-Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(69): Argument -rise_to with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 69
-Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(70): Argument -rise_from with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 70
-    Info (332050): set_clock_uncertainty -rise_from [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] -fall_to [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] -setup 0.080   File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 70
-Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(70): Argument -fall_to with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 70
-Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(71): Argument -rise_from with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 71
-    Info (332050): set_clock_uncertainty -rise_from [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] -fall_to [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] -hold 0.060   File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 71
-Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(71): Argument -fall_to with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 71
-Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(72): Argument -fall_from with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 72
-    Info (332050): set_clock_uncertainty -fall_from [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] -rise_to [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] -setup 0.080   File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 72
-Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(72): Argument -rise_to with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 72
-Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(73): Argument -fall_from with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 73
-    Info (332050): set_clock_uncertainty -fall_from [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] -rise_to [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] -hold 0.060   File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 73
-Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(73): Argument -rise_to with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 73
-Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(74): Argument -fall_from with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 74
-    Info (332050): set_clock_uncertainty -fall_from [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] -fall_to [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] -setup 0.080   File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 74
-Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(74): Argument -fall_to with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 74
-Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(75): Argument -fall_from with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 75
-    Info (332050): set_clock_uncertainty -fall_from [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] -fall_to [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] -hold 0.060   File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 75
-Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(75): Argument -fall_to with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 75
-Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(76): Argument -fall_from with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 76
-    Info (332050): set_clock_uncertainty -fall_from [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] -rise_to [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] -setup 0.080   File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 76
-Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(76): Argument -rise_to with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 76
-Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(77): Argument -fall_from with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 77
-    Info (332050): set_clock_uncertainty -fall_from [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] -rise_to [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] -hold 0.060   File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 77
-Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(77): Argument -rise_to with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 77
-Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(78): Argument -fall_from with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 78
-    Info (332050): set_clock_uncertainty -fall_from [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] -fall_to [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] -setup 0.080   File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 78
-Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(78): Argument -fall_to with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 78
-Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(79): Argument -fall_from with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 79
-    Info (332050): set_clock_uncertainty -fall_from [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] -fall_to [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] -hold 0.060   File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 79
-Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(79): Argument -fall_to with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 79
-Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(80): Argument -rise_from with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 80
-    Info (332050): set_clock_uncertainty -rise_from [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] -rise_to [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] -setup 0.080   File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 80
-Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(80): Argument -rise_to with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 80
-Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(81): Argument -rise_from with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 81
-    Info (332050): set_clock_uncertainty -rise_from [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] -rise_to [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] -hold 0.060   File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 81
-Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(81): Argument -rise_to with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 81
-Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(82): Argument -rise_from with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 82
-    Info (332050): set_clock_uncertainty -rise_from [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] -fall_to [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] -setup 0.080   File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 82
-Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(82): Argument -fall_to with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 82
-Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(83): Argument -rise_from with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 83
-    Info (332050): set_clock_uncertainty -rise_from [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] -fall_to [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] -hold 0.060   File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 83
-Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(83): Argument -fall_to with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 83
-Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(84): Argument -rise_from with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 84
-    Info (332050): set_clock_uncertainty -rise_from [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] -rise_to [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] -setup 0.080   File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 84
-Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(84): Argument -rise_to with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 84
-Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(85): Argument -rise_from with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 85
-    Info (332050): set_clock_uncertainty -rise_from [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] -rise_to [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] -hold 0.060   File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 85
-Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(85): Argument -rise_to with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 85
-Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(86): Argument -rise_from with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 86
-    Info (332050): set_clock_uncertainty -rise_from [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] -fall_to [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] -setup 0.080   File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 86
-Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(86): Argument -fall_to with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 86
-Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(87): Argument -rise_from with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 87
-    Info (332050): set_clock_uncertainty -rise_from [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] -fall_to [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] -hold 0.060   File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 87
-Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(87): Argument -fall_to with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 87
-Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(88): Argument -fall_from with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 88
-    Info (332050): set_clock_uncertainty -fall_from [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] -rise_to [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] -setup 0.080   File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 88
-Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(88): Argument -rise_to with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 88
-Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(89): Argument -fall_from with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 89
-    Info (332050): set_clock_uncertainty -fall_from [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] -rise_to [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] -hold 0.060   File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 89
-Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(89): Argument -rise_to with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 89
-Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(90): Argument -fall_from with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 90
-    Info (332050): set_clock_uncertainty -fall_from [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] -fall_to [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] -setup 0.080   File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 90
-Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(90): Argument -fall_to with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 90
-Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(91): Argument -fall_from with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 91
-    Info (332050): set_clock_uncertainty -fall_from [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] -fall_to [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] -hold 0.060   File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 91
-Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(91): Argument -fall_to with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 91
-Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(92): Argument -fall_from with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 92
-    Info (332050): set_clock_uncertainty -fall_from [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] -rise_to [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] -setup 0.080   File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 92
-Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(92): Argument -rise_to with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 92
-Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(93): Argument -fall_from with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 93
-    Info (332050): set_clock_uncertainty -fall_from [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] -rise_to [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] -hold 0.060   File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 93
-Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(93): Argument -rise_to with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 93
-Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(94): Argument -fall_from with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 94
-    Info (332050): set_clock_uncertainty -fall_from [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] -fall_to [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] -setup 0.080   File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 94
-Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(94): Argument -fall_to with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 94
-Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(95): Argument -fall_from with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 95
-    Info (332050): set_clock_uncertainty -fall_from [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] -fall_to [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] -hold 0.060   File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 95
-Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(95): Argument -fall_to with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/1_1_0.out.sdc Line: 95
+Warning (332174): Ignored filter at 1_1_0.out.sdc(49): soc_inst|pll_0|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|refclkin could not be matched with a pin File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 49
+Warning (332174): Ignored filter at 1_1_0.out.sdc(49): soc_inst|pll_0|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0] could not be matched with a pin File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 49
+Critical Warning (332049): Ignored create_generated_clock at 1_1_0.out.sdc(49): Argument <targets> is an empty collection File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 49
+    Info (332050): create_generated_clock -name {soc_inst|pll_0|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]} -source [get_pins {soc_inst|pll_0|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|refclkin}] -duty_cycle 50/1 -multiply_by 12 -divide_by 2 -master_clock {CLOCK_50} [get_pins {soc_inst|pll_0|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]}]  File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 49
+Warning (332049): Ignored create_generated_clock at 1_1_0.out.sdc(49): Argument -source is an empty collection File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 49
+Warning (332174): Ignored filter at 1_1_0.out.sdc(50): soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|vco0ph[0] could not be matched with a pin File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 50
+Warning (332174): Ignored filter at 1_1_0.out.sdc(50): soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk could not be matched with a pin File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 50
+Critical Warning (332049): Ignored create_generated_clock at 1_1_0.out.sdc(50): Argument <targets> is an empty collection File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 50
+    Info (332050): create_generated_clock -name {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk} -source [get_pins {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|vco0ph[0]}] -duty_cycle 50/1 -multiply_by 1 -divide_by 6 -master_clock {soc_inst|pll_0|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]} [get_pins {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}]  File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 50
+Warning (332049): Ignored create_generated_clock at 1_1_0.out.sdc(50): Argument -source is an empty collection File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 50
+Warning (332174): Ignored filter at 1_1_0.out.sdc(51): soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|vco0ph[0] could not be matched with a pin File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 51
+Warning (332174): Ignored filter at 1_1_0.out.sdc(51): soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk could not be matched with a pin File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 51
+Critical Warning (332049): Ignored create_generated_clock at 1_1_0.out.sdc(51): Argument <targets> is an empty collection File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 51
+    Info (332050): create_generated_clock -name {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk} -source [get_pins {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|vco0ph[0]}] -duty_cycle 50/1 -multiply_by 1 -divide_by 30 -master_clock {soc_inst|pll_0|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]} [get_pins {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}]  File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 51
+Warning (332049): Ignored create_generated_clock at 1_1_0.out.sdc(51): Argument -source is an empty collection File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 51
+Warning (332174): Ignored filter at 1_1_0.out.sdc(64): soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk could not be matched with a clock File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 64
+Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(64): Argument -rise_from with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 64
+    Info (332050): set_clock_uncertainty -rise_from [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] -rise_to [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] -setup 0.080   File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 64
+Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(64): Argument -rise_to with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 64
+Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(65): Argument -rise_from with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 65
+    Info (332050): set_clock_uncertainty -rise_from [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] -rise_to [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] -hold 0.060   File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 65
+Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(65): Argument -rise_to with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 65
+Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(66): Argument -rise_from with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 66
+    Info (332050): set_clock_uncertainty -rise_from [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] -fall_to [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] -setup 0.080   File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 66
+Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(66): Argument -fall_to with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 66
+Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(67): Argument -rise_from with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 67
+    Info (332050): set_clock_uncertainty -rise_from [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] -fall_to [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] -hold 0.060   File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 67
+Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(67): Argument -fall_to with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 67
+Warning (332174): Ignored filter at 1_1_0.out.sdc(68): soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk could not be matched with a clock File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 68
+Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(68): Argument -rise_from with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 68
+    Info (332050): set_clock_uncertainty -rise_from [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] -rise_to [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] -setup 0.080   File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 68
+Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(68): Argument -rise_to with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 68
+Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(69): Argument -rise_from with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 69
+    Info (332050): set_clock_uncertainty -rise_from [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] -rise_to [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] -hold 0.060   File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 69
+Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(69): Argument -rise_to with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 69
+Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(70): Argument -rise_from with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 70
+    Info (332050): set_clock_uncertainty -rise_from [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] -fall_to [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] -setup 0.080   File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 70
+Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(70): Argument -fall_to with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 70
+Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(71): Argument -rise_from with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 71
+    Info (332050): set_clock_uncertainty -rise_from [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] -fall_to [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] -hold 0.060   File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 71
+Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(71): Argument -fall_to with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 71
+Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(72): Argument -fall_from with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 72
+    Info (332050): set_clock_uncertainty -fall_from [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] -rise_to [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] -setup 0.080   File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 72
+Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(72): Argument -rise_to with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 72
+Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(73): Argument -fall_from with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 73
+    Info (332050): set_clock_uncertainty -fall_from [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] -rise_to [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] -hold 0.060   File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 73
+Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(73): Argument -rise_to with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 73
+Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(74): Argument -fall_from with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 74
+    Info (332050): set_clock_uncertainty -fall_from [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] -fall_to [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] -setup 0.080   File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 74
+Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(74): Argument -fall_to with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 74
+Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(75): Argument -fall_from with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 75
+    Info (332050): set_clock_uncertainty -fall_from [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] -fall_to [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] -hold 0.060   File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 75
+Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(75): Argument -fall_to with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 75
+Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(76): Argument -fall_from with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 76
+    Info (332050): set_clock_uncertainty -fall_from [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] -rise_to [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] -setup 0.080   File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 76
+Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(76): Argument -rise_to with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 76
+Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(77): Argument -fall_from with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 77
+    Info (332050): set_clock_uncertainty -fall_from [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] -rise_to [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] -hold 0.060   File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 77
+Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(77): Argument -rise_to with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 77
+Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(78): Argument -fall_from with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 78
+    Info (332050): set_clock_uncertainty -fall_from [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] -fall_to [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] -setup 0.080   File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 78
+Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(78): Argument -fall_to with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 78
+Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(79): Argument -fall_from with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 79
+    Info (332050): set_clock_uncertainty -fall_from [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] -fall_to [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] -hold 0.060   File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 79
+Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(79): Argument -fall_to with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 79
+Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(80): Argument -rise_from with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 80
+    Info (332050): set_clock_uncertainty -rise_from [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] -rise_to [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] -setup 0.080   File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 80
+Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(80): Argument -rise_to with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 80
+Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(81): Argument -rise_from with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 81
+    Info (332050): set_clock_uncertainty -rise_from [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] -rise_to [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] -hold 0.060   File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 81
+Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(81): Argument -rise_to with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 81
+Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(82): Argument -rise_from with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 82
+    Info (332050): set_clock_uncertainty -rise_from [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] -fall_to [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] -setup 0.080   File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 82
+Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(82): Argument -fall_to with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 82
+Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(83): Argument -rise_from with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 83
+    Info (332050): set_clock_uncertainty -rise_from [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] -fall_to [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] -hold 0.060   File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 83
+Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(83): Argument -fall_to with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 83
+Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(84): Argument -rise_from with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 84
+    Info (332050): set_clock_uncertainty -rise_from [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] -rise_to [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] -setup 0.080   File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 84
+Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(84): Argument -rise_to with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 84
+Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(85): Argument -rise_from with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 85
+    Info (332050): set_clock_uncertainty -rise_from [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] -rise_to [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] -hold 0.060   File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 85
+Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(85): Argument -rise_to with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 85
+Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(86): Argument -rise_from with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 86
+    Info (332050): set_clock_uncertainty -rise_from [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] -fall_to [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] -setup 0.080   File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 86
+Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(86): Argument -fall_to with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 86
+Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(87): Argument -rise_from with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 87
+    Info (332050): set_clock_uncertainty -rise_from [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] -fall_to [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] -hold 0.060   File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 87
+Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(87): Argument -fall_to with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 87
+Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(88): Argument -fall_from with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 88
+    Info (332050): set_clock_uncertainty -fall_from [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] -rise_to [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] -setup 0.080   File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 88
+Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(88): Argument -rise_to with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 88
+Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(89): Argument -fall_from with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 89
+    Info (332050): set_clock_uncertainty -fall_from [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] -rise_to [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] -hold 0.060   File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 89
+Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(89): Argument -rise_to with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 89
+Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(90): Argument -fall_from with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 90
+    Info (332050): set_clock_uncertainty -fall_from [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] -fall_to [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] -setup 0.080   File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 90
+Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(90): Argument -fall_to with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 90
+Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(91): Argument -fall_from with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 91
+    Info (332050): set_clock_uncertainty -fall_from [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] -fall_to [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] -hold 0.060   File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 91
+Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(91): Argument -fall_to with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 91
+Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(92): Argument -fall_from with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 92
+    Info (332050): set_clock_uncertainty -fall_from [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] -rise_to [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] -setup 0.080   File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 92
+Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(92): Argument -rise_to with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 92
+Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(93): Argument -fall_from with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 93
+    Info (332050): set_clock_uncertainty -fall_from [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] -rise_to [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] -hold 0.060   File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 93
+Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(93): Argument -rise_to with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 93
+Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(94): Argument -fall_from with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 94
+    Info (332050): set_clock_uncertainty -fall_from [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] -fall_to [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] -setup 0.080   File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 94
+Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(94): Argument -fall_to with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 94
+Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(95): Argument -fall_from with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 95
+    Info (332050): set_clock_uncertainty -fall_from [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] -fall_to [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] -hold 0.060   File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 95
+Warning (332049): Ignored set_clock_uncertainty at 1_1_0.out.sdc(95): Argument -fall_to with value [get_clocks {soc_inst|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] contains zero elements File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/1_1_0.out.sdc Line: 95
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Warning (332056): PLL cross checking found inconsistent PLL clock settings:
     Warning (332056): Node: fpga_top_inst|modulation_inst|pll_inst|ip_pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0] was found missing 1 generated clock that corresponds to a base clock with a period of: 20.000
 Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1100mV 85C Model
-Info (332146): Worst-case setup slack is 10.972
+Info (332146): Worst-case setup slack is 11.319
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    10.972               0.000 altera_reserved_tck 
-    Info (332119):    15.301               0.000 CLOCK_50 
-Info (332146): Worst-case hold slack is 0.338
+    Info (332119):    11.319               0.000 altera_reserved_tck 
+    Info (332119):    14.830               0.000 CLOCK_50 
+Info (332146): Worst-case hold slack is 0.157
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.338               0.000 CLOCK_50 
-    Info (332119):     0.517               0.000 altera_reserved_tck 
-Info (332146): Worst-case recovery slack is 29.595
+    Info (332119):     0.157               0.000 altera_reserved_tck 
+    Info (332119):     0.344               0.000 CLOCK_50 
+Info (332146): Worst-case recovery slack is 29.447
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    29.595               0.000 altera_reserved_tck 
-Info (332146): Worst-case removal slack is 0.945
+    Info (332119):    29.447               0.000 altera_reserved_tck 
+Info (332146): Worst-case removal slack is 0.849
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.945               0.000 altera_reserved_tck 
-Info (332146): Worst-case minimum pulse width slack is 8.881
+    Info (332119):     0.849               0.000 altera_reserved_tck 
+Info (332146): Worst-case minimum pulse width slack is 8.891
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     8.881               0.000 CLOCK_50 
-    Info (332119):    15.171               0.000 altera_reserved_tck 
-Info (332114): Report Metastability: Found 14 synchronizer chains.
+    Info (332119):     8.891               0.000 CLOCK_50 
+    Info (332119):    15.184               0.000 altera_reserved_tck 
+Info (332114): Report Metastability: Found 96 synchronizer chains.
     Info (332114): The design MTBF is not calculated because there are no specified synchronizers in the design.
-    Info (332114): Number of Synchronizer Chains Found: 14
+    Info (332114): Number of Synchronizer Chains Found: 96
     Info (332114): Shortest Synchronizer Chain: 2 Registers
     Info (332114): Fraction of Chains for which MTBFs Could Not be Calculated: 1.000
-    Info (332114): Worst Case Available Settling Time: 43.524 ns
+    Info (332114): Worst Case Available Settling Time: 18.620 ns
     Info (332114): 
 Info: Analyzing Slow 1100mV 0C Model
 Info (334003): Started post-fitting delay annotation
@@ -1328,35 +1516,35 @@ Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Warning (332056): PLL cross checking found inconsistent PLL clock settings:
     Warning (332056): Node: fpga_top_inst|modulation_inst|pll_inst|ip_pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0] was found missing 1 generated clock that corresponds to a base clock with a period of: 20.000
-Info (332146): Worst-case setup slack is 11.050
+Info (332146): Worst-case setup slack is 11.463
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    11.050               0.000 altera_reserved_tck 
-    Info (332119):    15.384               0.000 CLOCK_50 
-Info (332146): Worst-case hold slack is 0.312
+    Info (332119):    11.463               0.000 altera_reserved_tck 
+    Info (332119):    14.900               0.000 CLOCK_50 
+Info (332146): Worst-case hold slack is 0.143
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.312               0.000 CLOCK_50 
-    Info (332119):     0.520               0.000 altera_reserved_tck 
-Info (332146): Worst-case recovery slack is 29.724
+    Info (332119):     0.143               0.000 altera_reserved_tck 
+    Info (332119):     0.320               0.000 CLOCK_50 
+Info (332146): Worst-case recovery slack is 29.559
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    29.724               0.000 altera_reserved_tck 
-Info (332146): Worst-case removal slack is 0.890
+    Info (332119):    29.559               0.000 altera_reserved_tck 
+Info (332146): Worst-case removal slack is 0.837
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.890               0.000 altera_reserved_tck 
-Info (332146): Worst-case minimum pulse width slack is 8.915
+    Info (332119):     0.837               0.000 altera_reserved_tck 
+Info (332146): Worst-case minimum pulse width slack is 8.920
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     8.915               0.000 CLOCK_50 
-    Info (332119):    15.179               0.000 altera_reserved_tck 
-Info (332114): Report Metastability: Found 14 synchronizer chains.
+    Info (332119):     8.920               0.000 CLOCK_50 
+    Info (332119):    15.189               0.000 altera_reserved_tck 
+Info (332114): Report Metastability: Found 96 synchronizer chains.
     Info (332114): The design MTBF is not calculated because there are no specified synchronizers in the design.
-    Info (332114): Number of Synchronizer Chains Found: 14
+    Info (332114): Number of Synchronizer Chains Found: 96
     Info (332114): Shortest Synchronizer Chain: 2 Registers
     Info (332114): Fraction of Chains for which MTBFs Could Not be Calculated: 1.000
-    Info (332114): Worst Case Available Settling Time: 43.612 ns
+    Info (332114): Worst Case Available Settling Time: 18.714 ns
     Info (332114): 
 Info: Analyzing Fast 1100mV 85C Model
 Info (334003): Started post-fitting delay annotation
@@ -1364,76 +1552,76 @@ Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Warning (332056): PLL cross checking found inconsistent PLL clock settings:
     Warning (332056): Node: fpga_top_inst|modulation_inst|pll_inst|ip_pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0] was found missing 1 generated clock that corresponds to a base clock with a period of: 20.000
-Info (332146): Worst-case setup slack is 13.629
+Info (332146): Worst-case setup slack is 13.813
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    13.629               0.000 altera_reserved_tck 
-    Info (332119):    17.247               0.000 CLOCK_50 
-Info (332146): Worst-case hold slack is 0.179
+    Info (332119):    13.813               0.000 altera_reserved_tck 
+    Info (332119):    17.038               0.000 CLOCK_50 
+Info (332146): Worst-case hold slack is 0.043
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.179               0.000 CLOCK_50 
-    Info (332119):     0.217               0.000 altera_reserved_tck 
-Info (332146): Worst-case recovery slack is 30.776
+    Info (332119):     0.043               0.000 altera_reserved_tck 
+    Info (332119):     0.177               0.000 CLOCK_50 
+Info (332146): Worst-case recovery slack is 30.601
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    30.776               0.000 altera_reserved_tck 
-Info (332146): Worst-case removal slack is 0.432
+    Info (332119):    30.601               0.000 altera_reserved_tck 
+Info (332146): Worst-case removal slack is 0.452
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.432               0.000 altera_reserved_tck 
-Info (332146): Worst-case minimum pulse width slack is 8.478
+    Info (332119):     0.452               0.000 altera_reserved_tck 
+Info (332146): Worst-case minimum pulse width slack is 8.482
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     8.478               0.000 CLOCK_50 
-    Info (332119):    14.843               0.000 altera_reserved_tck 
-Info (332114): Report Metastability: Found 14 synchronizer chains.
+    Info (332119):     8.482               0.000 CLOCK_50 
+    Info (332119):    14.849               0.000 altera_reserved_tck 
+Info (332114): Report Metastability: Found 96 synchronizer chains.
     Info (332114): The design MTBF is not calculated because there are no specified synchronizers in the design.
-    Info (332114): Number of Synchronizer Chains Found: 14
+    Info (332114): Number of Synchronizer Chains Found: 96
     Info (332114): Shortest Synchronizer Chain: 2 Registers
     Info (332114): Fraction of Chains for which MTBFs Could Not be Calculated: 1.000
-    Info (332114): Worst Case Available Settling Time: 46.363 ns
+    Info (332114): Worst Case Available Settling Time: 19.112 ns
     Info (332114): 
 Info: Analyzing Fast 1100mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Warning (332056): PLL cross checking found inconsistent PLL clock settings:
     Warning (332056): Node: fpga_top_inst|modulation_inst|pll_inst|ip_pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0] was found missing 1 generated clock that corresponds to a base clock with a period of: 20.000
-Info (332146): Worst-case setup slack is 14.016
+Info (332146): Worst-case setup slack is 14.191
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    14.016               0.000 altera_reserved_tck 
-    Info (332119):    17.476               0.000 CLOCK_50 
-Info (332146): Worst-case hold slack is 0.168
+    Info (332119):    14.191               0.000 altera_reserved_tck 
+    Info (332119):    17.279               0.000 CLOCK_50 
+Info (332146): Worst-case hold slack is 0.029
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.168               0.000 CLOCK_50 
-    Info (332119):     0.201               0.000 altera_reserved_tck 
-Info (332146): Worst-case recovery slack is 31.043
+    Info (332119):     0.029               0.000 altera_reserved_tck 
+    Info (332119):     0.159               0.000 CLOCK_50 
+Info (332146): Worst-case recovery slack is 30.881
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    31.043               0.000 altera_reserved_tck 
-Info (332146): Worst-case removal slack is 0.364
+    Info (332119):    30.881               0.000 altera_reserved_tck 
+Info (332146): Worst-case removal slack is 0.416
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.364               0.000 altera_reserved_tck 
-Info (332146): Worst-case minimum pulse width slack is 8.435
+    Info (332119):     0.416               0.000 altera_reserved_tck 
+Info (332146): Worst-case minimum pulse width slack is 8.438
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     8.435               0.000 CLOCK_50 
-    Info (332119):    14.832               0.000 altera_reserved_tck 
-Info (332114): Report Metastability: Found 14 synchronizer chains.
+    Info (332119):     8.438               0.000 CLOCK_50 
+    Info (332119):    14.836               0.000 altera_reserved_tck 
+Info (332114): Report Metastability: Found 96 synchronizer chains.
     Info (332114): The design MTBF is not calculated because there are no specified synchronizers in the design.
-    Info (332114): Number of Synchronizer Chains Found: 14
+    Info (332114): Number of Synchronizer Chains Found: 96
     Info (332114): Shortest Synchronizer Chain: 2 Registers
     Info (332114): Fraction of Chains for which MTBFs Could Not be Calculated: 1.000
-    Info (332114): Worst Case Available Settling Time: 46.743 ns
+    Info (332114): Worst Case Available Settling Time: 19.218 ns
     Info (332114): 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 88 warnings
-    Info: Peak virtual memory: 873 megabytes
-    Info: Processing ended: Wed May  5 15:58:29 2021
-    Info: Elapsed time: 00:00:18
-    Info: Total CPU time (on all processors): 00:00:21
+    Info: Peak virtual memory: 886 megabytes
+    Info: Processing ended: Wed Jun  9 13:36:36 2021
+    Info: Elapsed time: 00:00:22
+    Info: Total CPU time (on all processors): 00:00:26
 
 

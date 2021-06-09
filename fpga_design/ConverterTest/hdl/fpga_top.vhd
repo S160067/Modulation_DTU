@@ -30,10 +30,7 @@ port (
 	);
 	end component modulation_top;
 	
-	SW : in std_logic_vector(9 downto 0);
-      LEDR : out std_logic_vector(9 downto 0);
-		KEY_N : in std_logic_vector(3 downto 0)
-
+	
 
 signal framing_modulation_tx, modulation_framing_rx : std_logic_vector(7 downto 0);
 signal GPIO_loopback : std_logic_vector(35 downto 0);
@@ -47,15 +44,16 @@ signal key_in : std_logic_vector(3 downto 0);
 begin
 	sw_in <= SW;
 	LEDR_in <= LEDR;
-
+	LEDR <= SW; 
+	
 modulation_inst : component modulation_top
 port map (
 	clk => clk, reset => reset,
 	GPIO_0 => GPIO_0,
 	GPIO_1 => GPIO_1,
 
-	fifo_bitstream_in => sw_in(0), fifo_empty => sw_in(1), fifo_full => sw_in(2) : in std_logic;
-	fifo_bitstream_out => , fifo_wr, fifo_read_en : out std_logic
+	fifo_bitstream_in => sw_in(0), fifo_empty => sw_in(1), fifo_full => sw_in(2),
+	fifo_bitstream_out => LEDR_in(0), fifo_wr => LEDR_in(1), fifo_read_en => LEDR_in(2)
 	
 	);
 	

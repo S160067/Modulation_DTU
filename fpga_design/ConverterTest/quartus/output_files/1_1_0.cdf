@@ -4,9 +4,9 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Ign)
-		Device PartName(5CSEMA5) MfrSpec(OpMask(0));
+		Device PartName(SOCVHPS) MfrSpec(OpMask(0));
 	P ActionCode(Cfg)
-		Device PartName(5CSEMA5F31) Path("/home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/output_files/") File("1_1_0.sof") MfrSpec(OpMask(1));
+		Device PartName(5CSEMA5F31) Path("/home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/quartus/output_files/") File("1_1_0.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

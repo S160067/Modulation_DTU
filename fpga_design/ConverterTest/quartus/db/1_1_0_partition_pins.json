@@ -44,63 +44,115 @@
 					"strict" : false
 				},
 				{
-					"name" : "GPIO_0[1]",
+					"name" : "GPIO_1[1]",
 					"strict" : false
 				},
 				{
-					"name" : "GPIO_0[3]",
+					"name" : "GPIO_1[3]",
 					"strict" : false
 				},
 				{
-					"name" : "GPIO_0[4]",
+					"name" : "GPIO_1[4]",
 					"strict" : false
 				},
 				{
-					"name" : "GPIO_0[5]",
+					"name" : "GPIO_1[5]",
 					"strict" : false
 				},
 				{
-					"name" : "GPIO_0[6]",
+					"name" : "GPIO_1[6]",
 					"strict" : false
 				},
 				{
-					"name" : "GPIO_0[7]",
+					"name" : "GPIO_1[7]",
 					"strict" : false
 				},
 				{
-					"name" : "GPIO_0[8]",
+					"name" : "GPIO_1[8]",
 					"strict" : false
 				},
 				{
-					"name" : "GPIO_0[9]",
+					"name" : "GPIO_1[9]",
 					"strict" : false
 				},
 				{
-					"name" : "GPIO_0[10]",
+					"name" : "GPIO_1[10]",
 					"strict" : false
 				},
 				{
-					"name" : "GPIO_0[11]",
+					"name" : "GPIO_1[11]",
 					"strict" : false
 				},
 				{
-					"name" : "GPIO_0[33]",
+					"name" : "GPIO_1[12]",
 					"strict" : false
 				},
 				{
-					"name" : "GPIO_0[35]",
+					"name" : "GPIO_1[13]",
 					"strict" : false
 				},
 				{
-					"name" : "CLOCK_50",
+					"name" : "GPIO_1[14]",
 					"strict" : false
 				},
 				{
-					"name" : "KEY_N[0]",
+					"name" : "GPIO_1[15]",
 					"strict" : false
 				},
 				{
-					"name" : "KEY_N[1]",
+					"name" : "GPIO_1[19]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO_1[21]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO_1[22]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO_1[23]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO_1[24]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO_1[25]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO_1[26]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO_1[27]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO_1[28]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO_1[29]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO_1[30]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO_1[31]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO_1[32]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO_1[33]",
 					"strict" : false
 				},
 				{
@@ -109,6 +161,46 @@
 				},
 				{
 					"name" : "SW[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[2]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[3]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[4]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[5]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[6]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[7]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[8]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[9]",
+					"strict" : false
+				},
+				{
+					"name" : "CLOCK_50",
+					"strict" : false
+				},
+				{
+					"name" : "KEY_N[0]",
 					"strict" : false
 				}
 			]

@@ -22,7 +22,7 @@ ARCHITECTURE behavior OF modulation_top_tb IS
 	);
 end component;
 
-signal clk, reset : std_logic := '0';
+signal clk, reset : std_logic;
 signal bitstream_in, bitstream_out, fifo_wr, fifo_full, fifo_read_en, fifo_empty : std_logic := '0';
 signal data_i, data_q : std_logic_vector(13 downto 0);
 signal GPIO_0, GPIO_1 : std_logic_vector(35 downto 0);
@@ -52,12 +52,10 @@ stim_proc: process
 
 begin
 
-   reset <= '0';
-   wait for 40 ns;
    reset <= '1';
    wait for 40 ns;
-
-wait for 50 ns;
+   reset <= '0';
+   wait;
 
 end process;
  
