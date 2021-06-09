@@ -14,7 +14,7 @@ entity Mod_interface_RX is
 
    	re_i			: in std_logic;
    	im_i 			: in std_logic;
-    valid_i	: in std_logic		--note: valid_i is  re_valid && im_valid	
+		valid_i	: in std_logic		--note: valid_i is  re_valid && im_valid	
     );
 end Mod_interface_RX;
 
@@ -35,20 +35,17 @@ if(rising_edge(clk)) then
 		data_sr <= (others=>'0');
 		data_available <= '0';
 	else
-		fifo_read <= '0';
-		if(fifo_full <= '1')
-			if(valid_i) then
+		if(valid_i) then
 				fifo_read <= '1';
 				data_o <= re_i;
-				data_reg <=  im_i;
-			elsif (valid_reg = '1') then
+			data_reg <=  im_i;
+		elsif (valid_reg = '1') then
 				data_o <= data_reg;	
 				fifo_read <= '1'; 
 				valid_reg <='0';		
 			end if; 
 		end if;
 	end if;	
-end if;
 end process;
 
 end rtl; 
