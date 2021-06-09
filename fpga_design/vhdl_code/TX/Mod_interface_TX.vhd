@@ -68,7 +68,7 @@ BEGIN
             END IF;
           WHEN sending => 
             enable_o <= '1'; 
-            IF (time_cnt = 18) THEN
+            IF (time_cnt = 19) THEN
               state <= idle;
               ready <= '1';
               enable_o <= '0'; 

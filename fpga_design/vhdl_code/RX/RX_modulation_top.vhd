@@ -1,27 +1,25 @@
--- Quartus Prime aVHDL Template
--- Basic Shift Register
+
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
 
 ENTITY RX_modulation_top IS
 	GENERIC (
-		DAC_data_width : NATURAL := 14;
-		pulse_width : NATURAL := 17
+		DAC_data_width : integer := 14;
+		pulse_width : integer := 17;
+		msg_data_width : integer := 8
 	);
 
 	PORT (
-		data_i : IN std_logic;
+		data_o : out std_logic_vector(1 downto 0);
 		clk_i : IN std_logic;
 		reset_i  : IN std_logic;
-		fifo_full_i : in std_logic;
-		fifo_read_o : out std_logic;
-	
+		valid_o : out std_logic;	
 		ctrl_o : out std_logic_vector(15 downto 0);
-		im_valid_o : out std_logic;
-		im_sample_o : OUT std_logic_vector(DAC_data_width - 1 DOWNTO 0);
-		re_valid_o : out std_logic;
-		re_sample_o : OUT std_logic_vector(DAC_data_width - 1 DOWNTO 0)
+		im_data_valid	 : in std_logic;
+		re_data_valid	 : in std_logic;
+		im_sample_i : in std_logic_vector(DAC_data_width - 1 DOWNTO 0);
+		re_sample_i : in std_logic_vector(DAC_data_width - 1 DOWNTO 0)
 	);
 
 END ENTITY;
@@ -29,12 +27,13 @@ END ENTITY;
 ARCHITECTURE rtl OF RX_modulation_top IS
 component mod_deshaper is 
 
+		
 		port(
 		i_rst									: in std_logic;
 		i_clk 									: in std_logic;
 		i_data_valid							: in std_logic;
-		i_symbol								: in std_logic;
-		o_result								: out std_logic_vector(DAC_data_width-1 downto 0);
+		i_sample								: in std_logic_vector(DAC_data_width-1 downto 0);
+		o_symbol								: out std_logic;
 		o_valid									: out std_logic
 		);	
 
@@ -43,49 +42,49 @@ component Mod_interface_RX is
    port (
    	clk 			: in std_logic;
    	reset			: in std_logic;
-   	data_i 		: in std_logic;
-   	fifo_full : in std_logic;
-   	fifo_read : out std_logic;
-
-
-   	re_o			: out std_logic;
-   	im_o 			: out std_logic;
-    enable_o	: out std_logic	
+   	data_o 			: out std_logic_vector(1 downto 0);
+   	valid_o 		: out std_logic;
+   	re_i			: in std_logic;
+   	im_i 			: in std_logic;
+		im_valid_i  : in std_logic;
+		re_valid_i	: in std_logic		--note: 	 is  re_valid && im_valid	
     );
 end component;
 
-signal io_im_o, io_re_o : std_logic;
-signal io_valid_o : std_logic;
+signal re, im : std_logic;
+signal im_valid, re_valid : std_logic;
 BEGIN
+--assigns
+-----------------------------------------
+--port maps
 
 re_deshaper : mod_deshaper PORT MAP (
 	 i_rst => reset_i,
 	 i_clk => clk_i,
-	 i_data_valid => io_valid_o,
-	 i_symbol => io_re_o,
-	 o_result => mod_re_o,
-	 o_valid => re_valid_o
+	 i_data_valid => re_data_valid,
+	 i_sample => re_sample_i,
+	 o_symbol => re,
+	 o_valid => re_valid
 );
 im_deshaper : mod_deshaper PORT MAP (
 	 i_rst => reset_i,
 	 i_clk => clk_i,
-	 i_data_valid => io_valid_o,
-	 i_symbol => io_im_o,
-	 o_result => mod_im_o,
-	 o_valid => im_valid_o
+	 i_data_valid => im_data_valid,
+	 i_sample => im_sample_i,
+	 o_symbol => im,
+	 o_valid => im_valid
 );
+
 u_mod_interface : Mod_interface_RX port MAP(
-	data_i =>data_i,
-	clk_i => clk_i,
-	reset_i => reset_i,
-	fifo_full_i => fifo_full_i,
-	fifo_read_o => fifo_read_o,
-	re_o => io_re_o,
-	im_o => io_im_o,
-	enable_o => io_valid_o
-	);
-
+	clk		  => 	clk_i,
+	reset 	  => 	reset_i,
+	re_i 		=>	 re,
+	im_i 	=>	 im,
+	re_valid_i => re_valid,
+	im_valid_i => im_valid,
+	data_o 	=> data_o,
+	valid_o	 => valid_o);
+----------------------------------------------------
 ctrl_o <= (others=>'0');
-
 
 END rtl;
