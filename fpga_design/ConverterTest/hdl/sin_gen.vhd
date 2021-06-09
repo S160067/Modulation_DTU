@@ -23,7 +23,7 @@ END ENTITY;
 
 ARCHITECTURE rtl OF sin_gen IS
 signal phase_cnt : std_logic_vector(4 downto 0);
-signal sin_temp : std_logic_vector(15 downto 0);
+signal sin_temp : std_logic_vector(13 downto 0);
 
 BEGIN	
 
@@ -46,27 +46,30 @@ end process;
 process(phase_cnt)
 begin
 	CASE phase_cnt IS
-when b"00000" => sin_temp <=x"2000";
-when b"00001" => sin_temp <=x"261F";
-when b"00010" => sin_temp <=x"2B50";
-when b"00011" => sin_temp <=x"2EC8";
-when b"00100" => sin_temp <=x"3000";
-when b"00101" => sin_temp <=x"2EC8";
-when b"00110" => sin_temp <=x"2B50";
-when b"00111" => sin_temp <=x"261F";
-when b"01000" => sin_temp <=x"2000";
-when b"01001" => sin_temp <=x"19E1";
-when b"01010" => sin_temp <=x"14B0";
-when b"01011" => sin_temp <=x"1138";
-when b"01100" => sin_temp <=x"1000";
-when b"01101" => sin_temp <=x"1138";
-when b"01110" => sin_temp <=x"14B0";
-when b"01111" => sin_temp <=x"19E1";
-when b"10000" => sin_temp <=x"2000";
-when others => sin_temp <=x"FFFF";
+	
+	
+	
+when b"00000" => sin_temp <="01111111111111";
+when b"00001" => sin_temp <="10110000111110";
+when b"00010" => sin_temp <="11011010100000";
+when b"00011" => sin_temp <="11110110001111";
+when b"00100" => sin_temp <="11111111111111";
+when b"00101" => sin_temp <="11110110001111";
+when b"00110" => sin_temp <="11011010100000";
+when b"00111" => sin_temp <="10110000111110";
+when b"01000" => sin_temp <="01111111111111";
+when b"01001" => sin_temp <="01001111000000";
+when b"01010" => sin_temp <="00100101011110";
+when b"01011" => sin_temp <="00001001101111";
+when b"01100" => sin_temp <="00000000000000";
+when b"01101" => sin_temp <="00001001101111";
+when b"01110" => sin_temp <="00100101011110";
+when b"01111" => sin_temp <="01001111000000";
+when b"10000" => sin_temp <="01111111111111";
+when others => sin_temp <="11111111111111";
 end case;
 end process;
-sin_o <= sin_temp(13 downto 0);	
+sin_o <= sin_temp;	
 
 END rtl;
 
