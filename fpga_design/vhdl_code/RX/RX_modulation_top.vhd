@@ -19,7 +19,7 @@ ENTITY RX_modulation_top IS
 	
 		ctrl_o : out std_logic_vector(15 downto 0);
 		im_valid_o : out std_logic;
-		im_sample_o : OUT std_logic_vector(DAC_data_width - 1 DOWNTO 0)
+		im_sample_o : OUT std_logic_vector(DAC_data_width - 1 DOWNTO 0);
 		re_valid_o : out std_logic;
 		re_sample_o : OUT std_logic_vector(DAC_data_width - 1 DOWNTO 0)
 	);
@@ -34,7 +34,7 @@ component mod_deshaper is
 		i_clk 									: in std_logic;
 		i_data_valid							: in std_logic;
 		i_symbol								: in std_logic;
-		o_result								: out signed(DAC_data_width-1 downto 0);
+		o_result								: out std_logic_vector(DAC_data_width-1 downto 0);
 		o_valid									: out std_logic
 		);	
 
@@ -58,16 +58,16 @@ signal io_im_o, io_re_o : std_logic;
 signal io_valid_o : std_logic;
 BEGIN
 
-re_shaper : mod_deshaper PORT MAP (
-	 i_rst => i_rst,
+re_deshaper : mod_deshaper PORT MAP (
+	 i_rst => reset_i,
 	 i_clk => clk_i,
 	 i_data_valid => io_valid_o,
 	 i_symbol => io_re_o,
 	 o_result => mod_re_o,
 	 o_valid => re_valid_o
 );
-im_shaper : mod_deshaper PORT MAP (
-	 i_rst => ,
+im_deshaper : mod_deshaper PORT MAP (
+	 i_rst => reset_i,
 	 i_clk => clk_i,
 	 i_data_valid => io_valid_o,
 	 i_symbol => io_im_o,
