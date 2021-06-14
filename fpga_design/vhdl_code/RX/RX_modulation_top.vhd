@@ -21,7 +21,6 @@ ENTITY RX_modulation_top IS
 		im_sample_i : in std_logic_vector(DAC_data_width - 1 DOWNTO 0);
 		re_sample_i : in std_logic_vector(DAC_data_width - 1 DOWNTO 0)
 	);
-
 END ENTITY;
 
 ARCHITECTURE rtl OF RX_modulation_top IS

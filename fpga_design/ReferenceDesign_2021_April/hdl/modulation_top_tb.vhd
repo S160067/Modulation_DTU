@@ -10,33 +10,59 @@ END modulation_top_tb;
 ARCHITECTURE behavior OF modulation_top_tb IS
  
  -- Component Declaration for the Unit Under Test (UUT)
- component modulation_top is
-	port (
-		clk, reset			: in std_logic;
-		-- Datout to GPIO
-		GPIO_0 : inout std_logic_vector(35 downto 0);
-		GPIO_1 : inout std_logic_vector(35 downto 0);
-		-- FIFO SIGNALS
-		fifo_bitstream_in, fifo_empty, fifo_full : in std_logic;
-		fifo_bitstream_out, fifo_wr, fifo_read_en : out std_logic
-	);
-end component;
+ component reciever_top is
+   port (
+      clk, reset : in std_logic;
+      data_i, data_q  : in std_logic_vector(13 downto 0);
+      fifo_full : in std_logic;
+      bitstream, fifo_wr : out std_logic
+   );
+   end component;
+
+   component sender_top is
+      port (
+         clk, reset : in std_logic;
+         fifo_bitstream, fifo_empty : in std_logic;
+         write, read_en : out std_logic;
+         data_i, data_q : out std_logic_vector(13 downto 0);
+         modulation_scheme_select : in std_logic
+         );
+   end component;
 
 signal clk, reset : std_logic := '0';
-signal bitstream_in, bitstream_out, fifo_wr, fifo_full, fifo_read_en, fifo_empty : std_logic := '0';
-signal data_i, data_q : std_logic_vector(13 downto 0) :=  ( others => '0');
-signal GPIO_0, GPIO_1 : std_logic_vector(35 downto 0) :=  ( others => '0');
+signal bitstream_in, fifo_read_en, fifo_empty, write, modulation_scheme_select : std_logic;
+signal bitstream_out, fifo_wr, fifo_full  : std_logic := '0';
+signal data_i_tx, data_q_tx,data_i_rx, data_q_rx : std_logic_vector(13 downto 0) :=  ( others => '0');
+
  -- Clock period definitions
 constant clock_period : time := 20 ns;
-
-file file_dataI : text;
  
 BEGIN
 
  -- Instantiate the Unit Under Test (UUT)
-uut: modulation_top PORT MAP (
-   clk, reset, GPIO_0, GPIO_1, bitstream_in, fifo_empty, fifo_full, bitstream_out, fifo_wr, fifo_read_en);
- 
+ UUT_RX: component reciever_top PORT MAP (
+      clk => clk, 
+      reset => reset, 
+      data_i => data_i_rx, 
+      data_q => data_q_rx, 
+      fifo_full => fifo_full, 
+      bitstream => bitstream_out, 
+      fifo_wr => fifo_wr
+   );
+UUT_TX: component sender_top port map(
+      clk => clk, 
+      reset => reset,
+      fifo_bitstream => bitstream_in, 
+      fifo_empty => fifo_empty,
+      write => write, 
+      read_en => fifo_read_en,
+      data_i => data_i_tx, 
+      data_q => data_q_tx,
+      modulation_scheme_select => modulation_scheme_select
+); 
+
+data_i_rx <= data_q_tx;
+data_q_rx <= data_q_tx;
 
 -- Clock process definitions
 clock_process :process
@@ -51,32 +77,46 @@ end process;
 -- Stimulus process
 stim_proc: process
 
-   variable v_ILINE     : line;
-   variable r_ILINE : std_logic;
-   
 begin
-
-   file_open(file_dataI, "/home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/fifoinputs.txt",  read_mode);
    
-   while not endfile(file_dataI) loop
-     readline(file_dataI, v_ILINE);
-      read(v_ILINE, r_ILINE);
-     
-     -- Pass the line to signal
-     bitstream_in <= r_ILINE;
-
-
-     wait for clock_period;
-    --wait for 10 ns;
- 
-   end loop;
-
-   file_close(file_dataI);
+   reset <= '1';
+   fifo_empty <= '1';
+   fifo_full <= '0';
+   wait for 30 ns;
+   reset <= '0';
+   fifo_empty <= '0';
+   modulation_scheme_select <= '0';
+   fifo_empty <= '0';
    
-   
+   -- Test 10
+   wait until fifo_read_en = '1';
+   wait for clock_period;
+   bitstream_in <= '0';
+   wait for clock_period;
+   bitstream_in <= '1';
 
-wait for 50 ns;
+   -- Test 01
+   wait until fifo_read_en = '1';
+   wait for clock_period;
+   bitstream_in <= '1';
+   wait for clock_period;
+   bitstream_in <= '0';
 
+   -- Test 00
+   wait until fifo_read_en = '1';
+   wait for clock_period;
+   bitstream_in <= '0';
+   wait for clock_period;
+   bitstream_in <= '0';
+
+   -- Test 01
+   wait until fifo_read_en = '1';
+   wait for clock_period;
+   bitstream_in <= '1';
+   wait for clock_period;
+   bitstream_in <= '1';
+
+   wait;
 end process;
  
 END;
