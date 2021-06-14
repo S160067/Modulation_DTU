@@ -18,6 +18,7 @@ ENTITY sin_gen IS
 		--phase_i : IN std_logic(phase_width - 1 DOWNTO 0);
 		sin_o : OUT std_logic_vector(data_width - 1 DOWNTO 0)
 	);
+
 END ENTITY;
 
 ARCHITECTURE rtl OF sin_gen IS

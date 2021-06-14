@@ -9,6 +9,7 @@ entity modulation_top is
 		GPIO_1 : inout std_logic_vector(35 downto 0);
 		-- FIFO SIGNALS
 		fifo_bitstream_in, fifo_empty, fifo_full : in std_logic;
+		modulation_scheme_select : in std_logic;
 		fifo_bitstream_out, fifo_wr, fifo_read_en : out std_logic
 	);
 end modulation_top;

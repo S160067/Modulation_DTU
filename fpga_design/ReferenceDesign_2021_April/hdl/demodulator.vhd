@@ -9,7 +9,7 @@ entity demodulator is
 		valid : out std_logic;
 		data_out : out std_logic_vector(1 downto 0)
 		);
-	end demodulator;
+end demodulator;
 architecture arch of demodulator is 
 
 signal ctrl : std_logic_vector(15 downto 0);

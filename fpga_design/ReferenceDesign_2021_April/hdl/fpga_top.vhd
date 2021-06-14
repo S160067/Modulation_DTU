@@ -5,13 +5,11 @@ entity fpga_top is
 port (
 		clk						: in std_logic;
 		reset						: in std_logic;
-		
-		
 		-- GPIO INterface to modulation
 		GPIO_0					: inout std_logic_vector(35 downto 0);
 		GPIO_1					: inout std_logic_vector(35 downto 0);
 		SW : in std_logic_vector(9 downto 0);
-      LEDR : out std_logic_vector(9 downto 0);
+      	LEDR : out std_logic_vector(9 downto 0);
 		KEY_N : in std_logic_vector(3 downto 0)
 		);
 end fpga_top;
@@ -20,23 +18,15 @@ architecture fpga_arch of fpga_top is
 
 component modulation_top is
 port (
-	clk, reset			: in std_logic;
-	
-	-- Data interface from framing and encryption
-	framing_tx_data 	: in std_logic_vector(7 downto 0);
-	framing_rx_data   : out std_logic_vector(7 downto 0);
-	
-	-- Datout to GPIO
-	GPIO_0 : inout std_logic_vector(35 downto 0);
-	GPIO_1 : inout std_logic_vector(35 downto 0);
-	
-	status_modulation_data 		: out std_logic_vector(23 downto 0);
-	status_modulation_wrreq		: out std_logic;
-	status_modulation_full			: in std_logic;
-		SW : in std_logic_vector(9 downto 0);
-      LEDR : out std_logic_vector(9 downto 0);
-		KEY_N : in std_logic_vector(3 downto 0)
-	);
+			clk, reset			: in std_logic;
+			-- Datout to GPIO
+			GPIO_0 : inout std_logic_vector(35 downto 0);
+			GPIO_1 : inout std_logic_vector(35 downto 0);
+			-- FIFO SIGNALS
+			fifo_bitstream_in, fifo_empty, fifo_full : in std_logic;
+			modulation_scheme_select : in std_logic;
+			fifo_bitstream_out, fifo_wr, fifo_read_en : out std_logic
+		);
 end component modulation_top;
 
 
@@ -55,16 +45,13 @@ begin
 modulation_inst : component modulation_top
 port map (
 	clk => clk, reset => reset,
-	framing_tx_data => framing_modulation_tx,
-	framing_rx_data => modulation_framing_rx,
 	GPIO_0 => GPIO_0,
 	GPIO_1 => GPIO_1,
-	status_modulation_data => status_modulation_wr_data,
-	status_modulation_wrreq	=> status_modulation_wrreq,
-	status_modulation_full	=> status_modulation_full,
-		SW => SW,
-      LEDR => LEDR,
-		KEY_N => KEY_N
+
+	fifo_bitstream_in => SW(0), fifo_empty => SW(1), fifo_full => SW(2),
+	modulation_scheme_select => SW(9),
+	fifo_bitstream_out => LEDR(0), fifo_wr => LEDR(1), fifo_read_en => LEDR(2)
+	
 	);
 	
 	
