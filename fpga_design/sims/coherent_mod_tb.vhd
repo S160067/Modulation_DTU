@@ -6,7 +6,7 @@ use ieee.numeric_std.all;
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
 
-ENTITY TX_mod_tb IS
+ENTITY TXRX_mod_tb IS
 	GENERIC (
 		DAC_data_width : NATURAL := 14;
 		pulse_width : NATURAL := 17
@@ -14,7 +14,7 @@ ENTITY TX_mod_tb IS
 
 END ENTITY;
 
-ARCHITECTURE TB OF TX_mod_tb IS
+ARCHITECTURE TB OF TXRX_mod_tb IS
 component TX_modulation_top IS
 	GENERIC (
 		DAC_data_width : NATURAL := 14;

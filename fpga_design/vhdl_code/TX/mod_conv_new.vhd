@@ -1,148 +1,137 @@
-library ieee;
-use ieee.std_logic_1164.all;
-use ieee.numeric_std.all;
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+USE ieee.numeric_std.ALL;
+ENTITY mod_convolution IS
+	GENERIC (
+		CONSTANT G_SHIFTREG_SIZE : POSITIVE := 16;
+		CONSTANT G_MANTISSA_SIZE : POSITIVE := 13
+	);
 
+	PORT (
+		i_rst : IN STD_LOGIC;
+		i_clk : IN STD_LOGIC;
+		i_data_valid : IN STD_LOGIC;
+		i_no_data_flag : IN STD_LOGIC;
+		i_symbol : IN STD_LOGIC;
+		o_result : OUT STD_LOGIC_VECTOR(G_MANTISSA_SIZE DOWNTO 0);
+		o_valid : OUT STD_LOGIC
+	);
 
-entity mod_convolution is 
-generic (
-constant G_SHIFTREG_SIZE 	    : positive := 16;
-constant G_MANTISSA_SIZE	    : positive := 13
-);
+	FUNCTION mult(a, b : signed(G_MANTISSA_SIZE DOWNTO 0)) RETURN signed IS
 
-port(
-i_rst						   	: in std_logic;
-i_clk 						  	: in std_logic;
-i_data_valid				  	: in std_logic;
-i_symbol				    	: in std_logic;
-o_result					    : out std_logic_vector(G_MANTISSA_SIZE downto 0);
-o_valid						  	: out std_logic
-);
+		VARIABLE v_r : signed(2 * G_MANTISSA_SIZE + 1 DOWNTO 0);
+		VARIABLE auxmax, auxmin : signed(G_MANTISSA_SIZE DOWNTO 0);
 
+	BEGIN
+		v_r := a * b;
+		auxmax := to_signed(8191, G_MANTISSA_SIZE + 1);
+		auxmin := to_signed(-8192, G_MANTISSA_SIZE + 1);
 
+		IF v_r(2 * G_MANTISSA_SIZE + 1) = '1' THEN
+			IF v_r(2 * G_MANTISSA_SIZE) = '0' THEN
+				RETURN auxmin;
+			ELSE
+				RETURN (v_r(2 * G_MANTISSA_SIZE + 1) & v_r(2 * G_MANTISSA_SIZE - 1 DOWNTO G_MANTISSA_SIZE));
+			END IF;
 
-function 	mult( a, b : signed(G_MANTISSA_SIZE downto 0)) return signed is 
+		ELSE
+			IF v_r(2 * G_MANTISSA_SIZE) = '1' THEN
+				RETURN auxmax;
+			ELSE
+				RETURN (v_r(2 * G_MANTISSA_SIZE + 1) & v_r(2 * G_MANTISSA_SIZE - 1 DOWNTO G_MANTISSA_SIZE));
+			END IF;
+		END IF;
+	END mult;
+END mod_convolution;
 
-variable v_r :signed(2*G_MANTISSA_SIZE+1 downto 0);
-variable auxmax, auxmin :signed(G_MANTISSA_SIZE downto 0);
+ARCHITECTURE rtl OF mod_convolution IS
 
-begin
-v_r := a*b;
-auxmax := to_signed(8191, G_MANTISSA_SIZE+1);
-auxmin := to_signed(-8192, G_MANTISSA_SIZE+1);
+	TYPE fbarray IS ARRAY (0 TO G_SHIFTREG_SIZE) OF signed(G_MANTISSA_SIZE DOWNTO 0);
+	SIGNAL s_sregis : fbarray := (OTHERS => (OTHERS => '0'));
+	SIGNAL s_mult : fbarray := (OTHERS => (OTHERS => '0'));
+	SIGNAL s_pulse : fbarray := (OTHERS => (OTHERS => '0'));
+	SIGNAL s_sum : signed(G_MANTISSA_SIZE + 4 DOWNTO 0);
 
-if v_r(2*G_MANTISSA_SIZE+1) = '1' then
-	if v_r(2*G_MANTISSA_SIZE) = '0' then
-		return auxmin;
-	else then 
-		return (v_r(2*G_MANTISSA_SIZE+1) & v_r(2*G_MANTISSA_SIZE-1 downto G_MANTISSA_SIZE));
-	end if;
+BEGIN
 
-else
-	if v_r(2*G_MANTISSA_SIZE) = '1' then
-		return auxmax;
-	else
-		 return (v_r(2*G_MANTISSA_SIZE+1) & v_r(2*G_MANTISSA_SIZE-1 downto G_MANTISSA_SIZE));
-	end if;
-end if;
-end mult;	
+	s_pulse(0) <= to_signed(212, s_pulse(0)'length);
+	s_pulse(1) <= to_signed(156, s_pulse(0)'length);
+	s_pulse(2) <= to_signed(-424, s_pulse(0)'length);
+	s_pulse(3) <= to_signed(-784, s_pulse(0)'length);
+	s_pulse(4) <= to_signed(-424, s_pulse(0)'length);
+	s_pulse(5) <= to_signed(784, s_pulse(0)'length);
+	s_pulse(6) <= to_signed(2474, s_pulse(0)'length);
+	s_pulse(7) <= to_signed(3943, s_pulse(0)'length);
+	s_pulse(8) <= to_signed(4523, s_pulse(0)'length);
+	s_pulse(9) <= to_signed(3943, s_pulse(0)'length);
+	s_pulse(10) <= to_signed(2474, s_pulse(0)'length);
+	s_pulse(11) <= to_signed(784, s_pulse(0)'length);
+	s_pulse(12) <= to_signed(-424, s_pulse(0)'length);
+	s_pulse(13) <= to_signed(-784, s_pulse(0)'length);
+	s_pulse(14) <= to_signed(-424, s_pulse(0)'length);
+	s_pulse(15) <= to_signed(156, s_pulse(0)'length);
+	s_pulse(16) <= to_signed(212, s_pulse(0)'length);
 
+	shiftregs : PROCESS (i_clk)
 
-end mod_convolution;	
+		VARIABLE sumvar : signed(G_MANTISSA_SIZE + 4 DOWNTO 0);
 
-architecture rtl of mod_convolution is 
+	BEGIN
 
-type fbarray is array (0 to G_SHIFTREG_SIZE) of signed(G_MANTISSA_SIZE downto 0);
-signal s_sregis 			: fbarray := (others=>(others=>'0'));
-signal s_mult				: fbarray := (others=>(others=>'0'));
-signal s_pulse 			: fbarray := (others=>(others=>'0'));
-signal s_sum				: signed(G_MANTISSA_SIZE+4 downto 0);
+		IF (rising_edge(i_clk)) THEN
+			IF (i_rst = '1') THEN
 
-begin
+				s_sregis <= (OTHERS => (OTHERS => '0'));
+				s_sum <= (OTHERS => '0');
 
-s_pulse(0) <= to_signed(212, s_pulse(0)'length);
-s_pulse(1) <= to_signed(156, s_pulse(0)'length);
-s_pulse(2) <= to_signed(-424, s_pulse(0)'length);
-s_pulse(3) <= to_signed(-784, s_pulse(0)'length);
-s_pulse(4) <= to_signed(-424, s_pulse(0)'length);
-s_pulse(5) <= to_signed(784, s_pulse(0)'length);
-s_pulse(6) <= to_signed(2474, s_pulse(0)'length);
-s_pulse(7) <= to_signed(3943, s_pulse(0)'length);
-s_pulse(8) <= to_signed(4523, s_pulse(0)'length);
-s_pulse(9) <= to_signed(3943, s_pulse(0)'length);
-s_pulse(10) <= to_signed(2474, s_pulse(0)'length);
-s_pulse(11) <= to_signed(784, s_pulse(0)'length);
-s_pulse(12) <= to_signed(-424, s_pulse(0)'length);
-s_pulse(13) <= to_signed(-784, s_pulse(0)'length);
-s_pulse(14) <= to_signed(-424, s_pulse(0)'length);
-s_pulse(15) <= to_signed(156, s_pulse(0)'length);
-s_pulse(16) <= to_signed(212, s_pulse(0)'length);
+			ELSE
+				o_valid <= '1';
 
-shiftregs: process(i_clk) 
+				s_sregis(1 TO G_SHIFTREG_SIZE - 1) <= s_sregis(0 TO G_SHIFTREG_SIZE - 2);
 
-variable sumvar : signed(G_MANTISSA_SIZE+4 downto 0);
+				IF (i_data_valid = '1' AND i_symbol = '0') THEN
+					s_sregis(0) <= to_signed(8191, s_sregis(0)'length);
 
-begin
+				ELSIF (i_data_valid = '1' AND i_symbol = '1') THEN
 
-if(i_clk'event and i_clk = '1') then
+					s_sregis(0) <= to_signed(-8192, s_sregis(0)'length);
 
-	s_sregis(1 to G_SHIFTREG_SIZE-1) <= s_sregis(0 to G_SHIFTREG_SIZE-2);
+				ELSE
 
-	if (i_data_valid = '1' and i_symbol= '0') then
+					s_sregis(0) <= to_signed(0, s_sregis(0)'length);
 
-		s_sregis(0)<= to_signed(8191, s_sregis(0)'length);
-		
-	elsif(i_data_valid = '1' and i_symbol= '1') then
+				END IF;
 
-		s_sregis(0)<= to_signed(-8192, s_sregis(0)'length);
-		
-	else 
+				sumvar := (OTHERS => '0');
 
-		s_sregis(0)<= to_signed(0, s_sregis(0)'length);
-		
-	end if;
-	
-	sumvar := (others=> '0');
-	
-	for i in 0 to G_SHIFTREG_SIZE-1 loop
-		
-			sumvar := sumvar + resize(s_mult(i), sumvar'length);
+				FOR i IN 0 TO G_SHIFTREG_SIZE - 1 LOOP
 
-	end loop;
-	
-	s_sum <= sumvar;
+					sumvar := sumvar + resize(s_mult(i), sumvar'length);
 
-end if;
+				END LOOP;
 
+				s_sum <= sumvar;
+			END IF;
+		END IF;
+	END PROCESS;
 
-if(i_rst = '1') then
+	arith : PROCESS (i_symbol, s_sregis, s_mult, s_sum, i_rst, s_pulse)
+	BEGIN
 
-s_sregis <= (others=>(others=>'0'));
-s_sum <= (others => '0');
+		s_mult <= (OTHERS => (OTHERS => '0'));
 
-end if;
+		FOR i IN 0 TO G_SHIFTREG_SIZE - 1 LOOP
 
-end process;
+			s_mult(i) <= mult(s_sregis(i), s_pulse(i));
 
-arith: process(i_symbol, s_sregis, s_mult, s_sum, i_rst) 
-begin
+		END LOOP;
 
-s_mult <= (others =>(others => '0'));
+		o_result <= STD_LOGIC_VECTOR(s_sum(G_MANTISSA_SIZE DOWNTO 0));
 
-for i in 0 to G_SHIFTREG_SIZE-1 loop
+		IF (i_rst = '1') THEN
+			s_mult <= (OTHERS => (OTHERS => '0'));
+			o_result <= (OTHERS => '0');
 
-s_mult(i) <= mult(s_sregis(i), s_pulse(i));
-
-end loop;
-
-o_result <= s_sum(G_MANTISSA_SIZE downto 0);
-o_valid <= '0';
-
-
-if(i_rst = '1') then
-s_mult <= (others =>(others => '0'));
-o_result <= (others => '0');
-o_valid <= '0';
-
-end if;
-end process;
-end architecture;
+		END IF;
+	END PROCESS;
+END ARCHITECTURE;

@@ -32,13 +32,14 @@ ENTITY TX_modulation_top IS
 END ENTITY;
 
 ARCHITECTURE rtl OF TX_modulation_top IS
-component mod_shaper is 
+component mod_convolution is 
 
 		port(
 		i_rst									: in std_logic;
 		i_clk 									: in std_logic;
 		i_data_valid							: in std_logic;
 		i_symbol								: in std_logic;
+		i_no_data_flag							: in std_logic;
 		o_result								: out std_logic_vector(DAC_data_width-1 downto 0);
 		o_valid									: out std_logic
 		);	
@@ -51,6 +52,7 @@ component Mod_interface_TX is
    	data_i 			: in std_logic_vector(1 downto 0);
    	buffer_valid : in std_logic;
    	buffer_ready : out std_logic;
+   	no_data_flag_o : out std_logic;
    	re_o			: out std_logic;
    	im_o 			: out std_logic;
     enable_o	: out std_logic	
@@ -59,21 +61,23 @@ component Mod_interface_TX is
 end component;
 
 signal io_im_o, io_re_o : std_logic;
-signal io_valid_o : std_logic;
+signal io_valid_o,no_data_flag : std_logic;
 BEGIN
 
-re_shaper : mod_shaper PORT 	MAP (
+re_shaper : mod_convolution PORT 	MAP (
 	 i_rst =>  reset_i,
 	 i_clk => clk_i ,
 	 i_data_valid => io_valid_o,
 	 i_symbol => io_re_o,
+	 i_no_data_flag => no_data_flag,
 	 o_result => re_sample_o,
 	 o_valid => re_valid_o
 );
-im_shaper : mod_shaper PORT MAP (
+im_shaper : mod_convolution  PORT MAP (
 	 i_rst => reset_i,
 	 i_clk => clk_i,
 	 i_data_valid => io_valid_o,
+	 i_no_data_flag => no_data_flag,
 	 i_symbol => io_im_o,
 	 o_result => im_sample_o,
 	 o_valid => im_valid_o
@@ -82,6 +86,7 @@ u_mod_interface : Mod_interface_TX port MAP(
 	data_i =>data_i,
 	clk => clk_i,
 	reset => reset_i,
+	no_data_flag_o => no_data_flag,
 	buffer_valid => buffer_valid_i,
 	buffer_ready => buffer_ready_o,
 	re_o => io_re_o,

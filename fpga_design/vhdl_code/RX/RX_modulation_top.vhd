@@ -25,9 +25,7 @@ ENTITY RX_modulation_top IS
 END ENTITY;
 
 ARCHITECTURE rtl OF RX_modulation_top IS
-component mod_deshaper is 
-
-		
+component mod_deconv is 
 		port(
 		i_rst									: in std_logic;
 		i_clk 									: in std_logic;
@@ -58,7 +56,7 @@ BEGIN
 -----------------------------------------
 --port maps
 
-re_deshaper : mod_deshaper PORT MAP (
+re_deshaper : mod_deconv PORT MAP (
 	 i_rst => reset_i,
 	 i_clk => clk_i,
 	 i_data_valid => re_data_valid,
@@ -66,7 +64,7 @@ re_deshaper : mod_deshaper PORT MAP (
 	 o_symbol => re,
 	 o_valid => re_valid
 );
-im_deshaper : mod_deshaper PORT MAP (
+im_deshaper : mod_deconv PORT MAP (
 	 i_rst => reset_i,
 	 i_clk => clk_i,
 	 i_data_valid => im_data_valid,

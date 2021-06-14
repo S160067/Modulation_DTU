@@ -14,6 +14,7 @@ ENTITY Mod_interface_TX IS
     buffer_ready : out std_logic;
     buffer_valid : in std_logic;
     re_o : OUT std_logic;
+    no_data_flag_o : out std_logic;
     im_o : OUT std_logic;
     enable_o : OUT std_logic 
   );
@@ -23,7 +24,6 @@ ARCHITECTURE rtl OF Mod_interface_TX IS
   --declarations
   SIGNAL time_cnt : std_logic_vector(7 DOWNTO 0);
   SIGNAL data_reg : std_logic_vector(1 DOWNTO 0);
-  SIGNAL data_available : std_logic;
   SIGNAL ready : std_logic; --internal flag to signal that read is high
   TYPE t_State IS (idle, sending);
   SIGNAL State : t_State;
@@ -38,6 +38,7 @@ BEGIN
   BEGIN
     IF (rising_edge(clk)) THEN
       IF (reset = '1') THEN
+
         time_cnt <= (others=>'0');
       ELSE
         IF (state = sending) THEN
@@ -54,21 +55,26 @@ BEGIN
      IF (rising_edge(clk)) THEN
         IF (reset = '1') THEN
           state <= idle;
+          no_data_flag_o <= '0';
           data_reg <=( others=>'0');
         END IF;
         enable_o <= '0'; 
         ready <= '0';
+        no_data_flag_o <= '0';
         CASE state IS 
           WHEN idle => 
             ready <= '1';
             IF (ready='1' AND buffer_valid = '1') THEN
               state <= sending;
               data_reg <=data_i;
+              enable_o <= '1';
               ready <= '0';
-            END IF;
+            
+            else
+            no_data_flag_o <= '1';
+            END IF;  
           WHEN sending => 
-            enable_o <= '1'; 
-            IF (time_cnt = 19) THEN
+            IF (time_cnt = pulse_width) THEN
               state <= idle;
               ready <= '1';
               enable_o <= '0'; 
