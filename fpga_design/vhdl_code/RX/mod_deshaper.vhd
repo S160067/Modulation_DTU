@@ -12,7 +12,7 @@ entity mod_deshaper is
 		i_rst										: in std_logic;
 		i_clk 									: in std_logic;
 		i_data_valid							: in std_logic;
-		i_sample									: in signed(G_MANTISSA_SIZE downto 0);
+		i_sample									: in STD_logic_vector(G_MANTISSA_SIZE downto 0);
 		o_symbol									: out std_logic;
 		o_valid									: out std_logic
 		);	
@@ -27,6 +27,7 @@ architecture rtl of mod_deshaper is
 	signal cnt     			: integer range 0 to 16;
 	
 	begin
+
 	
 	synced: process(i_clk)
 
@@ -45,7 +46,7 @@ architecture rtl of mod_deshaper is
 				
 					if (cnt > 5 and cnt < 11) then
 					
-						s_sum <= s_sum + i_sample;
+						s_sum <= s_sum + signed(i_sample);
 						
 					end if;
 					

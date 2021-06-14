@@ -24,7 +24,7 @@ architecture rtl of mod_shaper is
 	signal s_lock				: std_logic;
 	signal s_symbol			: std_logic;
 	signal s_pulse 			: fbarray := (others=>(others=>'0'));
-	signal cnt     			: integer range 0 to 16;
+	signal cnt     			: integer range 0 to 20;
 	
 	begin
 		

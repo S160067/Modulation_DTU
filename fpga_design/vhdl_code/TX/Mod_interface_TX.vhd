@@ -63,7 +63,7 @@ BEGIN
             ready <= '1';
             IF (ready='1' AND buffer_valid = '1') THEN
               state <= sending;
-              data_reg <=( others=>'0');
+              data_reg <=data_i;
               ready <= '0';
             END IF;
           WHEN sending => 
