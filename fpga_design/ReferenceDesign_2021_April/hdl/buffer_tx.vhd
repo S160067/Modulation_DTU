@@ -19,9 +19,8 @@ architecture arch of buffer_tx is
 
 signal reg1,reg2, reg1_next,reg2_next, reg1_en, reg2_en : std_logic;
 
-TYPE STATE_TYPE IS (idle_state,middle_state,valid_state);
-	signal state, next_state : STATE_TYPE ;
-
+TYPE STATE_TYPE IS (idle_state,middle_state,valid_state, delay_state);
+signal state, next_state : STATE_TYPE ;
 
 begin
 
@@ -30,25 +29,28 @@ PROCESS (fifo_empty, ready,state, next_state)
 	BEGIN
 		reg1_en <= '0';
 		reg2_en <= '0';
-		--valid <= '0';
+		valid <= '0';
 		read_en <= '0';
 		next_state <= idle_state;
 	   CASE state IS
 		  WHEN idle_state =>
 		  	valid <='0';
 				if(fifo_empty = '0') THEN
-					reg1_en <='1';
+					--reg1_en <='1';
 					read_en <='1';				
-					next_state <= middle_state;
+					next_state <= delay_state;
 				else 
 					next_state <= idle_state;
 				end if;
-
+		  WHEN delay_state =>
+				reg1_en <= '1';
+				read_en <='1';
+				next_state <= middle_state;
 		  WHEN middle_state =>
 				valid <='0';
 				if(fifo_empty = '0') THEN
-					read_en <='1';
 					reg2_en <='1';
+					read_en <= '1';
 					next_state <= valid_state;
 				else
 					next_state <= middle_state;
@@ -86,7 +88,7 @@ PROCESS (fifo_empty, ready,state, next_state)
 				END IF;		  
 	END PROCESS;
 	
-data_out <= reg1 & reg2;
+data_out <= reg2 & reg1;
 
 reg1_next <= bitstream; 
 reg2_next<= bitstream;
@@ -94,4 +96,3 @@ reg2_next<= bitstream;
 	
 	
 end arch;
-
