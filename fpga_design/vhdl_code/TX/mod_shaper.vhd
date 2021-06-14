@@ -9,11 +9,11 @@ entity mod_shaper is
 		);
 		
 		port(
-		i_rst										: in std_logic;
+		i_rst									: in std_logic;
 		i_clk 									: in std_logic;
 		i_data_valid							: in std_logic;
-		i_symbol									: in std_logic;
-		o_result									: out std_logic_vector(G_MANTISSA_SIZE downto 0);
+		i_symbol								: in std_logic;
+		o_result								: out std_logic_vector(G_MANTISSA_SIZE downto 0);
 		o_valid									: out std_logic
 		);	
 

@@ -4,7 +4,7 @@ use ieee.numeric_std.all;
 use ieee.std_logic_unsigned.all;
 ENTITY Mod_interface_TX IS
   GENERIC (
-    pulse_width : INTEGER := 17;
+    pulse_width : INTEGER := 2;
     standoff : INTEGER := 0
   );
   PORT (
