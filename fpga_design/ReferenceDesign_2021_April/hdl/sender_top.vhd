@@ -77,7 +77,7 @@ begin
 		clk => clk,
 		reset => reset,
 		ready =>  mod_ready,
-		fifo_bitstream => fifo_bitstream, 
+		bitstream => fifo_bitstream, 
 		fifo_empty => fifo_empty, 
 		read_en => read_en, 
 		valid => buf_valid,
@@ -95,13 +95,13 @@ begin
 	);
 
 	sin_inst : component sin_gen port map(
-		clk => clk,
-		reset => reset,
+		clk_i => clk,
+		reset_i => reset,
 		sin_o => data_sin_i
 	);
 	cos_inst : component cos_gen port map(
-		clk => clk,
-		reset => reset,
+		clk_i => clk,
+		reset_i => reset,
 		cos_o => data_cos_q
 	);
 

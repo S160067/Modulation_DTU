@@ -4,23 +4,24 @@ use ieee.numeric_std.all;
 use STD.textio.all;
 use ieee.std_logic_textio.all;
 
-ENTITY test_controller_tb IS
-END test_controller_tb;
+ENTITY sender_top_tb IS
+END sender_top_tb;
  
-ARCHITECTURE behavior OF test_controller_tb IS
+ARCHITECTURE behavior OF sender_top_tb IS
  
  -- Component Declaration for the Unit Under Test (UUT)
 COMPONENT sender_top is
    port (
       clk, reset : in std_logic;
-      data_i, data_q  : in std_logic_vector(13 downto 0);
-      fifo_full : in std_logic;
-      bitstream, fifo_wr : out std_logic
+      fifo_bitstream, fifo_empty : in std_logic;
+      write, read_en : out std_logic;
+      data_i, data_q : out std_logic_vector(13 downto 0);
+      modulation_scheme_select : in std_logic
    );
 end component;
  
 signal clk, reset : std_logic := '0';
-signal bitstream, fifo_wr, fifo_full : std_logic;
+signal bitstream, fifo_empty, read_en, write, modulation_scheme_select : std_logic;
 signal data_i, data_q : std_logic_vector(13 downto 0) :=  ( others => '0');
  -- Clock period definitions
 constant clock_period : time := 20 ns;
@@ -32,8 +33,16 @@ file file_dataQ : text;
 BEGIN
 
  -- Instantiate the Unit Under Test (UUT)
-uut: reciever_top PORT MAP (
-   clk, reset, data_i, data_q, fifo_full, bitstream, fifo_wr);
+uut: component sender_top PORT MAP (
+   clk => clk, 
+   reset => reset, 
+   fifo_bitstream => bitstream, 
+   fifo_empty => fifo_empty,
+   write => write,
+   read_en => read_en,
+   data_i => data_i, 
+   data_q => data_q, 
+   modulation_scheme_select => modulation_scheme_select);
  
 
 -- Clock process definitions
@@ -48,39 +57,23 @@ end process;
 
 -- Stimulus process
 stim_proc: process
-
-   variable v_ILINE     : line;
-   variable v_QLINE     : line;
-   variable r_ILINE : std_logic_vector(13 downto 0);
-   variable r_QLINE : std_logic_vector(13 downto 0);
-   
+  
 begin
-
-   file_open(file_dataI, "/home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/datastreamI.txt",  read_mode);
-   file_open(file_dataQ, "/home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/datastreamQ.txt", read_mode);
    
-   while not endfile(file_dataI) loop
-     readline(file_dataI, v_ILINE);
-     readline(file_dataQ, v_QLINE);
-      read(v_ILINE, r_ILINE);
-      read(v_QLINE, r_QLINE);
-     
-     -- Pass the line to signal
-     data_i <= r_ILINE;
-     data_q <= r_QLINE;
+   reset <= '1';
+   fifo_empty <= '1';
+   wait for 30 ns;
+   reset <= '0';
+   fifo_empty <= '0';
+   modulation_scheme_select <= '0';
+   fifo_empty <= '0';
+   wait until read_en = '1';
+   wait for clock_period;
+   bitstream <= '0';
+   wait for clock_period;
+   bitstream <= '1';
 
-
-     --wait for clock_period;
-      wait for 10 ns;
- 
-   end loop;
-
-   file_close(file_dataI);
-   file_close(file_dataI);
-
-   
-
-wait for 50 ns;
+   wait;
 
 end process;
  

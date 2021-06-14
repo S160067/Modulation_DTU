@@ -14,6 +14,7 @@ end reciever;
 architecture loopback_arch of reciever is 
 
 begin
+
 	valid <= data_i(13) OR data_i(12) OR data_i(11) OR data_i(10) OR data_i(9) OR data_i(8) OR data_i(7); 
 
 	data_sync_i <= data_i;

@@ -50,7 +50,7 @@ PROCESS (fifo_empty, ready,state, next_state)
 				valid <='0';
 				if(fifo_empty = '0') THEN
 					reg2_en <='1';
-					read_en <= '1';
+					--read_en <= '1';
 					next_state <= valid_state;
 				else
 					next_state <= middle_state;
