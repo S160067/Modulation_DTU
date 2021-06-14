@@ -11,10 +11,9 @@ entity Mod_interface_RX is
    	data_o 			: out std_logic_vector(1 downto 0);
    	valid_o 		: out std_logic;
 
-
    	re_i			: in std_logic;
    	im_i 			: in std_logic;
-	re_valid_i	: in std_logic;		--note: valid_i is  re_valid && im_valid	
+	  re_valid_i	: in std_logic;		--note: valid_i is  re_valid && im_valid	
     im_valid_i	: in std_logic	
     );
 end Mod_interface_RX;
