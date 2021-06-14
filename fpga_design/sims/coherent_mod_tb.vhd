@@ -43,28 +43,25 @@ component RX_modulation_top IS
 		DAC_data_width : NATURAL := 14;
 		pulse_width : NATURAL := 17
 	);
-
 	PORT (
-		data_i : IN std_logic_vector(1 downto 0);
-		clk_i : IN std_logic;
-		
-		reset_i  : IN std_logic;
-		-- 
-		buffer_valid_i : in std_logic;
-		buffer_ready_o : out std_logic;
-		
-		ctrl_o : out std_logic_vector(15 downto 0);
-		--
-		im_valid_o : out std_logic;
-		im_sample_o : OUT std_logic_vector(DAC_data_width - 1 DOWNTO 0);
-		re_valid_o : out std_logic;
-		re_sample_o : OUT std_logic_vector(DAC_data_width - 1 DOWNTO 0)
-	);
+		clk_i 			 : IN std_logic;
+		reset_i          : IN std_logic;
+		valid_o 		 : out std_logic;	
+		data_o 			 : out std_logic_vector(1 downto 0);
+		ctrl_o 			 : out std_logic_vector(15 downto 0);
+		im_data_valid	 : in std_logic;
+		re_data_valid	 : in std_logic;
+		im_sample_i 	 : in std_logic_vector(DAC_data_width - 1 DOWNTO 0);
+		re_sample_i 	 : in std_logic_vector(DAC_data_width - 1 DOWNTO 0)
+		);
 end component;
 signal re_sample_o, im_sample_o :  std_logic_vector(DAC_data_width - 1 DOWNTO 0);
 signal clk,reset_i,buffer_valid_i,buffer_ready_o,im_valid_o,re_valid_o :std_logic;
 signal ctrl_o : std_logic_vector(15 downto 0);
 signal data_i : std_logic_vector(1 downto 0);
+signal data_o : std_logic_vector(1 downto 0);
+signal valid_o : std_logic;
+
 BEGIN
 
 DUT_TX : TX_modulation_top port MAP(
@@ -79,20 +76,20 @@ DUT_TX : TX_modulation_top port MAP(
 	re_valid_o => re_valid_o,
 	re_sample_o => re_sample_o
 	);
-DUT_RX : TX_modulation_top port MAP(
-	data_i =>data_i,
+DUT_RX : RX_modulation_top port MAP(
+	data_o =>data_o,
 	clk_i => clk,
 	reset_i => reset_i,
-	buffer_valid_i => buffer_valid_i,
-	buffer_ready_o => buffer_ready_o,
-	ctrl_o=> ctrl_o,
-	im_valid_o => im_valid_o,
-	im_sample_o => im_sample_o,
-	re_valid_o => re_valid_o,
-	re_sample_o => re_sample_o
+	valid_o => valid_o,
+	ctrl_o => ctrl_o,
+	im_data_valid => im_valid_o,
+	re_data_valid => re_valid_o,
+	im_sample_i => im_sample_o,
+	re_sample_i => re_sample_o
+
 	);
 
-
+		
 
 process
 BEGIN

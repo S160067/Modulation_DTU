@@ -9,11 +9,11 @@ entity mod_deshaper is
 		);
 		
 		port(
-		i_rst										: in std_logic;
+		i_rst									: in std_logic;
 		i_clk 									: in std_logic;
 		i_data_valid							: in std_logic;
-		i_sample									: in STD_logic_vector(G_MANTISSA_SIZE downto 0);
-		o_symbol									: out std_logic;
+		i_sample								: in STD_logic_vector(G_MANTISSA_SIZE downto 0);
+		o_symbol								: out std_logic;
 		o_valid									: out std_logic
 		);	
 
@@ -42,7 +42,7 @@ architecture rtl of mod_deshaper is
 					s_lock <= '1';
 					o_valid <= '0';
 				
-				elsif (i_data_valid = '1' and s_lock = '1') then
+				elsif (s_lock = '1') then
 				
 					if (cnt > 5 and cnt < 11) then
 					
@@ -51,14 +51,14 @@ architecture rtl of mod_deshaper is
 					end if;
 					
 					
-					if (i_data_valid = '1' and cnt = 16) then
-					
+					if  (cnt = 16) then
+						s_lock <= '0';
 						cnt <= 0;
 						o_valid <= '1';
 						o_symbol <= s_sum(G_MANTISSA_SIZE+4);
 						s_sum <= (others =>'0');
 				
-					elsif(i_data_valid = '1') then
+					elsif(s_lock = '1') then
 					
 						cnt <= cnt + 1;	
 						
@@ -66,7 +66,7 @@ architecture rtl of mod_deshaper is
 						
 				end if;
 				
-				if (i_data_valid = '0') then
+				if (s_lock = '0') then
 					
 					o_valid <= '0';
 					
