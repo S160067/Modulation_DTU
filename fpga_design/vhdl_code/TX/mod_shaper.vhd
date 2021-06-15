@@ -34,16 +34,16 @@ architecture rtl of mod_shaper is
 	s_pulse(4) <= to_signed(-424*2, s_pulse(0)'length);
 	s_pulse(5) <= to_signed(784*2, s_pulse(0)'length);
 	s_pulse(6) <= to_signed(2474*2, s_pulse(0)'length);
-	s_pulse(7) <= to_signed(3943*2 -1, s_pulse(0)'length);
+	s_pulse(7) <= to_signed(3943*2, s_pulse(0)'length);
 	s_pulse(8) <= to_signed(8191, s_pulse(0)'length);
-	s_pulse(9) <= to_signed(3943*2 -1, s_pulse(0)'length);
-	s_pulse(10) <= to_signed(2474*2, s_pulse(0)'length);
+	s_pulse(9) <= to_signed(3943*2, s_pulse(0)'length);
+	s_pulse(10) <= to_signed(2474*2 , s_pulse(0)'length);
 	s_pulse(11) <= to_signed(784*2, s_pulse(0)'length);
 	s_pulse(12) <= to_signed(-424*2, s_pulse(0)'length);
 	s_pulse(13) <= to_signed(-784*2, s_pulse(0)'length);
 	s_pulse(14) <= to_signed(-424*2, s_pulse(0)'length);
-	s_pulse(15) <= to_signed(156-2, s_pulse(0)'length);
-	s_pulse(16) <= to_signed(212, s_pulse(0)'length);
+	s_pulse(15) <= to_signed(156*2 , s_pulse(0)'length);
+	s_pulse(16) <= to_signed(212*2, s_pulse(0)'length);
 	
 
 	synced: process(i_clk)
@@ -70,13 +70,13 @@ architecture rtl of mod_shaper is
 					if cnt < 16 then
 						cnt <= cnt + 1;
 					end if;
-					o_result <=std_logic_vector(s_pulse(cnt));
+					o_result <=std_logic_vector(s_pulse(cnt)+8191);
 				elsif ( s_lock = '1' and s_symbol = '1') then
 					o_valid <= '1';
 					if cnt < 16 then
 						cnt <= cnt + 1;
 					end if;
-					o_result <= std_logic_vector(-s_pulse(cnt));
+					o_result <= std_logic_vector(-s_pulse(cnt)+8191);
 				end if;
 					
 				if ( cnt = 16) then

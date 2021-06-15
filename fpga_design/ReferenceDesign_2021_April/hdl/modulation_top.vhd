@@ -133,8 +133,8 @@ begin
 	GPIO_1 (13 ) <= test_i(1); 
 	GPIO_1 (15 ) <= test_i(0);	
 	
-	GPIO_0(33) <= '1'; --Enable B
-	GPIO_0(35) <= '1'; --Enable A
+	GPIO_0(33) <= '0'; --Enable B
+	GPIO_0(35) <= '0'; --Enable A
 
    GPIO_0(18) <= pll_clk_65; --PLL Clock to ADC_B
    GPIO_0(16) <= pll_clk_65; --PLL Clock to ADC_A
