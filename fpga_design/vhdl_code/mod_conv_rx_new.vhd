@@ -116,7 +116,7 @@ end if;
 
 end process;
 
-arith: process(i_element, s_sregis, s_mult, s_sum, i_data_valid, i_rst) 
+arith: process(element, s_sregis, s_mult, s_sum, i_data_valid, i_rst) 
 begin
 
 s_mult <= (others =>(others => '0'));
