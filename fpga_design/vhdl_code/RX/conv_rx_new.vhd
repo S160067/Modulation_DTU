@@ -13,8 +13,8 @@ port(
 i_rst						    	: in std_logic;
 i_clk 						  	: in std_logic;
 i_data_valid				  	: in std_logic;
-i_element				    	: in signed(G_MANTISSA_SIZE downto 0);
-o_result					    	: out signed(G_MANTISSA_SIZE downto 0);
+i_element				    	: in std_logic_vector(G_MANTISSA_SIZE downto 0);
+o_result					    	: out std_logic_vector(G_MANTISSA_SIZE downto 0);
 o_valid						  	: out std_logic
 );
 
@@ -89,7 +89,7 @@ if(i_clk'event and i_clk = '1') then
 
 	if (i_data_valid = '1') then
 
-		s_sregis(0) <= i_element;
+		s_sregis(0) <= signed(i_element);
 		
 	end if;
 	
@@ -125,7 +125,7 @@ s_mult(i) <= mult(s_sregis(i), s_pulse(i));
 
 end loop;
 
-o_result <= s_sum(G_MANTISSA_SIZE downto 0);
+o_result <= std_logic_vector(s_sum(G_MANTISSA_SIZE downto 0));
 o_valid <= i_data_valid;
 
 
