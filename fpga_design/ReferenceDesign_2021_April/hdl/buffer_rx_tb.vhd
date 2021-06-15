@@ -16,7 +16,7 @@ COMPONENT buffer_rx is
       bitstream, fifo_wr : out std_logic
       );
 end component;
- 
+
 signal clk, reset : std_logic := '0';
 signal fifo_full, valid : std_logic;
 signal bitstream, fifo_wr : std_logic := '0';
@@ -27,7 +27,7 @@ constant clock_period : time := 20 ns;
 BEGIN
 
  -- Instantiate the Unit Under Test (UUT)
-uut: buffer_rx PORT MAP (
+uut: component buffer_rx PORT MAP (
    clk => clk, 
    reset => reset,
    data_mod => data_mod,
@@ -46,21 +46,18 @@ wait for clock_period/2;
 clk <= '1';
 wait for clock_period/2;
 end process;
- 
+
 -- Stimulus process
 stim_proc: process
 begin
    reset <= '1';
  -- hold reset state for 100 ns. 
- wait for 20 ns;
+ wait for 30 ns;
    reset <= '0';
+wait for clock_period;
    fifo_full <= '0';
--- Test things
-wait for 5 ns;
 data_mod <= "01";
 valid <= '1';
-
-
 
 wait;
 

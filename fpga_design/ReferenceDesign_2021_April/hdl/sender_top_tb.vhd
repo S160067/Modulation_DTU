@@ -67,11 +67,56 @@ begin
    fifo_empty <= '0';
    modulation_scheme_select <= '0';
    fifo_empty <= '0';
+   
+   -- Test 10
    wait until read_en = '1';
    wait for clock_period;
    bitstream <= '0';
    wait for clock_period;
    bitstream <= '1';
+
+   -- Test 01
+   wait until read_en = '1';
+   wait for clock_period;
+   bitstream <= '1';
+   wait for clock_period;
+   bitstream <= '0';
+
+   -- Test 00
+   wait until read_en = '1';
+   wait for clock_period;
+   bitstream <= '0';
+   wait for clock_period;
+   bitstream <= '0';
+
+   -- Test 01
+   wait until read_en = '1';
+   wait for clock_period;
+   bitstream <= '1';
+   wait for clock_period;
+   bitstream <= '1';
+
+   wait for clock_period;
+
+   fifo_empty <= '1';
+   
+   wait for 900 ns;
+   -- Test 01
+   --wait until read_en = '1';
+   wait for clock_period;
+   bitstream <= '1';
+   wait for clock_period;
+   bitstream <= '0';
+
+   -- Test 00
+   --wait until read_en = '1';
+   wait for clock_period;
+   bitstream <= '0';
+   wait for clock_period;
+   bitstream <= '0';
+   
+   wait for 40 ns;
+   modulation_scheme_select <= '1';
 
    wait;
 

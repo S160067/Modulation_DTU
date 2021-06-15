@@ -4,10 +4,10 @@ use ieee.numeric_std.all;
 use STD.textio.all;
 use ieee.std_logic_textio.all;
 
-ENTITY test_controller_tb IS
-END test_controller_tb;
+ENTITY reciever_top_tb IS
+END reciever_top_tb;
  
-ARCHITECTURE behavior OF test_controller_tb IS
+ARCHITECTURE behavior OF reciever_top_tb IS
  
  -- Component Declaration for the Unit Under Test (UUT)
 COMPONENT reciever_top is
@@ -15,7 +15,8 @@ COMPONENT reciever_top is
       clk, reset : in std_logic;
       data_i, data_q  : in std_logic_vector(13 downto 0);
       fifo_full : in std_logic;
-      bitstream, fifo_wr : out std_logic
+      bitstream, fifo_wr : out std_logic;
+      debug_data_mod : out std_logic_vector(1 downto 0)
    );
 end component;
  
@@ -56,12 +57,18 @@ stim_proc: process
    
 begin
 
-   file_open(file_dataI, "/home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/datastreamI.txt",  read_mode);
-   file_open(file_dataQ, "/home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/datastreamQ.txt", read_mode);
+   reset <= '1';
+   fifo_full <= '0';
+   wait for 30 ns;
+   reset <= '0';
+   wait for 20 ns;
+
+   file_open(file_dataI, "/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/ftable.txt",  read_mode);
+   file_open(file_dataQ, "/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/gtable.txt", read_mode);
    
    while not endfile(file_dataI) loop
-     readline(file_dataI, v_ILINE);
-     readline(file_dataQ, v_QLINE);
+      readline(file_dataI, v_ILINE);
+      readline(file_dataQ, v_QLINE);
       read(v_ILINE, r_ILINE);
       read(v_QLINE, r_QLINE);
      
@@ -80,7 +87,7 @@ begin
 
    
 
-wait for 50 ns;
+wait;
 
 end process;
  

@@ -25,22 +25,24 @@ port (
 			-- FIFO SIGNALS
 			fifo_bitstream_in, fifo_empty, fifo_full : in std_logic;
 			modulation_scheme_select : in std_logic;
-			fifo_bitstream_out, fifo_wr, fifo_read_en : out std_logic
+			fifo_bitstream_out, fifo_wr, fifo_read_en : out std_logic;
+			debug_data_mod : out std_logic_vector(1 downto 0);
+			debug_data_in : in std_logic_vector(1 downto 0);
+			debug_valid : in std_logic
 		);
 end component modulation_top;
 
 
-
-signal framing_modulation_tx, modulation_framing_rx : std_logic_vector(7 downto 0);
 signal GPIO_loopback : std_logic_vector(35 downto 0);
 
-signal status_modulation_wr_data, status_modulation_rd_data						 	: std_logic_vector(23 downto 0);
-signal status_modulation_wrreq, status_modulation_full, status_modulation_rdreq, status_modulation_empty : std_logic;
-
-
+signal debug_data_out, debug_data_in : std_logic_vector(1 downto 0);
 
 begin
-	
+
+	LEDR(8) <= debug_data_out(0);
+	LEDR(7) <= debug_data_out(1); 
+	debug_data_in(0) <= SW(8);
+	debug_data_in(1) <= SW(7);
 
 modulation_inst : component modulation_top
 port map (
@@ -50,8 +52,10 @@ port map (
 
 	fifo_bitstream_in => SW(0), fifo_empty => SW(1), fifo_full => SW(2),
 	modulation_scheme_select => SW(9),
-	fifo_bitstream_out => LEDR(0), fifo_wr => LEDR(1), fifo_read_en => LEDR(2)
-	
+	fifo_bitstream_out => LEDR(0), fifo_wr => LEDR(1), fifo_read_en => LEDR(2),
+	debug_data_mod => debug_data_out,
+	debug_data_in => debug_data_in,
+	debug_valid => SW(6)
 	);
 	
 	
