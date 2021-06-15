@@ -6,7 +6,8 @@ port (
 	clk, reset : in std_logic;
 	data_i, data_q  : in std_logic_vector(13 downto 0);
 	fifo_full : in std_logic;
-	bitstream, fifo_wr : out std_logic
+	bitstream, fifo_wr : out std_logic;
+	debug_data_mod : out std_logic_vector(1 downto 0)
 );
 end reciever_top;
 
@@ -54,6 +55,8 @@ end component;
 	signal data_from_mod : std_logic_vector(1 downto 0);
 	signal demod_valid, sync_valid, reciev_valid : std_logic;
 begin
+
+	debug_data_mod <= data_from_mod;
 
 	buff_inst : component buffer_rx port map(
 		clk => clk, 
