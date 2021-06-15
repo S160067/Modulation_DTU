@@ -30,7 +30,8 @@ architecture loopback_arch of modulation_top is
 			clk, reset : in std_logic;
 			fifo_bitstream, fifo_empty : in std_logic;
 			write, read_en : out std_logic;
-			data_i, data_q : out std_logic_vector(13 downto 0)
+			data_i, data_q : out std_logic_vector(13 downto 0);
+			modulation_scheme_select : in std_logic
 			);
 	end component;
 
@@ -48,15 +49,18 @@ architecture loopback_arch of modulation_top is
 	signal sender_write : std_logic;
 begin
 	
-	--pll_inst : component ip_pll
-	--	port map (
-	--		refclk  	=> clk, --  refclk.clk
-	--		rst 		=> reset, --   reset.reset
-	--		outclk_0 => pll_clk,        -- outclk0.clk
-	--		outclk_1 => pll_clk_skew        -- outclk1.clk
-	--		);
+	pll_inst : component ip_pll
+		port map (
+			refclk  	=> clk, --  refclk.clk
+			rst 		=> reset, --   reset.reset
+			outclk_0 => pll_clk,        -- outclk0.clk
+			outclk_1 => pll_clk_skew        -- outclk1.clk
+	);
+
 	sender_inst : component sender_top port map(
-		clk, reset, fifo_bitstream_in, fifo_empty, sender_write, fifo_read_en, data_DA_a, data_DA_b
+		clk => clk, 
+		reset => reset, 
+		fifo_bitstream_in, fifo_empty, sender_write, fifo_read_en, data_DA_a, data_DA_b
 	);
 	reciever_inst : component reciever_top port map(
 		clk, reset, data_AD_a, data_AD_b, fifo_full, fifo_bitstream_out, fifo_wr
