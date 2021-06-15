@@ -16,31 +16,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "LEDR[3]",
-					"strict" : false
-				},
-				{
-					"name" : "LEDR[4]",
-					"strict" : false
-				},
-				{
-					"name" : "LEDR[5]",
-					"strict" : false
-				},
-				{
-					"name" : "LEDR[6]",
-					"strict" : false
-				},
-				{
 					"name" : "LEDR[7]",
 					"strict" : false
 				},
 				{
 					"name" : "LEDR[8]",
-					"strict" : false
-				},
-				{
-					"name" : "LEDR[9]",
 					"strict" : false
 				},
 				{
@@ -84,11 +64,187 @@
 					"strict" : false
 				},
 				{
-					"name" : "GPIO_0[33]",
+					"name" : "GPIO_0[12]",
 					"strict" : false
 				},
 				{
-					"name" : "GPIO_0[35]",
+					"name" : "GPIO_0[14]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO_0[15]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO_0[17]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO_0[19]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO_0[20]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO_0[21]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO_0[22]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO_0[23]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO_0[24]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO_0[25]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO_0[26]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO_0[27]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO_0[28]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO_0[29]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO_0[30]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO_0[31]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO_1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO_1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO_1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO_1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO_1[6]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO_1[7]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO_1[8]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO_1[9]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO_1[10]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO_1[11]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO_1[12]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO_1[13]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO_1[14]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO_1[15]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO_1[19]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO_1[21]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO_1[22]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO_1[23]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO_1[24]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO_1[25]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO_1[26]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO_1[27]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO_1[28]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO_1[29]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO_1[30]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO_1[31]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO_1[32]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO_1[33]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[1]",
 					"strict" : false
 				},
 				{
@@ -100,15 +256,27 @@
 					"strict" : false
 				},
 				{
-					"name" : "KEY_N[1]",
+					"name" : "SW[2]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[6]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[9]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[8]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[7]",
 					"strict" : false
 				},
 				{
 					"name" : "SW[0]",
-					"strict" : false
-				},
-				{
-					"name" : "SW[1]",
 					"strict" : false
 				}
 			]

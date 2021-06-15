@@ -1,5 +1,5 @@
 Assembler report for 1_1_0
-Wed May  5 15:58:09 2021
+Tue Jun 15 11:12:18 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -39,7 +39,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Wed May  5 15:58:09 2021 ;
+; Assembler Status      ; Successful - Tue Jun 15 11:12:18 2021 ;
 ; Revision Name         ; 1_1_0                                 ;
 ; Top-level Entity Name ; DE1_SoC_ReferenceTop                  ;
 ; Family                ; Cyclone V                             ;
@@ -64,13 +64,13 @@ https://fpgasoftware.intel.com/eula.
 +--------+------------------------+--------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------+
-; Assembler Generated Files                                                                                         ;
-+-------------------------------------------------------------------------------------------------------------------+
-; File Name                                                                                                         ;
-+-------------------------------------------------------------------------------------------------------------------+
-; /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/output_files/1_1_0.sof ;
-+-------------------------------------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Assembler Generated Files                                                                                                        ;
++----------------------------------------------------------------------------------------------------------------------------------+
+; File Name                                                                                                                        ;
++----------------------------------------------------------------------------------------------------------------------------------+
+; /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/output_files/1_1_0.sof ;
++----------------------------------------------------------------------------------------------------------------------------------+
 
 
 +-------------------------------------+
@@ -78,8 +78,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------+--------------------+
 ; Option         ; Setting            ;
 +----------------+--------------------+
-; JTAG usercode  ; 0x00C99BC4         ;
-; Checksum       ; 0x00C99BC4         ;
+; JTAG usercode  ; 0x00D688A8         ;
+; Checksum       ; 0x00D688A8         ;
 +----------------+--------------------+
 
 
@@ -89,15 +89,15 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Wed May  5 15:57:58 2021
+    Info: Processing started: Tue Jun 15 11:12:06 2021
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off DE1-SOC-342x9 -c 1_1_0
 Warning (125092): Tcl Script File soc_system/synthesis/soc_system.qip not found
     Info (125063): set_global_assignment -name QIP_FILE soc_system/synthesis/soc_system.qip
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 519 megabytes
-    Info: Processing ended: Wed May  5 15:58:10 2021
+    Info: Peak virtual memory: 518 megabytes
+    Info: Processing ended: Tue Jun 15 11:12:18 2021
     Info: Elapsed time: 00:00:12
     Info: Total CPU time (on all processors): 00:00:12
 
