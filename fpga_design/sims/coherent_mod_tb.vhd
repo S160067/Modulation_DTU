@@ -58,11 +58,10 @@ end component;
 signal re_sample_o, im_sample_o :  std_logic_vector(DAC_data_width - 1 DOWNTO 0);
 signal clk,reset_i,buffer_valid_i,buffer_ready_o,im_valid_o,re_valid_o :std_logic;
 signal ctrl_o : std_logic_vector(15 downto 0);
-signal data_i : std_logic_vector(1 downto 0);
+signal data_i,test_vector : std_logic_vector(1 downto 0);
 signal data_o : std_logic_vector(1 downto 0);
 signal valid_o : std_logic;
 signal test_valid : std_logic;
-
 BEGIN
 
 DUT_TX : TX_modulation_top port MAP(
@@ -93,10 +92,10 @@ DUT_RX : RX_modulation_top port MAP(
 process(im_sample_o,re_sample_o)
 BEGIN
 if(im_sample_o = "00000000000000"and re_sample_o ="00000000000000") then
- test_valid <= '0';
+  test_valid <= '0';
 else
-	test_valid <= '1';
-	end if;
+  test_valid <= '1';
+end if;
 end process;
 
 process
@@ -105,6 +104,11 @@ wait for 5 ns;
 clk <= '0';
 wait for 5 ns;
 clk <= '1';
+end process;
+process
+BEGIN 
+wait until CLK='1';
+test_vector <= data_i(0) & not data_i(1);
 end process;
 
 
@@ -116,40 +120,21 @@ buffer_valid_i <= '0';
 wait for 40 ns;
 reset_i <= '0';
 wait for 30 ns;
---
-wait until CLK='1';
-buffer_valid_i <=  '1';
-data_i <= b"00";
-wait until CLK='1';
-buffer_valid_i <=  '0';
-wait until CLK='1';
---
-wait until CLK='1';
-buffer_valid_i <=  '1'; 
-data_i <= b"01";
-wait until buffer_ready_o='1';
-wait until CLK='1';
-buffer_valid_i <=  '0';
-wait until CLK='1';
---
-wait until CLK='1';
-buffer_valid_i <=  '1';
-data_i <= b"10";
-wait until buffer_ready_o='1';
-wait until CLK='1';
+	wait until CLK='1';
+	buffer_valid_i <= '1';
+	data_i <=  test_vector;
+stim_loop : for k in 0 to 500 loop
+	wait until buffer_ready_o='1';
+	wait until CLK='1';
+	buffer_valid_i <= '1';
+	data_i <=  test_vector;
 
-buffer_valid_i <=  '0';
-wait until CLK='1';
---
-wait until CLK='1';
-buffer_valid_i <=  '1';
-data_i <= b"11";
-wait until buffer_ready_o='1';
-wait until CLK='1';
-buffer_valid_i <=  '0';
-wait until CLK='1';
+	
+end loop stim_loop;
 wait;
 end process;
+
+
 
 
 

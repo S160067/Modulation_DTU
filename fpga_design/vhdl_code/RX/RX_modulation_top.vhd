@@ -49,12 +49,43 @@ component Mod_interface_RX is
     );
 end component;
 
+component mod_conv_rx_new is 
+port(
+i_rst						    : in std_logic;
+i_clk 						  	: in std_logic;
+i_data_valid				  	: in std_logic;
+i_element				    	: in signed(G_MANTISSA_SIZE downto 0);
+o_result					    : out signed(G_MANTISSA_SIZE downto 0);
+o_valid						  	: out std_logic
+);
+END component;
 signal re, im : std_logic;
 signal im_valid, re_valid : std_logic;
 BEGIN
 --assigns
 -----------------------------------------
 --port maps
+entity mod_conv_rx_new is 
+generic (
+constant G_SHIFTREG_SIZE 	    : positive := 16;
+constant G_MANTISSA_SIZE	    : positive := 13
+);
+re_deconv : mod_conv_rx_new PORT MAP (
+	 i_rst => reset_i,
+	 i_clk => clk_i,
+	 i_data_valid => re_data_valid,
+	 i_element => re_sample_i,
+	 o_result => re_sample_conv,
+	 o_valid => re_valid_conv
+);
+im_deconv : mod_conv_rx_new PORT MAP (
+	 i_rst => reset_i,
+	 i_clk => clk_i,
+	 i_data_valid => im_data_valid,
+	 i_element => im_sample_i,
+	 o_result => im_sample_conv,
+	 o_valid => im_valid_conv
+);
 
 re_deshaper : mod_deconv PORT MAP (
 	 i_rst => reset_i,
