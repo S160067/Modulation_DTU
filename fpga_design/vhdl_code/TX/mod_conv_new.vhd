@@ -51,7 +51,7 @@ ARCHITECTURE rtl OF mod_convolution IS
 	SIGNAL s_mult : fbarray := (OTHERS => (OTHERS => '0'));
 	SIGNAL s_pulse : fbarray := (OTHERS => (OTHERS => '0'));
 	SIGNAL s_sum : signed(G_MANTISSA_SIZE + 4 DOWNTO 0);
-
+	signal no_data_flag_reg : STD_LOGIC;
 BEGIN
 
 	s_pulse(0) <= to_signed(212, s_pulse(0)'length);
@@ -62,7 +62,9 @@ BEGIN
 	s_pulse(5) <= to_signed(784, s_pulse(0)'length);
 	s_pulse(6) <= to_signed(2474, s_pulse(0)'length);
 	s_pulse(7) <= to_signed(3943, s_pulse(0)'length);
+
 	s_pulse(8) <= to_signed(4523, s_pulse(0)'length);
+
 	s_pulse(9) <= to_signed(3943, s_pulse(0)'length);
 	s_pulse(10) <= to_signed(2474, s_pulse(0)'length);
 	s_pulse(11) <= to_signed(784, s_pulse(0)'length);
@@ -83,10 +85,10 @@ BEGIN
 
 				s_sregis <= (OTHERS => (OTHERS => '0'));
 				s_sum <= (OTHERS => '0');
-
+				no_data_flag_reg <= '1';
 			ELSE
-				o_valid <= '1';
-
+			no_data_flag_reg <= i_no_data_flag;
+			o_valid <= not no_data_flag_reg;
 				s_sregis(1 TO G_SHIFTREG_SIZE - 1) <= s_sregis(0 TO G_SHIFTREG_SIZE - 2);
 
 				IF (i_data_valid = '1' AND i_symbol = '0') THEN
@@ -95,43 +97,28 @@ BEGIN
 				ELSIF (i_data_valid = '1' AND i_symbol = '1') THEN
 
 					s_sregis(0) <= to_signed(-8192, s_sregis(0)'length);
-
 				ELSE
-
 					s_sregis(0) <= to_signed(0, s_sregis(0)'length);
-
 				END IF;
-
 				sumvar := (OTHERS => '0');
-
 				FOR i IN 0 TO G_SHIFTREG_SIZE - 1 LOOP
-
 					sumvar := sumvar + resize(s_mult(i), sumvar'length);
-
 				END LOOP;
-
 				s_sum <= sumvar;
 			END IF;
 		END IF;
 	END PROCESS;
-
+	
 	arith : PROCESS (i_symbol, s_sregis, s_mult, s_sum, i_rst, s_pulse)
 	BEGIN
-
 		s_mult <= (OTHERS => (OTHERS => '0'));
-
 		FOR i IN 0 TO G_SHIFTREG_SIZE - 1 LOOP
-
 			s_mult(i) <= mult(s_sregis(i), s_pulse(i));
-
 		END LOOP;
-
-		o_result <= STD_LOGIC_VECTOR(s_sum(G_MANTISSA_SIZE DOWNTO 0));
+			o_result <= STD_LOGIC_VECTOR(s_sum(G_MANTISSA_SIZE DOWNTO 0));
 
 		IF (i_rst = '1') THEN
 			s_mult <= (OTHERS => (OTHERS => '0'));
-			o_result <= (OTHERS => '0');
-
 		END IF;
 	END PROCESS;
 END ARCHITECTURE;

@@ -61,6 +61,7 @@ signal ctrl_o : std_logic_vector(15 downto 0);
 signal data_i : std_logic_vector(1 downto 0);
 signal data_o : std_logic_vector(1 downto 0);
 signal valid_o : std_logic;
+signal test_valid : std_logic;
 
 BEGIN
 
@@ -82,14 +83,21 @@ DUT_RX : RX_modulation_top port MAP(
 	reset_i => reset_i,
 	valid_o => valid_o,
 	ctrl_o => ctrl_o,
-	im_data_valid => im_valid_o,
-	re_data_valid => re_valid_o,
+	im_data_valid => test_valid,
+	re_data_valid => test_valid,
 	im_sample_i => im_sample_o,
 	re_sample_i => re_sample_o
 
 	);
 
-		
+process(im_sample_o,re_sample_o)
+BEGIN
+if(im_sample_o = "00000000000000"and re_sample_o ="00000000000000") then
+ test_valid <= '0';
+else
+	test_valid <= '1';
+	end if;
+end process;
 
 process
 BEGIN
