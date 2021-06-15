@@ -1,5 +1,5 @@
 Analysis & Synthesis report for 1_1_0
-Tue Jun 15 14:05:02 2021
+Tue Jun 15 14:52:55 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -31,19 +31,20 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
  23. Parameter Settings for User Entity Instance: fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|sin_gen:sin_inst
  24. Parameter Settings for User Entity Instance: fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|cos_gen:cos_inst
  25. Parameter Settings for User Entity Instance: fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst|demodulator:demod_inst|RX_modulation_top:mod_inst
- 26. Parameter Settings for User Entity Instance: fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst|demodulator:demod_inst|RX_modulation_top:mod_inst|mod_deshaper:re_deshaper
- 27. Parameter Settings for User Entity Instance: fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst|demodulator:demod_inst|RX_modulation_top:mod_inst|mod_deshaper:im_deshaper
- 28. Parameter Settings for User Entity Instance: fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst|demodulator:demod_inst|RX_modulation_top:mod_inst|Mod_interface_RX:u_mod_interface
- 29. Parameter Settings for Inferred Entity Instance: sld_signaltap:auto_signaltap_0
- 30. Port Connectivity Checks: "fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst|demodulator:demod_inst|RX_modulation_top:mod_inst"
- 31. Port Connectivity Checks: "fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|modulator:mod_inst|TX_modulation_top:tx_mod_inst|Mod_interface_TX:u_mod_interface"
- 32. Port Connectivity Checks: "fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|modulator:mod_inst|TX_modulation_top:tx_mod_inst"
- 33. Port Connectivity Checks: "fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst"
- 34. Signal Tap Logic Analyzer Settings
- 35. Post-Synthesis Netlist Statistics for Top Partition
- 36. Elapsed Time Per Partition
- 37. Connections to In-System Debugging Instance "auto_signaltap_0"
- 38. Analysis & Synthesis Messages
+ 26. Parameter Settings for User Entity Instance: fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst|demodulator:demod_inst|RX_modulation_top:mod_inst|mod_conv_rx_new:re_deconv
+ 27. Parameter Settings for User Entity Instance: fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst|demodulator:demod_inst|RX_modulation_top:mod_inst|mod_conv_rx_new:im_deconv
+ 28. Parameter Settings for User Entity Instance: fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst|demodulator:demod_inst|RX_modulation_top:mod_inst|mod_deconv:re_deshaper
+ 29. Parameter Settings for User Entity Instance: fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst|demodulator:demod_inst|RX_modulation_top:mod_inst|mod_deconv:im_deshaper
+ 30. Parameter Settings for User Entity Instance: fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst|demodulator:demod_inst|RX_modulation_top:mod_inst|Mod_interface_RX:u_mod_interface
+ 31. Parameter Settings for Inferred Entity Instance: sld_signaltap:auto_signaltap_0
+ 32. Port Connectivity Checks: "fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst|demodulator:demod_inst|RX_modulation_top:mod_inst"
+ 33. Port Connectivity Checks: "fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|modulator:mod_inst|TX_modulation_top:tx_mod_inst"
+ 34. Port Connectivity Checks: "fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst"
+ 35. Signal Tap Logic Analyzer Settings
+ 36. Post-Synthesis Netlist Statistics for Top Partition
+ 37. Elapsed Time Per Partition
+ 38. Connections to In-System Debugging Instance "auto_signaltap_0"
+ 39. Analysis & Synthesis Messages
 
 
 
@@ -70,17 +71,17 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Jun 15 14:05:02 2021       ;
+; Analysis & Synthesis Status     ; Successful - Tue Jun 15 14:52:55 2021       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; 1_1_0                                       ;
 ; Top-level Entity Name           ; DE1_SoC_ReferenceTop                        ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 1690                                        ;
+; Total registers                 ; 2101                                        ;
 ; Total pins                      ; 97                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 12,288                                      ;
-; Total DSP Blocks                ; 32                                          ;
+; Total DSP Blocks                ; 64                                          ;
 ; Total HSSI RX PCSs              ; 0                                           ;
 ; Total HSSI PMA RX Deserializers ; 0                                           ;
 ; Total HSSI TX PCSs              ; 0                                           ;
@@ -200,10 +201,11 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------------------------------------+-----------------+----------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------+
 ; File Name with User-Entered Path                                   ; Used in Netlist ; File Type                                    ; File Name with Absolute Path                                                                                                                                                 ; Library     ;
 +--------------------------------------------------------------------+-----------------+----------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------+
+; ../../vhdl_code/RX/mod_deconv_new.vhd                              ; yes             ; User VHDL File                               ; /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/RX/mod_deconv_new.vhd                                                                       ;             ;
+; ../../vhdl_code/RX/mod_conv_rx_new.vhd                             ; yes             ; User VHDL File                               ; /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/RX/mod_conv_rx_new.vhd                                                                      ;             ;
 ; ../../vhdl_code/TX/mod_conv_new.vhd                                ; yes             ; User VHDL File                               ; /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/TX/mod_conv_new.vhd                                                                         ;             ;
 ; ../../vhdl_code/RX/RX_modulation_top.vhd                           ; yes             ; User VHDL File                               ; /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/RX/RX_modulation_top.vhd                                                                    ;             ;
 ; ../../vhdl_code/RX/MOD_interface_rx.vhd                            ; yes             ; User VHDL File                               ; /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/RX/MOD_interface_rx.vhd                                                                     ;             ;
-; ../../vhdl_code/RX/mod_deshaper.vhd                                ; yes             ; User VHDL File                               ; /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/RX/mod_deshaper.vhd                                                                         ;             ;
 ; ../../vhdl_code/TX/TX_modulation_top.vhd                           ; yes             ; User VHDL File                               ; /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/TX/TX_modulation_top.vhd                                                                    ;             ;
 ; ../../vhdl_code/TX/Mod_interface_TX.vhd                            ; yes             ; User VHDL File                               ; /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/TX/Mod_interface_TX.vhd                                                                     ;             ;
 ; ../hdl/sync.vhd                                                    ; yes             ; User VHDL File                               ; /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/sync.vhd                                                               ;             ;
@@ -286,30 +288,30 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimate of Logic utilization (ALMs needed) ; 1010           ;
+; Estimate of Logic utilization (ALMs needed) ; 1316           ;
 ;                                             ;                ;
-; Combinational ALUT usage for logic          ; 944            ;
+; Combinational ALUT usage for logic          ; 1341           ;
 ;     -- 7 input functions                    ; 7              ;
-;     -- 6 input functions                    ; 102            ;
-;     -- 5 input functions                    ; 260            ;
-;     -- 4 input functions                    ; 82             ;
-;     -- <=3 input functions                  ; 493            ;
+;     -- 6 input functions                    ; 101            ;
+;     -- 5 input functions                    ; 360            ;
+;     -- 4 input functions                    ; 80             ;
+;     -- <=3 input functions                  ; 793            ;
 ;                                             ;                ;
-; Dedicated logic registers                   ; 1690           ;
+; Dedicated logic registers                   ; 2101           ;
 ;                                             ;                ;
 ; I/O pins                                    ; 97             ;
 ; Total MLAB memory bits                      ; 0              ;
 ; Total block memory bits                     ; 12288          ;
 ;                                             ;                ;
-; Total DSP Blocks                            ; 32             ;
+; Total DSP Blocks                            ; 64             ;
 ;                                             ;                ;
 ; Total PLLs                                  ; 3              ;
 ;     -- PLLs                                 ; 3              ;
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
-; Maximum fan-out                             ; 1141           ;
-; Total fan-out                               ; 10810          ;
-; Average fan-out                             ; 3.56           ;
+; Maximum fan-out                             ; 1552           ;
+; Total fan-out                               ; 13786          ;
+; Average fan-out                             ; 3.55           ;
 +---------------------------------------------+----------------+
 
 
@@ -318,28 +320,30 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
 ; Compilation Hierarchy Node                                                                                                              ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                                                                                                                                                                              ; Entity Name                       ; Library Name ;
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
-; |DE1_SoC_ReferenceTop                                                                                                                   ; 944 (1)             ; 1690 (0)                  ; 12288             ; 32         ; 97   ; 0            ; |DE1_SoC_ReferenceTop                                                                                                                                                                                                                                                                                                                                            ; DE1_SoC_ReferenceTop              ; work         ;
-;    |fpga_top:fpga_top_inst|                                                                                                             ; 529 (0)             ; 174 (0)                   ; 0                 ; 32         ; 0    ; 0            ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst                                                                                                                                                                                                                                                                                                                     ; fpga_top                          ; work         ;
-;       |modulation_top:modulation_inst|                                                                                                  ; 529 (0)             ; 174 (0)                   ; 0                 ; 32         ; 0    ; 0            ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst                                                                                                                                                                                                                                                                                      ; modulation_top                    ; work         ;
+; |DE1_SoC_ReferenceTop                                                                                                                   ; 1341 (1)            ; 2101 (0)                  ; 12288             ; 64         ; 97   ; 0            ; |DE1_SoC_ReferenceTop                                                                                                                                                                                                                                                                                                                                            ; DE1_SoC_ReferenceTop              ; work         ;
+;    |fpga_top:fpga_top_inst|                                                                                                             ; 926 (0)             ; 585 (0)                   ; 0                 ; 64         ; 0    ; 0            ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst                                                                                                                                                                                                                                                                                                                     ; fpga_top                          ; work         ;
+;       |modulation_top:modulation_inst|                                                                                                  ; 926 (0)             ; 585 (0)                   ; 0                 ; 64         ; 0    ; 0            ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst                                                                                                                                                                                                                                                                                      ; modulation_top                    ; work         ;
 ;          |ip_pll:pll_inst|                                                                                                              ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|ip_pll:pll_inst                                                                                                                                                                                                                                                                      ; ip_pll                            ; ip_pll       ;
 ;             |ip_pll_0002:ip_pll_inst|                                                                                                   ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|ip_pll:pll_inst|ip_pll_0002:ip_pll_inst                                                                                                                                                                                                                                              ; ip_pll_0002                       ; ip_pll       ;
 ;                |altera_pll:altera_pll_i|                                                                                                ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|ip_pll:pll_inst|ip_pll_0002:ip_pll_inst|altera_pll:altera_pll_i                                                                                                                                                                                                                      ; altera_pll                        ; work         ;
-;          |reciever_top:reciever_inst|                                                                                                   ; 64 (0)              ; 58 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst                                                                                                                                                                                                                                                           ; reciever_top                      ; work         ;
+;          |reciever_top:reciever_inst|                                                                                                   ; 433 (0)             ; 469 (0)                   ; 0                 ; 32         ; 0    ; 0            ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst                                                                                                                                                                                                                                                           ; reciever_top                      ; work         ;
 ;             |buffer_rx:buff_inst|                                                                                                       ; 8 (8)               ; 10 (10)                   ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst|buffer_rx:buff_inst                                                                                                                                                                                                                                       ; buffer_rx                         ; work         ;
-;             |demodulator:demod_inst|                                                                                                    ; 55 (0)              ; 48 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst|demodulator:demod_inst                                                                                                                                                                                                                                    ; demodulator                       ; work         ;
-;                |RX_modulation_top:mod_inst|                                                                                             ; 55 (0)              ; 48 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst|demodulator:demod_inst|RX_modulation_top:mod_inst                                                                                                                                                                                                         ; RX_modulation_top                 ; work         ;
+;             |demodulator:demod_inst|                                                                                                    ; 424 (0)             ; 459 (0)                   ; 0                 ; 32         ; 0    ; 0            ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst|demodulator:demod_inst                                                                                                                                                                                                                                    ; demodulator                       ; work         ;
+;                |RX_modulation_top:mod_inst|                                                                                             ; 424 (0)             ; 459 (0)                   ; 0                 ; 32         ; 0    ; 0            ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst|demodulator:demod_inst|RX_modulation_top:mod_inst                                                                                                                                                                                                         ; RX_modulation_top                 ; work         ;
 ;                   |Mod_interface_RX:u_mod_interface|                                                                                    ; 0 (0)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst|demodulator:demod_inst|RX_modulation_top:mod_inst|Mod_interface_RX:u_mod_interface                                                                                                                                                                        ; Mod_interface_RX                  ; work         ;
-;                   |mod_deshaper:im_deshaper|                                                                                            ; 34 (34)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst|demodulator:demod_inst|RX_modulation_top:mod_inst|mod_deshaper:im_deshaper                                                                                                                                                                                ; mod_deshaper                      ; work         ;
-;                   |mod_deshaper:re_deshaper|                                                                                            ; 21 (21)             ; 19 (19)                   ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst|demodulator:demod_inst|RX_modulation_top:mod_inst|mod_deshaper:re_deshaper                                                                                                                                                                                ; mod_deshaper                      ; work         ;
+;                   |mod_conv_rx_new:im_deconv|                                                                                           ; 208 (208)           ; 225 (225)                 ; 0                 ; 16         ; 0    ; 0            ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst|demodulator:demod_inst|RX_modulation_top:mod_inst|mod_conv_rx_new:im_deconv                                                                                                                                                                               ; mod_conv_rx_new                   ; work         ;
+;                   |mod_conv_rx_new:re_deconv|                                                                                           ; 208 (208)           ; 225 (225)                 ; 0                 ; 16         ; 0    ; 0            ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst|demodulator:demod_inst|RX_modulation_top:mod_inst|mod_conv_rx_new:re_deconv                                                                                                                                                                               ; mod_conv_rx_new                   ; work         ;
+;                   |mod_deconv:im_deshaper|                                                                                              ; 5 (5)               ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst|demodulator:demod_inst|RX_modulation_top:mod_inst|mod_deconv:im_deshaper                                                                                                                                                                                  ; mod_deconv                        ; work         ;
+;                   |mod_deconv:re_deshaper|                                                                                              ; 3 (3)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst|demodulator:demod_inst|RX_modulation_top:mod_inst|mod_deconv:re_deshaper                                                                                                                                                                                  ; mod_deconv                        ; work         ;
 ;             |reciever:receiv_ins|                                                                                                       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst|reciever:receiv_ins                                                                                                                                                                                                                                       ; reciever                          ; work         ;
-;          |sender_top:sender_inst|                                                                                                       ; 465 (28)            ; 116 (0)                   ; 0                 ; 32         ; 0    ; 0            ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst                                                                                                                                                                                                                                                               ; sender_top                        ; work         ;
+;          |sender_top:sender_inst|                                                                                                       ; 493 (28)            ; 116 (0)                   ; 0                 ; 32         ; 0    ; 0            ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst                                                                                                                                                                                                                                                               ; sender_top                        ; work         ;
 ;             |buffer_tx:buff_inst|                                                                                                       ; 7 (7)               ; 6 (6)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|buffer_tx:buff_inst                                                                                                                                                                                                                                           ; buffer_tx                         ; work         ;
 ;             |cos_gen:cos_inst|                                                                                                          ; 16 (16)             ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|cos_gen:cos_inst                                                                                                                                                                                                                                              ; cos_gen                           ; work         ;
-;             |modulator:mod_inst|                                                                                                        ; 409 (0)             ; 105 (0)                   ; 0                 ; 32         ; 0    ; 0            ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|modulator:mod_inst                                                                                                                                                                                                                                            ; modulator                         ; work         ;
-;                |TX_modulation_top:tx_mod_inst|                                                                                          ; 409 (0)             ; 105 (0)                   ; 0                 ; 32         ; 0    ; 0            ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|modulator:mod_inst|TX_modulation_top:tx_mod_inst                                                                                                                                                                                                              ; TX_modulation_top                 ; work         ;
+;             |modulator:mod_inst|                                                                                                        ; 437 (0)             ; 105 (0)                   ; 0                 ; 32         ; 0    ; 0            ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|modulator:mod_inst                                                                                                                                                                                                                                            ; modulator                         ; work         ;
+;                |TX_modulation_top:tx_mod_inst|                                                                                          ; 437 (0)             ; 105 (0)                   ; 0                 ; 32         ; 0    ; 0            ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|modulator:mod_inst|TX_modulation_top:tx_mod_inst                                                                                                                                                                                                              ; TX_modulation_top                 ; work         ;
 ;                   |Mod_interface_TX:u_mod_interface|                                                                                    ; 17 (17)             ; 13 (13)                   ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|modulator:mod_inst|TX_modulation_top:tx_mod_inst|Mod_interface_TX:u_mod_interface                                                                                                                                                                             ; Mod_interface_TX                  ; work         ;
-;                   |mod_convolution:im_shaper|                                                                                           ; 196 (196)           ; 46 (46)                   ; 0                 ; 16         ; 0    ; 0            ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|modulator:mod_inst|TX_modulation_top:tx_mod_inst|mod_convolution:im_shaper                                                                                                                                                                                    ; mod_convolution                   ; work         ;
-;                   |mod_convolution:re_shaper|                                                                                           ; 196 (196)           ; 46 (46)                   ; 0                 ; 16         ; 0    ; 0            ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|modulator:mod_inst|TX_modulation_top:tx_mod_inst|mod_convolution:re_shaper                                                                                                                                                                                    ; mod_convolution                   ; work         ;
+;                   |mod_convolution:im_shaper|                                                                                           ; 210 (210)           ; 46 (46)                   ; 0                 ; 16         ; 0    ; 0            ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|modulator:mod_inst|TX_modulation_top:tx_mod_inst|mod_convolution:im_shaper                                                                                                                                                                                    ; mod_convolution                   ; work         ;
+;                   |mod_convolution:re_shaper|                                                                                           ; 210 (210)           ; 46 (46)                   ; 0                 ; 16         ; 0    ; 0            ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|modulator:mod_inst|TX_modulation_top:tx_mod_inst|mod_convolution:re_shaper                                                                                                                                                                                    ; mod_convolution                   ; work         ;
 ;             |sin_gen:sin_inst|                                                                                                          ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|sin_gen:sin_inst                                                                                                                                                                                                                                              ; sin_gen                           ; work         ;
 ;    |sld_hub:auto_hub|                                                                                                                   ; 90 (1)              ; 90 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC_ReferenceTop|sld_hub:auto_hub                                                                                                                                                                                                                                                                                                                           ; sld_hub                           ; altera_sld   ;
 ;       |alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric| ; 89 (0)              ; 90 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC_ReferenceTop|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric                                                                                                                                                                                           ; alt_sld_fab_with_jtag_input       ; altera_sld   ;
@@ -495,11 +499,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------+-------------+
 ; Statistic                         ; Number Used ;
 +-----------------------------------+-------------+
-; Two Independent 18x18             ; 32          ;
-; Total number of DSP blocks        ; 32          ;
+; Two Independent 18x18             ; 64          ;
+; Total number of DSP blocks        ; 64          ;
 ;                                   ;             ;
-; Fixed Point Signed Multiplier     ; 12          ;
-; Fixed Point Mixed Sign Multiplier ; 20          ;
+; Fixed Point Signed Multiplier     ; 24          ;
+; Fixed Point Mixed Sign Multiplier ; 40          ;
 +-----------------------------------+-------------+
 
 
@@ -556,13 +560,10 @@ Encoding Type:  One-Hot
 ; fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|sin_gen:sin_inst|phase_cnt[2]                                                               ; Merged with fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|cos_gen:cos_inst|phase_cnt[2]                                                              ;
 ; fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|sin_gen:sin_inst|phase_cnt[1]                                                               ; Merged with fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|cos_gen:cos_inst|phase_cnt[1]                                                              ;
 ; fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|sin_gen:sin_inst|phase_cnt[0]                                                               ; Merged with fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|cos_gen:cos_inst|phase_cnt[0]                                                              ;
-; fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst|demodulator:demod_inst|RX_modulation_top:mod_inst|mod_deshaper:re_deshaper|o_valid      ; Merged with fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst|demodulator:demod_inst|RX_modulation_top:mod_inst|mod_deshaper:im_deshaper|o_valid     ;
-; fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst|demodulator:demod_inst|RX_modulation_top:mod_inst|mod_deshaper:re_deshaper|cnt[3]       ; Merged with fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst|demodulator:demod_inst|RX_modulation_top:mod_inst|mod_deshaper:im_deshaper|cnt[3]      ;
-; fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst|demodulator:demod_inst|RX_modulation_top:mod_inst|mod_deshaper:re_deshaper|cnt[2]       ; Merged with fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst|demodulator:demod_inst|RX_modulation_top:mod_inst|mod_deshaper:im_deshaper|cnt[2]      ;
-; fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst|demodulator:demod_inst|RX_modulation_top:mod_inst|mod_deshaper:re_deshaper|cnt[1]       ; Merged with fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst|demodulator:demod_inst|RX_modulation_top:mod_inst|mod_deshaper:im_deshaper|cnt[1]      ;
-; fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst|demodulator:demod_inst|RX_modulation_top:mod_inst|mod_deshaper:re_deshaper|cnt[0]       ; Merged with fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst|demodulator:demod_inst|RX_modulation_top:mod_inst|mod_deshaper:im_deshaper|cnt[0]      ;
-; fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst|demodulator:demod_inst|RX_modulation_top:mod_inst|mod_deshaper:re_deshaper|cnt[4]       ; Merged with fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst|demodulator:demod_inst|RX_modulation_top:mod_inst|mod_deshaper:im_deshaper|cnt[4]      ;
-; fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst|demodulator:demod_inst|RX_modulation_top:mod_inst|mod_deshaper:re_deshaper|s_lock       ; Merged with fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst|demodulator:demod_inst|RX_modulation_top:mod_inst|mod_deshaper:im_deshaper|s_lock      ;
+; fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst|demodulator:demod_inst|RX_modulation_top:mod_inst|mod_deconv:re_deshaper|o_valid        ; Merged with fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst|demodulator:demod_inst|RX_modulation_top:mod_inst|mod_deconv:im_deshaper|o_valid       ;
+; fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst|demodulator:demod_inst|RX_modulation_top:mod_inst|mod_deconv:re_deshaper|cnt[1]         ; Merged with fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst|demodulator:demod_inst|RX_modulation_top:mod_inst|mod_deconv:im_deshaper|cnt[1]        ;
+; fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst|demodulator:demod_inst|RX_modulation_top:mod_inst|mod_deconv:re_deshaper|cnt[0]         ; Merged with fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst|demodulator:demod_inst|RX_modulation_top:mod_inst|mod_deconv:im_deshaper|cnt[0]        ;
+; fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst|demodulator:demod_inst|RX_modulation_top:mod_inst|mod_deconv:re_deshaper|s_lock         ; Merged with fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst|demodulator:demod_inst|RX_modulation_top:mod_inst|mod_deconv:im_deshaper|s_lock        ;
 ; fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|modulator:mod_inst|TX_modulation_top:tx_mod_inst|mod_convolution:im_shaper|s_sregis[15][10] ; Merged with fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|modulator:mod_inst|TX_modulation_top:tx_mod_inst|mod_convolution:im_shaper|s_sregis[15][0] ;
 ; fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|modulator:mod_inst|TX_modulation_top:tx_mod_inst|mod_convolution:im_shaper|s_sregis[15][11] ; Merged with fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|modulator:mod_inst|TX_modulation_top:tx_mod_inst|mod_convolution:im_shaper|s_sregis[15][0] ;
 ; fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|modulator:mod_inst|TX_modulation_top:tx_mod_inst|mod_convolution:im_shaper|s_sregis[15][12] ; Merged with fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|modulator:mod_inst|TX_modulation_top:tx_mod_inst|mod_convolution:im_shaper|s_sregis[15][0] ;
@@ -948,7 +949,7 @@ Encoding Type:  One-Hot
 ; fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|modulator:mod_inst|TX_modulation_top:tx_mod_inst|mod_convolution:re_shaper|s_sregis[15][8]  ; Merged with fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|modulator:mod_inst|TX_modulation_top:tx_mod_inst|mod_convolution:re_shaper|s_sregis[15][0] ;
 ; fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|modulator:mod_inst|TX_modulation_top:tx_mod_inst|mod_convolution:re_shaper|s_sregis[15][9]  ; Merged with fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|modulator:mod_inst|TX_modulation_top:tx_mod_inst|mod_convolution:re_shaper|s_sregis[15][0] ;
 ; fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst|buffer_rx:buff_inst|state.wait2_state                                                   ; Stuck at GND due to stuck port data_in                                                                                                                                              ;
-; Total Number of Removed Registers = 397                                                                                                                                  ;                                                                                                                                                                                     ;
+; Total Number of Removed Registers = 394                                                                                                                                  ;                                                                                                                                                                                     ;
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
@@ -957,12 +958,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 1690  ;
-; Number of registers using Synchronous Clear  ; 241   ;
+; Total registers                              ; 2101  ;
+; Number of registers using Synchronous Clear  ; 657   ;
 ; Number of registers using Synchronous Load   ; 207   ;
 ; Number of registers using Asynchronous Clear ; 526   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 601   ;
+; Number of registers using Clock Enable       ; 588   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -986,30 +987,41 @@ Encoding Type:  One-Hot
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                                                                                                                 ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                                                                                       ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|modulator:mod_inst|TX_modulation_top:tx_mod_inst|Mod_interface_TX:u_mod_interface|time_cnt[5] ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|cos_gen:cos_inst|phase_cnt[3]                                                                 ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst|demodulator:demod_inst|RX_modulation_top:mod_inst|mod_deshaper:re_deshaper|o_symbol       ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|modulator:mod_inst|TX_modulation_top:tx_mod_inst|Mod_interface_TX:u_mod_interface|data_reg[0] ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 10 LEs               ; 5 LEs                  ; Yes        ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst|demodulator:demod_inst|RX_modulation_top:mod_inst|mod_deshaper:im_deshaper|cnt[4]         ;
-; 6:1                ; 36 bits   ; 144 LEs       ; 0 LEs                ; 144 LEs                ; Yes        ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst|demodulator:demod_inst|RX_modulation_top:mod_inst|mod_deshaper:im_deshaper|s_sum[12]      ;
-; 3:1                ; 13 bits   ; 26 LEs        ; 26 LEs               ; 0 LEs                  ; No         ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|modulator:mod_inst|TX_modulation_top:tx_mod_inst|mod_convolution:im_shaper|s_mult[14][10]     ;
-; 3:1                ; 13 bits   ; 26 LEs        ; 26 LEs               ; 0 LEs                  ; No         ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|modulator:mod_inst|TX_modulation_top:tx_mod_inst|mod_convolution:im_shaper|s_mult[13][12]     ;
-; 3:1                ; 13 bits   ; 26 LEs        ; 26 LEs               ; 0 LEs                  ; No         ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|modulator:mod_inst|TX_modulation_top:tx_mod_inst|mod_convolution:im_shaper|s_mult[12][8]      ;
-; 3:1                ; 13 bits   ; 26 LEs        ; 26 LEs               ; 0 LEs                  ; No         ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|modulator:mod_inst|TX_modulation_top:tx_mod_inst|mod_convolution:re_shaper|s_mult[14][3]      ;
-; 3:1                ; 13 bits   ; 26 LEs        ; 26 LEs               ; 0 LEs                  ; No         ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|modulator:mod_inst|TX_modulation_top:tx_mod_inst|mod_convolution:re_shaper|s_mult[13][4]      ;
-; 3:1                ; 13 bits   ; 26 LEs        ; 26 LEs               ; 0 LEs                  ; No         ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|modulator:mod_inst|TX_modulation_top:tx_mod_inst|mod_convolution:re_shaper|s_mult[12][0]      ;
-; 3:1                ; 13 bits   ; 26 LEs        ; 26 LEs               ; 0 LEs                  ; No         ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|modulator:mod_inst|TX_modulation_top:tx_mod_inst|mod_convolution:im_shaper|s_mult[4][9]       ;
-; 3:1                ; 13 bits   ; 26 LEs        ; 26 LEs               ; 0 LEs                  ; No         ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|modulator:mod_inst|TX_modulation_top:tx_mod_inst|mod_convolution:im_shaper|s_mult[3][7]       ;
-; 3:1                ; 13 bits   ; 26 LEs        ; 26 LEs               ; 0 LEs                  ; No         ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|modulator:mod_inst|TX_modulation_top:tx_mod_inst|mod_convolution:im_shaper|s_mult[2][5]       ;
-; 3:1                ; 13 bits   ; 26 LEs        ; 26 LEs               ; 0 LEs                  ; No         ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|modulator:mod_inst|TX_modulation_top:tx_mod_inst|mod_convolution:re_shaper|s_mult[4][2]       ;
-; 3:1                ; 13 bits   ; 26 LEs        ; 26 LEs               ; 0 LEs                  ; No         ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|modulator:mod_inst|TX_modulation_top:tx_mod_inst|mod_convolution:re_shaper|s_mult[3][12]      ;
-; 3:1                ; 13 bits   ; 26 LEs        ; 26 LEs               ; 0 LEs                  ; No         ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|modulator:mod_inst|TX_modulation_top:tx_mod_inst|mod_convolution:re_shaper|s_mult[2][2]       ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                                                                                                                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                                                                                        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|modulator:mod_inst|TX_modulation_top:tx_mod_inst|Mod_interface_TX:u_mod_interface|time_cnt[7]  ;
+; 3:1                ; 28 bits   ; 56 LEs        ; 0 LEs                ; 56 LEs                 ; Yes        ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst|demodulator:demod_inst|RX_modulation_top:mod_inst|mod_conv_rx_new:im_deconv|s_sregis[0][6] ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|cos_gen:cos_inst|phase_cnt[2]                                                                  ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|modulator:mod_inst|TX_modulation_top:tx_mod_inst|Mod_interface_TX:u_mod_interface|data_reg[0]  ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst|demodulator:demod_inst|RX_modulation_top:mod_inst|mod_deconv:im_deshaper|cnt[1]            ;
+; 3:1                ; 13 bits   ; 26 LEs        ; 26 LEs               ; 0 LEs                  ; No         ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|modulator:mod_inst|TX_modulation_top:tx_mod_inst|mod_convolution:im_shaper|s_mult[14][1]       ;
+; 3:1                ; 13 bits   ; 26 LEs        ; 26 LEs               ; 0 LEs                  ; No         ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|modulator:mod_inst|TX_modulation_top:tx_mod_inst|mod_convolution:im_shaper|s_mult[13][11]      ;
+; 3:1                ; 13 bits   ; 26 LEs        ; 26 LEs               ; 0 LEs                  ; No         ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|modulator:mod_inst|TX_modulation_top:tx_mod_inst|mod_convolution:im_shaper|s_mult[12][5]       ;
+; 3:1                ; 13 bits   ; 26 LEs        ; 26 LEs               ; 0 LEs                  ; No         ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|modulator:mod_inst|TX_modulation_top:tx_mod_inst|mod_convolution:re_shaper|s_mult[14][1]       ;
+; 3:1                ; 13 bits   ; 26 LEs        ; 26 LEs               ; 0 LEs                  ; No         ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|modulator:mod_inst|TX_modulation_top:tx_mod_inst|mod_convolution:re_shaper|s_mult[13][5]       ;
+; 3:1                ; 13 bits   ; 26 LEs        ; 26 LEs               ; 0 LEs                  ; No         ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|modulator:mod_inst|TX_modulation_top:tx_mod_inst|mod_convolution:re_shaper|s_mult[12][0]       ;
+; 3:1                ; 13 bits   ; 26 LEs        ; 26 LEs               ; 0 LEs                  ; No         ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst|demodulator:demod_inst|RX_modulation_top:mod_inst|mod_conv_rx_new:re_deconv|s_mult[14][4]  ;
+; 3:1                ; 13 bits   ; 26 LEs        ; 26 LEs               ; 0 LEs                  ; No         ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst|demodulator:demod_inst|RX_modulation_top:mod_inst|mod_conv_rx_new:re_deconv|s_mult[13][5]  ;
+; 3:1                ; 13 bits   ; 26 LEs        ; 26 LEs               ; 0 LEs                  ; No         ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst|demodulator:demod_inst|RX_modulation_top:mod_inst|mod_conv_rx_new:re_deconv|s_mult[12][2]  ;
+; 3:1                ; 13 bits   ; 26 LEs        ; 26 LEs               ; 0 LEs                  ; No         ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst|demodulator:demod_inst|RX_modulation_top:mod_inst|mod_conv_rx_new:im_deconv|s_mult[14][12] ;
+; 3:1                ; 13 bits   ; 26 LEs        ; 26 LEs               ; 0 LEs                  ; No         ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst|demodulator:demod_inst|RX_modulation_top:mod_inst|mod_conv_rx_new:im_deconv|s_mult[13][2]  ;
+; 3:1                ; 13 bits   ; 26 LEs        ; 26 LEs               ; 0 LEs                  ; No         ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst|demodulator:demod_inst|RX_modulation_top:mod_inst|mod_conv_rx_new:im_deconv|s_mult[12][11] ;
+; 3:1                ; 13 bits   ; 26 LEs        ; 26 LEs               ; 0 LEs                  ; No         ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|modulator:mod_inst|TX_modulation_top:tx_mod_inst|mod_convolution:im_shaper|s_mult[4][12]       ;
+; 3:1                ; 13 bits   ; 26 LEs        ; 26 LEs               ; 0 LEs                  ; No         ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|modulator:mod_inst|TX_modulation_top:tx_mod_inst|mod_convolution:im_shaper|s_mult[3][6]        ;
+; 3:1                ; 13 bits   ; 26 LEs        ; 26 LEs               ; 0 LEs                  ; No         ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|modulator:mod_inst|TX_modulation_top:tx_mod_inst|mod_convolution:im_shaper|s_mult[2][3]        ;
+; 3:1                ; 13 bits   ; 26 LEs        ; 26 LEs               ; 0 LEs                  ; No         ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|modulator:mod_inst|TX_modulation_top:tx_mod_inst|mod_convolution:re_shaper|s_mult[4][4]        ;
+; 3:1                ; 13 bits   ; 26 LEs        ; 26 LEs               ; 0 LEs                  ; No         ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|modulator:mod_inst|TX_modulation_top:tx_mod_inst|mod_convolution:re_shaper|s_mult[3][9]        ;
+; 3:1                ; 13 bits   ; 26 LEs        ; 26 LEs               ; 0 LEs                  ; No         ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|modulator:mod_inst|TX_modulation_top:tx_mod_inst|mod_convolution:re_shaper|s_mult[2][4]        ;
+; 3:1                ; 13 bits   ; 26 LEs        ; 26 LEs               ; 0 LEs                  ; No         ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst|demodulator:demod_inst|RX_modulation_top:mod_inst|mod_conv_rx_new:re_deconv|s_mult[4][4]   ;
+; 3:1                ; 13 bits   ; 26 LEs        ; 26 LEs               ; 0 LEs                  ; No         ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst|demodulator:demod_inst|RX_modulation_top:mod_inst|mod_conv_rx_new:re_deconv|s_mult[3][7]   ;
+; 3:1                ; 13 bits   ; 26 LEs        ; 26 LEs               ; 0 LEs                  ; No         ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst|demodulator:demod_inst|RX_modulation_top:mod_inst|mod_conv_rx_new:re_deconv|s_mult[2][12]  ;
+; 3:1                ; 13 bits   ; 26 LEs        ; 26 LEs               ; 0 LEs                  ; No         ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst|demodulator:demod_inst|RX_modulation_top:mod_inst|mod_conv_rx_new:im_deconv|s_mult[4][7]   ;
+; 3:1                ; 13 bits   ; 26 LEs        ; 26 LEs               ; 0 LEs                  ; No         ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst|demodulator:demod_inst|RX_modulation_top:mod_inst|mod_conv_rx_new:im_deconv|s_mult[3][4]   ;
+; 3:1                ; 13 bits   ; 26 LEs        ; 26 LEs               ; 0 LEs                  ; No         ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst|demodulator:demod_inst|RX_modulation_top:mod_inst|mod_conv_rx_new:im_deconv|s_mult[2][4]   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +-------------------------------------------------------+
@@ -1284,8 +1296,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------+-------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Parameter Name  ; Value ; Type                                                                                                                                                                       ;
 +-----------------+-------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; g_shiftreg_size ; 16    ; Signed Integer                                                                                                                                                             ;
-; g_mantissa_size ; 13    ; Signed Integer                                                                                                                                                             ;
+; G_SHIFTREG_SIZE ; 16    ; Signed Integer                                                                                                                                                             ;
+; G_MANTISSA_SIZE ; 13    ; Signed Integer                                                                                                                                                             ;
 +-----------------+-------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -1295,8 +1307,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------+-------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Parameter Name  ; Value ; Type                                                                                                                                                                       ;
 +-----------------+-------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; g_shiftreg_size ; 16    ; Signed Integer                                                                                                                                                             ;
-; g_mantissa_size ; 13    ; Signed Integer                                                                                                                                                             ;
+; G_SHIFTREG_SIZE ; 16    ; Signed Integer                                                                                                                                                             ;
+; G_MANTISSA_SIZE ; 13    ; Signed Integer                                                                                                                                                             ;
 +-----------------+-------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -1348,25 +1360,47 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst|demodulator:demod_inst|RX_modulation_top:mod_inst|mod_deshaper:re_deshaper ;
-+-----------------+-------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Name  ; Value ; Type                                                                                                                                                                           ;
-+-----------------+-------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; G_SHIFTREG_SIZE ; 16    ; Signed Integer                                                                                                                                                                 ;
-; G_MANTISSA_SIZE ; 13    ; Signed Integer                                                                                                                                                                 ;
-+-----------------+-------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst|demodulator:demod_inst|RX_modulation_top:mod_inst|mod_conv_rx_new:re_deconv ;
++-----------------+-------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Name  ; Value ; Type                                                                                                                                                                            ;
++-----------------+-------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; G_SHIFTREG_SIZE ; 16    ; Signed Integer                                                                                                                                                                  ;
+; G_MANTISSA_SIZE ; 13    ; Signed Integer                                                                                                                                                                  ;
++-----------------+-------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst|demodulator:demod_inst|RX_modulation_top:mod_inst|mod_deshaper:im_deshaper ;
-+-----------------+-------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Name  ; Value ; Type                                                                                                                                                                           ;
-+-----------------+-------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; G_SHIFTREG_SIZE ; 16    ; Signed Integer                                                                                                                                                                 ;
-; G_MANTISSA_SIZE ; 13    ; Signed Integer                                                                                                                                                                 ;
-+-----------------+-------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst|demodulator:demod_inst|RX_modulation_top:mod_inst|mod_conv_rx_new:im_deconv ;
++-----------------+-------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Name  ; Value ; Type                                                                                                                                                                            ;
++-----------------+-------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; G_SHIFTREG_SIZE ; 16    ; Signed Integer                                                                                                                                                                  ;
+; G_MANTISSA_SIZE ; 13    ; Signed Integer                                                                                                                                                                  ;
++-----------------+-------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst|demodulator:demod_inst|RX_modulation_top:mod_inst|mod_deconv:re_deshaper ;
++-----------------+-------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Name  ; Value ; Type                                                                                                                                                                         ;
++-----------------+-------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; G_SHIFTREG_SIZE ; 16    ; Signed Integer                                                                                                                                                               ;
+; G_MANTISSA_SIZE ; 13    ; Signed Integer                                                                                                                                                               ;
++-----------------+-------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst|demodulator:demod_inst|RX_modulation_top:mod_inst|mod_deconv:im_deshaper ;
++-----------------+-------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Name  ; Value ; Type                                                                                                                                                                         ;
++-----------------+-------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; G_SHIFTREG_SIZE ; 16    ; Signed Integer                                                                                                                                                               ;
+; G_MANTISSA_SIZE ; 13    ; Signed Integer                                                                                                                                                               ;
++-----------------+-------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -1456,15 +1490,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|modulator:mod_inst|TX_modulation_top:tx_mod_inst|Mod_interface_TX:u_mod_interface" ;
-+----------------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port           ; Type   ; Severity ; Details                                                                                                                                               ;
-+----------------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
-; no_data_flag_o ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                   ;
-+----------------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
-
-
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|modulator:mod_inst|TX_modulation_top:tx_mod_inst" ;
 +--------+--------+----------+------------------------------------------------------------------------------------------------------------------------------+
@@ -1497,37 +1522,37 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 174                         ;
+; arriav_ff             ; 585                         ;
 ;     CLR               ; 14                          ;
-;     ENA               ; 11                          ;
-;     ENA SCLR          ; 36                          ;
-;     SCLR              ; 105                         ;
+;     ENA               ; 6                           ;
+;     ENA SCLR          ; 28                          ;
+;     SCLR              ; 529                         ;
 ;     SLD               ; 1                           ;
 ;     plain             ; 7                           ;
 ; arriav_io_obuf        ; 72                          ;
-; arriav_lcell_comb     ; 530                         ;
-;     arith             ; 296                         ;
-;         1 data inputs ; 8                           ;
-;         2 data inputs ; 64                          ;
-;         3 data inputs ; 120                         ;
-;         5 data inputs ; 104                         ;
+; arriav_lcell_comb     ; 927                         ;
+;     arith             ; 568                         ;
+;         1 data inputs ; 64                          ;
+;         2 data inputs ; 56                          ;
+;         3 data inputs ; 240                         ;
+;         5 data inputs ; 208                         ;
 ;     extend            ; 6                           ;
 ;         7 data inputs ; 6                           ;
-;     normal            ; 144                         ;
+;     normal            ; 185                         ;
 ;         0 data inputs ; 1                           ;
-;         2 data inputs ; 13                          ;
-;         3 data inputs ; 61                          ;
-;         4 data inputs ; 44                          ;
-;         5 data inputs ; 13                          ;
-;         6 data inputs ; 12                          ;
-;     shared            ; 84                          ;
-;         3 data inputs ; 84                          ;
-; arriav_mac            ; 32                          ;
+;         2 data inputs ; 10                          ;
+;         3 data inputs ; 112                         ;
+;         4 data inputs ; 42                          ;
+;         5 data inputs ; 9                           ;
+;         6 data inputs ; 11                          ;
+;     shared            ; 168                         ;
+;         3 data inputs ; 168                         ;
+; arriav_mac            ; 64                          ;
 ; boundary_port         ; 97                          ;
 ; generic_pll           ; 3                           ;
 ;                       ;                             ;
 ; Max LUT depth         ; 6.30                        ;
-; Average LUT depth     ; 3.85                        ;
+; Average LUT depth     ; 3.73                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1536,7 +1561,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:02     ;
+; Top            ; 00:00:03     ;
 +----------------+--------------+
 
 
@@ -1779,12 +1804,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Tue Jun 15 14:04:22 2021
+    Info: Processing started: Tue Jun 15 14:52:12 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DE1-SOC-342x9 -c 1_1_0
 Warning (125092): Tcl Script File soc_system/synthesis/soc_system.qip not found
     Info (125063): set_global_assignment -name QIP_FILE soc_system/synthesis/soc_system.qip
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/RX/mod_deconv_new.vhd
+    Info (12022): Found design unit 1: mod_deconv-rtl File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/RX/mod_deconv_new.vhd Line: 22
+    Info (12023): Found entity 1: mod_deconv File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/RX/mod_deconv_new.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/RX/mod_conv_rx_new.vhd
+    Info (12022): Found design unit 1: mod_conv_rx_new-rtl File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/RX/mod_conv_rx_new.vhd Line: 52
+    Info (12023): Found entity 1: mod_conv_rx_new File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/RX/mod_conv_rx_new.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/TX/mod_conv_new.vhd
     Info (12022): Found design unit 1: mod_convolution-rtl File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/TX/mod_conv_new.vhd Line: 47
     Info (12023): Found entity 1: mod_convolution File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/TX/mod_conv_new.vhd Line: 4
@@ -1948,9 +1979,8 @@ Info (12128): Elaborating entity "buffer_tx" for hierarchy "fpga_top:fpga_top_in
 Info (12128): Elaborating entity "modulator" for hierarchy "fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|modulator:mod_inst" File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/sender_top.vhd Line: 93
 Warning (10036): Verilog HDL or VHDL warning at modulator.vhd(38): object "ctrl" assigned a value but never read File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/modulator.vhd Line: 38
 Info (12128): Elaborating entity "TX_modulation_top" for hierarchy "fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|modulator:mod_inst|TX_modulation_top:tx_mod_inst" File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/modulator.vhd Line: 44
-Warning (10541): VHDL Signal Declaration warning at TX_modulation_top.vhd(65): used implicit default value for signal "no_data_flag" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/TX/TX_modulation_top.vhd Line: 65
-Info (12128): Elaborating entity "mod_convolution" for hierarchy "fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|modulator:mod_inst|TX_modulation_top:tx_mod_inst|mod_convolution:re_shaper" File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/TX/TX_modulation_top.vhd Line: 68
-Info (12128): Elaborating entity "Mod_interface_TX" for hierarchy "fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|modulator:mod_inst|TX_modulation_top:tx_mod_inst|Mod_interface_TX:u_mod_interface" File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/TX/TX_modulation_top.vhd Line: 87
+Info (12128): Elaborating entity "mod_convolution" for hierarchy "fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|modulator:mod_inst|TX_modulation_top:tx_mod_inst|mod_convolution:re_shaper" File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/TX/TX_modulation_top.vhd Line: 67
+Info (12128): Elaborating entity "Mod_interface_TX" for hierarchy "fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|modulator:mod_inst|TX_modulation_top:tx_mod_inst|Mod_interface_TX:u_mod_interface" File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/TX/TX_modulation_top.vhd Line: 85
 Info (12128): Elaborating entity "sin_gen" for hierarchy "fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|sin_gen:sin_inst" File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/sender_top.vhd Line: 104
 Info (12128): Elaborating entity "cos_gen" for hierarchy "fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|cos_gen:cos_inst" File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/sender_top.vhd Line: 109
 Info (12128): Elaborating entity "reciever_top" for hierarchy "fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst" File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/modulation_top.vhd Line: 84
@@ -1958,8 +1988,10 @@ Info (12128): Elaborating entity "buffer_rx" for hierarchy "fpga_top:fpga_top_in
 Info (12128): Elaborating entity "demodulator" for hierarchy "fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst|demodulator:demod_inst" File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/reciever_top.vhd Line: 70
 Warning (10036): Verilog HDL or VHDL warning at demodulator.vhd(15): object "ctrl" assigned a value but never read File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/demodulator.vhd Line: 15
 Info (12128): Elaborating entity "RX_modulation_top" for hierarchy "fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst|demodulator:demod_inst|RX_modulation_top:mod_inst" File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/demodulator.vhd Line: 39
-Info (12128): Elaborating entity "mod_deshaper" for hierarchy "fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst|demodulator:demod_inst|RX_modulation_top:mod_inst|mod_deshaper:re_deshaper" File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/RX/RX_modulation_top.vhd Line: 60
-Info (12128): Elaborating entity "Mod_interface_RX" for hierarchy "fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst|demodulator:demod_inst|RX_modulation_top:mod_inst|Mod_interface_RX:u_mod_interface" File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/RX/RX_modulation_top.vhd Line: 77
+Info (12128): Elaborating entity "mod_conv_rx_new" for hierarchy "fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst|demodulator:demod_inst|RX_modulation_top:mod_inst|mod_conv_rx_new:re_deconv" File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/RX/RX_modulation_top.vhd Line: 69
+Warning (10492): VHDL Process Statement warning at mod_conv_rx_new.vhd(126): signal "s_pulse" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/RX/mod_conv_rx_new.vhd Line: 126
+Info (12128): Elaborating entity "mod_deconv" for hierarchy "fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst|demodulator:demod_inst|RX_modulation_top:mod_inst|mod_deconv:re_deshaper" File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/RX/RX_modulation_top.vhd Line: 86
+Info (12128): Elaborating entity "Mod_interface_RX" for hierarchy "fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst|demodulator:demod_inst|RX_modulation_top:mod_inst|Mod_interface_RX:u_mod_interface" File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/RX/RX_modulation_top.vhd Line: 103
 Info (12128): Elaborating entity "sync" for hierarchy "fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst|sync:sync_inst" File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/reciever_top.vhd Line: 79
 Info (12128): Elaborating entity "reciever" for hierarchy "fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst|reciever:receiv_ins" File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/reciever_top.vhd Line: 82
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_4c84.tdf
@@ -1984,7 +2016,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr
     Info (12023): Found entity 1: cmpr_99c File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/db/cmpr_99c.tdf Line: 23
 Info (12033): Analysis and Synthesis generated Signal Tap or debug node instance "auto_signaltap_0"
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
-Info (11172): 2021.06.15.14:04:46 Progress: Loading sld78a6c0c4/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2021.06.15.14:52:37 Progress: Loading sld78a6c0c4/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -2129,18 +2161,18 @@ Info (286031): Timing-Driven Synthesis is running on partition "Top"
 Info (35024): Successfully connected in-system debug instance "auto_signaltap_0" to all 225 required data inputs, trigger inputs, acquisition clocks, and dynamic pins
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 22 node(s), including 0 DDIO, 3 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 2502 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 3351 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 18 input pins
     Info (21059): Implemented 11 output pins
     Info (21060): Implemented 72 bidirectional pins
-    Info (21061): Implemented 2269 logic cells
+    Info (21061): Implemented 3086 logic cells
     Info (21064): Implemented 96 RAM segments
     Info (21065): Implemented 3 PLLs
-    Info (21062): Implemented 32 DSP elements
+    Info (21062): Implemented 64 DSP elements
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 127 warnings
-    Info: Peak virtual memory: 553 megabytes
-    Info: Processing ended: Tue Jun 15 14:05:02 2021
-    Info: Elapsed time: 00:00:40
-    Info: Total CPU time (on all processors): 00:01:17
+    Info: Peak virtual memory: 566 megabytes
+    Info: Processing ended: Tue Jun 15 14:52:55 2021
+    Info: Elapsed time: 00:00:43
+    Info: Total CPU time (on all processors): 00:01:20
 
 

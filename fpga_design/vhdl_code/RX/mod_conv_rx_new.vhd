@@ -18,7 +18,7 @@ o_result					    : out std_logic_vector(G_MANTISSA_SIZE downto 0);
 o_valid						  	: out std_logic
 );
 
-end entity;
+
 
 function 	mult( a, b : signed(G_MANTISSA_SIZE downto 0)) return signed is 
 

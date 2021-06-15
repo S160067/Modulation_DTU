@@ -1827,6 +1827,8 @@ set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_COUNTER_PIPELINE=
 set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_ADVANCED_TRIGGER_ENTITY=basic,1," -section_id auto_signaltap_0
 set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_LEVEL_PIPELINE=1" -section_id auto_signaltap_0
 set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_ENABLE_ADVANCED_TRIGGER=0" -section_id auto_signaltap_0
+set_global_assignment -name VHDL_FILE ../../vhdl_code/RX/mod_deconv_new.vhd
+set_global_assignment -name VHDL_FILE ../../vhdl_code/RX/mod_conv_rx_new.vhd
 set_global_assignment -name VHDL_FILE ../../vhdl_code/TX/mod_conv_new.vhd
 set_global_assignment -name VHDL_FILE ../../vhdl_code/RX/RX_modulation_top.vhd
 set_global_assignment -name VHDL_FILE ../../vhdl_code/RX/MOD_interface_rx.vhd
