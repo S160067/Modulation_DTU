@@ -5,16 +5,16 @@ KEY_N[0] => fpga_top:fpga_top_inst.KEY_N[0]
 KEY_N[1] => fpga_top:fpga_top_inst.KEY_N[1]
 KEY_N[2] => fpga_top:fpga_top_inst.KEY_N[2]
 KEY_N[3] => fpga_top:fpga_top_inst.KEY_N[3]
-LEDR[0] << fpga_top:fpga_top_inst.LEDR[0]
-LEDR[1] << fpga_top:fpga_top_inst.LEDR[1]
-LEDR[2] << fpga_top:fpga_top_inst.LEDR[2]
-LEDR[3] << fpga_top:fpga_top_inst.LEDR[3]
-LEDR[4] << fpga_top:fpga_top_inst.LEDR[4]
-LEDR[5] << fpga_top:fpga_top_inst.LEDR[5]
-LEDR[6] << fpga_top:fpga_top_inst.LEDR[6]
-LEDR[7] << fpga_top:fpga_top_inst.LEDR[7]
-LEDR[8] << fpga_top:fpga_top_inst.LEDR[8]
-LEDR[9] << fpga_top:fpga_top_inst.LEDR[9]
+LEDR[0] <= fpga_top:fpga_top_inst.LEDR[0]
+LEDR[1] <= fpga_top:fpga_top_inst.LEDR[1]
+LEDR[2] <= fpga_top:fpga_top_inst.LEDR[2]
+LEDR[3] <= fpga_top:fpga_top_inst.LEDR[3]
+LEDR[4] <= fpga_top:fpga_top_inst.LEDR[4]
+LEDR[5] <= fpga_top:fpga_top_inst.LEDR[5]
+LEDR[6] <= fpga_top:fpga_top_inst.LEDR[6]
+LEDR[7] <= fpga_top:fpga_top_inst.LEDR[7]
+LEDR[8] <= fpga_top:fpga_top_inst.LEDR[8]
+LEDR[9] <= fpga_top:fpga_top_inst.LEDR[9]
 SW[0] => fpga_top:fpga_top_inst.SW[0]
 SW[1] => fpga_top:fpga_top_inst.SW[1]
 SW[2] => fpga_top:fpga_top_inst.SW[2]
@@ -179,7 +179,7 @@ SW[1] => modulation_top:modulation_inst.fifo_empty
 SW[2] => modulation_top:modulation_inst.fifo_full
 SW[3] => ~NO_FANOUT~
 SW[4] => ~NO_FANOUT~
-SW[5] => ~NO_FANOUT~
+SW[5] => modulation_top:modulation_inst.debug_select
 SW[6] => modulation_top:modulation_inst.debug_valid
 SW[7] => modulation_top:modulation_inst.debug_data_in[1]
 SW[8] => modulation_top:modulation_inst.debug_data_in[0]
@@ -264,6 +264,7 @@ debug_data_mod[1] <= reciever_top:reciever_inst.debug_data_mod[1]
 debug_data_in[0] => sender_top:sender_inst.debug_data_in[0]
 debug_data_in[1] => sender_top:sender_inst.debug_data_in[1]
 debug_valid => sender_top:sender_inst.debug_valid
+debug_select => sender_top:sender_inst.debug_select
 
 
 |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|ip_pll:pll_inst
@@ -464,10 +465,12 @@ zdbfbclk <> <GND>
 
 
 |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst
+clk => debug_mod_input:debug_mod_inst.clk
 clk => buffer_tx:buff_inst.clk
 clk => modulator:mod_inst.clk
 clk => sin_gen:sin_inst.clk_i
 clk => cos_gen:cos_inst.clk_i
+reset => debug_mod_input:debug_mod_inst.reset
 reset => buffer_tx:buff_inst.reset
 reset => modulator:mod_inst.reset
 reset => sin_gen:sin_inst.reset_i
@@ -537,6 +540,19 @@ debug_data_in[1] => mod_data_in[1].DATAA
 debug_valid => mod_data_in[1].OUTPUTSELECT
 debug_valid => mod_data_in[0].OUTPUTSELECT
 debug_valid => mod_valid_in.OUTPUTSELECT
+debug_select => mux_out_data[1].OUTPUTSELECT
+debug_select => mux_out_data[0].OUTPUTSELECT
+debug_select => mux_out_valid.OUTPUTSELECT
+
+
+|DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|debug_mod_input:debug_mod_inst
+clk => state.CLK
+reset => state.ACLR
+ready => next_state.DATAB
+ready => next_state.DATAA
+bitstream[0] <= state.DB_MAX_OUTPUT_PORT_TYPE
+bitstream[1] <= state.DB_MAX_OUTPUT_PORT_TYPE
+valid <= <VCC>
 
 
 |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|buffer_tx:buff_inst

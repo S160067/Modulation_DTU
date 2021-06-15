@@ -13,7 +13,8 @@ entity modulation_top is
 		fifo_bitstream_out, fifo_wr, fifo_read_en : out std_logic;
 		debug_data_mod : out std_logic_vector(1 downto 0);
 		debug_data_in : in std_logic_vector(1 downto 0);
-		debug_valid : in std_logic
+		debug_valid : in std_logic;
+		debug_select : in std_logic
 	);
 end modulation_top;
 
@@ -37,7 +38,8 @@ architecture loopback_arch of modulation_top is
 			data_i, data_q : out std_logic_vector(13 downto 0);
 			modulation_scheme_select : in std_logic;
 			debug_data_in : in std_logic_vector(1 downto 0);
-			debug_valid : in std_logic
+			debug_valid : in std_logic;
+			debug_select : in std_logic
 			);
 	end component;
 
@@ -79,7 +81,8 @@ begin
 		data_q => test_q,
 		modulation_scheme_select => modulation_scheme_select,
 		debug_data_in => debug_data_in,
-		debug_valid => debug_valid
+		debug_valid => debug_valid,
+		debug_select => debug_select
 	);
 	reciever_inst : component reciever_top port map(
 		clk => clk, 
