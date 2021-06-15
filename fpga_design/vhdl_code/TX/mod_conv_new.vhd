@@ -10,11 +10,11 @@ constant G_MANTISSA_SIZE	    : positive := 13
 );
 
 port(
-i_rst						   	: in std_logic;
+i_rst						    	: in std_logic;
 i_clk 						  	: in std_logic;
 i_data_valid				  	: in std_logic;
-i_symbol				    	: in std_logic;
-o_result					    : out std_logic_vector(G_MANTISSA_SIZE downto 0);
+i_symbol				    		: in std_logic;
+o_result					    	: out signed(G_MANTISSA_SIZE downto 0);
 o_valid						  	: out std_logic
 );
 
@@ -33,7 +33,7 @@ auxmin := to_signed(-8192, G_MANTISSA_SIZE+1);
 if v_r(2*G_MANTISSA_SIZE+1) = '1' then
 	if v_r(2*G_MANTISSA_SIZE) = '0' then
 		return auxmin;
-	else then 
+	else 
 		return (v_r(2*G_MANTISSA_SIZE+1) & v_r(2*G_MANTISSA_SIZE-1 downto G_MANTISSA_SIZE));
 	end if;
 
@@ -135,7 +135,7 @@ s_mult(i) <= mult(s_sregis(i), s_pulse(i));
 end loop;
 
 o_result <= s_sum(G_MANTISSA_SIZE downto 0);
-o_valid <= '0';
+o_valid <= '1';
 
 
 if(i_rst = '1') then
