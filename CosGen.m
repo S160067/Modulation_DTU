@@ -1,10 +1,10 @@
 function cnt = CosGen(pulse_width,data_width)
-    s=(pi)/(floor((pulse_width)/2));    
+    s=(pi)/((pulse_width)/2);   
     disp("case phase_i is") 
     cnt = 0;
     bitlength=length(dec2bin(pulse_width-1));
     for x = 0:s:(2*pi)
-       y=sin(x)*8192+8191;
+       y=cos(x)*8192+8191;
        y=uint32(y);
        y=dec2bin(y,data_width);
        output_string =['when b"',dec2bin(cnt,bitlength),'" => cos_temp <="',y,'";'];
