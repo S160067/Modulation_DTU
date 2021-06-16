@@ -128,7 +128,7 @@ s_mult(i) <= mult(s_sregis(i), s_pulse(i));
 end loop;
 o_valid <= valid_reg2;
 
-o_result <= std_logic_vector(s_sum(G_MANTISSA_SIZE downto 0));
+o_result <= std_logic_vector(s_sum(G_MANTISSA_SIZE downto 0)-8191);
 
 
 if(i_rst = '1') then
