@@ -90,7 +90,7 @@ if(i_clk'event and i_clk = '1') then
 
 	if (i_data_valid = '1') then
 
-		s_sregis(0) <= signed(i_element);
+		s_sregis(0) <= signed(i_element)-8191;
 		
 	end if;
 	valid_reg <= i_data_valid;
@@ -128,7 +128,7 @@ s_mult(i) <= mult(s_sregis(i), s_pulse(i));
 end loop;
 o_valid <= valid_reg2;
 
-o_result <= std_logic_vector(s_sum(G_MANTISSA_SIZE downto 0)-8191);
+o_result <= std_logic_vector(s_sum(G_MANTISSA_SIZE downto 0));
 
 
 if(i_rst = '1') then
