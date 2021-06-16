@@ -3,8 +3,7 @@
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
-LIBRARY ieee;
-USE ieee.std_logic_1164.ALL;
+USE ieee.std_logic_unsigned.ALL;
 
 ENTITY TXRX_mod_tb IS
 	GENERIC (
@@ -62,6 +61,7 @@ signal data_i,test_vector : std_logic_vector(1 downto 0);
 signal data_o : std_logic_vector(1 downto 0);
 signal valid_o : std_logic;
 signal test_valid : std_logic;
+signal cnt : std_logic_vector(7 downto 0);
 BEGIN
 
 DUT_TX : TX_modulation_top port MAP(
@@ -89,7 +89,7 @@ DUT_RX : RX_modulation_top port MAP(
 
 	);
 
-
+test_valid <= not reset_i;
 process
 BEGIN
 wait for 5 ns;
@@ -97,11 +97,8 @@ clk <= '0';
 wait for 5 ns;
 clk <= '1';
 end process;
-process
-BEGIN 
-wait until CLK='1';
-test_vector <= data_i(0) & not data_i(1);
-end process;
+
+
 
 
 stim: process
@@ -109,19 +106,23 @@ BEGIN
 reset_i <= '1';
 data_i <= (others=>'0');
 buffer_valid_i <= '0';
+test_vector <= "10";
+cnt <= (others=>'0');
 wait for 40 ns;
 reset_i <= '0';
 wait for 30 ns;
-	wait until CLK='1';
-	buffer_valid_i <= '1';
-	data_i <=  test_vector;
+wait until CLK='1';
 stim_loop : for k in 0 to 500 loop
-	wait until buffer_ready_o='1';
+	
 	wait until CLK='1';
 	buffer_valid_i <= '1';
-	data_i <=  test_vector;
-
-	
+	data_i <= test_vector;
+	cnt <= cnt+1;
+	if(cnt = 6) then
+			cnt <= (others=>'0');
+			test_vector <= not test_vector;
+	end if;
+	wait until buffer_ready_o='1';
 end loop stim_loop;
 wait;
 end process;
