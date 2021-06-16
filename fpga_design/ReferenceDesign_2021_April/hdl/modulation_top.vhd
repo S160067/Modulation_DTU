@@ -14,7 +14,8 @@ entity modulation_top is
 		debug_data_mod : out std_logic_vector(1 downto 0);
 		debug_data_in : in std_logic_vector(1 downto 0);
 		debug_valid : in std_logic;
-		debug_select : in std_logic
+		debug_select : in std_logic;
+		debug_SNR_valid : out std_logic
 	);
 end modulation_top;
 
@@ -49,7 +50,8 @@ architecture loopback_arch of modulation_top is
 			data_i, data_q  : in std_logic_vector(13 downto 0);
 			fifo_full : in std_logic;
 			bitstream, fifo_wr : out std_logic;
-			debug_data_mod : out std_logic_vector(1 downto 0)
+			debug_data_mod : out std_logic_vector(1 downto 0);
+			debug_valid : out std_logic
 		);
 	end component;
 
@@ -92,7 +94,8 @@ begin
 		fifo_full => fifo_full, 
 		bitstream => fifo_bitstream_out, 
 		fifo_wr => fifo_wr,
-		debug_data_mod => debug_data_mod
+		debug_data_mod => debug_data_mod,
+		debug_valid => debug_SNR_valid
 	);
 	data_AD_a <= GPIO_0(31) & GPIO_0(29) & GPIO_0(30) & GPIO_0(28) & GPIO_0(27) & GPIO_0(25) & 
 						GPIO_0(26) & GPIO_0(24) & GPIO_0(23) & GPIO_0(21) & GPIO_0(22) & GPIO_0(20) & 

@@ -7,7 +7,8 @@ port (
 	data_i, data_q  : in std_logic_vector(13 downto 0);
 	fifo_full : in std_logic;
 	bitstream, fifo_wr : out std_logic;
-	debug_data_mod : out std_logic_vector(1 downto 0)
+	debug_data_mod : out std_logic_vector(1 downto 0);
+	debug_valid : out std_logic
 );
 end reciever_top;
 
@@ -57,7 +58,8 @@ end component;
 begin
 
 	debug_data_mod <= data_from_mod;
-
+	debug_valid <= reciev_valid;
+	
 	buff_inst : component buffer_rx port map(
 		clk => clk, 
 		reset => reset, 

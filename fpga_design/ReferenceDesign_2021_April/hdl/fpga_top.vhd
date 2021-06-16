@@ -29,7 +29,8 @@ port (
 			debug_data_mod : out std_logic_vector(1 downto 0);
 			debug_data_in : in std_logic_vector(1 downto 0);
 			debug_valid : in std_logic;
-			debug_select : in std_logic
+			debug_select : in std_logic;
+			debug_SNR_valid : out std_logic
 		);
 end component modulation_top;
 
@@ -57,7 +58,8 @@ port map (
 	debug_data_mod => debug_data_out,
 	debug_data_in => debug_data_in,
 	debug_valid => SW(6),
-	debug_select => SW(5)
+	debug_select => SW(5),
+	debug_SNR_valid => LEDR(6)
 	);
 	
 	

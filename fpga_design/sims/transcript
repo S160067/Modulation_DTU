@@ -81,3 +81,4 @@ restart -f
 # ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
 # Loading SIM_SENDERTOP_WORK.buffer_rx_tb(behavior)
 run
+# Load canceled

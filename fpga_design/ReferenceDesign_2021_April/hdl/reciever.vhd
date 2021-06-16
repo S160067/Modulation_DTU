@@ -15,8 +15,8 @@ architecture loopback_arch of reciever is
 
 begin
 
-	--valid <= data_i(13) OR data_i(12) OR data_i(11) OR data_i(10) OR data_i(9) OR data_i(8) OR data_i(7); 
-	valid <= '1';
+	valid <= data_i(13) OR data_i(12) OR data_i(11) OR data_i(10) OR data_i(9) OR data_i(8) OR data_i(7) OR data_q(13) OR data_q(12) OR data_q(11) OR data_q(10) OR data_q(9) OR data_q(8) OR data_q(7) ; 
+	--valid <= '1';
 	data_sync_i <= data_i;
 	data_sync_q <= data_q;
 
