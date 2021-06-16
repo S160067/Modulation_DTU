@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <deploy
- date="2021.06.16.14:05:40"
+ date="2021.06.16.14:29:05"
  outputDirectory="/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/db/ip/sld78a6c0c4/">
  <perimeter>
   <parameter

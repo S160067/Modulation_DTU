@@ -82,3 +82,61 @@ restart -f
 # Loading SIM_SENDERTOP_WORK.buffer_rx_tb(behavior)
 run
 # Load canceled
+# Error opening /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/RX/mod_deshaper.vhd
+# Path name '/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/RX/mod_deshaper.vhd' doesn't exist.
+# Compile of buffer_tx.vhd was successful.
+# Compile of cos_gen.vhd was successful.
+# Compile of modulator.vhd was successful.
+# Compile of sender_top.vhd was successful.
+# Compile of sender_top_tb.vhd was successful.
+# Compile of sin_gen.vhd was successful.
+# Compile of buffer_rx.vhd was successful.
+# Compile of modulation_top_tb.vhd was successful.
+# Compile of reciever.vhd was successful.
+# Compile of reciever_top.vhd was successful.
+# Compile of sync.vhd was successful.
+# Compile of demodulator.vhd was successful.
+# Compile of reciever_top_tb.vhd was successful.
+# Compile of buffer_rx_tb.vhd was successful.
+# Compile of mod_conv_new.vhd was successful.
+# Compile of Mod_interface_TX.vhd was successful.
+# Compile of mod_shaper.vhd was successful.
+# Compile of TX_modulation_top.vhd was successful.
+# Compile of conv_rx_new.vhd was successful.
+# Compile of mod_deconv_new.vhd was successful.
+# Compile of MOD_interface_rx.vhd was successful.
+# Compile of RX_modulation_top.vhd was successful.
+# 22 compiles, 0 failed with no errors.
+vsim SIM_SENDERTOP_WORK.buffer_tx SIM_SENDERTOP_WORK.mod_conv_rx_new SIM_SENDERTOP_WORK.mod_convolution SIM_SENDERTOP_WORK.mod_deconv SIM_SENDERTOP_WORK.mod_deshaper SIM_SENDERTOP_WORK.mod_interface_tx SIM_SENDERTOP_WORK.mod_shaper SIM_SENDERTOP_WORK.modulator SIM_SENDERTOP_WORK.sender_top SIM_SENDERTOP_WORK.sender_top_tb SIM_SENDERTOP_WORK.tx_modulation_top
+# End time: 14:32:59 on Jun 16,2021, Elapsed time: 5:48:46
+# Errors: 0, Warnings: 6
+# vsim SIM_SENDERTOP_WORK.buffer_tx SIM_SENDERTOP_WORK.mod_conv_rx_new SIM_SENDERTOP_WORK.mod_convolution SIM_SENDERTOP_WORK.mod_deconv SIM_SENDERTOP_WORK.mod_deshaper SIM_SENDERTOP_WORK.mod_interface_tx SIM_SENDERTOP_WORK.mod_shaper SIM_SENDERTOP_WORK.modulator SIM_SENDERTOP_WORK.sender_top SIM_SENDERTOP_WORK.sender_top_tb SIM_SENDERTOP_WORK.tx_modulation_top 
+# Start time: 14:32:59 on Jun 16,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading SIM_SENDERTOP_WORK.buffer_tx(arch)
+# Loading ieee.numeric_std(body)
+# Loading SIM_SENDERTOP_WORK.mod_conv_rx_new(rtl)
+# Loading SIM_SENDERTOP_WORK.mod_convolution(rtl)
+# Loading SIM_SENDERTOP_WORK.mod_deconv(rtl)
+# Loading SIM_SENDERTOP_WORK.mod_deshaper(rtl)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading SIM_SENDERTOP_WORK.mod_interface_tx(rtl)
+# Loading SIM_SENDERTOP_WORK.mod_shaper(rtl)
+# Loading SIM_SENDERTOP_WORK.modulator(arch)
+# Loading SIM_SENDERTOP_WORK.sender_top(arch)
+# Loading ieee.std_logic_textio(body)
+# Loading SIM_SENDERTOP_WORK.sender_top_tb(behavior)
+# Loading SIM_SENDERTOP_WORK.tx_modulation_top(rtl)
+# ** Warning: (vsim-3473) Component instance "debug_mod_inst : debug_mod_input" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /sender_top File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/sender_top.vhd
+# Loading SIM_SENDERTOP_WORK.sin_gen(rtl)
+# Loading SIM_SENDERTOP_WORK.cos_gen(rtl)
+# ** Fatal: (vsim-3817) Port "debug_data_in" of entity "sender_top" is not in the component being instantiated.
+#    Time: 0 ps  Iteration: 0  Instance: /sender_top_tb/uut File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/sender_top.vhd Line: 11
+# FATAL ERROR while loading design
+# Error loading design
+# End time: 14:32:59 on Jun 16,2021, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 2

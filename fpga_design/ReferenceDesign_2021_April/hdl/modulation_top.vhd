@@ -149,11 +149,11 @@ begin
   GPIO_0(32) <= '1'; --POWER ON
   GPIO_1(35) <= '1'; --Mode Select. 1 = dual port &  0 = interleaved.
 
-  GPIO_1(18) <= pll_clk_125; --PLL Clock to DAC_B
-  GPIO_1(16) <= pll_clk_125; --PLL Clock to DAC_A
+  GPIO_1(18) <= pll_clk_125 when sender_write = '1' else '0'; --PLL Clock to DAC_B
+  GPIO_1(16) <= pll_clk_125 when sender_write = '1' else '0'; --PLL Clock to DAC_A
 
-  GPIO_1(34) <= pll_clk_125_skew; --Input write signal for PORT B
-  GPIO_1(17) <= pll_clk_125_skew; --Input write signal for PORT A
+  GPIO_1(34) <= pll_clk_125_skew when sender_write = '1' else '0'; --Input write signal for PORT B
+  GPIO_1(17) <= pll_clk_125_skew when sender_write = '1' else '0'; --Input write signal for PORT A
   
 	
 end loopback_arch;

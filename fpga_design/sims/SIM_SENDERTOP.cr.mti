@@ -14,14 +14,6 @@ Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 
 -- Compiling entity buffer_tx
 -- Compiling architecture arch of buffer_tx
 
-} {} {}} /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/RX/MOD_interface_rx.vhd {1 {vcom -work SIM_SENDERTOP_WORK -2002 -explicit -stats=none /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/RX/MOD_interface_rx.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Compiling entity Mod_interface_RX
--- Compiling architecture rtl of Mod_interface_RX
-
 } {} {}} /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/buffer_rx_tb.vhd {1 {vcom -work work -2002 -explicit -stats=none /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/buffer_rx_tb.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
 -- Loading package STANDARD
@@ -41,15 +33,6 @@ Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 
 -- Compiling entity sender_top_tb
 -- Compiling architecture behavior of sender_top_tb
 
-} {} {}} /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/RX/mod_deshaper.vhd {1 {vcom -work SIM_SENDERTOP_WORK -2002 -explicit -stats=none /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/RX/mod_deshaper.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity mod_deshaper
--- Compiling architecture rtl of mod_deshaper
-
 } {} {}} /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/modulation_top_tb.vhd {1 {vcom -work SIM_SENDERTOP_WORK -2002 -explicit -stats=none /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/modulation_top_tb.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
 -- Loading package STANDARD
@@ -59,14 +42,6 @@ Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 
 -- Loading package std_logic_textio
 -- Compiling entity modulation_top_tb
 -- Compiling architecture behavior of modulation_top_tb
-
-} {} {}} /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/RX/RX_modulation_top.vhd {1 {vcom -work SIM_SENDERTOP_WORK -2002 -explicit -stats=none /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/RX/RX_modulation_top.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Compiling entity RX_modulation_top
--- Compiling architecture rtl of RX_modulation_top
 
 } {} {}} /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/cos_gen.vhd {1 {vcom -work SIM_SENDERTOP_WORK -2002 -explicit -stats=none /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/cos_gen.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
@@ -94,24 +69,6 @@ Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 
 -- Loading package NUMERIC_STD
 -- Compiling entity demodulator
 -- Compiling architecture arch of demodulator
-
-} {} {}} /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/TX/TX_modulation_top.vhd {1 {vcom -work SIM_SENDERTOP_WORK -2002 -explicit -stats=none /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/TX/TX_modulation_top.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity TX_modulation_top
--- Compiling architecture rtl of TX_modulation_top
-
-} {} {}} /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/TX/mod_shaper.vhd {1 {vcom -work SIM_SENDERTOP_WORK -2002 -explicit -stats=none /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/TX/mod_shaper.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity mod_shaper
--- Compiling architecture rtl of mod_shaper
 
 } {} {}} /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/buffer_rx.vhd {1 {vcom -work SIM_SENDERTOP_WORK -2002 -explicit -stats=none /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/buffer_rx.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
