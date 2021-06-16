@@ -1,5 +1,5 @@
 Analysis & Synthesis report for 1_1_0
-Wed Jun 16 09:19:39 2021
+Wed Jun 16 12:33:53 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -37,7 +37,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Failed - Wed Jun 16 09:19:39 2021           ;
+; Analysis & Synthesis Status ; Failed - Wed Jun 16 12:33:53 2021           ;
 ; Quartus Prime Version       ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name               ; 1_1_0                                       ;
 ; Top-level Entity Name       ; DE1_SoC_ReferenceTop                        ;
@@ -162,12 +162,15 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Wed Jun 16 09:19:25 2021
+    Info: Processing started: Wed Jun 16 12:33:39 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DE1-SOC-342x9 -c 1_1_0
 Warning (125092): Tcl Script File soc_system/synthesis/soc_system.qip not found
     Info (125063): set_global_assignment -name QIP_FILE soc_system/synthesis/soc_system.qip
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/RX/conv_rx_new.vhd
+    Info (12022): Found design unit 1: mod_conv_rx_new-rtl File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/RX/conv_rx_new.vhd Line: 52
+    Info (12023): Found entity 1: mod_conv_rx_new File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/RX/conv_rx_new.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/debug_mod_input.vhd
     Info (12022): Found design unit 1: debug_mod_input-arch File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/debug_mod_input.vhd Line: 17
     Info (12023): Found entity 1: debug_mod_input File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/debug_mod_input.vhd Line: 9
@@ -191,9 +194,8 @@ Info (12021): Found 2 design units, including 1 entities, in source file /home/h
 Info (12021): Found 2 design units, including 1 entities, in source file /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/TX/mod_shaper.vhd
     Info (12022): Found design unit 1: mod_shaper-rtl File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/TX/mod_shaper.vhd Line: 22
     Info (12023): Found entity 1: mod_shaper File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/TX/mod_shaper.vhd Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/TX/Mod_interface_TX.vhd
-    Info (12022): Found design unit 1: Mod_interface_TX-rtl File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/TX/Mod_interface_TX.vhd Line: 23
-    Info (12023): Found entity 1: Mod_interface_TX File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/TX/Mod_interface_TX.vhd Line: 5
+Error (10500): VHDL syntax error at Mod_interface_TX.vhd(26) near text "data";  expecting ":", or "," File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/TX/Mod_interface_TX.vhd Line: 26
+Info (12021): Found 0 design units, including 0 entities, in source file /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/TX/Mod_interface_TX.vhd
 Info (12021): Found 2 design units, including 1 entities, in source file /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/sync.vhd
     Info (12022): Found design unit 1: sync-arch File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/sync.vhd Line: 13
     Info (12023): Found entity 1: sync File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/sync.vhd Line: 4
@@ -224,8 +226,9 @@ Info (12021): Found 2 design units, including 1 entities, in source file /home/h
 Info (12021): Found 2 design units, including 1 entities, in source file /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/buffer_tx.vhd
     Info (12022): Found design unit 1: buffer_tx-arch File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/buffer_tx.vhd Line: 18
     Info (12023): Found entity 1: buffer_tx File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/buffer_tx.vhd Line: 9
-Error (10500): VHDL syntax error at buffer_rx.vhd(81) near text "PROCESS";  expecting "case" File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/buffer_rx.vhd Line: 81
-Info (12021): Found 0 design units, including 0 entities, in source file /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/buffer_rx.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/buffer_rx.vhd
+    Info (12022): Found design unit 1: buffer_rx-arch File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/buffer_rx.vhd Line: 18
+    Info (12023): Found entity 1: buffer_rx File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/buffer_rx.vhd Line: 9
 Warning (12019): Can't analyze file -- file ../hdl/framing_top.vhd is missing
 Info (12021): Found 2 design units, including 1 entities, in source file fifo8_8.vhd
     Info (12022): Found design unit 1: fifo8_8-SYN File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/fifo8_8.vhd Line: 57
@@ -259,9 +262,9 @@ Info (12021): Found 2 design units, including 1 entities, in source file ip_pll.
 Info (12021): Found 1 design units, including 1 entities, in source file ip_pll/ip_pll_0002.v
     Info (12023): Found entity 1: ip_pll_0002 File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/ip_pll/ip_pll_0002.v Line: 2
 Error: Quartus Prime Analysis & Synthesis was unsuccessful. 1 error, 5 warnings
-    Error: Peak virtual memory: 505 megabytes
-    Error: Processing ended: Wed Jun 16 09:19:39 2021
+    Error: Peak virtual memory: 490 megabytes
+    Error: Processing ended: Wed Jun 16 12:33:53 2021
     Error: Elapsed time: 00:00:14
-    Error: Total CPU time (on all processors): 00:00:33
+    Error: Total CPU time (on all processors): 00:00:35
 
 

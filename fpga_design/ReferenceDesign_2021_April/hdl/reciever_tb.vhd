@@ -35,7 +35,6 @@ BEGIN
  -- Instantiate the Unit Under Test (UUT)
 uut: reciever_top PORT MAP (
    clk, reset, data_i, data_q, fifo_full, bitstream, fifo_wr);
- 
 
 -- Clock process definitions
 clock_process :process
@@ -45,7 +44,7 @@ wait for clock_period/2;
 clk <= '1';
 wait for clock_period/2;
 end process;
- 
+
 
 -- Stimulus process
 stim_proc: process

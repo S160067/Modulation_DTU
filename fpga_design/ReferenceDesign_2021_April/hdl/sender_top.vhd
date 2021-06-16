@@ -17,7 +17,6 @@ end sender_top;
 architecture arch of sender_top is 
 
 -- COMPONENT DECLARATION
-
 component buffer_tx is
 	port (
 		clk, reset, ready : in std_logic;

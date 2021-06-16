@@ -19,7 +19,7 @@ COMPONENT reciever_top is
       debug_data_mod : out std_logic_vector(1 downto 0)
    );
 end component;
- 
+
 signal clk, reset : std_logic := '0';
 signal bitstream, fifo_wr, fifo_full : std_logic;
 signal data_i, data_q : std_logic_vector(13 downto 0) :=  ( others => '0');
@@ -36,7 +36,6 @@ BEGIN
 uut: reciever_top PORT MAP (
    clk, reset, data_i, data_q, fifo_full, bitstream, fifo_wr);
  
-
 -- Clock process definitions
 clock_process :process
 begin

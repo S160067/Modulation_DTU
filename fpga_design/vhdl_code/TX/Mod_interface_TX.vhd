@@ -23,7 +23,7 @@ END Mod_interface_TX;
 ARCHITECTURE rtl OF Mod_interface_TX IS
   --declarations
   SIGNAL time_cnt : std_logic_vector(7 DOWNTO 0);
-  SIGNAL data_reg,stored data : std_logic_vector(1 DOWNTO 0);
+  SIGNAL data_reg, stored data : std_logic_vector(1 DOWNTO 0);
   SIGNAL ready : std_logic; --internal flag to signal that read is high
   TYPE t_State IS (idle, sending);
   SIGNAL State : t_State;
