@@ -23,7 +23,7 @@ END Mod_interface_TX;
 ARCHITECTURE rtl OF Mod_interface_TX IS
   --declarations
   SIGNAL time_cnt : std_logic_vector(7 DOWNTO 0);
-  SIGNAL data_reg : std_logic_vector(1 DOWNTO 0);
+  SIGNAL data_reg,stored data : std_logic_vector(1 DOWNTO 0);
   SIGNAL ready : std_logic; --internal flag to signal that read is high
   TYPE t_State IS (idle, sending);
   SIGNAL State : t_State;
@@ -65,13 +65,18 @@ BEGIN
           WHEN idle => 
             ready <= '1';
             IF (ready='1' AND buffer_valid = '1') THEN
-              state <= sending;
               data_reg <=data_i;
+              state <= sending;
               enable_o <= '1';
-              ready <= '0';
-            
+              ready <= '0'; 
+              if(no_data_flag_o = '1') then
+                data_reg <= "01";
+                preamble <= '1';
+                preamble_cnt <= '1';
+              end if;           
             else
-            no_data_flag_o <= '1';
+              no_data_flag_o <= '1';
+              state <= preamble;
             END IF;  
           WHEN sending => 
             IF (time_cnt = pulse_width) THEN
@@ -79,6 +84,8 @@ BEGIN
               ready <= '1';
               enable_o <= '0'; 
             END IF;
+          when preamble =>
+            
           WHEN OTHERS => 
             state <= idle;
         END CASE;
