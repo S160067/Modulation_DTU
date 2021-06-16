@@ -1,118 +1,44 @@
 # Loading project SIM_SENDERTOP
-# Compile of buffer_tx.vhd was successful.
-# Compile of cos_gen.vhd was successful.
-# Compile of modulator.vhd was successful.
 # Compile of sender_top.vhd was successful.
-# Compile of sender_top_tb.vhd was successful.
-# Compile of sin_gen.vhd was successful.
 # Compile of Mod_interface_TX.vhd was successful.
 # Compile of mod_shaper.vhd was successful.
 # Compile of TX_modulation_top.vhd was successful.
-# Compile of buffer_rx.vhd was successful.
-# Compile of mod_deshaper.vhd was successful.
 # Compile of MOD_interface_rx.vhd was successful.
 # Compile of RX_modulation_top.vhd was successful.
 # Compile of modulation_top_tb.vhd was successful.
-# Compile of reciever.vhd was successful.
 # Compile of reciever_top.vhd was successful.
-# Compile of sync.vhd was successful.
-# Compile of demodulator.vhd was successful.
 # Compile of reciever_top_tb.vhd was successful.
-# 19 compiles, 0 failed with no errors.
-vsim SIM_SENDERTOP_WORK.buffer_rx SIM_SENDERTOP_WORK.demodulator SIM_SENDERTOP_WORK.mod_deshaper SIM_SENDERTOP_WORK.mod_interface_rx SIM_SENDERTOP_WORK.reciever SIM_SENDERTOP_WORK.reciever_top SIM_SENDERTOP_WORK.reciever_top_tb SIM_SENDERTOP_WORK.rx_modulation_top SIM_SENDERTOP_WORK.sync
-# vsim SIM_SENDERTOP_WORK.buffer_rx SIM_SENDERTOP_WORK.demodulator SIM_SENDERTOP_WORK.mod_deshaper SIM_SENDERTOP_WORK.mod_interface_rx SIM_SENDERTOP_WORK.reciever SIM_SENDERTOP_WORK.reciever_top SIM_SENDERTOP_WORK.reciever_top_tb SIM_SENDERTOP_WORK.rx_modulation_top SIM_SENDERTOP_WORK.sync 
-# Start time: 08:55:51 on Jun 15,2021
+# Compile of buffer_rx_tb.vhd was successful.
+# 10 compiles, 0 failed with no errors.
+vsim SIM_SENDERTOP_WORK.buffer_rx SIM_SENDERTOP_WORK.buffer_rx_tb
+# vsim SIM_SENDERTOP_WORK.buffer_rx SIM_SENDERTOP_WORK.buffer_rx_tb 
+# Start time: 08:44:13 on Jun 16,2021
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
 # Loading SIM_SENDERTOP_WORK.buffer_rx(arch)
 # Loading ieee.numeric_std(body)
-# Loading SIM_SENDERTOP_WORK.demodulator(arch)
-# Loading SIM_SENDERTOP_WORK.mod_deshaper(rtl)
-# Loading SIM_SENDERTOP_WORK.mod_interface_rx(rtl)
-# Loading SIM_SENDERTOP_WORK.reciever(loopback_arch)
-# Loading SIM_SENDERTOP_WORK.reciever_top(loopback_arch)
-# Loading ieee.std_logic_textio(body)
-# Loading SIM_SENDERTOP_WORK.reciever_top_tb(behavior)
-# Loading SIM_SENDERTOP_WORK.rx_modulation_top(rtl)
-# Loading SIM_SENDERTOP_WORK.sync(arch)
-add wave -position insertpoint sim:/reciever_top_tb/uut/*
+# Loading SIM_SENDERTOP_WORK.buffer_rx_tb(behavior)
 run
-# ** Warning: (vsim-7) Failed to open VHDL file "/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/datastreamI.txt" in r mode.
-# No such file or directory. (errno = ENOENT)
-#    Time: 0 ps  Iteration: 0  Instance: /reciever_top_tb
-# ** Warning: (vsim-7) Failed to open VHDL file "/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/datastreamQ.txt" in r mode.
-# No such file or directory. (errno = ENOENT)
-#    Time: 0 ps  Iteration: 0  Instance: /reciever_top_tb
-# ** Fatal: (vsim-7) Failed to open VHDL file "/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/datastreamI.txt" in r mode.
-# No such file or directory. (errno = ENOENT)
-#    Time: 0 ps  Iteration: 0  Process: /reciever_top_tb/stim_proc File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/reciever_top_tb.vhd
-# Fatal error in Process stim_proc at /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/reciever_top_tb.vhd line 62
-# 
-# HDL call sequence:
-# Stopped at /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/reciever_top_tb.vhd 62 Process stim_proc
-# 
-run
-# Cannot continue because of fatal error.
-# HDL call sequence:
-# Stopped at /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/reciever_top_tb.vhd 62 Process stim_proc
-# 
-run
-# Cannot continue because of fatal error.
-# HDL call sequence:
-# Stopped at /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/reciever_top_tb.vhd 62 Process stim_proc
-# 
+add wave -position insertpoint sim:/buffer_rx_tb/uut/*
 restart
 # ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
 run
-# ** Warning: (vsim-7) Failed to open VHDL file "/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/datastreamI.txt" in r mode.
-# No such file or directory. (errno = ENOENT)
-#    Time: 0 ps  Iteration: 0  Instance: /reciever_top_tb
-# ** Warning: (vsim-7) Failed to open VHDL file "/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/datastreamQ.txt" in r mode.
-# No such file or directory. (errno = ENOENT)
-#    Time: 0 ps  Iteration: 0  Instance: /reciever_top_tb
-# ** Fatal: (vsim-7) Failed to open VHDL file "/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/datastreamI.txt" in r mode.
-# No such file or directory. (errno = ENOENT)
-#    Time: 0 ps  Iteration: 0  Process: /reciever_top_tb/stim_proc File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/reciever_top_tb.vhd
-# Fatal error in Process stim_proc at /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/reciever_top_tb.vhd line 62
-# 
-# HDL call sequence:
-# Stopped at /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/reciever_top_tb.vhd 62 Process stim_proc
-# 
-# Compile of buffer_tx.vhd was successful.
-# Compile of cos_gen.vhd was successful.
-# Compile of modulator.vhd was successful.
-# Compile of sender_top.vhd was successful.
-# Compile of sender_top_tb.vhd was successful.
-# Compile of sin_gen.vhd was successful.
-# Compile of Mod_interface_TX.vhd was successful.
-# Compile of mod_shaper.vhd was successful.
-# Compile of TX_modulation_top.vhd was successful.
-# Compile of buffer_rx.vhd was successful.
-# Compile of mod_deshaper.vhd was successful.
-# Compile of MOD_interface_rx.vhd was successful.
-# Compile of RX_modulation_top.vhd was successful.
-# Compile of modulation_top_tb.vhd was successful.
-# Compile of reciever.vhd was successful.
-# Compile of reciever_top.vhd was successful.
-# Compile of sync.vhd was successful.
-# Compile of demodulator.vhd was successful.
-# Compile of reciever_top_tb.vhd was successful.
-# 19 compiles, 0 failed with no errors.
+# Compile of buffer_rx_tb.vhd was successful.
 restart -f
 # ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading SIM_SENDERTOP_WORK.buffer_rx(arch)
-# Loading SIM_SENDERTOP_WORK.demodulator(arch)
-# Loading SIM_SENDERTOP_WORK.mod_deshaper(rtl)
-# Loading SIM_SENDERTOP_WORK.mod_interface_rx(rtl)
-# Loading SIM_SENDERTOP_WORK.reciever(loopback_arch)
-# Loading SIM_SENDERTOP_WORK.reciever_top(loopback_arch)
-# Loading SIM_SENDERTOP_WORK.reciever_top_tb(behavior)
-# Loading SIM_SENDERTOP_WORK.rx_modulation_top(rtl)
-# Loading SIM_SENDERTOP_WORK.sync(arch)
+# Loading SIM_SENDERTOP_WORK.buffer_rx_tb(behavior)
 run
 restart
 run
+# WARNING: No extended dataflow license exists
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Compile of buffer_rx.vhd failed with 3 errors.
+# Compile of buffer_rx_tb.vhd was successful.
+# 2 compiles, 1 failed with 3 errors.
+# Compile of buffer_rx.vhd failed with 3 errors.
 # Compile of buffer_tx.vhd was successful.
 # Compile of cos_gen.vhd was successful.
 # Compile of modulator.vhd was successful.
@@ -122,40 +48,7 @@ run
 # Compile of Mod_interface_TX.vhd was successful.
 # Compile of mod_shaper.vhd was successful.
 # Compile of TX_modulation_top.vhd was successful.
-# Compile of buffer_rx.vhd was successful.
-# Compile of mod_deshaper.vhd was successful.
-# Compile of MOD_interface_rx.vhd was successful.
-# Compile of RX_modulation_top.vhd was successful.
-# Compile of modulation_top_tb.vhd was successful.
-# Compile of reciever.vhd was successful.
-# Compile of reciever_top.vhd was successful.
-# Compile of sync.vhd was successful.
-# Compile of demodulator.vhd was successful.
-# Compile of reciever_top_tb.vhd was successful.
-# 19 compiles, 0 failed with no errors.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading SIM_SENDERTOP_WORK.buffer_rx(arch)
-# Loading SIM_SENDERTOP_WORK.demodulator(arch)
-# Loading SIM_SENDERTOP_WORK.mod_deshaper(rtl)
-# Loading SIM_SENDERTOP_WORK.mod_interface_rx(rtl)
-# Loading SIM_SENDERTOP_WORK.reciever(loopback_arch)
-# Loading SIM_SENDERTOP_WORK.reciever_top(loopback_arch)
-# Loading SIM_SENDERTOP_WORK.reciever_top_tb(behavior)
-# Loading SIM_SENDERTOP_WORK.rx_modulation_top(rtl)
-# Loading SIM_SENDERTOP_WORK.sync(arch)
-run
-# Compile of buffer_tx.vhd was successful.
-# Compile of cos_gen.vhd was successful.
-# Compile of modulator.vhd was successful.
-# Compile of sender_top.vhd was successful.
-# Compile of sender_top_tb.vhd was successful.
-# Compile of sin_gen.vhd was successful.
-# Compile of Mod_interface_TX.vhd was successful.
-# Compile of mod_shaper.vhd was successful.
-# Compile of TX_modulation_top.vhd was successful.
-# Compile of buffer_rx.vhd was successful.
-# Compile of mod_deshaper.vhd was successful.
+# Compile of buffer_rx.vhd failed with 3 errors.
 # Compile of MOD_interface_rx.vhd was successful.
 # Compile of RX_modulation_top.vhd was successful.
 # Compile of modulation_top_tb.vhd was successful.
@@ -165,17 +58,26 @@ run
 # Compile of demodulator.vhd was successful.
 # Compile of reciever_top_tb.vhd was successful.
 # Compile of buffer_rx_tb.vhd was successful.
-# 20 compiles, 0 failed with no errors.
-vsim SIM_SENDERTOP_WORK.buffer_rx SIM_SENDERTOP_WORK.buffer_rx_tb
-# End time: 09:34:30 on Jun 15,2021, Elapsed time: 0:38:39
-# Errors: 0, Warnings: 3
-# vsim SIM_SENDERTOP_WORK.buffer_rx SIM_SENDERTOP_WORK.buffer_rx_tb 
-# Start time: 09:34:30 on Jun 15,2021
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
+# 19 compiles, 2 failed with 3 errors.
+# Compile of buffer_rx.vhd failed with 1 errors.
+# Compile of buffer_rx.vhd was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
 # Loading SIM_SENDERTOP_WORK.buffer_rx(arch)
-# Loading ieee.numeric_std(body)
 # Loading SIM_SENDERTOP_WORK.buffer_rx_tb(behavior)
-add wave -position insertpoint sim:/buffer_rx_tb/uut/*
+run
+# Compile of buffer_rx_tb.vhd was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading SIM_SENDERTOP_WORK.buffer_rx_tb(behavior)
+run
+# Compile of buffer_rx_tb.vhd was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading SIM_SENDERTOP_WORK.buffer_rx_tb(behavior)
+run
+# Compile of buffer_rx_tb.vhd was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading SIM_SENDERTOP_WORK.buffer_rx_tb(behavior)
 run

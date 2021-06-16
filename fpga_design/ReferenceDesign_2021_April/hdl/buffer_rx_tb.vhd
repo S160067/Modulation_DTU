@@ -18,7 +18,7 @@ COMPONENT buffer_rx is
 end component;
 
 signal clk, reset : std_logic := '0';
-signal fifo_full, valid : std_logic;
+signal fifo_full, valid : std_logic := '0';
 signal bitstream, fifo_wr : std_logic := '0';
 signal data_mod : std_logic_vector(1 downto 0) :=  ( others => '0');
  -- Clock period definitions
@@ -50,15 +50,44 @@ end process;
 -- Stimulus process
 stim_proc: process
 begin
-   reset <= '1';
- -- hold reset state for 100 ns. 
- wait for 30 ns;
-   reset <= '0';
-wait for clock_period;
-   fifo_full <= '0';
-data_mod <= "01";
-valid <= '1';
 
+      reset <= '1';
+      wait for 30 ns;
+      reset <= '0';
+      fifo_full <= '0';
+      wait for clock_period;
+
+      data_mod <= "00";
+      valid <= '1';
+      wait until fifo_wr = '1';
+      wait for clock_period;
+      
+      data_mod <= "01";
+      valid <= '1';
+      wait until fifo_wr = '1';
+      wait for clock_period;
+
+      data_mod <= "10";
+      valid <= '1';
+      wait until fifo_wr = '1';
+      wait for clock_period;
+
+      data_mod <= "11";
+      valid <= '1';
+      wait until fifo_wr = '1';
+      wait for clock_period;
+      wait for clock_period;
+
+      fifo_full <= '1';
+
+      data_mod <= "11";
+      valid <= '1';
+      wait for clock_period;
+      wait for clock_period;
+      data_mod <= "01";
+      valid <= '1';
+      wait for clock_period;
+      wait for clock_period;
 wait;
 
 end process;

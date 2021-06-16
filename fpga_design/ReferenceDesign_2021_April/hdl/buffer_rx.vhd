@@ -20,7 +20,7 @@ architecture arch of buffer_rx is
 signal data_sel, shift1, shift1_next, shift2,shift2_next, shift1_en,shift2_en, reg_in_en : std_logic;
 signal reg_in, reg_in_next : std_logic_vector(1 downto 0);
 
-TYPE STATE_TYPE IS (idle_state,loadfirst_state,loadsecond_state,shift_state, end_state, wait1_state, wait2_state);
+TYPE STATE_TYPE IS (idle_state,loadfirst_state,loadsecond_state,shift_state, end_state);
 signal state, next_state : STATE_TYPE ;
 
 begin
@@ -38,47 +38,43 @@ BEGIN
 	data_sel <= '0';
 	fifo_wr <= '0';
 	next_state <= idle_state;
-   CASE state IS
+   	CASE state IS
 	  WHEN idle_state =>
+	  	if(fifo_full = '0') then
 			if(valid = '1') THEN
 				reg_in_en <='1';				
 				next_state <= loadfirst_state;
 			else 
 				next_state <= idle_state;
 			end if;
+		end if;
 	  WHEN loadfirst_state =>
-			data_sel <= '0';
+		  if(fifo_full = '0') then
+	  		data_sel <= '0';
 			shift1_en <='1';
 			reg_in_en <= '1';
 			next_state <= loadsecond_state;
-	  WHEN loadsecond_state =>
+		end if;
+
+		WHEN loadsecond_state =>
+		if(fifo_full = '0') then
 			data_sel <= '1';
 			shift2_en <= '1';
 			shift1_en <= '1';
-			if(fifo_full = '0') THEN
 				next_state <= shift_state;
-			else
-				next_state <= wait1_state;
-			end if;	
-		WHEN wait1_state =>
-			if(fifo_full = '1') then
-				next_state <= shift_state;
-			end if;
+		end if;
 	  WHEN shift_state =>
+		  if(fifo_full = '0') then
 			fifo_wr <='1';
 			shift2_en <= '1';
 			
 			data_sel <= '1';
 			next_state <= end_state;
-		
+		end if;
 	WHEN end_state =>
+		if(fifo_full = '0') then
 			fifo_wr <= '1';
-	WHEN wait2_state => 
-			if(fifo_full = '1') then
-				next_state <= wait2_state;
-			else
-				next_state <= end_state;
-			end if;
+		end if;
 	END CASE;
 END PROCESS;
 
