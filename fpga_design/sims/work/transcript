@@ -405,3 +405,45 @@ run
 # GetModuleFileName: The specified module could not be found.
 # 
 # 
+# Compile of sender_top_tb.vhd was successful.
+vsim -gui AAAAAAAAAAA.buffer_tx AAAAAAAAAAA.cos_gen AAAAAAAAAAA.mod_convolution AAAAAAAAAAA.mod_interface_tx AAAAAAAAAAA.mod_shaper AAAAAAAAAAA.modulator AAAAAAAAAAA.sender_top AAAAAAAAAAA.sender_top_tb AAAAAAAAAAA.sin_gen AAAAAAAAAAA.tx_modulation_top
+# End time: 16:30:34 on Jun 17,2021, Elapsed time: 1:56:06
+# Errors: 0, Warnings: 2
+# vsim -gui AAAAAAAAAAA.buffer_tx AAAAAAAAAAA.cos_gen AAAAAAAAAAA.mod_convolution AAAAAAAAAAA.mod_interface_tx AAAAAAAAAAA.mod_shaper AAAAAAAAAAA.modulator AAAAAAAAAAA.sender_top AAAAAAAAAAA.sender_top_tb AAAAAAAAAAA.sin_gen AAAAAAAAAAA.tx_modulation_top 
+# Start time: 16:30:34 on Jun 17,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading AAAAAAAAAAA.buffer_tx(arch)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading AAAAAAAAAAA.cos_gen(rtl)
+# Loading ieee.numeric_std(body)
+# Loading AAAAAAAAAAA.mod_convolution(rtl)
+# Loading AAAAAAAAAAA.mod_interface_tx(rtl)
+# Loading AAAAAAAAAAA.mod_shaper(rtl)
+# Loading AAAAAAAAAAA.modulator(arch)
+# Loading AAAAAAAAAAA.sender_top(arch)
+# Loading ieee.std_logic_textio(body)
+# Loading AAAAAAAAAAA.sender_top_tb(behavior)
+# Loading AAAAAAAAAAA.sin_gen(rtl)
+# Loading AAAAAAAAAAA.tx_modulation_top(rtl)
+add wave -position insertpoint sim:/sender_top_tb/uut/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: haraldbid  Hostname: harald-E31  ProcessID: 183678
+#           Attempting to use alternate WLF file "./wlft27rm4d".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft27rm4d
+run
+# Compile of sender_top_tb.vhd was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading AAAAAAAAAAA.sender_top_tb(behavior)
+run
+# Compile of sender_top_tb.vhd was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading AAAAAAAAAAA.sender_top_tb(behavior)
+run
+# End time: 21:06:17 on Jun 17,2021, Elapsed time: 4:35:43
+# Errors: 0, Warnings: 1

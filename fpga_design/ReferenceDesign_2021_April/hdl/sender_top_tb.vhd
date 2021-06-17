@@ -97,10 +97,11 @@ begin
    bitstream <= '1';
 
    wait for clock_period;
-
+   
+   wait for 40 ns;
    fifo_empty <= '1';
    
-   wait for 900 ns;
+   wait for 100 ns;
    -- Test 01
    --wait until read_en = '1';
    wait for clock_period;
@@ -115,8 +116,7 @@ begin
    wait for clock_period;
    bitstream <= '0';
    
-   wait for 40 ns;
-   modulation_scheme_select <= '1';
+ 
 
    wait;
 
