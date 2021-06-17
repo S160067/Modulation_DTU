@@ -1,5 +1,5 @@
 Analysis & Synthesis report for 1_1_0
-Wed Jun 16 14:29:18 2021
+Thu Jun 17 10:04:16 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -70,13 +70,13 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Jun 16 14:29:17 2021       ;
+; Analysis & Synthesis Status     ; Successful - Thu Jun 17 10:04:16 2021       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; 1_1_0                                       ;
 ; Top-level Entity Name           ; DE1_SoC_ReferenceTop                        ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 2109                                        ;
+; Total registers                 ; 2136                                        ;
 ; Total pins                      ; 97                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 12,288                                      ;
@@ -288,16 +288,16 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimate of Logic utilization (ALMs needed) ; 1323           ;
+; Estimate of Logic utilization (ALMs needed) ; 1343           ;
 ;                                             ;                ;
-; Combinational ALUT usage for logic          ; 1362           ;
+; Combinational ALUT usage for logic          ; 1400           ;
 ;     -- 7 input functions                    ; 8              ;
-;     -- 6 input functions                    ; 96             ;
-;     -- 5 input functions                    ; 369            ;
+;     -- 6 input functions                    ; 99             ;
+;     -- 5 input functions                    ; 380            ;
 ;     -- 4 input functions                    ; 82             ;
-;     -- <=3 input functions                  ; 807            ;
+;     -- <=3 input functions                  ; 831            ;
 ;                                             ;                ;
-; Dedicated logic registers                   ; 2109           ;
+; Dedicated logic registers                   ; 2136           ;
 ;                                             ;                ;
 ; I/O pins                                    ; 97             ;
 ; Total MLAB memory bits                      ; 0              ;
@@ -309,9 +309,9 @@ https://fpgasoftware.intel.com/eula.
 ;     -- PLLs                                 ; 3              ;
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
-; Maximum fan-out                             ; 1560           ;
-; Total fan-out                               ; 13865          ;
-; Average fan-out                             ; 3.55           ;
+; Maximum fan-out                             ; 1587           ;
+; Total fan-out                               ; 14066          ;
+; Average fan-out                             ; 3.54           ;
 +---------------------------------------------+----------------+
 
 
@@ -320,13 +320,13 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
 ; Compilation Hierarchy Node                                                                                                              ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                                                                                                                                                                              ; Entity Name                       ; Library Name ;
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
-; |DE1_SoC_ReferenceTop                                                                                                                   ; 1362 (1)            ; 2109 (0)                  ; 12288             ; 64         ; 97   ; 0            ; |DE1_SoC_ReferenceTop                                                                                                                                                                                                                                                                                                                                            ; DE1_SoC_ReferenceTop              ; work         ;
-;    |fpga_top:fpga_top_inst|                                                                                                             ; 945 (0)             ; 593 (0)                   ; 0                 ; 64         ; 0    ; 0            ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst                                                                                                                                                                                                                                                                                                                     ; fpga_top                          ; work         ;
-;       |modulation_top:modulation_inst|                                                                                                  ; 945 (2)             ; 593 (0)                   ; 0                 ; 64         ; 0    ; 0            ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst                                                                                                                                                                                                                                                                                      ; modulation_top                    ; work         ;
+; |DE1_SoC_ReferenceTop                                                                                                                   ; 1400 (1)            ; 2136 (0)                  ; 12288             ; 64         ; 97   ; 0            ; |DE1_SoC_ReferenceTop                                                                                                                                                                                                                                                                                                                                            ; DE1_SoC_ReferenceTop              ; work         ;
+;    |fpga_top:fpga_top_inst|                                                                                                             ; 983 (0)             ; 620 (0)                   ; 0                 ; 64         ; 0    ; 0            ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst                                                                                                                                                                                                                                                                                                                     ; fpga_top                          ; work         ;
+;       |modulation_top:modulation_inst|                                                                                                  ; 983 (27)            ; 620 (0)                   ; 0                 ; 64         ; 0    ; 0            ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst                                                                                                                                                                                                                                                                                      ; modulation_top                    ; work         ;
 ;          |ip_pll:pll_inst|                                                                                                              ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|ip_pll:pll_inst                                                                                                                                                                                                                                                                      ; ip_pll                            ; ip_pll       ;
 ;             |ip_pll_0002:ip_pll_inst|                                                                                                   ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|ip_pll:pll_inst|ip_pll_0002:ip_pll_inst                                                                                                                                                                                                                                              ; ip_pll_0002                       ; ip_pll       ;
 ;                |altera_pll:altera_pll_i|                                                                                                ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|ip_pll:pll_inst|ip_pll_0002:ip_pll_inst|altera_pll:altera_pll_i                                                                                                                                                                                                                      ; altera_pll                        ; work         ;
-;          |reciever_top:reciever_inst|                                                                                                   ; 441 (0)             ; 470 (0)                   ; 0                 ; 32         ; 0    ; 0            ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst                                                                                                                                                                                                                                                           ; reciever_top                      ; work         ;
+;          |reciever_top:reciever_inst|                                                                                                   ; 454 (0)             ; 497 (0)                   ; 0                 ; 32         ; 0    ; 0            ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst                                                                                                                                                                                                                                                           ; reciever_top                      ; work         ;
 ;             |buffer_rx:buff_inst|                                                                                                       ; 11 (11)             ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst|buffer_rx:buff_inst                                                                                                                                                                                                                                       ; buffer_rx                         ; work         ;
 ;             |demodulator:demod_inst|                                                                                                    ; 426 (0)             ; 461 (0)                   ; 0                 ; 32         ; 0    ; 0            ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst|demodulator:demod_inst                                                                                                                                                                                                                                    ; demodulator                       ; work         ;
 ;                |RX_modulation_top:mod_inst|                                                                                             ; 426 (0)             ; 461 (0)                   ; 0                 ; 32         ; 0    ; 0            ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst|demodulator:demod_inst|RX_modulation_top:mod_inst                                                                                                                                                                                                         ; RX_modulation_top                 ; work         ;
@@ -335,7 +335,7 @@ https://fpgasoftware.intel.com/eula.
 ;                   |mod_conv_rx_new:re_deconv|                                                                                           ; 208 (208)           ; 225 (225)                 ; 0                 ; 16         ; 0    ; 0            ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst|demodulator:demod_inst|RX_modulation_top:mod_inst|mod_conv_rx_new:re_deconv                                                                                                                                                                               ; mod_conv_rx_new                   ; work         ;
 ;                   |mod_deconv:im_deshaper|                                                                                              ; 5 (5)               ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst|demodulator:demod_inst|RX_modulation_top:mod_inst|mod_deconv:im_deshaper                                                                                                                                                                                  ; mod_deconv                        ; work         ;
 ;                   |mod_deconv:re_deshaper|                                                                                              ; 3 (3)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst|demodulator:demod_inst|RX_modulation_top:mod_inst|mod_deconv:re_deshaper                                                                                                                                                                                  ; mod_deconv                        ; work         ;
-;             |reciever:receiv_ins|                                                                                                       ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst|reciever:receiv_ins                                                                                                                                                                                                                                       ; reciever                          ; work         ;
+;             |reciever:receiv_ins|                                                                                                       ; 17 (17)             ; 27 (27)                   ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst|reciever:receiv_ins                                                                                                                                                                                                                                       ; reciever                          ; work         ;
 ;          |sender_top:sender_inst|                                                                                                       ; 502 (28)            ; 123 (0)                   ; 0                 ; 32         ; 0    ; 0            ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst                                                                                                                                                                                                                                                               ; sender_top                        ; work         ;
 ;             |buffer_tx:buff_inst|                                                                                                       ; 7 (7)               ; 6 (6)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|buffer_tx:buff_inst                                                                                                                                                                                                                                           ; buffer_tx                         ; work         ;
 ;             |cos_gen:cos_inst|                                                                                                          ; 16 (16)             ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|cos_gen:cos_inst                                                                                                                                                                                                                                              ; cos_gen                           ; work         ;
@@ -554,18 +554,19 @@ Encoding Type:  One-Hot
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Register name                                                                                                                                                            ; Reason for Removal                                                                                                                                                                   ;
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|modulator:mod_inst|TX_modulation_top:tx_mod_inst|mod_convolution:re_shaper|o_valid          ; Merged with fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|modulator:mod_inst|TX_modulation_top:tx_mod_inst|mod_convolution:im_shaper|o_valid          ;
+; fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst|reciever:receiv_ins|reg_out_q[1]                                                        ; Merged with fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst|reciever:receiv_ins|reg_out_q[12]                                                       ;
+; fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|modulator:mod_inst|TX_modulation_top:tx_mod_inst|mod_convolution:re_shaper|no_data_flag_reg ; Merged with fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|modulator:mod_inst|TX_modulation_top:tx_mod_inst|mod_convolution:im_shaper|no_data_flag_reg ;
 ; fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|sin_gen:sin_inst|phase_cnt[4]                                                               ; Merged with fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|cos_gen:cos_inst|phase_cnt[4]                                                               ;
 ; fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|sin_gen:sin_inst|phase_cnt[3]                                                               ; Merged with fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|cos_gen:cos_inst|phase_cnt[3]                                                               ;
 ; fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|sin_gen:sin_inst|phase_cnt[2]                                                               ; Merged with fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|cos_gen:cos_inst|phase_cnt[2]                                                               ;
 ; fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|sin_gen:sin_inst|phase_cnt[1]                                                               ; Merged with fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|cos_gen:cos_inst|phase_cnt[1]                                                               ;
 ; fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|sin_gen:sin_inst|phase_cnt[0]                                                               ; Merged with fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|cos_gen:cos_inst|phase_cnt[0]                                                               ;
-; fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|modulator:mod_inst|TX_modulation_top:tx_mod_inst|mod_convolution:re_shaper|o_valid          ; Merged with fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|modulator:mod_inst|TX_modulation_top:tx_mod_inst|mod_convolution:im_shaper|o_valid          ;
 ; fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst|demodulator:demod_inst|RX_modulation_top:mod_inst|mod_deconv:re_deshaper|o_valid        ; Merged with fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst|demodulator:demod_inst|RX_modulation_top:mod_inst|mod_deconv:im_deshaper|o_valid        ;
 ; fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst|demodulator:demod_inst|RX_modulation_top:mod_inst|mod_conv_rx_new:re_deconv|valid_reg2  ; Merged with fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst|demodulator:demod_inst|RX_modulation_top:mod_inst|mod_conv_rx_new:im_deconv|valid_reg2  ;
 ; fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst|demodulator:demod_inst|RX_modulation_top:mod_inst|mod_deconv:re_deshaper|cnt[1]         ; Merged with fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst|demodulator:demod_inst|RX_modulation_top:mod_inst|mod_deconv:im_deshaper|cnt[1]         ;
 ; fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst|demodulator:demod_inst|RX_modulation_top:mod_inst|mod_deconv:re_deshaper|cnt[0]         ; Merged with fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst|demodulator:demod_inst|RX_modulation_top:mod_inst|mod_deconv:im_deshaper|cnt[0]         ;
 ; fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst|demodulator:demod_inst|RX_modulation_top:mod_inst|mod_deconv:re_deshaper|s_lock         ; Merged with fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst|demodulator:demod_inst|RX_modulation_top:mod_inst|mod_deconv:im_deshaper|s_lock         ;
-; fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|modulator:mod_inst|TX_modulation_top:tx_mod_inst|mod_convolution:re_shaper|no_data_flag_reg ; Merged with fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|modulator:mod_inst|TX_modulation_top:tx_mod_inst|mod_convolution:im_shaper|no_data_flag_reg ;
 ; fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst|demodulator:demod_inst|RX_modulation_top:mod_inst|mod_conv_rx_new:re_deconv|valid_reg   ; Merged with fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst|demodulator:demod_inst|RX_modulation_top:mod_inst|mod_conv_rx_new:im_deconv|valid_reg   ;
 ; fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|modulator:mod_inst|TX_modulation_top:tx_mod_inst|mod_convolution:im_shaper|s_sregis[15][10] ; Merged with fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|modulator:mod_inst|TX_modulation_top:tx_mod_inst|mod_convolution:im_shaper|s_sregis[15][0]  ;
 ; fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|modulator:mod_inst|TX_modulation_top:tx_mod_inst|mod_convolution:im_shaper|s_sregis[15][11] ; Merged with fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|modulator:mod_inst|TX_modulation_top:tx_mod_inst|mod_convolution:im_shaper|s_sregis[15][0]  ;
@@ -951,7 +952,7 @@ Encoding Type:  One-Hot
 ; fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|modulator:mod_inst|TX_modulation_top:tx_mod_inst|mod_convolution:re_shaper|s_sregis[15][7]  ; Merged with fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|modulator:mod_inst|TX_modulation_top:tx_mod_inst|mod_convolution:re_shaper|s_sregis[15][0]  ;
 ; fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|modulator:mod_inst|TX_modulation_top:tx_mod_inst|mod_convolution:re_shaper|s_sregis[15][8]  ; Merged with fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|modulator:mod_inst|TX_modulation_top:tx_mod_inst|mod_convolution:re_shaper|s_sregis[15][0]  ;
 ; fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|modulator:mod_inst|TX_modulation_top:tx_mod_inst|mod_convolution:re_shaper|s_sregis[15][9]  ; Merged with fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|modulator:mod_inst|TX_modulation_top:tx_mod_inst|mod_convolution:re_shaper|s_sregis[15][0]  ;
-; Total Number of Removed Registers = 397                                                                                                                                  ;                                                                                                                                                                                      ;
+; Total Number of Removed Registers = 398                                                                                                                                  ;                                                                                                                                                                                      ;
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
@@ -960,10 +961,10 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 2109  ;
+; Total registers                              ; 2136  ;
 ; Number of registers using Synchronous Clear  ; 657   ;
 ; Number of registers using Synchronous Load   ; 207   ;
-; Number of registers using Asynchronous Clear ; 529   ;
+; Number of registers using Asynchronous Clear ; 556   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 589   ;
 ; Number of registers using Preset             ; 0     ;
@@ -994,10 +995,10 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                                                                                        ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; 3:1                ; 28 bits   ; 56 LEs        ; 0 LEs                ; 56 LEs                 ; Yes        ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst|demodulator:demod_inst|RX_modulation_top:mod_inst|mod_conv_rx_new:im_deconv|s_sregis[0][2] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|modulator:mod_inst|TX_modulation_top:tx_mod_inst|Mod_interface_TX:u_mod_interface|time_cnt[0]  ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|cos_gen:cos_inst|phase_cnt[3]                                                                  ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|modulator:mod_inst|TX_modulation_top:tx_mod_inst|Mod_interface_TX:u_mod_interface|data_reg[1]  ;
+; 3:1                ; 28 bits   ; 56 LEs        ; 0 LEs                ; 56 LEs                 ; Yes        ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst|demodulator:demod_inst|RX_modulation_top:mod_inst|mod_conv_rx_new:im_deconv|s_sregis[0][1] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|modulator:mod_inst|TX_modulation_top:tx_mod_inst|Mod_interface_TX:u_mod_interface|time_cnt[3]  ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|cos_gen:cos_inst|phase_cnt[0]                                                                  ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|modulator:mod_inst|TX_modulation_top:tx_mod_inst|Mod_interface_TX:u_mod_interface|data_reg[0]  ;
 ; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst|demodulator:demod_inst|RX_modulation_top:mod_inst|mod_deconv:im_deshaper|cnt[0]            ;
 ; 3:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|modulator:mod_inst|TX_modulation_top:tx_mod_inst|mod_convolution:im_shaper|s_mult[14][12]      ;
 ; 3:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|modulator:mod_inst|TX_modulation_top:tx_mod_inst|mod_convolution:im_shaper|s_mult[13][9]       ;
@@ -1011,11 +1012,11 @@ Encoding Type:  One-Hot
 ; 3:1                ; 13 bits   ; 26 LEs        ; 26 LEs               ; 0 LEs                  ; No         ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst|demodulator:demod_inst|RX_modulation_top:mod_inst|mod_conv_rx_new:im_deconv|s_mult[14][10] ;
 ; 3:1                ; 13 bits   ; 26 LEs        ; 26 LEs               ; 0 LEs                  ; No         ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst|demodulator:demod_inst|RX_modulation_top:mod_inst|mod_conv_rx_new:im_deconv|s_mult[13][11] ;
 ; 3:1                ; 13 bits   ; 26 LEs        ; 26 LEs               ; 0 LEs                  ; No         ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst|demodulator:demod_inst|RX_modulation_top:mod_inst|mod_conv_rx_new:im_deconv|s_mult[12][4]  ;
-; 3:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|modulator:mod_inst|TX_modulation_top:tx_mod_inst|mod_convolution:im_shaper|s_mult[4][12]       ;
-; 3:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|modulator:mod_inst|TX_modulation_top:tx_mod_inst|mod_convolution:im_shaper|s_mult[3][3]        ;
-; 3:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|modulator:mod_inst|TX_modulation_top:tx_mod_inst|mod_convolution:im_shaper|s_mult[2][7]        ;
-; 3:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|modulator:mod_inst|TX_modulation_top:tx_mod_inst|mod_convolution:re_shaper|s_mult[4][3]        ;
-; 3:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|modulator:mod_inst|TX_modulation_top:tx_mod_inst|mod_convolution:re_shaper|s_mult[3][5]        ;
+; 3:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|modulator:mod_inst|TX_modulation_top:tx_mod_inst|mod_convolution:im_shaper|s_mult[4][1]        ;
+; 3:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|modulator:mod_inst|TX_modulation_top:tx_mod_inst|mod_convolution:im_shaper|s_mult[3][4]        ;
+; 3:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|modulator:mod_inst|TX_modulation_top:tx_mod_inst|mod_convolution:im_shaper|s_mult[2][5]        ;
+; 3:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|modulator:mod_inst|TX_modulation_top:tx_mod_inst|mod_convolution:re_shaper|s_mult[4][9]        ;
+; 3:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|modulator:mod_inst|TX_modulation_top:tx_mod_inst|mod_convolution:re_shaper|s_mult[3][2]        ;
 ; 3:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|sender_top:sender_inst|modulator:mod_inst|TX_modulation_top:tx_mod_inst|mod_convolution:re_shaper|s_mult[2][2]        ;
 ; 3:1                ; 13 bits   ; 26 LEs        ; 26 LEs               ; 0 LEs                  ; No         ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst|demodulator:demod_inst|RX_modulation_top:mod_inst|mod_conv_rx_new:re_deconv|s_mult[4][10]  ;
 ; 3:1                ; 13 bits   ; 26 LEs        ; 26 LEs               ; 0 LEs                  ; No         ; |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst|demodulator:demod_inst|RX_modulation_top:mod_inst|mod_conv_rx_new:re_deconv|s_mult[3][6]   ;
@@ -1515,15 +1516,15 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 593                         ;
-;     CLR               ; 17                          ;
+; arriav_ff             ; 620                         ;
+;     CLR               ; 44                          ;
 ;     ENA               ; 7                           ;
 ;     ENA SCLR          ; 28                          ;
 ;     SCLR              ; 529                         ;
 ;     SLD               ; 1                           ;
 ;     plain             ; 11                          ;
 ; arriav_io_obuf        ; 72                          ;
-; arriav_lcell_comb     ; 946                         ;
+; arriav_lcell_comb     ; 984                         ;
 ;     arith             ; 568                         ;
 ;         1 data inputs ; 64                          ;
 ;         2 data inputs ; 56                          ;
@@ -1531,14 +1532,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;         5 data inputs ; 208                         ;
 ;     extend            ; 7                           ;
 ;         7 data inputs ; 7                           ;
-;     normal            ; 203                         ;
+;     normal            ; 241                         ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 3                           ;
-;         2 data inputs ; 18                          ;
-;         3 data inputs ; 115                         ;
+;         2 data inputs ; 43                          ;
+;         3 data inputs ; 114                         ;
 ;         4 data inputs ; 41                          ;
-;         5 data inputs ; 20                          ;
-;         6 data inputs ; 5                           ;
+;         5 data inputs ; 31                          ;
+;         6 data inputs ; 8                           ;
 ;     shared            ; 168                         ;
 ;         3 data inputs ; 168                         ;
 ; arriav_mac            ; 64                          ;
@@ -1555,7 +1556,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:03     ;
+; Top            ; 00:00:04     ;
 +----------------+--------------+
 
 
@@ -1798,7 +1799,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Wed Jun 16 14:28:33 2021
+    Info: Processing started: Thu Jun 17 10:03:31 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DE1-SOC-342x9 -c 1_1_0
 Warning (125092): Tcl Script File soc_system/synthesis/soc_system.qip not found
     Info (125063): set_global_assignment -name QIP_FILE soc_system/synthesis/soc_system.qip
@@ -2013,7 +2014,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr
     Info (12023): Found entity 1: cmpr_99c File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/quartus/db/cmpr_99c.tdf Line: 23
 Info (12033): Analysis and Synthesis generated Signal Tap or debug node instance "auto_signaltap_0"
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
-Info (11172): 2021.06.16.14:28:59 Progress: Loading sld78a6c0c4/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2021.06.17.10:03:56 Progress: Loading sld78a6c0c4/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -2072,36 +2073,36 @@ Warning (13034): The following nodes have both tri-state and non-tri-state drive
     Warning (13035): Inserted always-enabled tri-state buffer between "GPIO_1[33]" and its non-tri-state driver. File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/DE1_SoC_ReferenceTop.vhd Line: 42
     Warning (13035): Inserted always-enabled tri-state buffer between "GPIO_1[34]" and its non-tri-state driver. File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/DE1_SoC_ReferenceTop.vhd Line: 42
 Warning (13039): The following bidirectional pins have no drivers
-    Warning (13040): bidirectional pin "GPIO_0[31]" has no driver File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
-    Warning (13040): bidirectional pin "GPIO_0[30]" has no driver File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
-    Warning (13040): bidirectional pin "GPIO_0[29]" has no driver File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
-    Warning (13040): bidirectional pin "GPIO_0[28]" has no driver File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
-    Warning (13040): bidirectional pin "GPIO_0[27]" has no driver File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
-    Warning (13040): bidirectional pin "GPIO_0[26]" has no driver File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
-    Warning (13040): bidirectional pin "GPIO_0[25]" has no driver File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
-    Warning (13040): bidirectional pin "GPIO_0[15]" has no driver File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
-    Warning (13040): bidirectional pin "GPIO_0[14]" has no driver File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
-    Warning (13040): bidirectional pin "GPIO_0[12]" has no driver File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
-    Warning (13040): bidirectional pin "GPIO_0[11]" has no driver File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
-    Warning (13040): bidirectional pin "GPIO_0[10]" has no driver File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
-    Warning (13040): bidirectional pin "GPIO_0[9]" has no driver File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
-    Warning (13040): bidirectional pin "GPIO_0[3]" has no driver File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
-    Warning (13040): bidirectional pin "GPIO_0[0]" has no driver File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
-    Warning (13040): bidirectional pin "GPIO_0[1]" has no driver File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
-    Warning (13040): bidirectional pin "GPIO_0[2]" has no driver File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
-    Warning (13040): bidirectional pin "GPIO_0[4]" has no driver File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
-    Warning (13040): bidirectional pin "GPIO_0[5]" has no driver File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
-    Warning (13040): bidirectional pin "GPIO_0[6]" has no driver File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
-    Warning (13040): bidirectional pin "GPIO_0[7]" has no driver File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
-    Warning (13040): bidirectional pin "GPIO_0[8]" has no driver File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
-    Warning (13040): bidirectional pin "GPIO_0[13]" has no driver File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
     Warning (13040): bidirectional pin "GPIO_0[17]" has no driver File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
     Warning (13040): bidirectional pin "GPIO_0[19]" has no driver File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
     Warning (13040): bidirectional pin "GPIO_0[20]" has no driver File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
-    Warning (13040): bidirectional pin "GPIO_0[21]" has no driver File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
     Warning (13040): bidirectional pin "GPIO_0[22]" has no driver File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
+    Warning (13040): bidirectional pin "GPIO_0[21]" has no driver File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
     Warning (13040): bidirectional pin "GPIO_0[23]" has no driver File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
     Warning (13040): bidirectional pin "GPIO_0[24]" has no driver File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
+    Warning (13040): bidirectional pin "GPIO_0[26]" has no driver File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
+    Warning (13040): bidirectional pin "GPIO_0[25]" has no driver File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
+    Warning (13040): bidirectional pin "GPIO_0[27]" has no driver File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
+    Warning (13040): bidirectional pin "GPIO_0[28]" has no driver File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
+    Warning (13040): bidirectional pin "GPIO_0[30]" has no driver File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
+    Warning (13040): bidirectional pin "GPIO_0[29]" has no driver File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
+    Warning (13040): bidirectional pin "GPIO_0[31]" has no driver File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
+    Warning (13040): bidirectional pin "GPIO_0[1]" has no driver File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
+    Warning (13040): bidirectional pin "GPIO_0[3]" has no driver File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
+    Warning (13040): bidirectional pin "GPIO_0[4]" has no driver File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
+    Warning (13040): bidirectional pin "GPIO_0[6]" has no driver File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
+    Warning (13040): bidirectional pin "GPIO_0[5]" has no driver File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
+    Warning (13040): bidirectional pin "GPIO_0[7]" has no driver File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
+    Warning (13040): bidirectional pin "GPIO_0[8]" has no driver File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
+    Warning (13040): bidirectional pin "GPIO_0[10]" has no driver File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
+    Warning (13040): bidirectional pin "GPIO_0[9]" has no driver File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
+    Warning (13040): bidirectional pin "GPIO_0[11]" has no driver File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
+    Warning (13040): bidirectional pin "GPIO_0[12]" has no driver File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
+    Warning (13040): bidirectional pin "GPIO_0[14]" has no driver File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
+    Warning (13040): bidirectional pin "GPIO_0[15]" has no driver File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
+    Warning (13040): bidirectional pin "GPIO_0[0]" has no driver File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
+    Warning (13040): bidirectional pin "GPIO_0[2]" has no driver File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
+    Warning (13040): bidirectional pin "GPIO_0[13]" has no driver File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
     Warning (13040): bidirectional pin "GPIO_0[34]" has no driver File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/DE1_SoC_ReferenceTop.vhd Line: 39
     Warning (13040): bidirectional pin "GPIO_1[0]" has no driver File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/DE1_SoC_ReferenceTop.vhd Line: 42
     Warning (13040): bidirectional pin "GPIO_1[2]" has no driver File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/DE1_SoC_ReferenceTop.vhd Line: 42
@@ -2156,19 +2157,19 @@ Warning (13024): Output pins are stuck at VCC or GND
 Info (286031): Timing-Driven Synthesis is running on partition "Top"
 Info (35024): Successfully connected in-system debug instance "auto_signaltap_0" to all 225 required data inputs, trigger inputs, acquisition clocks, and dynamic pins
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 18 node(s), including 0 DDIO, 3 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 3371 device resources after synthesis - the final resource count might be different
+    Info (16011): Adding 22 node(s), including 0 DDIO, 3 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 3412 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 18 input pins
     Info (21059): Implemented 11 output pins
     Info (21060): Implemented 72 bidirectional pins
-    Info (21061): Implemented 3106 logic cells
+    Info (21061): Implemented 3147 logic cells
     Info (21064): Implemented 96 RAM segments
     Info (21065): Implemented 3 PLLs
     Info (21062): Implemented 64 DSP elements
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 128 warnings
-    Info: Peak virtual memory: 583 megabytes
-    Info: Processing ended: Wed Jun 16 14:29:18 2021
+    Info: Peak virtual memory: 571 megabytes
+    Info: Processing ended: Thu Jun 17 10:04:16 2021
     Info: Elapsed time: 00:00:45
-    Info: Total CPU time (on all processors): 00:01:22
+    Info: Total CPU time (on all processors): 00:01:23
 
 

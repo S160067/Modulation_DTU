@@ -11,11 +11,8 @@ entity modulation_top is
 		fifo_bitstream_in, fifo_empty, fifo_full : in std_logic;
 		modulation_scheme_select : in std_logic;
 		fifo_bitstream_out, fifo_wr, fifo_read_en : out std_logic;
-		debug_data_mod : out std_logic_vector(1 downto 0);
-		debug_data_in : in std_logic_vector(1 downto 0);
-		debug_valid : in std_logic;
-		debug_select : in std_logic;
-		debug_SNR_valid : out std_logic
+		modulation_scheme_select : in std_logic;
+		debug_select : in std_logic
 	);
 end modulation_top;
 
@@ -38,8 +35,6 @@ architecture loopback_arch of modulation_top is
 			write, read_en : out std_logic;
 			data_i, data_q : out std_logic_vector(13 downto 0);
 			modulation_scheme_select : in std_logic;
-			debug_data_in : in std_logic_vector(1 downto 0);
-			debug_valid : in std_logic;
 			debug_select : in std_logic
 			);
 	end component;
@@ -49,9 +44,7 @@ architecture loopback_arch of modulation_top is
 			clk, reset : in std_logic;
 			data_i, data_q  : in std_logic_vector(13 downto 0);
 			fifo_full : in std_logic;
-			bitstream, fifo_wr : out std_logic;
-			debug_data_mod : out std_logic_vector(1 downto 0);
-			debug_valid : out std_logic
+			bitstream, fifo_wr : out std_logic
 		);
 	end component;
 
@@ -82,8 +75,6 @@ begin
 		data_i => test_i, 
 		data_q => test_q,
 		modulation_scheme_select => modulation_scheme_select,
-		debug_data_in => debug_data_in,
-		debug_valid => debug_valid,
 		debug_select => debug_select
 	);
 	reciever_inst : component reciever_top port map(
@@ -93,16 +84,14 @@ begin
 		data_q => data_AD_b, 
 		fifo_full => fifo_full, 
 		bitstream => fifo_bitstream_out, 
-		fifo_wr => fifo_wr,
-		debug_data_mod => debug_data_mod,
-		debug_valid => debug_SNR_valid
+		fifo_wr => fifo_wr
 	);
-	data_AD_a <= GPIO_0(31) & GPIO_0(29) & GPIO_0(30) & GPIO_0(28) & GPIO_0(27) & GPIO_0(25) & 
+	data_AD_a <= ( GPIO_0(31) & GPIO_0(29) & GPIO_0(30) & GPIO_0(28) & GPIO_0(27) & GPIO_0(25) & 
 						GPIO_0(26) & GPIO_0(24) & GPIO_0(23) & GPIO_0(21) & GPIO_0(22) & GPIO_0(20) & 
-						GPIO_0(19) & GPIO_0(17) ;
+						GPIO_0(19) & GPIO_0(17) ) when sender_write = '1' else (others => '0') ;
 					  
-	data_AD_b <= GPIO_0(15) & GPIO_0(3) & GPIO_0(14) & GPIO_0(12) & GPIO_0(11) & GPIO_0(9) & GPIO_0(10) & 
-					  GPIO_0(8) & GPIO_0(7) & GPIO_0(5) & GPIO_0(6) & GPIO_0(4) & GPIO_0(3) & GPIO_0(1);
+	data_AD_b <= ( GPIO_0(15) & GPIO_0(3) & GPIO_0(14) & GPIO_0(12) & GPIO_0(11) & GPIO_0(9) & GPIO_0(10) & 
+					  GPIO_0(8) & GPIO_0(7) & GPIO_0(5) & GPIO_0(6) & GPIO_0(4) & GPIO_0(3) & GPIO_0(1) ) when sender_write = '1' else (others => '0') ;
 					  
 	-- DA_B
 	GPIO_1 (19 ) <= test_q(13); 
@@ -149,11 +138,11 @@ begin
   GPIO_0(32) <= '1'; --POWER ON
   GPIO_1(35) <= '1'; --Mode Select. 1 = dual port &  0 = interleaved.
 
-  GPIO_1(18) <= pll_clk_125 when sender_write = '1' else '0'; --PLL Clock to DAC_B
-  GPIO_1(16) <= pll_clk_125 when sender_write = '1' else '0'; --PLL Clock to DAC_A
+  GPIO_1(18) <= pll_clk_125; --PLL Clock to DAC_B
+  GPIO_1(16) <= pll_clk_125; --PLL Clock to DAC_A
 
-  GPIO_1(34) <= pll_clk_125_skew when sender_write = '1' else '0'; --Input write signal for PORT B
-  GPIO_1(17) <= pll_clk_125_skew when sender_write = '1' else '0'; --Input write signal for PORT A
+  GPIO_1(34) <= pll_clk_125_skew; --Input write signal for PORT B
+  GPIO_1(17) <= pll_clk_125_skew; --Input write signal for PORT A
   
 	
 end loopback_arch;

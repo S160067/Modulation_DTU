@@ -13,7 +13,7 @@ Ebuffer_rx
 Z0 w1623828397
 Z1 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z2 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
-!i122 512
+!i122 643
 Z3 d/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/sims
 Z4 8/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/buffer_rx.vhd
 Z5 F/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/buffer_rx.vhd
@@ -23,9 +23,9 @@ V[5<z2CCK?J0jzWXMPSU3k0
 !s100 g3gj>V7M6nEIV7S0I5zoT3
 Z6 OV;C;2020.1;71
 32
-Z7 !s110 1623846722
+Z7 !s110 1623920707
 !i10b 1
-Z8 !s108 1623846722.000000
+Z8 !s108 1623920707.000000
 Z9 !s90 -reportprogress|300|-work|SIM_SENDERTOP_WORK|-2002|-explicit|-stats=none|/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/buffer_rx.vhd|
 Z10 !s107 /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/buffer_rx.vhd|
 !i113 1
@@ -35,7 +35,7 @@ Aarch
 R1
 R2
 DEx4 work 9 buffer_rx 0 22 [5<z2CCK?J0jzWXMPSU3k0
-!i122 512
+!i122 643
 l26
 L18 91
 VTBjo8A5:PFWz[gBeFNPf21
@@ -51,11 +51,11 @@ R10
 R11
 R12
 Ebuffer_rx_tb
-Z13 w1623828523
+Z13 w1623917591
 Z14 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
 R1
 R2
-!i122 519
+!i122 650
 R3
 Z15 8/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/buffer_rx_tb.vhd
 Z16 F/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/buffer_rx_tb.vhd
@@ -65,9 +65,9 @@ VZ]iCNQk4[F6_FLl;[30D20
 !s100 WRQ<:PeSdT<0Vzeog44?43
 R6
 32
-Z17 !s110 1623846723
+Z17 !s110 1623920708
 !i10b 1
-Z18 !s108 1623846723.000000
+Z18 !s108 1623920708.000000
 Z19 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/buffer_rx_tb.vhd|
 Z20 !s107 /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/buffer_rx_tb.vhd|
 !i113 1
@@ -78,7 +78,7 @@ R14
 R1
 R2
 DEx4 work 12 buffer_rx_tb 0 22 Z]iCNQk4[F6_FLl;[30D20
-!i122 519
+!i122 650
 l27
 L8 88
 VFXRbm;aZ0MFiWcRkQE`Wi3
@@ -97,7 +97,7 @@ Ebuffer_tx
 Z22 w1623670791
 R1
 R2
-!i122 506
+!i122 637
 R3
 Z23 8/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/buffer_tx.vhd
 Z24 F/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/buffer_tx.vhd
@@ -109,9 +109,9 @@ R6
 32
 R7
 !i10b 1
-Z25 !s108 1623846721.000000
-Z26 !s90 -reportprogress|300|-work|SIM_SENDERTOP_WORK|-2002|-explicit|-stats=none|/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/buffer_tx.vhd|
-Z27 !s107 /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/buffer_tx.vhd|
+R8
+Z25 !s90 -reportprogress|300|-work|SIM_SENDERTOP_WORK|-2002|-explicit|-stats=none|/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/buffer_tx.vhd|
+Z26 !s107 /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/buffer_tx.vhd|
 !i113 1
 R11
 R12
@@ -119,7 +119,7 @@ Aarch
 R1
 R2
 DEx4 work 9 buffer_tx 0 22 F37`F`cja6iUQFCXo5J<@1
-!i122 506
+!i122 637
 l25
 L18 81
 V3ndHPh4[Gj2RFo7^;?V2U1
@@ -128,22 +128,63 @@ R6
 32
 R7
 !i10b 1
+R8
 R25
 R26
-R27
 !i113 1
 R11
 R12
-Ecos_gen
-Z28 w1623666089
-Z29 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
-Z30 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Ebuffer_tx_tb
+Z27 w1623919207
 R1
 R2
-!i122 507
+!i122 659
 R3
-Z31 8/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/cos_gen.vhd
-Z32 F/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/cos_gen.vhd
+Z28 8/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/buffer_tx_tb.vhd
+Z29 F/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/buffer_tx_tb.vhd
+l0
+L5 1
+VCDTG8P;aK3AO6K6zhVPS[3
+!s100 L>DbL`XK2M6LQ<dCBCTID0
+R6
+32
+Z30 !s110 1623920709
+!i10b 1
+Z31 !s108 1623920709.000000
+Z32 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/buffer_tx_tb.vhd|
+Z33 !s107 /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/buffer_tx_tb.vhd|
+!i113 1
+R21
+R12
+Abehavior
+R1
+R2
+DEx4 work 12 buffer_tx_tb 0 22 CDTG8P;aK3AO6K6zhVPS[3
+!i122 659
+l28
+L8 91
+V>dP:k>1NUeHOnZ1WHSGjh3
+!s100 IMR8mVN]]HQBGCEV85Wjj3
+R6
+32
+R30
+!i10b 1
+R31
+R32
+R33
+!i113 1
+R21
+R12
+Ecos_gen
+Z34 w1623666089
+Z35 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z36 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+R1
+R2
+!i122 638
+R3
+Z37 8/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/cos_gen.vhd
+Z38 F/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/cos_gen.vhd
 l0
 L5 1
 VmbciK`GABIU<LANg8d<FR3
@@ -153,18 +194,18 @@ R6
 R7
 !i10b 1
 R8
-Z33 !s90 -reportprogress|300|-work|SIM_SENDERTOP_WORK|-2002|-explicit|-stats=none|/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/cos_gen.vhd|
-Z34 !s107 /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/cos_gen.vhd|
+Z39 !s90 -reportprogress|300|-work|SIM_SENDERTOP_WORK|-2002|-explicit|-stats=none|/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/cos_gen.vhd|
+Z40 !s107 /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/cos_gen.vhd|
 !i113 1
 R11
 R12
 Artl
-R29
-R30
+R35
+R36
 R1
 R2
 DEx4 work 7 cos_gen 0 22 mbciK`GABIU<LANg8d<FR3
-!i122 507
+!i122 638
 l24
 L20 46
 VYlfcOg3HADzQ5_kaZDJR00
@@ -174,20 +215,20 @@ R6
 R7
 !i10b 1
 R8
-R33
-R34
+R39
+R40
 !i113 1
 R11
 R12
 Edemodulator
-Z35 w1623680206
+Z41 w1623680206
 R14
 R1
 R2
-!i122 517
+!i122 648
 R3
-Z36 8/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/demodulator.vhd
-Z37 F/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/demodulator.vhd
+Z42 8/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/demodulator.vhd
+Z43 F/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/demodulator.vhd
 l0
 L5 1
 VWO;_oiX::U]f>>_UKN5z>3
@@ -196,9 +237,9 @@ R6
 32
 R17
 !i10b 1
-R8
-Z38 !s90 -reportprogress|300|-work|SIM_SENDERTOP_WORK|-2002|-explicit|-stats=none|/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/demodulator.vhd|
-Z39 !s107 /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/demodulator.vhd|
+R18
+Z44 !s90 -reportprogress|300|-work|SIM_SENDERTOP_WORK|-2002|-explicit|-stats=none|/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/demodulator.vhd|
+Z45 !s107 /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/demodulator.vhd|
 !i113 1
 R11
 R12
@@ -207,7 +248,7 @@ R14
 R1
 R2
 DEx4 work 11 demodulator 0 22 WO;_oiX::U]f>>_UKN5z>3
-!i122 517
+!i122 648
 l37
 L13 39
 VU]iAATX7JIjSR_AOgYnCX2
@@ -216,21 +257,21 @@ R6
 32
 R17
 !i10b 1
-R8
-R38
-R39
+R18
+R44
+R45
 !i113 1
 R11
 R12
 Emod_conv_rx_new
-Z40 w1623841307
+Z46 w1623841307
 R14
 R1
 R2
-!i122 524
+!i122 655
 R3
-Z41 8/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/RX/conv_rx_new.vhd
-Z42 F/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/RX/conv_rx_new.vhd
+Z47 8/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/RX/conv_rx_new.vhd
+Z48 F/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/RX/conv_rx_new.vhd
 l0
 L6 1
 VdkQK8[g5gj:GjDI;7a8JF0
@@ -240,8 +281,8 @@ R6
 R17
 !i10b 1
 R18
-Z43 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/RX/conv_rx_new.vhd|
-Z44 !s107 /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/RX/conv_rx_new.vhd|
+Z49 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/RX/conv_rx_new.vhd|
+Z50 !s107 /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/RX/conv_rx_new.vhd|
 !i113 1
 R21
 R12
@@ -250,7 +291,7 @@ R14
 R1
 R2
 DEx4 work 15 mod_conv_rx_new 0 22 dkQK8[g5gj:GjDI;7a8JF0
-!i122 524
+!i122 655
 l61
 L52 90
 VH4L1<_B@4BWMzeLVzDR>]1
@@ -260,20 +301,20 @@ R6
 R17
 !i10b 1
 R18
-R43
-R44
+R49
+R50
 !i113 1
 R21
 R12
 Emod_convolution
-Z45 w1623840294
+Z51 w1623840294
 R14
 R1
 R2
-!i122 520
+!i122 651
 R3
-Z46 8/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/TX/mod_conv_new.vhd
-Z47 F/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/TX/mod_conv_new.vhd
+Z52 8/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/TX/mod_conv_new.vhd
+Z53 F/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/TX/mod_conv_new.vhd
 l0
 L4 1
 VU1g0=``Fj?8h>@^BW?Umk1
@@ -283,8 +324,8 @@ R6
 R17
 !i10b 1
 R18
-Z48 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/TX/mod_conv_new.vhd|
-Z49 !s107 /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/TX/mod_conv_new.vhd|
+Z54 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/TX/mod_conv_new.vhd|
+Z55 !s107 /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/TX/mod_conv_new.vhd|
 !i113 1
 R21
 R12
@@ -293,7 +334,7 @@ R14
 R1
 R2
 DEx4 work 15 mod_convolution 0 22 U1g0=``Fj?8h>@^BW?Umk1
-!i122 520
+!i122 651
 l55
 L47 78
 V>SgTe606ajY9LLIazZK7G0
@@ -303,31 +344,31 @@ R6
 R17
 !i10b 1
 R18
-R48
-R49
+R54
+R55
 !i113 1
 R21
 R12
 Emod_deconv
-Z50 w1623760274
+Z56 w1623760274
 R14
 R1
 R2
-!i122 525
+!i122 656
 R3
-Z51 8/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/RX/mod_deconv_new.vhd
-Z52 F/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/RX/mod_deconv_new.vhd
+Z57 8/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/RX/mod_deconv_new.vhd
+Z58 F/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/RX/mod_deconv_new.vhd
 l0
 L5 1
 V7_fQCz7O66VOX3o9hcDoh0
 !s100 dNW0W<2MhZ<KDV>h3>OD70
 R6
 32
-R17
+R30
 !i10b 1
 R18
-Z53 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/RX/mod_deconv_new.vhd|
-Z54 !s107 /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/RX/mod_deconv_new.vhd|
+Z59 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/RX/mod_deconv_new.vhd|
+Z60 !s107 /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/RX/mod_deconv_new.vhd|
 !i113 1
 R21
 R12
@@ -336,41 +377,41 @@ R14
 R1
 R2
 DEx4 work 10 mod_deconv 0 22 7_fQCz7O66VOX3o9hcDoh0
-!i122 525
+!i122 656
 l28
 L22 57
 VQYjKUkh<L]aUW[9FZ1_:B1
 !s100 J3feh[kjjf2UGkdA5f0fQ1
 R6
 32
-R17
+R30
 !i10b 1
 R18
-R53
-R54
+R59
+R60
 !i113 1
 R21
 R12
 Emod_deshaper
-Z55 w1623667513
+Z61 w1623667513
 R14
 R1
 R2
 !i122 458
 R3
-Z56 8/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/RX/mod_deshaper.vhd
-Z57 F/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/RX/mod_deshaper.vhd
+Z62 8/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/RX/mod_deshaper.vhd
+Z63 F/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/RX/mod_deshaper.vhd
 l0
 L5 1
 VbZ27OFZ0?3L]RffBlAm062
 !s100 4f;9@K[1;dnLB9WCPbEal2
 R6
 32
-Z58 !s110 1623742449
+Z64 !s110 1623742449
 !i10b 1
-Z59 !s108 1623742449.000000
-Z60 !s90 -reportprogress|300|-work|SIM_SENDERTOP_WORK|-2002|-explicit|-stats=none|/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/RX/mod_deshaper.vhd|
-Z61 !s107 /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/RX/mod_deshaper.vhd|
+Z65 !s108 1623742449.000000
+Z66 !s90 -reportprogress|300|-work|SIM_SENDERTOP_WORK|-2002|-explicit|-stats=none|/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/RX/mod_deshaper.vhd|
+Z67 !s107 /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/RX/mod_deshaper.vhd|
 !i113 1
 R11
 R12
@@ -386,33 +427,33 @@ VzFE8<4Bz683>`[l4jC_g:3
 !s100 g_Ao<kO]:7X_V^9GSGV^V3
 R6
 32
-R58
+R64
 !i10b 1
-R59
-R60
-R61
+R65
+R66
+R67
 !i113 1
 R11
 R12
 Emod_interface_rx
-Z62 w1623761282
+Z68 w1623761282
 R1
 R2
-!i122 526
+!i122 657
 R3
-Z63 8/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/RX/MOD_interface_rx.vhd
-Z64 F/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/RX/MOD_interface_rx.vhd
+Z69 8/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/RX/MOD_interface_rx.vhd
+Z70 F/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/RX/MOD_interface_rx.vhd
 l0
 L3 1
 V;F[HioVBn>JjnH3P_fH4X3
 !s100 ;@b?PiFEUkZB6]<17bQ_c0
 R6
 32
-R17
+R30
 !i10b 1
-R18
-Z65 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/RX/MOD_interface_rx.vhd|
-Z66 !s107 /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/RX/MOD_interface_rx.vhd|
+R31
+Z71 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/RX/MOD_interface_rx.vhd|
+Z72 !s107 /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/RX/MOD_interface_rx.vhd|
 !i113 1
 R21
 R12
@@ -420,32 +461,32 @@ Artl
 R1
 R2
 DEx4 work 16 mod_interface_rx 0 22 ;F[HioVBn>JjnH3P_fH4X3
-!i122 526
+!i122 657
 l24
 L21 21
 Vh;hzG:TFlbQoVcENWSn0V0
 !s100 <X7h0R8Y4JN^H8ezHIH7k0
 R6
 32
-R17
+R30
 !i10b 1
-R18
-R65
-R66
+R31
+R71
+R72
 !i113 1
 R21
 R12
 Emod_interface_tx
-Z67 w1623840363
-R29
-R30
+Z73 w1623840363
+R35
+R36
 R14
 R1
 R2
-!i122 521
+!i122 652
 R3
-Z68 8/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/TX/Mod_interface_TX.vhd
-Z69 F/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/TX/Mod_interface_TX.vhd
+Z74 8/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/TX/Mod_interface_TX.vhd
+Z75 F/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/TX/Mod_interface_TX.vhd
 l0
 L5 1
 VVUjN@J74_c3`cm2@]jbRF0
@@ -455,19 +496,19 @@ R6
 R17
 !i10b 1
 R18
-Z70 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/TX/Mod_interface_TX.vhd|
-Z71 !s107 /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/TX/Mod_interface_TX.vhd|
+Z76 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/TX/Mod_interface_TX.vhd|
+Z77 !s107 /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/TX/Mod_interface_TX.vhd|
 !i113 1
 R21
 R12
 Artl
-R29
-R30
+R35
+R36
 R14
 R1
 R2
 DEx4 work 16 mod_interface_tx 0 22 VUjN@J74_c3`cm2@]jbRF0
-!i122 521
+!i122 652
 l30
 L23 65
 VA@jzSlT27FFj^VBJN1;1U3
@@ -477,20 +518,20 @@ R6
 R17
 !i10b 1
 R18
-R70
-R71
+R76
+R77
 !i113 1
 R21
 R12
 Emod_shaper
-Z72 w1623758076
+Z78 w1623758076
 R14
 R1
 R2
-!i122 522
+!i122 653
 R3
-Z73 8/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/TX/mod_shaper.vhd
-Z74 F/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/TX/mod_shaper.vhd
+Z79 8/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/TX/mod_shaper.vhd
+Z80 F/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/TX/mod_shaper.vhd
 l0
 L5 1
 VU`?FbS9VLU9M2VdV?^oDB1
@@ -500,8 +541,8 @@ R6
 R17
 !i10b 1
 R18
-Z75 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/TX/mod_shaper.vhd|
-Z76 !s107 /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/TX/mod_shaper.vhd|
+Z81 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/TX/mod_shaper.vhd|
+Z82 !s107 /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/TX/mod_shaper.vhd|
 !i113 1
 R21
 R12
@@ -510,7 +551,7 @@ R14
 R1
 R2
 DEx4 work 10 mod_shaper 0 22 U`?FbS9VLU9M2VdV?^oDB1
-!i122 522
+!i122 653
 l28
 L22 74
 VneP_;5>UjDd[;[C[j35j:0
@@ -520,64 +561,64 @@ R6
 R17
 !i10b 1
 R18
-R75
-R76
+R81
+R82
 !i113 1
 R21
 R12
 Emodulation_top_tb
-Z77 w1623750221
-Z78 DPx4 ieee 16 std_logic_textio 0 22 ^l:n6VFdg74Q?CKDhjD]D3
+Z83 w1623922596
+Z84 DPx4 ieee 16 std_logic_textio 0 22 ^l:n6VFdg74Q?CKDhjD]D3
 R14
 R1
 R2
-!i122 513
+!i122 663
 R3
-Z79 8/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/modulation_top_tb.vhd
-Z80 F/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/modulation_top_tb.vhd
+Z85 8/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/modulation_top_tb.vhd
+Z86 F/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/modulation_top_tb.vhd
 l0
 L7 1
 V=aDKQAkj7eOMeTMf4S??I1
 !s100 YZPRoN8=MlV@_i4ka981W0
 R6
 32
-R7
+Z87 !s110 1623922611
 !i10b 1
-R8
-Z81 !s90 -reportprogress|300|-work|SIM_SENDERTOP_WORK|-2002|-explicit|-stats=none|/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/modulation_top_tb.vhd|
-Z82 !s107 /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/modulation_top_tb.vhd|
+Z88 !s108 1623922611.000000
+Z89 !s90 -reportprogress|300|-work|SIM_SENDERTOP_WORK|-2002|-explicit|-stats=none|/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/modulation_top_tb.vhd|
+Z90 !s107 /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/modulation_top_tb.vhd|
 !i113 1
 R11
 R12
 Abehavior
-R78
+R84
 R14
 R1
 R2
-DEx4 work 17 modulation_top_tb 0 22 =aDKQAkj7eOMeTMf4S??I1
-!i122 513
+Z91 DEx4 work 17 modulation_top_tb 0 22 =aDKQAkj7eOMeTMf4S??I1
+!i122 663
 l40
-L10 113
-VXPR3bTNL809l[3GK5<zE<0
-!s100 @d@lVNCW96C5CzaKg46Y12
+Z92 L10 116
+VXK[VSAhc:Q0@k@_=iYg^O1
+!s100 b7b6VJhhoQKH>:>Ujdb4B2
 R6
 32
-R7
+R87
 !i10b 1
-R8
-R81
-R82
+R88
+R89
+R90
 !i113 1
 R11
 R12
 Emodulator
-Z83 w1623667430
+Z93 w1623667430
 R1
 R2
-!i122 508
+!i122 639
 R3
-Z84 8/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/modulator.vhd
-Z85 F/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/modulator.vhd
+Z94 8/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/modulator.vhd
+Z95 F/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/modulator.vhd
 l0
 L4 1
 V2^bODY`RJlHJSJ];e;aem1
@@ -587,8 +628,8 @@ R6
 R7
 !i10b 1
 R8
-Z86 !s90 -reportprogress|300|-work|SIM_SENDERTOP_WORK|-2002|-explicit|-stats=none|/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/modulator.vhd|
-Z87 !s107 /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/modulator.vhd|
+Z96 !s90 -reportprogress|300|-work|SIM_SENDERTOP_WORK|-2002|-explicit|-stats=none|/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/modulator.vhd|
+Z97 !s107 /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/modulator.vhd|
 !i113 1
 R11
 R12
@@ -596,93 +637,11 @@ Aarch
 R1
 R2
 DEx4 work 9 modulator 0 22 2^bODY`RJlHJSJ];e;aem1
-!i122 508
+!i122 639
 l41
 L13 44
 V9=e7FA]P?MFI4M3R=_8fk1
 !s100 :HFZX7HYLRo?ME@DXH6iR1
-R6
-32
-R7
-!i10b 1
-R8
-R86
-R87
-!i113 1
-R11
-R12
-Ereciever
-Z88 w1623842209
-R1
-R2
-!i122 514
-R3
-Z89 8/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/reciever.vhd
-Z90 F/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/reciever.vhd
-l0
-L5 1
-VjdJ^oEJm4;o`^?d:DGQa10
-!s100 Odc3KzS:bCk6YjWh5z_bg1
-R6
-32
-R7
-!i10b 1
-R8
-Z91 !s90 -reportprogress|300|-work|SIM_SENDERTOP_WORK|-2002|-explicit|-stats=none|/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/reciever.vhd|
-Z92 !s107 /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/reciever.vhd|
-!i113 1
-R11
-R12
-Aloopback_arch
-R1
-R2
-DEx4 work 8 reciever 0 22 jdJ^oEJm4;o`^?d:DGQa10
-!i122 514
-l16
-L14 10
-VMcGY0A`PdlL2k:MeozE7W0
-!s100 _`:0<IiJQDZ0:IXXc]YeP3
-R6
-32
-R7
-!i10b 1
-R8
-R91
-R92
-!i113 1
-R11
-R12
-Ereciever_top
-Z93 w1623842265
-R1
-R2
-!i122 515
-R3
-Z94 8/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/reciever_top.vhd
-Z95 F/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/reciever_top.vhd
-l0
-L4 1
-V`ho?QYeieb4gl@SQKGP5i0
-!s100 ]Y5Y1A9VBjECeGNOBolja2
-R6
-32
-R7
-!i10b 1
-R8
-Z96 !s90 -reportprogress|300|-work|SIM_SENDERTOP_WORK|-2002|-explicit|-stats=none|/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/reciever_top.vhd|
-Z97 !s107 /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/reciever_top.vhd|
-!i113 1
-R11
-R12
-Aloopback_arch
-R1
-R2
-DEx4 work 12 reciever_top 0 22 `ho?QYeieb4gl@SQKGP5i0
-!i122 515
-l58
-L15 74
-VTGk_Z9>N;jYTiZU5E2ULf2
-!s100 NDTTGldM8:fjo@Ko3L6a13
 R6
 32
 R7
@@ -693,16 +652,98 @@ R97
 !i113 1
 R11
 R12
+Ereciever
+Z98 w1623922418
+R1
+R2
+!i122 661
+R3
+Z99 8/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/reciever.vhd
+Z100 F/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/reciever.vhd
+l0
+L5 1
+VjdJ^oEJm4;o`^?d:DGQa10
+!s100 Odc3KzS:bCk6YjWh5z_bg1
+R6
+32
+Z101 !s110 1623922431
+!i10b 1
+Z102 !s108 1623922431.000000
+Z103 !s90 -reportprogress|300|-work|SIM_SENDERTOP_WORK|-2002|-explicit|-stats=none|/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/reciever.vhd|
+Z104 !s107 /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/reciever.vhd|
+!i113 1
+R11
+R12
+Aloopback_arch
+R1
+R2
+DEx4 work 8 reciever 0 22 jdJ^oEJm4;o`^?d:DGQa10
+!i122 661
+l19
+L14 40
+VOZkjb5b`M8Ei9CJHDfV>12
+!s100 kCAcih8F700U<Nn^F::oF2
+R6
+32
+R101
+!i10b 1
+R102
+R103
+R104
+!i113 1
+R11
+R12
+Ereciever_top
+Z105 w1623922453
+R1
+R2
+!i122 662
+R3
+Z106 8/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/reciever_top.vhd
+Z107 F/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/reciever_top.vhd
+l0
+L4 1
+VCfLJGcYzDCmToPE0;Q^bC2
+!s100 6GVQ0noTU4YaB8ZK]GK@Q0
+R6
+32
+Z108 !s110 1623922461
+!i10b 1
+Z109 !s108 1623922460.000000
+Z110 !s90 -reportprogress|300|-work|SIM_SENDERTOP_WORK|-2002|-explicit|-stats=none|/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/reciever_top.vhd|
+Z111 !s107 /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/reciever_top.vhd|
+!i113 1
+R11
+R12
+Aloopback_arch
+R1
+R2
+DEx4 work 12 reciever_top 0 22 CfLJGcYzDCmToPE0;Q^bC2
+!i122 662
+l58
+L15 74
+VTGk_Z9>N;jYTiZU5E2ULf2
+!s100 NDTTGldM8:fjo@Ko3L6a13
+R6
+32
+R108
+!i10b 1
+R109
+R110
+R111
+!i113 1
+R11
+R12
 Ereciever_top_tb
-Z98 w1623833855
-R78
+Z112 w1623833855
+R84
 R14
 R1
 R2
-!i122 518
+!i122 649
 R3
-Z99 8/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/reciever_top_tb.vhd
-Z100 F/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/reciever_top_tb.vhd
+Z113 8/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/reciever_top_tb.vhd
+Z114 F/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/reciever_top_tb.vhd
 l0
 L7 1
 V;:G]Phdiz_Nf57]Z0_16=3
@@ -712,18 +753,18 @@ R6
 R17
 !i10b 1
 R18
-Z101 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/reciever_top_tb.vhd|
-Z102 !s107 /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/reciever_top_tb.vhd|
+Z115 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/reciever_top_tb.vhd|
+Z116 !s107 /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/reciever_top_tb.vhd|
 !i113 1
 R21
 R12
 Abehavior
-R78
+R84
 R14
 R1
 R2
 DEx4 work 15 reciever_top_tb 0 22 ;:G]Phdiz_Nf57]Z0_16=3
-!i122 518
+!i122 649
 l33
 L10 84
 VMMZRGVQP7<CO@d]SbJZSd2
@@ -733,30 +774,30 @@ R6
 R17
 !i10b 1
 R18
-R101
-R102
+R115
+R116
 !i113 1
 R21
 R12
 Erx_modulation_top
-R62
+R68
 R1
 R2
-!i122 527
+!i122 658
 R3
-Z103 8/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/RX/RX_modulation_top.vhd
-Z104 F/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/RX/RX_modulation_top.vhd
+Z117 8/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/RX/RX_modulation_top.vhd
+Z118 F/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/RX/RX_modulation_top.vhd
 l0
 L6 1
 Vi;7KhFEG2c1ojDQOk[KQQ3
 !s100 NRlTa]WgBKXaHO4YVgKZR1
 R6
 32
-Z105 !s110 1623846724
+R30
 !i10b 1
-R18
-Z106 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/RX/RX_modulation_top.vhd|
-Z107 !s107 /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/RX/RX_modulation_top.vhd|
+R31
+Z119 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/RX/RX_modulation_top.vhd|
+Z120 !s107 /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/RX/RX_modulation_top.vhd|
 !i113 1
 R21
 R12
@@ -764,72 +805,72 @@ Artl
 R1
 R2
 DEx4 work 17 rx_modulation_top 0 22 i;7KhFEG2c1ojDQOk[KQQ3
-!i122 527
+!i122 658
 l65
-Z108 L26 90
+L26 90
 VA:jG=2oZ=cmJg;3nXIMba1
-Z109 !s100 [9gefCKUIC8Ei1jLL3ZYG3
+!s100 [9gefCKUIC8Ei1jLL3ZYG3
 R6
 32
-R105
+R30
 !i10b 1
-R18
-R106
-R107
+R31
+R119
+R120
 !i113 1
 R21
 R12
 Esender_top
-Z110 w1623829838
+Z121 w1623920676
 R1
 R2
-!i122 509
+!i122 640
 R3
-Z111 8/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/sender_top.vhd
-Z112 F/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/sender_top.vhd
+Z122 8/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/sender_top.vhd
+Z123 F/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/sender_top.vhd
 l0
 L4 1
-V0jnLINDQYfG6<CB]>QNA=1
-!s100 zV5YW:b=@5W]`F6YS;klI2
+VX6hYM<_[kC=OQnXBO75LA0
+!s100 N>;X4QKP]OZPgo9RD`ONS3
 R6
 32
 R7
 !i10b 1
 R8
-Z113 !s90 -reportprogress|300|-work|SIM_SENDERTOP_WORK|-2002|-explicit|-stats=none|/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/sender_top.vhd|
-Z114 !s107 /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/sender_top.vhd|
+Z124 !s90 -reportprogress|300|-work|SIM_SENDERTOP_WORK|-2002|-explicit|-stats=none|/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/sender_top.vhd|
+Z125 !s107 /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/sender_top.vhd|
 !i113 1
 R11
 R12
 Aarch
 R1
 R2
-DEx4 work 10 sender_top 0 22 0jnLINDQYfG6<CB]>QNA=1
-!i122 509
-l84
-L17 123
-V5e`9kk8BnGc>oacAFPH]W1
-!s100 K<?]@?b8KW4[:dW=GM[Ah1
+DEx4 work 10 sender_top 0 22 X6hYM<_[kC=OQnXBO75LA0
+!i122 640
+l77
+L14 107
+V?F2IGcD;P8C^U:G[50e=^1
+!s100 Y=XA:N[a2Bg4;fRLZ?RTa3
 R6
 32
 R7
 !i10b 1
 R8
-R113
-R114
+R124
+R125
 !i113 1
 R11
 R12
 Esender_top_tb
-Z115 w1623678566
-R78
+Z126 w1623678566
+R84
 R14
 R1
 R2
-!i122 510
+!i122 641
 R3
-Z116 8/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/sender_top_tb.vhd
-Z117 F/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/sender_top_tb.vhd
+Z127 8/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/sender_top_tb.vhd
+Z128 F/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/sender_top_tb.vhd
 l0
 L7 1
 VL8UbjTabn>N;QE44=153j1
@@ -839,20 +880,20 @@ R6
 R7
 !i10b 1
 R8
-Z118 !s90 -reportprogress|300|-work|SIM_SENDERTOP_WORK|-2002|-explicit|-stats=none|/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/sender_top_tb.vhd|
-Z119 !s107 /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/sender_top_tb.vhd|
+Z129 !s90 -reportprogress|300|-work|SIM_SENDERTOP_WORK|-2002|-explicit|-stats=none|/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/sender_top_tb.vhd|
+Z130 !s107 /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/sender_top_tb.vhd|
 !i113 1
 R11
 R12
 Abehavior
-R78
+R84
 R14
 R1
 R2
 DEx4 work 13 sender_top_tb 0 22 L8UbjTabn>N;QE44=153j1
-!i122 510
+!i122 641
 l33
-L10 116
+R92
 VYIG]TWnadi5iTnZ^NXNCV0
 !s100 CQJR]=c<UoSLDHoD1M1z53
 R6
@@ -860,21 +901,21 @@ R6
 R7
 !i10b 1
 R8
-R118
-R119
+R129
+R130
 !i113 1
 R11
 R12
 Esin_gen
-Z120 w1623666010
-R29
-R30
+Z131 w1623666010
+R35
+R36
 R1
 R2
-!i122 511
+!i122 642
 R3
-Z121 8/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/sin_gen.vhd
-Z122 F/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/sin_gen.vhd
+Z132 8/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/sin_gen.vhd
+Z133 F/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/sin_gen.vhd
 l0
 L8 1
 VA8oP78c>V3>6nE`<NJ2G30
@@ -884,18 +925,18 @@ R6
 R7
 !i10b 1
 R8
-Z123 !s90 -reportprogress|300|-work|SIM_SENDERTOP_WORK|-2002|-explicit|-stats=none|/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/sin_gen.vhd|
-Z124 !s107 /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/sin_gen.vhd|
+Z134 !s90 -reportprogress|300|-work|SIM_SENDERTOP_WORK|-2002|-explicit|-stats=none|/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/sin_gen.vhd|
+Z135 !s107 /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/sin_gen.vhd|
 !i113 1
 R11
 R12
 Artl
-R29
-R30
+R35
+R36
 R1
 R2
 DEx4 work 7 sin_gen 0 22 A8oP78c>V3>6nE`<NJ2G30
-!i122 511
+!i122 642
 l28
 L24 51
 V<Tk]GCNF6<One5PnIHB0^1
@@ -905,30 +946,30 @@ R6
 R7
 !i10b 1
 R8
-R123
-R124
+R134
+R135
 !i113 1
 R11
 R12
 Esync
-Z125 w1623679924
+Z136 w1623679924
 R1
 R2
-!i122 516
+!i122 647
 R3
-Z126 8/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/sync.vhd
-Z127 F/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/sync.vhd
+Z137 8/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/sync.vhd
+Z138 F/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/sync.vhd
 l0
 L4 1
 VM_8FFJ33E0CKXHoI8g4lE1
 !s100 :M=D45>R@@:S_9dX_IfM23
 R6
 32
-R7
+R17
 !i10b 1
-R8
-Z128 !s90 -reportprogress|300|-work|SIM_SENDERTOP_WORK|-2002|-explicit|-stats=none|/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/sync.vhd|
-Z129 !s107 /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/sync.vhd|
+R18
+Z139 !s90 -reportprogress|300|-work|SIM_SENDERTOP_WORK|-2002|-explicit|-stats=none|/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/sync.vhd|
+Z140 !s107 /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/sync.vhd|
 !i113 1
 R11
 R12
@@ -936,31 +977,31 @@ Aarch
 R1
 R2
 DEx4 work 4 sync 0 22 M_8FFJ33E0CKXHoI8g4lE1
-!i122 516
+!i122 647
 l16
 L13 10
 Ve5OHlAbIh[aP=ISk@ANoe2
 !s100 NVZ1VBf4`U_[bd4Gm<bG;3
 R6
 32
-R7
+R17
 !i10b 1
-R8
-R128
-R129
+R18
+R139
+R140
 !i113 1
 R11
 R12
 Etest_controller_tb
 w1623668423
-R78
+R84
 R14
 R1
 R2
 !i122 16
 R3
-R116
-R117
+R127
+R128
 l0
 L7 1
 V1ocURPIoc>f;JZI@:CCLj0
@@ -970,20 +1011,20 @@ R6
 !s110 1623668428
 !i10b 1
 !s108 1623668428.000000
-R118
-R119
+R129
+R130
 !i113 1
 R11
 R12
 Etx_modulation_top
-Z130 w1623760291
+Z141 w1623760291
 R14
 R1
 R2
-!i122 523
+!i122 654
 R3
-Z131 8/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/TX/TX_modulation_top.vhd
-Z132 F/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/TX/TX_modulation_top.vhd
+Z142 8/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/TX/TX_modulation_top.vhd
+Z143 F/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/TX/TX_modulation_top.vhd
 l0
 L9 1
 VlDJ2;[L;KoUeDZc<0VP[B2
@@ -993,8 +1034,8 @@ R6
 R17
 !i10b 1
 R18
-Z133 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/TX/TX_modulation_top.vhd|
-Z134 !s107 /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/TX/TX_modulation_top.vhd|
+Z144 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/TX/TX_modulation_top.vhd|
+Z145 !s107 /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/vhdl_code/TX/TX_modulation_top.vhd|
 !i113 1
 R21
 R12
@@ -1003,7 +1044,7 @@ R14
 R1
 R2
 DEx4 work 17 tx_modulation_top 0 22 lDJ2;[L;KoUeDZc<0VP[B2
-!i122 523
+!i122 654
 l65
 L34 68
 VKDhEY:Q>S`A81g9K9D?bb1
@@ -1013,8 +1054,8 @@ R6
 R17
 !i10b 1
 R18
-R133
-R134
+R144
+R145
 !i113 1
 R21
 R12

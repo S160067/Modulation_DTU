@@ -5,7 +5,7 @@ entity reciever_top is
 port (
 	clk, reset : in std_logic;
 	data_i, data_q  : in std_logic_vector(13 downto 0);
-	fifo_full : in std_logic;
+	fifo_full  : in std_logic;
 	bitstream, fifo_wr : out std_logic;
 	debug_data_mod : out std_logic_vector(1 downto 0);
 	debug_valid : out std_logic

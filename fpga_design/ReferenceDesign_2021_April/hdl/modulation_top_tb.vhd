@@ -61,7 +61,7 @@ UUT_TX: component sender_top port map(
       modulation_scheme_select => modulation_scheme_select
 ); 
 
-data_i_rx <= data_q_tx;
+data_i_rx <= data_i_tx;
 data_q_rx <= data_q_tx;
 
 -- Clock process definitions
@@ -72,7 +72,37 @@ wait for clock_period/2;
 clk <= '1';
 wait for clock_period/2;
 end process;
- 
+
+fifo_input :process
+begin
+   -- Test 00
+   wait until fifo_read_en = '1';
+   wait for clock_period;
+   bitstream_in <= '0';
+   wait for clock_period;
+   bitstream_in <= '0';
+
+      -- Test 10
+   wait until fifo_read_en = '1';
+   wait for clock_period;
+   bitstream_in <= '1';
+   wait for clock_period;
+   bitstream_in <= '0';
+
+         -- Test 10
+   wait until fifo_read_en = '1';
+   wait for clock_period;
+   bitstream_in <= '0';
+   wait for clock_period;
+   bitstream_in <= '1';
+        -- Test 10
+   wait until fifo_read_en = '1';
+   wait for clock_period;
+   bitstream_in <= '1';
+   wait for clock_period;
+   bitstream_in <= '1'; 
+end process;
+
 
 -- Stimulus process
 stim_proc: process
@@ -88,33 +118,6 @@ begin
    modulation_scheme_select <= '0';
    fifo_empty <= '0';
    
-   -- Test 10
-   wait until fifo_read_en = '1';
-   wait for clock_period;
-   bitstream_in <= '0';
-   wait for clock_period;
-   bitstream_in <= '1';
-
-   -- Test 01
-   wait until fifo_read_en = '1';
-   wait for clock_period;
-   bitstream_in <= '1';
-   wait for clock_period;
-   bitstream_in <= '0';
-
-   -- Test 00
-   wait until fifo_read_en = '1';
-   wait for clock_period;
-   bitstream_in <= '0';
-   wait for clock_period;
-   bitstream_in <= '0';
-
-   -- Test 01
-   wait until fifo_read_en = '1';
-   wait for clock_period;
-   bitstream_in <= '1';
-   wait for clock_period;
-   bitstream_in <= '1';
 
    wait;
 end process;
