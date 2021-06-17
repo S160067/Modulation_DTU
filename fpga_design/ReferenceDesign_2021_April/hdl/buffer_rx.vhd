@@ -74,7 +74,14 @@ BEGIN
 	WHEN end_state =>
 		if(fifo_full = '0') then
 			fifo_wr <= '1';
+			if(valid = '1') THEN
+			reg_in_en <='1';				
+			next_state <= loadfirst_state;
+		else 
+			next_state <= idle_state;
 		end if;
+		end if;
+		
 	END CASE;
 END PROCESS;
 

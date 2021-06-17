@@ -11,7 +11,6 @@ entity modulation_top is
 		fifo_bitstream_in, fifo_empty, fifo_full : in std_logic;
 		modulation_scheme_select : in std_logic;
 		fifo_bitstream_out, fifo_wr, fifo_read_en : out std_logic;
-		modulation_scheme_select : in std_logic;
 		debug_select : in std_logic
 	);
 end modulation_top;
