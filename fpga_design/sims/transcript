@@ -440,3 +440,246 @@ restart -f
 run
 restart
 run
+# Compile of buffer_tx.vhd was successful.
+# Compile of cos_gen.vhd was successful.
+# Compile of modulator.vhd was successful.
+# Compile of sender_top.vhd was successful.
+# Compile of sender_top_tb.vhd was successful.
+# Compile of sin_gen.vhd was successful.
+# Compile of buffer_rx.vhd was successful.
+# Compile of modulation_top_tb.vhd was successful.
+# Compile of reciever.vhd was successful.
+# Compile of reciever_top.vhd was successful.
+# Compile of sync.vhd was successful.
+# Compile of demodulator.vhd was successful.
+# Compile of reciever_top_tb.vhd was successful.
+# Compile of buffer_rx_tb.vhd was successful.
+# Compile of mod_conv_new.vhd was successful.
+# Compile of Mod_interface_TX.vhd was successful.
+# Compile of mod_shaper.vhd was successful.
+# Compile of TX_modulation_top.vhd was successful.
+# Compile of conv_rx_new.vhd was successful.
+# Compile of mod_deconv_new.vhd was successful.
+# Compile of MOD_interface_rx.vhd was successful.
+# Compile of RX_modulation_top.vhd was successful.
+# Compile of buffer_tx_tb.vhd was successful.
+# Compile of modulation_top_sim.vhd was successful.
+# 24 compiles, 0 failed with no errors.
+# Compile of buffer_tx.vhd was successful.
+# Compile of cos_gen.vhd was successful.
+# Compile of modulator.vhd was successful.
+# Compile of sender_top.vhd was successful.
+# Compile of sender_top_tb.vhd was successful.
+# Compile of sin_gen.vhd was successful.
+# Compile of buffer_rx.vhd was successful.
+# Compile of modulation_top_tb.vhd was successful.
+# Compile of reciever.vhd was successful.
+# Compile of reciever_top.vhd was successful.
+# Compile of sync.vhd was successful.
+# Compile of demodulator.vhd was successful.
+# Compile of reciever_top_tb.vhd was successful.
+# Compile of buffer_rx_tb.vhd was successful.
+# Compile of mod_conv_new.vhd was successful.
+# Compile of Mod_interface_TX.vhd was successful.
+# Compile of mod_shaper.vhd was successful.
+# Compile of TX_modulation_top.vhd was successful.
+# Compile of conv_rx_new.vhd was successful.
+# Compile of mod_deconv_new.vhd was successful.
+# Compile of MOD_interface_rx.vhd was successful.
+# Compile of RX_modulation_top.vhd was successful.
+# Compile of buffer_tx_tb.vhd was successful.
+# Compile of modulation_top_sim.vhd failed with 1 errors.
+# 24 compiles, 1 failed with 1 error.
+# Compile of buffer_tx.vhd was successful.
+# Compile of cos_gen.vhd was successful.
+# Compile of modulator.vhd was successful.
+# Compile of sender_top.vhd was successful.
+# Compile of sender_top_tb.vhd was successful.
+# Compile of sin_gen.vhd was successful.
+# Compile of buffer_rx.vhd was successful.
+# Compile of modulation_top_tb.vhd was successful.
+# Compile of reciever.vhd was successful.
+# Compile of reciever_top.vhd was successful.
+# Compile of sync.vhd was successful.
+# Compile of demodulator.vhd was successful.
+# Compile of reciever_top_tb.vhd was successful.
+# Compile of buffer_rx_tb.vhd was successful.
+# Compile of mod_conv_new.vhd was successful.
+# Compile of Mod_interface_TX.vhd was successful.
+# Compile of mod_shaper.vhd was successful.
+# Compile of TX_modulation_top.vhd was successful.
+# Compile of conv_rx_new.vhd was successful.
+# Compile of mod_deconv_new.vhd was successful.
+# Compile of MOD_interface_rx.vhd was successful.
+# Compile of RX_modulation_top.vhd was successful.
+# Compile of buffer_tx_tb.vhd was successful.
+# Compile of modulation_top_sim.vhd was successful.
+# 24 compiles, 0 failed with no errors.
+# Compile of modulation_FINAL_TB.vhd failed with 2 errors.
+# Compile of modulation_FINAL_TB.vhd was successful.
+vsim SIM_SENDERTOP_WORK.buffer_rx SIM_SENDERTOP_WORK.buffer_tx SIM_SENDERTOP_WORK.cos_gen SIM_SENDERTOP_WORK.demodulator SIM_SENDERTOP_WORK.mod_conv_rx_new SIM_SENDERTOP_WORK.mod_convolution SIM_SENDERTOP_WORK.mod_deconv SIM_SENDERTOP_WORK.mod_deshaper SIM_SENDERTOP_WORK.mod_interface_rx SIM_SENDERTOP_WORK.mod_interface_tx SIM_SENDERTOP_WORK.mod_shaper SIM_SENDERTOP_WORK.modulation_top_sim SIM_SENDERTOP_WORK.modulation_top_tb SIM_SENDERTOP_WORK.modulator SIM_SENDERTOP_WORK.reciever SIM_SENDERTOP_WORK.reciever_top SIM_SENDERTOP_WORK.rx_modulation_top SIM_SENDERTOP_WORK.sender_top SIM_SENDERTOP_WORK.sin_gen SIM_SENDERTOP_WORK.sync SIM_SENDERTOP_WORK.tx_modulation_top
+# End time: 11:02:33 on Jun 21,2021, Elapsed time: 96:19:12
+# Errors: 0, Warnings: 8
+# vsim SIM_SENDERTOP_WORK.buffer_rx SIM_SENDERTOP_WORK.buffer_tx SIM_SENDERTOP_WORK.cos_gen SIM_SENDERTOP_WORK.demodulator SIM_SENDERTOP_WORK.mod_conv_rx_new SIM_SENDERTOP_WORK.mod_convolution SIM_SENDERTOP_WORK.mod_deconv SIM_SENDERTOP_WORK.mod_deshaper SIM_SENDERTOP_WORK.mod_interface_rx SIM_SENDERTOP_WORK.mod_interface_tx SIM_SENDERTOP_WORK.mod_shaper SIM_SENDERTOP_WORK.modulation_top_sim SIM_SENDERTOP_WORK.modulation_top_tb SIM_SENDERTOP_WORK.modulator SIM_SENDERTOP_WORK.reciever SIM_SENDERTOP_WORK.reciever_top SIM_SENDERTOP_WORK.rx_modulation_top SIM_SENDERTOP_WORK.sender_top SIM_SENDERTOP_WORK.sin_gen SIM_SENDERTOP_WORK.sync SIM_SENDERTOP_WORK.tx_modulation_top 
+# Start time: 11:02:33 on Jun 21,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading SIM_SENDERTOP_WORK.buffer_rx(arch)
+# Loading SIM_SENDERTOP_WORK.buffer_tx(arch)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading SIM_SENDERTOP_WORK.cos_gen(rtl)
+# Loading ieee.numeric_std(body)
+# Loading SIM_SENDERTOP_WORK.demodulator(arch)
+# Loading SIM_SENDERTOP_WORK.mod_conv_rx_new(rtl)
+# Loading SIM_SENDERTOP_WORK.mod_convolution(rtl)
+# Loading SIM_SENDERTOP_WORK.mod_deconv(rtl)
+# Loading SIM_SENDERTOP_WORK.mod_deshaper(rtl)
+# Loading SIM_SENDERTOP_WORK.mod_interface_rx(rtl)
+# Loading SIM_SENDERTOP_WORK.mod_interface_tx(rtl)
+# Loading SIM_SENDERTOP_WORK.mod_shaper(rtl)
+# Loading SIM_SENDERTOP_WORK.modulation_top_sim(loopback_arch)
+# Loading ieee.std_logic_textio(body)
+# Loading SIM_SENDERTOP_WORK.modulation_top_tb(behavior)
+# Loading SIM_SENDERTOP_WORK.modulator(arch)
+# Loading SIM_SENDERTOP_WORK.reciever(loopback_arch)
+# Loading SIM_SENDERTOP_WORK.reciever_top(loopback_arch)
+# Loading SIM_SENDERTOP_WORK.rx_modulation_top(rtl)
+# Loading SIM_SENDERTOP_WORK.sender_top(arch)
+# Loading SIM_SENDERTOP_WORK.sin_gen(rtl)
+# Loading SIM_SENDERTOP_WORK.sync(arch)
+# Loading SIM_SENDERTOP_WORK.tx_modulation_top(rtl)
+# ** Error: (vsim-3732) No default binding for component instance 'sender_inst'.
+#    The following component port is not on the entity:
+#           debug_select
+#    Time: 0 ps  Iteration: 0  Instance: /modulation_top_sim/sender_inst File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/modulation_top_sim.vhd Line: 59
+# ** Error: (vsim-3732) No default binding for component instance 'sender_inst'.
+#    The following component port is not on the entity:
+#           debug_select
+#    Time: 0 ps  Iteration: 0  Instance: /modulation_top_tb/UUT_mod_top/sender_inst File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/modulation_top_sim.vhd Line: 59
+# Error loading design
+# End time: 11:02:33 on Jun 21,2021, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 1
+# Compile of modulation_FINAL_TB.vhd was successful.
+vsim SIM_SENDERTOP_WORK.buffer_rx SIM_SENDERTOP_WORK.buffer_tx SIM_SENDERTOP_WORK.cos_gen SIM_SENDERTOP_WORK.demodulator SIM_SENDERTOP_WORK.mod_conv_rx_new SIM_SENDERTOP_WORK.mod_convolution SIM_SENDERTOP_WORK.mod_deconv SIM_SENDERTOP_WORK.mod_deshaper SIM_SENDERTOP_WORK.mod_interface_rx SIM_SENDERTOP_WORK.mod_interface_tx SIM_SENDERTOP_WORK.mod_shaper SIM_SENDERTOP_WORK.modulation_final_tb SIM_SENDERTOP_WORK.modulation_top SIM_SENDERTOP_WORK.modulation_top_sim SIM_SENDERTOP_WORK.modulator SIM_SENDERTOP_WORK.reciever SIM_SENDERTOP_WORK.reciever_top SIM_SENDERTOP_WORK.rx_modulation_top SIM_SENDERTOP_WORK.sender_top SIM_SENDERTOP_WORK.sin_gen SIM_SENDERTOP_WORK.sync SIM_SENDERTOP_WORK.tx_modulation_top
+# vsim SIM_SENDERTOP_WORK.buffer_rx SIM_SENDERTOP_WORK.buffer_tx SIM_SENDERTOP_WORK.cos_gen SIM_SENDERTOP_WORK.demodulator SIM_SENDERTOP_WORK.mod_conv_rx_new SIM_SENDERTOP_WORK.mod_convolution SIM_SENDERTOP_WORK.mod_deconv SIM_SENDERTOP_WORK.mod_deshaper SIM_SENDERTOP_WORK.mod_interface_rx SIM_SENDERTOP_WORK.mod_interface_tx SIM_SENDERTOP_WORK.mod_shaper SIM_SENDERTOP_WORK.modulation_final_tb SIM_SENDERTOP_WORK.modulation_top SIM_SENDERTOP_WORK.modulation_top_sim SIM_SENDERTOP_WORK.modulator SIM_SENDERTOP_WORK.reciever SIM_SENDERTOP_WORK.reciever_top SIM_SENDERTOP_WORK.rx_modulation_top SIM_SENDERTOP_WORK.sender_top SIM_SENDERTOP_WORK.sin_gen SIM_SENDERTOP_WORK.sync SIM_SENDERTOP_WORK.tx_modulation_top 
+# Start time: 11:04:26 on Jun 21,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading SIM_SENDERTOP_WORK.buffer_rx(arch)
+# Loading SIM_SENDERTOP_WORK.buffer_tx(arch)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading SIM_SENDERTOP_WORK.cos_gen(rtl)
+# Loading ieee.numeric_std(body)
+# Loading SIM_SENDERTOP_WORK.demodulator(arch)
+# Loading SIM_SENDERTOP_WORK.mod_conv_rx_new(rtl)
+# Loading SIM_SENDERTOP_WORK.mod_convolution(rtl)
+# Loading SIM_SENDERTOP_WORK.mod_deconv(rtl)
+# Loading SIM_SENDERTOP_WORK.mod_deshaper(rtl)
+# Loading SIM_SENDERTOP_WORK.mod_interface_rx(rtl)
+# Loading SIM_SENDERTOP_WORK.mod_interface_tx(rtl)
+# Loading SIM_SENDERTOP_WORK.mod_shaper(rtl)
+# Loading ieee.std_logic_textio(body)
+# Loading SIM_SENDERTOP_WORK.modulation_final_tb(behavior)
+# Loading SIM_SENDERTOP_WORK.modulation_top(loopback_arch)
+# Loading SIM_SENDERTOP_WORK.modulation_top_sim(loopback_arch)
+# Loading SIM_SENDERTOP_WORK.modulator(arch)
+# Loading SIM_SENDERTOP_WORK.reciever(loopback_arch)
+# Loading SIM_SENDERTOP_WORK.reciever_top(loopback_arch)
+# Loading SIM_SENDERTOP_WORK.rx_modulation_top(rtl)
+# Loading SIM_SENDERTOP_WORK.sender_top(arch)
+# Loading SIM_SENDERTOP_WORK.sin_gen(rtl)
+# Loading SIM_SENDERTOP_WORK.sync(arch)
+# Loading SIM_SENDERTOP_WORK.tx_modulation_top(rtl)
+# ** Error: (vsim-3732) No default binding for component instance 'sender_inst'.
+#    The following component port is not on the entity:
+#           debug_select
+#    Time: 0 ps  Iteration: 0  Instance: /modulation_final_tb/UUT_mod_top/sender_inst File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/modulation_top_sim.vhd Line: 59
+# ** Warning: (vsim-3473) Component instance "pll_inst : ip_pll" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /modulation_top File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/modulation_top_sim.vhd
+# ** Error: (vsim-3732) No default binding for component instance 'sender_inst'.
+#    The following component port is not on the entity:
+#           debug_select
+#    Time: 0 ps  Iteration: 0  Instance: /modulation_top/sender_inst File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/modulation_top_sim.vhd Line: 78
+# ** Error: (vsim-3732) No default binding for component instance 'sender_inst'.
+#    The following component port is not on the entity:
+#           debug_select
+#    Time: 0 ps  Iteration: 0  Instance: /modulation_top_sim/sender_inst File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/modulation_top_sim.vhd Line: 59
+# Error loading design
+# End time: 11:04:27 on Jun 21,2021, Elapsed time: 0:00:01
+# Errors: 3, Warnings: 3
+# Compile of modulation_top_sim.vhd was successful.
+# Compile of modulation_FINAL_TB.vhd was successful.
+# 2 compiles, 0 failed with no errors.
+vsim SIM_SENDERTOP_WORK.buffer_rx SIM_SENDERTOP_WORK.buffer_tx SIM_SENDERTOP_WORK.cos_gen SIM_SENDERTOP_WORK.demodulator SIM_SENDERTOP_WORK.mod_conv_rx_new SIM_SENDERTOP_WORK.mod_convolution SIM_SENDERTOP_WORK.mod_deconv SIM_SENDERTOP_WORK.mod_deshaper SIM_SENDERTOP_WORK.mod_interface_rx SIM_SENDERTOP_WORK.mod_interface_tx SIM_SENDERTOP_WORK.mod_shaper SIM_SENDERTOP_WORK.modulation_final_tb SIM_SENDERTOP_WORK.modulation_top_sim SIM_SENDERTOP_WORK.modulator SIM_SENDERTOP_WORK.reciever SIM_SENDERTOP_WORK.reciever_top SIM_SENDERTOP_WORK.rx_modulation_top SIM_SENDERTOP_WORK.sender_top SIM_SENDERTOP_WORK.sin_gen SIM_SENDERTOP_WORK.sync SIM_SENDERTOP_WORK.tx_modulation_top
+# vsim SIM_SENDERTOP_WORK.buffer_rx SIM_SENDERTOP_WORK.buffer_tx SIM_SENDERTOP_WORK.cos_gen SIM_SENDERTOP_WORK.demodulator SIM_SENDERTOP_WORK.mod_conv_rx_new SIM_SENDERTOP_WORK.mod_convolution SIM_SENDERTOP_WORK.mod_deconv SIM_SENDERTOP_WORK.mod_deshaper SIM_SENDERTOP_WORK.mod_interface_rx SIM_SENDERTOP_WORK.mod_interface_tx SIM_SENDERTOP_WORK.mod_shaper SIM_SENDERTOP_WORK.modulation_final_tb SIM_SENDERTOP_WORK.modulation_top_sim SIM_SENDERTOP_WORK.modulator SIM_SENDERTOP_WORK.reciever SIM_SENDERTOP_WORK.reciever_top SIM_SENDERTOP_WORK.rx_modulation_top SIM_SENDERTOP_WORK.sender_top SIM_SENDERTOP_WORK.sin_gen SIM_SENDERTOP_WORK.sync SIM_SENDERTOP_WORK.tx_modulation_top 
+# Start time: 11:06:31 on Jun 21,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading SIM_SENDERTOP_WORK.buffer_rx(arch)
+# Loading SIM_SENDERTOP_WORK.buffer_tx(arch)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading SIM_SENDERTOP_WORK.cos_gen(rtl)
+# Loading ieee.numeric_std(body)
+# Loading SIM_SENDERTOP_WORK.demodulator(arch)
+# Loading SIM_SENDERTOP_WORK.mod_conv_rx_new(rtl)
+# Loading SIM_SENDERTOP_WORK.mod_convolution(rtl)
+# Loading SIM_SENDERTOP_WORK.mod_deconv(rtl)
+# Loading SIM_SENDERTOP_WORK.mod_deshaper(rtl)
+# Loading SIM_SENDERTOP_WORK.mod_interface_rx(rtl)
+# Loading SIM_SENDERTOP_WORK.mod_interface_tx(rtl)
+# Loading SIM_SENDERTOP_WORK.mod_shaper(rtl)
+# Loading ieee.std_logic_textio(body)
+# Loading SIM_SENDERTOP_WORK.modulation_final_tb(behavior)
+# Loading SIM_SENDERTOP_WORK.modulation_top_sim(loopback_arch)
+# Loading SIM_SENDERTOP_WORK.modulator(arch)
+# Loading SIM_SENDERTOP_WORK.reciever(loopback_arch)
+# Loading SIM_SENDERTOP_WORK.reciever_top(loopback_arch)
+# Loading SIM_SENDERTOP_WORK.rx_modulation_top(rtl)
+# Loading SIM_SENDERTOP_WORK.sender_top(arch)
+# Loading SIM_SENDERTOP_WORK.sin_gen(rtl)
+# Loading SIM_SENDERTOP_WORK.sync(arch)
+# Loading SIM_SENDERTOP_WORK.tx_modulation_top(rtl)
+# ** Warning: (vsim-8683) Uninitialized inout port /modulation_final_tb/UUT_mod_top/GPIO_0(35 downto 0) has no driver.
+# This port will contribute value (UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized inout port /modulation_final_tb/UUT_mod_top/GPIO_1(35 downto 0) has no driver.
+# This port will contribute value (UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU) to the signal network.
+add wave -position insertpoint sim:/modulation_final_tb/UUT_mod_top/*
+run
+# Compile of modulation_FINAL_TB.vhd was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading SIM_SENDERTOP_WORK.modulation_final_tb(behavior)
+# ** Warning: (vsim-8683) Uninitialized inout port /modulation_final_tb/UUT_mod_top/GPIO_0(35 downto 0) has no driver.
+# This port will contribute value (UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized inout port /modulation_final_tb/UUT_mod_top/GPIO_1(35 downto 0) has no driver.
+# This port will contribute value (UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU) to the signal network.
+run
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-8683) Uninitialized inout port /modulation_final_tb/UUT_mod_top/GPIO_0(35 downto 0) has no driver.
+# This port will contribute value (UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized inout port /modulation_final_tb/UUT_mod_top/GPIO_1(35 downto 0) has no driver.
+# This port will contribute value (UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU) to the signal network.
+run
+# Compile of modulation_FINAL_TB.vhd was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading SIM_SENDERTOP_WORK.modulation_final_tb(behavior)
+# ** Warning: (vsim-8683) Uninitialized inout port /modulation_final_tb/UUT_mod_top/GPIO_0(35 downto 0) has no driver.
+# This port will contribute value (UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized inout port /modulation_final_tb/UUT_mod_top/GPIO_1(35 downto 0) has no driver.
+# This port will contribute value (UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU) to the signal network.
+run
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-8683) Uninitialized inout port /modulation_final_tb/UUT_mod_top/GPIO_0(35 downto 0) has no driver.
+# This port will contribute value (UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized inout port /modulation_final_tb/UUT_mod_top/GPIO_1(35 downto 0) has no driver.
+# This port will contribute value (UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU) to the signal network.
+run

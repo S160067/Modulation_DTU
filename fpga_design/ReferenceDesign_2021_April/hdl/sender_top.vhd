@@ -7,7 +7,8 @@ port (
 	fifo_bitstream, fifo_empty : in std_logic;
 	write, read_en : out std_logic;
 	data_i, data_q : out std_logic_vector(13 downto 0);
-	modulation_scheme_select : in std_logic
+	modulation_scheme_select : in std_logic;
+	debug_select : in std_logic
 	);
 end sender_top;
 
@@ -66,14 +67,14 @@ component debug_mod_input is
 		valid : out std_logic
 	);
 end component;
-
+	
 -- SIGNAL DECLARATION
 	signal mod_ready, mod_valid, buf_valid : std_logic;
-	signal buff_data : std_logic_vector(1 downto 0);
+	signal buff_data, mux_out : std_logic_vector(1 downto 0);
 	signal data_mod_i, data_mod_q, data_sin_i, data_cos_q : std_logic_vector(13 downto 0);
-
-
-
+	signal debug_data_out : std_logic_vector(1 downto 0);
+	signal debug_data_valid, mux_val : std_logic;
+	
 begin
 
 	write <= mod_valid;
@@ -81,7 +82,9 @@ begin
 	data_i <= data_mod_i when modulation_scheme_select = '0' else data_sin_i;
 	data_q <= data_mod_q when modulation_scheme_select = '0' else data_cos_q;
 
-	
+	mux_val <= buf_valid when debug_select = '0' else debug_data_valid;
+	mux_out <= buff_data when debug_select = '0' else debug_data_out;
+
 	buff_inst : component buffer_tx port map(
 		clk => clk,
 		reset => reset,
@@ -95,8 +98,8 @@ begin
 	mod_inst : component modulator port map(
 		clk => clk, 
 		reset => reset, 
-		buf_valid => buf_valid,
-		data_in => buff_data, 
+		buf_valid => mux_val,
+		data_in => mux_out, 
 		data_i => data_mod_i, 
 		data_q => data_mod_q, 
 		valid => mod_valid,
@@ -114,6 +117,13 @@ begin
 		cos_o => data_cos_q
 	);
 
+	debug_inst : component debug_mod_input port map(
+		clk => clk,
+		reset => reset,
+		ready => mod_ready,
+		bitstream => debug_data_out,
+		valid => debug_data_valid
+	);
 
 
 	

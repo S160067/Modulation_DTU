@@ -1,12 +1,12 @@
-Fitter Status : Successful - Thu Jun 17 10:06:39 2021
+Fitter Status : Successful - Mon Jun 21 13:03:04 2021
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : 1_1_0
 Top-level Entity Name : DE1_SoC_ReferenceTop
 Family : Cyclone V
 Device : 5CSEMA5F31C6
 Timing Models : Final
-Logic utilization (in ALMs) : 1,116 / 32,070 ( 3 % )
-Total registers : 2130
+Logic utilization (in ALMs) : 1,073 / 32,070 ( 3 % )
+Total registers : 2117
 Total pins : 97 / 457 ( 21 % )
 Total virtual pins : 0
 Total block memory bits : 12,288 / 4,065,280 ( < 1 % )
