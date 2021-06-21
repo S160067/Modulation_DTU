@@ -115,7 +115,7 @@ BEGIN
 		FOR i IN 0 TO G_SHIFTREG_SIZE - 1 LOOP
 			s_mult(i) <= mult(s_sregis(i), s_pulse(i));
 		END LOOP;
-			o_result <= STD_LOGIC_VECTOR(8191+s_sum(G_MANTISSA_SIZE DOWNTO 0));
+			o_result <= STD_LOGIC_VECTOR(s_sum(G_MANTISSA_SIZE DOWNTO 0));
 
 		IF (i_rst = '1') THEN
 			s_mult <= (OTHERS => (OTHERS => '0'));

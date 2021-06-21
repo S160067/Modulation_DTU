@@ -81,6 +81,8 @@ begin
 		reset => rst_inv, 
 		data_i => data_AD_a, 
 		data_q => data_AD_b, 
+--		data_i => test_i, 
+--		data_q => test_q, 
 		fifo_full => fifo_full, 
 		bitstream => fifo_bitstream_out, 
 		fifo_wr => fifo_wr

@@ -90,7 +90,7 @@ if(i_clk'event and i_clk = '1') then
 
 	if (i_data_valid = '1') then
 
-		s_sregis(0) <= signed(i_element)-8191;
+		s_sregis(0) <= signed(i_element);
 		
 	end if;
 	valid_reg <= i_data_valid;

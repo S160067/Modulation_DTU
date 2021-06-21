@@ -49,6 +49,7 @@ BEGIN
       bitstream => bitstream_out, 
       fifo_wr => fifo_wr
    );
+
 UUT_TX: component sender_top port map(
       clk => clk, 
       reset => reset,
