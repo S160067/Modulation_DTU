@@ -30,7 +30,7 @@ ARCHITECTURE behavior OF modulation_top_tb IS
    end component;
 
 signal clk, reset : std_logic := '0';
-signal bitstream_in, fifo_read_en, fifo_empty, write, modulation_scheme_select : std_logic;
+signal bitstream_in, fifo_read_en, fifo_empty, write, modulation_scheme_select : std_logic := '0';
 signal bitstream_out, fifo_wr, fifo_full  : std_logic := '0';
 signal data_i_tx, data_q_tx,data_i_rx, data_q_rx : std_logic_vector(13 downto 0) :=  ( others => '0');
 
@@ -61,18 +61,53 @@ UUT_TX: component sender_top port map(
       modulation_scheme_select => modulation_scheme_select
 ); 
 
-data_i_rx <= data_q_tx;
+data_i_rx <= data_i_tx;
 data_q_rx <= data_q_tx;
 
 -- Clock process definitions
 clock_process :process
 begin
-clk <= '0';
-wait for clock_period/2;
-clk <= '1';
+   clk <= '1';
+   wait for clock_period/2;
+   clk <= '0';
 wait for clock_period/2;
 end process;
- 
+
+fifo_input :process
+begin
+   --bitstream_in <= '0';
+
+   --wait for 40 ns;
+   -- Test 00
+   wait until fifo_read_en = '1';
+   wait for clock_period;
+   bitstream_in <= '1';
+   wait for clock_period;
+   bitstream_in <= '0';
+
+      -- Test 10
+   wait until fifo_read_en = '1';
+   wait for clock_period;
+   bitstream_in <= '1';
+   wait for clock_period;
+   bitstream_in <= '0';
+
+         -- Test 01
+   wait until fifo_read_en = '1';
+   wait for clock_period;
+   bitstream_in <= '0';
+   wait for clock_period;
+   bitstream_in <= '1';
+        -- Test 11
+   wait until fifo_read_en = '1';
+   --wait for clock_period;
+   wait for clock_period;
+   bitstream_in <= '0';
+   wait for clock_period;
+   bitstream_in <= '1'; 
+
+end process;
+
 
 -- Stimulus process
 stim_proc: process
@@ -80,41 +115,15 @@ stim_proc: process
 begin
    
    reset <= '1';
-   fifo_empty <= '1';
-   fifo_full <= '0';
-   wait for 30 ns;
-   reset <= '0';
-   fifo_empty <= '0';
+   fifo_full <= '1';
    modulation_scheme_select <= '0';
+   fifo_empty <= '1';
+   wait for 60 ns;
+   reset <= '0';
+   wait for 20 ns;
    fifo_empty <= '0';
+   fifo_full <= '0';
    
-   -- Test 10
-   wait until fifo_read_en = '1';
-   wait for clock_period;
-   bitstream_in <= '0';
-   wait for clock_period;
-   bitstream_in <= '1';
-
-   -- Test 01
-   wait until fifo_read_en = '1';
-   wait for clock_period;
-   bitstream_in <= '1';
-   wait for clock_period;
-   bitstream_in <= '0';
-
-   -- Test 00
-   wait until fifo_read_en = '1';
-   wait for clock_period;
-   bitstream_in <= '0';
-   wait for clock_period;
-   bitstream_in <= '0';
-
-   -- Test 01
-   wait until fifo_read_en = '1';
-   wait for clock_period;
-   bitstream_in <= '1';
-   wait for clock_period;
-   bitstream_in <= '1';
 
    wait;
 end process;

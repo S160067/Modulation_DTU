@@ -1,12 +1,30 @@
-C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/test_controller_tb.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/test_controller_tb.vhd
+C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/modulation_top.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/modulation_top.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
--- Compiling entity test_controller_tb
--- Compiling architecture behavior of test_controller_tb
+-- Compiling entity modulation_top
+-- Compiling architecture loopback_arch of modulation_top
 
-} {} {}} C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/sender.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/sender.vhd
+} {} {}} C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/reciever_top.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/reciever_top.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity reciever_top
+-- Compiling architecture loopback_arch of reciever_top
+
+} {} {}} C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/sender_top_tb.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/sender_top_tb.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package std_logic_textio
+-- Compiling entity sender_top_tb
+-- Compiling architecture behavior of sender_top_tb
+
+} {} {}} C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/sender.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/sender.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -14,20 +32,136 @@ Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 
 -- Compiling entity sender
 -- Compiling architecture loopback_arch of sender
 
-} {} {}} C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/reciever.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/reciever.vhd
+} {} {}} C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/sender_top.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/sender_top.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity sender_top
+-- Compiling architecture arch of sender_top
+
+} {} {}} C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/modulation_top_tb.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/modulation_top_tb.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package std_logic_textio
+-- Compiling entity modulation_top_tb
+-- Compiling architecture behavior of modulation_top_tb
+
+} {} {}} C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/sync.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/sync.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity sync
+-- Compiling architecture arch of sync
+
+} {} {}} C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/debug_mod_input.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/debug_mod_input.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity debug_mod_input
+-- Compiling architecture arch of debug_mod_input
+
+} {} {}} C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/cos_gen.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/cos_gen.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity cos_gen
+-- Compiling architecture rtl of cos_gen
+
+} {} {}} C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/modulator.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/modulator.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity modulator
+-- Compiling architecture arch of modulator
+
+} {} {}} C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/buffer_rx_tb.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/buffer_rx_tb.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity buffer_rx_tb
+-- Compiling architecture behavior of buffer_rx_tb
+
+} {} {}} C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/demodulator.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/demodulator.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity demodulator
+-- Compiling architecture arch of demodulator
+
+} {} {}} C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/buffer_tx_tb.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/buffer_tx_tb.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity buffer_tx_tb
+-- Compiling architecture behavior of buffer_tx_tb
+
+} {} {}} C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/reciever_tb.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/reciever_tb.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package std_logic_textio
+-- Compiling entity test_controller_tb
+-- Compiling architecture behavior of test_controller_tb
+
+} {} {}} C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/sin_gen.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/sin_gen.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity sin_gen
+-- Compiling architecture rtl of sin_gen
+
+} {} {}} C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/buffer_rx.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/buffer_rx.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity buffer_rx
+-- Compiling architecture arch of buffer_rx
+
+} {} {}} C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/reciever_top_tb.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/reciever_top_tb.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package std_logic_textio
+-- Compiling entity reciever_top_tb
+-- Compiling architecture behavior of reciever_top_tb
+
+} {} {}} C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/buffer_tx.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/buffer_tx.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity buffer_tx
+-- Compiling architecture arch of buffer_tx
+
+} {} {}} C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/reciever.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/reciever.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Compiling entity reciever
 -- Compiling architecture loopback_arch of reciever
-
-} {} {}} C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/modulation_top_simmer.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/RefDesign20200615/hdl/modulation_top_simmer.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Compiling entity modulation_top
--- Compiling architecture loopback_arch of modulation_top
 
 } {} {}}

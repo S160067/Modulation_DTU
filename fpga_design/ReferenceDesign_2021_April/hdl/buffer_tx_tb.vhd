@@ -35,32 +35,63 @@ uut: component buffer_tx PORT MAP (
 -- Clock process definitions
 clock_process :process
 begin
-clk <= '0';
-wait for clock_period/2;
-clk <= '1';
+	clk <= '1';
+	wait for clock_period/2;
+	clk <= '0';
 wait for clock_period/2;
 end process;
  
+modulator_ready :process
+begin
+	
+	ready <= '1';
+	wait for clock_period;
+	wait for clock_period;
+	wait for clock_period;
+	wait for clock_period;
+end process;
+
 -- Stimulus process
 stim_proc: process
 begin
 	reset <= '1';
 	fifo_empty <= '1';	
-	-- hold reset state for 100 ns. 
-	wait for 30 ns;
-	ready <= '0';
-	reset <= '0';
-	bitstream <= '1';
+	--ready <= '0';
 	wait for 40 ns;
-	-- Test things
-	--wait for 5 ns;
-fifo_empty <='0';
-wait for clock_period;
-bitstream <='1';
-wait for clock_period;
-ready <= '1';
+	
+	reset <= '0';
+	bitstream <= '0';
+	fifo_empty <='0';
+	
+	-- 01
+	wait until read_en = '1';
+	wait for clock_period;
+	bitstream <= '0';
+	wait for clock_period;
+	bitstream <= '1';
+	
+	--10
+	wait until read_en = '1';
+	wait for clock_period;
+	bitstream <= '1';
+	wait for clock_period;
+	bitstream <= '0';
 
-wait for 80 ns;
+	-- 11
+	wait until read_en = '1';
+	wait for clock_period;
+	bitstream <= '1';
+	wait for clock_period;
+	bitstream <= '1';
+
+	--00
+	wait until read_en = '1';
+	wait for clock_period;
+	bitstream <= '0';
+	wait for clock_period;
+	bitstream <= '0';
+
+	wait;
 
 end process;
  

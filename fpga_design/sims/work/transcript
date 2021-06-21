@@ -1,1765 +1,449 @@
-# Loading project testtestsim
-# Compile of modulation_top.vhd failed with 1 errors.
-# Compile of modulation_top_tb.vhd was successful.
-# Compile of sender_top.vhd failed with 4 errors.
+# Compile of buffer_rx.vhd was successful.
+# Compile of buffer_rx_tb.vhd was successful.
+# Compile of buffer_tx.vhd was successful.
+# Compile of buffer_tx_tb.vhd was successful.
 # Compile of cos_gen.vhd was successful.
-# Compile of sin_gen.vhd was successful.
-# 5 compiles, 2 failed with 5 errors.
+# Compile of demodulator.vhd was successful.
 # Compile of modulation_top.vhd was successful.
 # Compile of modulation_top_tb.vhd was successful.
-# Compile of cos_gen.vhd was successful.
+# Compile of modulator.vhd was successful.
+# Compile of reciever.vhd was successful.
+# Compile of reciever_tb.vhd was successful.
+# Compile of reciever_top.vhd was successful.
+# Compile of reciever_top_tb.vhd was successful.
+# Compile of sender.vhd was successful.
+# Compile of sender_top.vhd was successful.
+# Compile of sender_top_tb.vhd was successful.
 # Compile of sin_gen.vhd was successful.
-# 4 compiles, 0 failed with no errors.
-vsim work.cos_gen work.modulation_top work.modulation_top_tb work.sin_gen
-# vsim work.cos_gen work.modulation_top work.modulation_top_tb work.sin_gen 
-# Start time: 09:39:18 on Jun 09,2021
+# Compile of sync.vhd was successful.
+# Compile of mod_conv_new.vhd was successful.
+# Compile of Mod_interface_TX.vhd was successful.
+# Compile of mod_shaper.vhd was successful.
+# Compile of TX_modulation_top.vhd was successful.
+# Compile of conv_rx_new.vhd was successful.
+# Compile of mod_deconv_new.vhd was successful.
+# Compile of MOD_interface_rx.vhd was successful.
+# Compile of RX_modulation_top.vhd was successful.
+# 26 compiles, 0 failed with no errors.
+vsim -gui AAAAAAAAAAA.buffer_rx AAAAAAAAAAA.buffer_tx AAAAAAAAAAA.cos_gen AAAAAAAAAAA.demodulator AAAAAAAAAAA.mod_conv_rx_new AAAAAAAAAAA.mod_interface_rx AAAAAAAAAAA.mod_interface_tx AAAAAAAAAAA.modulation_top AAAAAAAAAAA.modulation_top_tb AAAAAAAAAAA.modulator AAAAAAAAAAA.reciever AAAAAAAAAAA.reciever_top AAAAAAAAAAA.rx_modulation_top AAAAAAAAAAA.sender AAAAAAAAAAA.sender_top AAAAAAAAAAA.sin_gen AAAAAAAAAAA.sync AAAAAAAAAAA.tx_modulation_top
+# vsim -gui AAAAAAAAAAA.buffer_rx AAAAAAAAAAA.buffer_tx AAAAAAAAAAA.cos_gen AAAAAAAAAAA.demodulator AAAAAAAAAAA.mod_conv_rx_new AAAAAAAAAAA.mod_interface_rx AAAAAAAAAAA.mod_interface_tx AAAAAAAAAAA.modulation_top AAAAAAAAAAA.modulation_top_tb AAAAAAAAAAA.modulator AAAAAAAAAAA.reciever AAAAAAAAAAA.reciever_top AAAAAAAAAAA.rx_modulation_top AAAAAAAAAAA.sender AAAAAAAAAAA.sender_top AAAAAAAAAAA.sin_gen AAAAAAAAAAA.sync AAAAAAAAAAA.tx_modulation_top 
+# Start time: 14:33:06 on Jun 17,2021
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
+# Loading AAAAAAAAAAA.buffer_rx(arch)
+# Loading AAAAAAAAAAA.buffer_tx(arch)
 # Loading ieee.std_logic_arith(body)
 # Loading ieee.std_logic_unsigned(body)
-# Loading work.cos_gen(rtl)
-# Loading work.modulation_top(loopback_arch)
+# Loading AAAAAAAAAAA.cos_gen(rtl)
 # Loading ieee.numeric_std(body)
+# Loading AAAAAAAAAAA.demodulator(arch)
+# Loading AAAAAAAAAAA.mod_conv_rx_new(rtl)
+# Loading AAAAAAAAAAA.mod_interface_rx(rtl)
+# Loading AAAAAAAAAAA.mod_interface_tx(rtl)
+# Loading AAAAAAAAAAA.modulation_top(loopback_arch)
 # Loading ieee.std_logic_textio(body)
-# Loading work.modulation_top_tb(behavior)
-# Loading work.sin_gen(rtl)
+# Loading AAAAAAAAAAA.modulation_top_tb(behavior)
+# Loading AAAAAAAAAAA.modulator(arch)
+# Loading AAAAAAAAAAA.reciever(loopback_arch)
+# Loading AAAAAAAAAAA.reciever_top(loopback_arch)
+# Loading AAAAAAAAAAA.rx_modulation_top(rtl)
+# Loading AAAAAAAAAAA.sender(loopback_arch)
+# Loading AAAAAAAAAAA.sender_top(arch)
+# Loading AAAAAAAAAAA.sin_gen(rtl)
+# Loading AAAAAAAAAAA.sync(arch)
+# Loading AAAAAAAAAAA.tx_modulation_top(rtl)
+# Loading AAAAAAAAAAA.mod_deconv(rtl)
 # ** Warning: (vsim-3473) Component instance "pll_inst : ip_pll" is not bound.
-#    Time: 0 ps  Iteration: 0  Instance: /modulation_top File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/hdl/modulation_top.vhd
-# ** Warning: (vsim-3473) Component instance "pll_inst : ip_pll" is not bound.
-#    Time: 0 ps  Iteration: 0  Instance: /modulation_top_tb/uut File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/hdl/modulation_top.vhd
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(34), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(34).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(31), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(31).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(30), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(30).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(29), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(29).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(28), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(28).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(27), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(27).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(26), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(26).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(25), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(25).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(24), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(24).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(23), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(23).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(22), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(22).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(21), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(21).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(20), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(20).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(19), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(19).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(17), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(17).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(15), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(15).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(14), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(14).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(13), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(13).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(12), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(12).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(11), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(11).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(10), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(10).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(9), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(9).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(8), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(8).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(7), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(7).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(6), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(6).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(5), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(5).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(4), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(4).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(3), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(3).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(2), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(2).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(1), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(1).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(0), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(0).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_1(20), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_1(20).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_1(2), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_1(2).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_1(0), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_1(0).
-# ** Warning: (vsim-8683) Uninitialized out port /modulation_top_tb/uut/fifo_bitstream_out has no driver.
-# This port will contribute value (U) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /modulation_top_tb/uut/fifo_wr has no driver.
-# This port will contribute value (U) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /modulation_top_tb/uut/fifo_read_en has no driver.
-# This port will contribute value (U) to the signal network.
-add wave -position insertpoint sim:/modulation_top_tb/uut/*
+#    Time: 0 ps  Iteration: 0  Instance: /modulation_top File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/modulation_top.vhd
+# ** Error: (vsim-3732) No default binding for component instance 'sender_inst'.
+#    The following component port is not on the entity:
+#           debug_select
+#    Time: 0 ps  Iteration: 0  Instance: /modulation_top/sender_inst File: C:/Users/Harald/Documents/GitHub/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/modulation_top.vhd Line: 78
+# Loading AAAAAAAAAAA.mod_convolution(rtl)
+# Error loading design
+# End time: 14:33:06 on Jun 17,2021, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 13
+vsim -gui AAAAAAAAAAA.buffer_rx AAAAAAAAAAA.buffer_tx AAAAAAAAAAA.cos_gen AAAAAAAAAAA.demodulator AAAAAAAAAAA.mod_conv_rx_new AAAAAAAAAAA.mod_interface_rx AAAAAAAAAAA.mod_interface_tx AAAAAAAAAAA.modulation_top_tb AAAAAAAAAAA.modulator AAAAAAAAAAA.reciever AAAAAAAAAAA.reciever_top AAAAAAAAAAA.rx_modulation_top AAAAAAAAAAA.sender AAAAAAAAAAA.sender_top AAAAAAAAAAA.sin_gen AAAAAAAAAAA.sync AAAAAAAAAAA.tx_modulation_top
+# vsim -gui AAAAAAAAAAA.buffer_rx AAAAAAAAAAA.buffer_tx AAAAAAAAAAA.cos_gen AAAAAAAAAAA.demodulator AAAAAAAAAAA.mod_conv_rx_new AAAAAAAAAAA.mod_interface_rx AAAAAAAAAAA.mod_interface_tx AAAAAAAAAAA.modulation_top_tb AAAAAAAAAAA.modulator AAAAAAAAAAA.reciever AAAAAAAAAAA.reciever_top AAAAAAAAAAA.rx_modulation_top AAAAAAAAAAA.sender AAAAAAAAAAA.sender_top AAAAAAAAAAA.sin_gen AAAAAAAAAAA.sync AAAAAAAAAAA.tx_modulation_top 
+# Start time: 14:34:28 on Jun 17,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading AAAAAAAAAAA.buffer_rx(arch)
+# Loading AAAAAAAAAAA.buffer_tx(arch)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading AAAAAAAAAAA.cos_gen(rtl)
+# Loading ieee.numeric_std(body)
+# Loading AAAAAAAAAAA.demodulator(arch)
+# Loading AAAAAAAAAAA.mod_conv_rx_new(rtl)
+# Loading AAAAAAAAAAA.mod_interface_rx(rtl)
+# Loading AAAAAAAAAAA.mod_interface_tx(rtl)
+# Loading ieee.std_logic_textio(body)
+# Loading AAAAAAAAAAA.modulation_top_tb(behavior)
+# Loading AAAAAAAAAAA.modulator(arch)
+# Loading AAAAAAAAAAA.reciever(loopback_arch)
+# Loading AAAAAAAAAAA.reciever_top(loopback_arch)
+# Loading AAAAAAAAAAA.rx_modulation_top(rtl)
+# Loading AAAAAAAAAAA.sender(loopback_arch)
+# Loading AAAAAAAAAAA.sender_top(arch)
+# Loading AAAAAAAAAAA.sin_gen(rtl)
+# Loading AAAAAAAAAAA.sync(arch)
+# Loading AAAAAAAAAAA.tx_modulation_top(rtl)
+# Loading AAAAAAAAAAA.mod_deconv(rtl)
+# Loading AAAAAAAAAAA.mod_convolution(rtl)
+add wave -position insertpoint sim:/modulation_top_tb/UUT_RX/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: haraldbid  Hostname: harald-E31  ProcessID: 183678
+#           Attempting to use alternate WLF file "./wlft276vyh".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft276vyh
+add wave -position insertpoint sim:/modulation_top_tb/UUT_TX/*
 run
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 10 ns  Iteration: 1  Instance: /modulation_top_tb/uut/sin_inst
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 10 ns  Iteration: 1  Instance: /modulation_top_tb/uut/sin_inst
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 10 ns  Iteration: 1  Instance: /modulation_top_tb/uut/sin_inst
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 10 ns  Iteration: 1  Instance: /modulation_top_tb/uut/cos_inst
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 10 ns  Iteration: 1  Instance: /modulation_top_tb/uut/cos_inst
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 10 ns  Iteration: 1  Instance: /modulation_top_tb/uut/cos_inst
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 30 ns  Iteration: 1  Instance: /modulation_top_tb/uut/sin_inst
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 30 ns  Iteration: 1  Instance: /modulation_top_tb/uut/sin_inst
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 30 ns  Iteration: 1  Instance: /modulation_top_tb/uut/sin_inst
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 30 ns  Iteration: 1  Instance: /modulation_top_tb/uut/cos_inst
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 30 ns  Iteration: 1  Instance: /modulation_top_tb/uut/cos_inst
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 30 ns  Iteration: 1  Instance: /modulation_top_tb/uut/cos_inst
+# Compile of modulation_top_tb.vhd was successful.
+# Compile of reciever.vhd was successful.
+# 2 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading AAAAAAAAAAA.modulation_top_tb(behavior)
+# Loading AAAAAAAAAAA.reciever(loopback_arch)
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Compile of modulation_top_tb.vhd was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading AAAAAAAAAAA.modulation_top_tb(behavior)
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Compile of modulation_top_tb.vhd was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading AAAAAAAAAAA.modulation_top_tb(behavior)
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Compile of modulation_top_tb.vhd was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading AAAAAAAAAAA.modulation_top_tb(behavior)
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+add wave -position insertpoint sim:/modulation_top_tb/UUT_RX/buff_inst/*
+restart -f
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Compile of modulation_top_tb.vhd was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading AAAAAAAAAAA.modulation_top_tb(behavior)
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Compile of buffer_rx.vhd was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading AAAAAAAAAAA.buffer_rx(arch)
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Compile of modulation_top_tb.vhd was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading AAAAAAAAAAA.modulation_top_tb(behavior)
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Compile of modulation_top_tb.vhd was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading AAAAAAAAAAA.modulation_top_tb(behavior)
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Compile of modulation_top_tb.vhd was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading AAAAAAAAAAA.modulation_top_tb(behavior)
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Compile of modulation_top_tb.vhd was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading AAAAAAAAAAA.modulation_top_tb(behavior)
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Compile of reciever.vhd was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading AAAAAAAAAAA.reciever(loopback_arch)
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Compile of reciever.vhd was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading AAAAAAAAAAA.reciever(loopback_arch)
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Compile of reciever.vhd was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading AAAAAAAAAAA.reciever(loopback_arch)
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Compile of reciever.vhd was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading AAAAAAAAAAA.reciever(loopback_arch)
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Compile of modulation_top_tb.vhd failed with 2 errors.
+# Compile of modulation_top_tb.vhd was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading AAAAAAAAAAA.modulation_top_tb(behavior)
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Compile of modulation_top_tb.vhd was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading AAAAAAAAAAA.modulation_top_tb(behavior)
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Compile of buffer_rx.vhd was successful.
+# Compile of buffer_rx_tb.vhd was successful.
+# Compile of buffer_tx.vhd was successful.
+# Compile of buffer_tx_tb.vhd was successful.
+# Compile of cos_gen.vhd was successful.
+# Compile of demodulator.vhd was successful.
 # Compile of modulation_top.vhd was successful.
 # Compile of modulation_top_tb.vhd was successful.
-# Compile of cos_gen.vhd was successful.
+# Compile of modulator.vhd was successful.
+# Compile of reciever.vhd was successful.
+# Compile of reciever_tb.vhd was successful.
+# Compile of reciever_top.vhd was successful.
+# Compile of reciever_top_tb.vhd was successful.
+# Compile of sender.vhd was successful.
+# Compile of sender_top.vhd was successful.
+# Compile of sender_top_tb.vhd was successful.
 # Compile of sin_gen.vhd was successful.
-# 4 compiles, 0 failed with no errors.
+# Compile of sync.vhd was successful.
+# Compile of mod_conv_new.vhd was successful.
+# Compile of Mod_interface_TX.vhd was successful.
+# Compile of mod_shaper.vhd was successful.
+# Compile of TX_modulation_top.vhd was successful.
+# Compile of conv_rx_new.vhd was successful.
+# Compile of mod_deconv_new.vhd was successful.
+# Compile of MOD_interface_rx.vhd was successful.
+# Compile of RX_modulation_top.vhd was successful.
+# 26 compiles, 0 failed with no errors.
 restart -f
 # ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.cos_gen(rtl)
-# Loading work.modulation_top(loopback_arch)
-# Loading work.modulation_top_tb(behavior)
-# Loading work.sin_gen(rtl)
-# ** Warning: (vsim-3473) Component instance "pll_inst : ip_pll" is not bound.
-#    Time: 0 ps  Iteration: 0  Instance: /modulation_top File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/hdl/modulation_top.vhd
-# ** Warning: (vsim-3473) Component instance "pll_inst : ip_pll" is not bound.
-#    Time: 0 ps  Iteration: 0  Instance: /modulation_top_tb/uut File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/hdl/modulation_top.vhd
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(34), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(34).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(31), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(31).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(30), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(30).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(29), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(29).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(28), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(28).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(27), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(27).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(26), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(26).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(25), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(25).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(24), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(24).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(23), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(23).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(22), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(22).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(21), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(21).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(20), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(20).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(19), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(19).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(17), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(17).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(15), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(15).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(14), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(14).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(13), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(13).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(12), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(12).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(11), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(11).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(10), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(10).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(9), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(9).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(8), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(8).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(7), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(7).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(6), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(6).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(5), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(5).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(4), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(4).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(3), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(3).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(2), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(2).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(1), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(1).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(0), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(0).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_1(20), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_1(20).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_1(2), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_1(2).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_1(0), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_1(0).
-# ** Warning: (vsim-8683) Uninitialized out port /modulation_top_tb/uut/fifo_bitstream_out has no driver.
-# This port will contribute value (U) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /modulation_top_tb/uut/fifo_wr has no driver.
-# This port will contribute value (U) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /modulation_top_tb/uut/fifo_read_en has no driver.
-# This port will contribute value (U) to the signal network.
-# Warning in wave window restart: (vish-4014) No objects found matching '/modulation_top_tb/uut/sender_write'. 
+# Loading AAAAAAAAAAA.buffer_rx(arch)
+# Loading AAAAAAAAAAA.buffer_tx(arch)
+# Loading AAAAAAAAAAA.cos_gen(rtl)
+# Loading AAAAAAAAAAA.demodulator(arch)
+# Loading AAAAAAAAAAA.mod_conv_rx_new(rtl)
+# Loading AAAAAAAAAAA.mod_interface_rx(rtl)
+# Loading AAAAAAAAAAA.mod_interface_tx(rtl)
+# Loading AAAAAAAAAAA.modulation_top_tb(behavior)
+# Loading AAAAAAAAAAA.modulator(arch)
+# Loading AAAAAAAAAAA.reciever(loopback_arch)
+# Loading AAAAAAAAAAA.reciever_top(loopback_arch)
+# Loading AAAAAAAAAAA.rx_modulation_top(rtl)
+# Loading AAAAAAAAAAA.sender(loopback_arch)
+# Loading AAAAAAAAAAA.sender_top(arch)
+# Loading AAAAAAAAAAA.sin_gen(rtl)
+# Loading AAAAAAAAAAA.sync(arch)
+# Loading AAAAAAAAAAA.tx_modulation_top(rtl)
+# Loading AAAAAAAAAAA.mod_deconv(rtl)
+# Loading AAAAAAAAAAA.mod_convolution(rtl)
 run
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 10 ns  Iteration: 1  Instance: /modulation_top_tb/uut/sin_inst
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 10 ns  Iteration: 1  Instance: /modulation_top_tb/uut/sin_inst
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 10 ns  Iteration: 1  Instance: /modulation_top_tb/uut/sin_inst
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 10 ns  Iteration: 1  Instance: /modulation_top_tb/uut/cos_inst
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 10 ns  Iteration: 1  Instance: /modulation_top_tb/uut/cos_inst
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 10 ns  Iteration: 1  Instance: /modulation_top_tb/uut/cos_inst
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 30 ns  Iteration: 1  Instance: /modulation_top_tb/uut/sin_inst
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 30 ns  Iteration: 1  Instance: /modulation_top_tb/uut/sin_inst
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 30 ns  Iteration: 1  Instance: /modulation_top_tb/uut/sin_inst
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 30 ns  Iteration: 1  Instance: /modulation_top_tb/uut/cos_inst
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 30 ns  Iteration: 1  Instance: /modulation_top_tb/uut/cos_inst
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 30 ns  Iteration: 1  Instance: /modulation_top_tb/uut/cos_inst
-# Compile of modulation_top.vhd was successful.
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
 # Compile of modulation_top_tb.vhd was successful.
-# Compile of cos_gen.vhd was successful.
-# Compile of sin_gen.vhd was successful.
-# 4 compiles, 0 failed with no errors.
 restart -f
 # ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.cos_gen(rtl)
-# Loading work.modulation_top(loopback_arch)
-# Loading work.modulation_top_tb(behavior)
-# Loading work.sin_gen(rtl)
-# ** Warning: (vsim-3473) Component instance "pll_inst : ip_pll" is not bound.
-#    Time: 0 ps  Iteration: 0  Instance: /modulation_top File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/hdl/modulation_top.vhd
-# ** Warning: (vsim-3473) Component instance "pll_inst : ip_pll" is not bound.
-#    Time: 0 ps  Iteration: 0  Instance: /modulation_top_tb/uut File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/hdl/modulation_top.vhd
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(34), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(34).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(31), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(31).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(30), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(30).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(29), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(29).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(28), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(28).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(27), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(27).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(26), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(26).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(25), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(25).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(24), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(24).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(23), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(23).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(22), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(22).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(21), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(21).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(20), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(20).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(19), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(19).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(17), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(17).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(15), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(15).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(14), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(14).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(13), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(13).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(12), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(12).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(11), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(11).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(10), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(10).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(9), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(9).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(8), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(8).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(7), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(7).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(6), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(6).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(5), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(5).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(4), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(4).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(3), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(3).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(2), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(2).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(1), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(1).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(0), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(0).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_1(20), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_1(20).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_1(2), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_1(2).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_1(0), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_1(0).
-# ** Warning: (vsim-8683) Uninitialized out port /modulation_top_tb/uut/fifo_bitstream_out has no driver.
-# This port will contribute value (U) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /modulation_top_tb/uut/fifo_wr has no driver.
-# This port will contribute value (U) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /modulation_top_tb/uut/fifo_read_en has no driver.
-# This port will contribute value (U) to the signal network.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Warning: (vsim-3473) Component instance "pll_inst : ip_pll" is not bound.
-#    Time: 0 ps  Iteration: 0  Instance: /modulation_top File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/hdl/modulation_top.vhd
-# ** Warning: (vsim-3473) Component instance "pll_inst : ip_pll" is not bound.
-#    Time: 0 ps  Iteration: 0  Instance: /modulation_top_tb/uut File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/hdl/modulation_top.vhd
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(34), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(34).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(31), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(31).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(30), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(30).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(29), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(29).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(28), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(28).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(27), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(27).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(26), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(26).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(25), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(25).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(24), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(24).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(23), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(23).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(22), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(22).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(21), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(21).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(20), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(20).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(19), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(19).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(17), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(17).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(15), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(15).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(14), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(14).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(13), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(13).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(12), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(12).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(11), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(11).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(10), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(10).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(9), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(9).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(8), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(8).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(7), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(7).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(6), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(6).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(5), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(5).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(4), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(4).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(3), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(3).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(2), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(2).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(1), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(1).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(0), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(0).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_1(20), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_1(20).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_1(2), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_1(2).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_1(0), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_1(0).
-# ** Warning: (vsim-8683) Uninitialized out port /modulation_top_tb/uut/fifo_bitstream_out has no driver.
-# This port will contribute value (U) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /modulation_top_tb/uut/fifo_wr has no driver.
-# This port will contribute value (U) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /modulation_top_tb/uut/fifo_read_en has no driver.
-# This port will contribute value (U) to the signal network.
+# Loading AAAAAAAAAAA.modulation_top_tb(behavior)
 run
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 10 ns  Iteration: 1  Instance: /modulation_top_tb/uut/sin_inst
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 10 ns  Iteration: 1  Instance: /modulation_top_tb/uut/sin_inst
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 10 ns  Iteration: 1  Instance: /modulation_top_tb/uut/sin_inst
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 10 ns  Iteration: 1  Instance: /modulation_top_tb/uut/cos_inst
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 10 ns  Iteration: 1  Instance: /modulation_top_tb/uut/cos_inst
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 10 ns  Iteration: 1  Instance: /modulation_top_tb/uut/cos_inst
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 30 ns  Iteration: 1  Instance: /modulation_top_tb/uut/sin_inst
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 30 ns  Iteration: 1  Instance: /modulation_top_tb/uut/sin_inst
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 30 ns  Iteration: 1  Instance: /modulation_top_tb/uut/sin_inst
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 30 ns  Iteration: 1  Instance: /modulation_top_tb/uut/cos_inst
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 30 ns  Iteration: 1  Instance: /modulation_top_tb/uut/cos_inst
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 30 ns  Iteration: 1  Instance: /modulation_top_tb/uut/cos_inst
-add wave -position insertpoint sim:/modulation_top_tb/uut/sin_inst/*
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Warning: (vsim-3473) Component instance "pll_inst : ip_pll" is not bound.
-#    Time: 0 ps  Iteration: 0  Instance: /modulation_top File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/hdl/modulation_top.vhd
-# ** Warning: (vsim-3473) Component instance "pll_inst : ip_pll" is not bound.
-#    Time: 0 ps  Iteration: 0  Instance: /modulation_top_tb/uut File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/hdl/modulation_top.vhd
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(34), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(34).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(31), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(31).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(30), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(30).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(29), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(29).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(28), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(28).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(27), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(27).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(26), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(26).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(25), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(25).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(24), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(24).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(23), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(23).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(22), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(22).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(21), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(21).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(20), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(20).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(19), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(19).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(17), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(17).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(15), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(15).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(14), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(14).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(13), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(13).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(12), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(12).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(11), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(11).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(10), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(10).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(9), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(9).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(8), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(8).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(7), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(7).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(6), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(6).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(5), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(5).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(4), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(4).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(3), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(3).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(2), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(2).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(1), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(1).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(0), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(0).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_1(20), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_1(20).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_1(2), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_1(2).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_1(0), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_1(0).
-# ** Warning: (vsim-8683) Uninitialized out port /modulation_top_tb/uut/fifo_bitstream_out has no driver.
-# This port will contribute value (U) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /modulation_top_tb/uut/fifo_wr has no driver.
-# This port will contribute value (U) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /modulation_top_tb/uut/fifo_read_en has no driver.
-# This port will contribute value (U) to the signal network.
-run
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 10 ns  Iteration: 1  Instance: /modulation_top_tb/uut/sin_inst
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 10 ns  Iteration: 1  Instance: /modulation_top_tb/uut/sin_inst
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 10 ns  Iteration: 1  Instance: /modulation_top_tb/uut/sin_inst
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 10 ns  Iteration: 1  Instance: /modulation_top_tb/uut/cos_inst
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 10 ns  Iteration: 1  Instance: /modulation_top_tb/uut/cos_inst
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 10 ns  Iteration: 1  Instance: /modulation_top_tb/uut/cos_inst
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 30 ns  Iteration: 1  Instance: /modulation_top_tb/uut/sin_inst
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 30 ns  Iteration: 1  Instance: /modulation_top_tb/uut/sin_inst
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 30 ns  Iteration: 1  Instance: /modulation_top_tb/uut/sin_inst
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 30 ns  Iteration: 1  Instance: /modulation_top_tb/uut/cos_inst
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 30 ns  Iteration: 1  Instance: /modulation_top_tb/uut/cos_inst
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 30 ns  Iteration: 1  Instance: /modulation_top_tb/uut/cos_inst
-# Compile of modulation_top.vhd was successful.
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
 # Compile of modulation_top_tb.vhd was successful.
-# Compile of cos_gen.vhd was successful.
-# Compile of sin_gen.vhd was successful.
-# 4 compiles, 0 failed with no errors.
 restart -f
 # ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.cos_gen(rtl)
-# Loading work.modulation_top(loopback_arch)
-# Loading work.modulation_top_tb(behavior)
-# Loading work.sin_gen(rtl)
-# ** Warning: (vsim-3473) Component instance "pll_inst : ip_pll" is not bound.
-#    Time: 0 ps  Iteration: 0  Instance: /modulation_top File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/hdl/modulation_top.vhd
-# ** Warning: (vsim-3473) Component instance "pll_inst : ip_pll" is not bound.
-#    Time: 0 ps  Iteration: 0  Instance: /modulation_top_tb/uut File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/hdl/modulation_top.vhd
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(34), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(34).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(31), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(31).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(30), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(30).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(29), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(29).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(28), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(28).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(27), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(27).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(26), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(26).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(25), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(25).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(24), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(24).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(23), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(23).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(22), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(22).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(21), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(21).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(20), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(20).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(19), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(19).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(17), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(17).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(15), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(15).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(14), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(14).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(13), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(13).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(12), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(12).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(11), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(11).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(10), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(10).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(9), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(9).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(8), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(8).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(7), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(7).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(6), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(6).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(5), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(5).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(4), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(4).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(3), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(3).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(2), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(2).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(1), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(1).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(0), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(0).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_1(20), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_1(20).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_1(2), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_1(2).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_1(0), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_1(0).
-# ** Warning: (vsim-8683) Uninitialized out port /modulation_top_tb/uut/fifo_bitstream_out has no driver.
-# This port will contribute value (U) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /modulation_top_tb/uut/fifo_wr has no driver.
-# This port will contribute value (U) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /modulation_top_tb/uut/fifo_read_en has no driver.
-# This port will contribute value (U) to the signal network.
+# Loading AAAAAAAAAAA.modulation_top_tb(behavior)
 run
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 10 ns  Iteration: 1  Instance: /modulation_top_tb/uut/sin_inst
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 10 ns  Iteration: 1  Instance: /modulation_top_tb/uut/sin_inst
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 10 ns  Iteration: 1  Instance: /modulation_top_tb/uut/sin_inst
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 10 ns  Iteration: 1  Instance: /modulation_top_tb/uut/cos_inst
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 10 ns  Iteration: 1  Instance: /modulation_top_tb/uut/cos_inst
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 10 ns  Iteration: 1  Instance: /modulation_top_tb/uut/cos_inst
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 30 ns  Iteration: 1  Instance: /modulation_top_tb/uut/sin_inst
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 30 ns  Iteration: 1  Instance: /modulation_top_tb/uut/sin_inst
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 30 ns  Iteration: 1  Instance: /modulation_top_tb/uut/sin_inst
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 30 ns  Iteration: 1  Instance: /modulation_top_tb/uut/cos_inst
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 30 ns  Iteration: 1  Instance: /modulation_top_tb/uut/cos_inst
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 30 ns  Iteration: 1  Instance: /modulation_top_tb/uut/cos_inst
-# Compile of modulation_top.vhd was successful.
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
 # Compile of modulation_top_tb.vhd was successful.
-# Compile of cos_gen.vhd was successful.
-# Compile of sin_gen.vhd was successful.
-# 4 compiles, 0 failed with no errors.
 restart -f
 # ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.cos_gen(rtl)
-# Loading work.modulation_top(loopback_arch)
-# Loading work.modulation_top_tb(behavior)
-# Loading work.sin_gen(rtl)
-# ** Warning: (vsim-3473) Component instance "pll_inst : ip_pll" is not bound.
-#    Time: 0 ps  Iteration: 0  Instance: /modulation_top File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/hdl/modulation_top.vhd
-# ** Warning: (vsim-3473) Component instance "pll_inst : ip_pll" is not bound.
-#    Time: 0 ps  Iteration: 0  Instance: /modulation_top_tb/uut File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/hdl/modulation_top.vhd
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(34), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(34).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(31), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(31).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(30), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(30).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(29), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(29).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(28), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(28).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(27), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(27).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(26), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(26).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(25), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(25).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(24), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(24).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(23), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(23).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(22), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(22).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(21), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(21).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(20), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(20).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(19), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(19).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(17), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(17).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(15), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(15).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(14), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(14).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(13), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(13).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(12), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(12).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(11), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(11).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(10), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(10).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(9), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(9).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(8), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(8).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(7), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(7).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(6), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(6).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(5), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(5).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(4), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(4).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(3), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(3).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(2), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(2).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(1), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(1).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(0), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(0).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_1(20), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_1(20).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_1(2), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_1(2).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_1(0), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_1(0).
-# ** Warning: (vsim-8683) Uninitialized out port /modulation_top_tb/uut/fifo_bitstream_out has no driver.
-# This port will contribute value (U) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /modulation_top_tb/uut/fifo_wr has no driver.
-# This port will contribute value (U) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /modulation_top_tb/uut/fifo_read_en has no driver.
-# This port will contribute value (U) to the signal network.
+# Loading AAAAAAAAAAA.modulation_top_tb(behavior)
 run
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 10 ns  Iteration: 1  Instance: /modulation_top_tb/uut/sin_inst
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 10 ns  Iteration: 1  Instance: /modulation_top_tb/uut/sin_inst
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 10 ns  Iteration: 1  Instance: /modulation_top_tb/uut/sin_inst
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 10 ns  Iteration: 1  Instance: /modulation_top_tb/uut/cos_inst
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 10 ns  Iteration: 1  Instance: /modulation_top_tb/uut/cos_inst
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 10 ns  Iteration: 1  Instance: /modulation_top_tb/uut/cos_inst
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 30 ns  Iteration: 1  Instance: /modulation_top_tb/uut/sin_inst
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 30 ns  Iteration: 1  Instance: /modulation_top_tb/uut/sin_inst
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 30 ns  Iteration: 1  Instance: /modulation_top_tb/uut/sin_inst
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 30 ns  Iteration: 1  Instance: /modulation_top_tb/uut/cos_inst
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 30 ns  Iteration: 1  Instance: /modulation_top_tb/uut/cos_inst
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 30 ns  Iteration: 1  Instance: /modulation_top_tb/uut/cos_inst
-# Compile of modulation_top.vhd was successful.
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
 # Compile of modulation_top_tb.vhd was successful.
-# Compile of cos_gen.vhd was successful.
-# Compile of sin_gen.vhd was successful.
-# 4 compiles, 0 failed with no errors.
 restart -f
 # ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.cos_gen(rtl)
-# Loading work.modulation_top(loopback_arch)
-# Loading work.modulation_top_tb(behavior)
-# Loading work.sin_gen(rtl)
-# ** Warning: (vsim-3473) Component instance "pll_inst : ip_pll" is not bound.
-#    Time: 0 ps  Iteration: 0  Instance: /modulation_top File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/hdl/modulation_top.vhd
-# ** Warning: (vsim-3473) Component instance "pll_inst : ip_pll" is not bound.
-#    Time: 0 ps  Iteration: 0  Instance: /modulation_top_tb/uut File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/hdl/modulation_top.vhd
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(34), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(34).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(31), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(31).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(30), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(30).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(29), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(29).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(28), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(28).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(27), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(27).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(26), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(26).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(25), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(25).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(24), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(24).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(23), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(23).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(22), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(22).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(21), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(21).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(20), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(20).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(19), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(19).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(17), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(17).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(15), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(15).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(14), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(14).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(13), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(13).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(12), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(12).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(11), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(11).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(10), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(10).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(9), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(9).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(8), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(8).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(7), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(7).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(6), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(6).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(5), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(5).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(4), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(4).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(3), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(3).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(2), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(2).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(1), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(1).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(0), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(0).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_1(20), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_1(20).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_1(2), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_1(2).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_1(0), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_1(0).
-# ** Warning: (vsim-8683) Uninitialized out port /modulation_top_tb/uut/fifo_bitstream_out has no driver.
-# This port will contribute value (U) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /modulation_top_tb/uut/fifo_wr has no driver.
-# This port will contribute value (U) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /modulation_top_tb/uut/fifo_read_en has no driver.
-# This port will contribute value (U) to the signal network.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Warning: (vsim-3473) Component instance "pll_inst : ip_pll" is not bound.
-#    Time: 0 ps  Iteration: 0  Instance: /modulation_top File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/hdl/modulation_top.vhd
-# ** Warning: (vsim-3473) Component instance "pll_inst : ip_pll" is not bound.
-#    Time: 0 ps  Iteration: 0  Instance: /modulation_top_tb/uut File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/hdl/modulation_top.vhd
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(34), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(34).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(31), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(31).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(30), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(30).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(29), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(29).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(28), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(28).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(27), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(27).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(26), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(26).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(25), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(25).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(24), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(24).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(23), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(23).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(22), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(22).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(21), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(21).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(20), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(20).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(19), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(19).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(17), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(17).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(15), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(15).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(14), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(14).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(13), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(13).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(12), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(12).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(11), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(11).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(10), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(10).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(9), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(9).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(8), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(8).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(7), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(7).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(6), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(6).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(5), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(5).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(4), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(4).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(3), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(3).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(2), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(2).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(1), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(1).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(0), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(0).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_1(20), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_1(20).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_1(2), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_1(2).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_1(0), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_1(0).
-# ** Warning: (vsim-8683) Uninitialized out port /modulation_top_tb/uut/fifo_bitstream_out has no driver.
-# This port will contribute value (U) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /modulation_top_tb/uut/fifo_wr has no driver.
-# This port will contribute value (U) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /modulation_top_tb/uut/fifo_read_en has no driver.
-# This port will contribute value (U) to the signal network.
+# Loading AAAAAAAAAAA.modulation_top_tb(behavior)
 run
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 10 ns  Iteration: 1  Instance: /modulation_top_tb/uut/sin_inst
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 10 ns  Iteration: 1  Instance: /modulation_top_tb/uut/sin_inst
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 10 ns  Iteration: 1  Instance: /modulation_top_tb/uut/sin_inst
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 10 ns  Iteration: 1  Instance: /modulation_top_tb/uut/cos_inst
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 10 ns  Iteration: 1  Instance: /modulation_top_tb/uut/cos_inst
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 10 ns  Iteration: 1  Instance: /modulation_top_tb/uut/cos_inst
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 30 ns  Iteration: 1  Instance: /modulation_top_tb/uut/sin_inst
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 30 ns  Iteration: 1  Instance: /modulation_top_tb/uut/sin_inst
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 30 ns  Iteration: 1  Instance: /modulation_top_tb/uut/sin_inst
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 30 ns  Iteration: 1  Instance: /modulation_top_tb/uut/cos_inst
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 30 ns  Iteration: 1  Instance: /modulation_top_tb/uut/cos_inst
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 30 ns  Iteration: 1  Instance: /modulation_top_tb/uut/cos_inst
-# Compile of modulation_top.vhd was successful.
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+add dataflow sim:/modulation_top_tb/*
+# WARNING: No extended dataflow license exists
+add list sim:/modulation_top_tb/*
 # Compile of modulation_top_tb.vhd was successful.
-# Compile of cos_gen.vhd was successful.
-# Compile of sin_gen.vhd was successful.
-# 4 compiles, 0 failed with no errors.
 restart -f
 # ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.cos_gen(rtl)
-# Loading work.modulation_top(loopback_arch)
-# Loading work.modulation_top_tb(behavior)
-# Loading work.sin_gen(rtl)
-# ** Warning: (vsim-3473) Component instance "pll_inst : ip_pll" is not bound.
-#    Time: 0 ps  Iteration: 0  Instance: /modulation_top File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/hdl/modulation_top.vhd
-# ** Warning: (vsim-3473) Component instance "pll_inst : ip_pll" is not bound.
-#    Time: 0 ps  Iteration: 0  Instance: /modulation_top_tb/uut File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/hdl/modulation_top.vhd
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(34), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(34).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(31), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(31).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(30), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(30).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(29), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(29).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(28), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(28).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(27), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(27).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(26), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(26).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(25), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(25).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(24), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(24).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(23), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(23).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(22), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(22).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(21), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(21).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(20), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(20).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(19), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(19).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(17), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(17).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(15), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(15).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(14), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(14).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(13), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(13).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(12), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(12).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(11), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(11).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(10), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(10).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(9), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(9).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(8), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(8).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(7), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(7).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(6), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(6).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(5), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(5).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(4), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(4).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(3), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(3).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(2), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(2).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(1), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(1).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(0), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(0).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_1(20), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_1(20).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_1(2), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_1(2).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_1(0), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_1(0).
-# ** Warning: (vsim-8683) Uninitialized out port /modulation_top_tb/uut/fifo_bitstream_out has no driver.
-# This port will contribute value (U) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /modulation_top_tb/uut/fifo_wr has no driver.
-# This port will contribute value (U) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /modulation_top_tb/uut/fifo_read_en has no driver.
-# This port will contribute value (U) to the signal network.
+# Loading AAAAAAAAAAA.modulation_top_tb(behavior)
 run
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 10 ns  Iteration: 1  Instance: /modulation_top_tb/uut/cos_inst
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 10 ns  Iteration: 1  Instance: /modulation_top_tb/uut/cos_inst
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 10 ns  Iteration: 1  Instance: /modulation_top_tb/uut/cos_inst
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 30 ns  Iteration: 1  Instance: /modulation_top_tb/uut/cos_inst
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 30 ns  Iteration: 1  Instance: /modulation_top_tb/uut/cos_inst
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 30 ns  Iteration: 1  Instance: /modulation_top_tb/uut/cos_inst
-# Compile of cos_gen.vhd was successful.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.cos_gen(rtl)
-# ** Warning: (vsim-3473) Component instance "pll_inst : ip_pll" is not bound.
-#    Time: 0 ps  Iteration: 0  Instance: /modulation_top File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/hdl/modulation_top.vhd
-# ** Warning: (vsim-3473) Component instance "pll_inst : ip_pll" is not bound.
-#    Time: 0 ps  Iteration: 0  Instance: /modulation_top_tb/uut File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/hdl/modulation_top.vhd
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(34), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(34).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(31), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(31).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(30), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(30).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(29), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(29).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(28), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(28).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(27), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(27).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(26), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(26).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(25), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(25).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(24), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(24).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(23), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(23).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(22), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(22).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(21), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(21).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(20), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(20).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(19), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(19).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(17), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(17).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(15), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(15).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(14), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(14).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(13), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(13).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(12), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(12).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(11), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(11).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(10), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(10).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(9), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(9).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(8), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(8).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(7), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(7).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(6), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(6).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(5), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(5).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(4), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(4).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(3), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(3).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(2), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(2).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(1), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(1).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(0), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(0).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_1(20), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_1(20).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_1(2), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_1(2).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_1(0), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_1(0).
-# ** Warning: (vsim-8683) Uninitialized out port /modulation_top_tb/uut/fifo_bitstream_out has no driver.
-# This port will contribute value (U) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /modulation_top_tb/uut/fifo_wr has no driver.
-# This port will contribute value (U) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /modulation_top_tb/uut/fifo_read_en has no driver.
-# This port will contribute value (U) to the signal network.
-run
-# Compile of modulation_top.vhd was successful.
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
 # Compile of modulation_top_tb.vhd was successful.
-# Compile of cos_gen.vhd was successful.
-# Compile of sin_gen.vhd was successful.
-# 4 compiles, 0 failed with no errors.
 restart -f
 # ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.cos_gen(rtl)
-# Loading work.modulation_top(loopback_arch)
-# Loading work.modulation_top_tb(behavior)
-# Loading work.sin_gen(rtl)
-# ** Warning: (vsim-3473) Component instance "pll_inst : ip_pll" is not bound.
-#    Time: 0 ps  Iteration: 0  Instance: /modulation_top File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/hdl/modulation_top.vhd
-# ** Warning: (vsim-3473) Component instance "pll_inst : ip_pll" is not bound.
-#    Time: 0 ps  Iteration: 0  Instance: /modulation_top_tb/uut File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/hdl/modulation_top.vhd
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(34), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(34).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(31), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(31).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(30), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(30).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(29), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(29).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(28), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(28).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(27), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(27).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(26), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(26).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(25), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(25).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(24), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(24).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(23), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(23).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(22), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(22).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(21), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(21).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(20), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(20).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(19), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(19).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(17), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(17).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(15), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(15).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(14), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(14).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(13), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(13).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(12), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(12).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(11), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(11).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(10), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(10).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(9), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(9).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(8), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(8).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(7), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(7).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(6), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(6).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(5), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(5).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(4), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(4).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(3), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(3).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(2), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(2).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(1), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(1).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(0), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(0).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_1(20), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_1(20).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_1(2), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_1(2).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_1(0), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_1(0).
-# ** Warning: (vsim-8683) Uninitialized out port /modulation_top_tb/uut/fifo_bitstream_out has no driver.
-# This port will contribute value (U) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /modulation_top_tb/uut/fifo_wr has no driver.
-# This port will contribute value (U) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /modulation_top_tb/uut/fifo_read_en has no driver.
-# This port will contribute value (U) to the signal network.
+# Loading AAAAAAAAAAA.modulation_top_tb(behavior)
 run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Compile of modulation_top_tb.vhd was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading AAAAAAAAAAA.modulation_top_tb(behavior)
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+restart
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Compile of modulation_top_tb.vhd was successful.
 restart
 # ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Warning: (vsim-3473) Component instance "pll_inst : ip_pll" is not bound.
-#    Time: 0 ps  Iteration: 0  Instance: /modulation_top File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/hdl/modulation_top.vhd
-# ** Warning: (vsim-3473) Component instance "pll_inst : ip_pll" is not bound.
-#    Time: 0 ps  Iteration: 0  Instance: /modulation_top_tb/uut File: /home/haraldbid/Projects/GIT/Modulation_DTU/fpga_design/ConverterTest/hdl/modulation_top.vhd
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(34), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(34).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(31), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(31).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(30), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(30).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(29), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(29).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(28), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(28).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(27), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(27).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(26), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(26).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(25), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(25).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(24), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(24).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(23), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(23).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(22), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(22).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(21), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(21).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(20), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(20).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(19), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(19).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(17), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(17).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(15), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(15).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(14), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(14).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(13), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(13).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(12), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(12).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(11), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(11).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(10), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(10).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(9), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(9).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(8), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(8).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(7), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(7).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(6), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(6).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(5), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(5).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(4), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(4).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(3), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(3).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(2), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(2).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(1), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(1).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_0(0), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_0(0).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_1(20), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_1(20).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_1(2), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_1(2).
-# ** Warning: (vsim-8684) No drivers exist on inout port /modulation_top_tb/uut/GPIO_1(0), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /modulation_top_tb/GPIO_1(0).
-# ** Warning: (vsim-8683) Uninitialized out port /modulation_top_tb/uut/fifo_bitstream_out has no driver.
-# This port will contribute value (U) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /modulation_top_tb/uut/fifo_wr has no driver.
-# This port will contribute value (U) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /modulation_top_tb/uut/fifo_read_en has no driver.
-# This port will contribute value (U) to the signal network.
+# Loading AAAAAAAAAAA.modulation_top_tb(behavior)
+restart -f
 run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Compile of modulation_top_tb.vhd was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading AAAAAAAAAAA.modulation_top_tb(behavior)
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Compile of modulation_top_tb.vhd was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading AAAAAAAAAAA.modulation_top_tb(behavior)
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+restart
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+add wave -position insertpoint sim:/modulation_top_tb/UUT_RX/buff_inst/*
+add wave -position insertpoint sim:/modulation_top_tb/UUT_TX/buff_inst/*
+restart
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Compile of modulation_top_tb.vhd was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading AAAAAAAAAAA.modulation_top_tb(behavior)
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+restart
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Compile of sender_top_tb.vhd was successful.
+vsim -gui AAAAAAAAAAA.buffer_tx AAAAAAAAAAA.cos_gen AAAAAAAAAAA.mod_convolution AAAAAAAAAAA.mod_interface_tx AAAAAAAAAAA.mod_shaper AAAAAAAAAAA.modulator AAAAAAAAAAA.sender_top AAAAAAAAAAA.sender_top_tb AAAAAAAAAAA.sin_gen AAAAAAAAAAA.tx_modulation_top
+# End time: 16:30:34 on Jun 17,2021, Elapsed time: 1:56:06
+# Errors: 0, Warnings: 2
+# vsim -gui AAAAAAAAAAA.buffer_tx AAAAAAAAAAA.cos_gen AAAAAAAAAAA.mod_convolution AAAAAAAAAAA.mod_interface_tx AAAAAAAAAAA.mod_shaper AAAAAAAAAAA.modulator AAAAAAAAAAA.sender_top AAAAAAAAAAA.sender_top_tb AAAAAAAAAAA.sin_gen AAAAAAAAAAA.tx_modulation_top 
+# Start time: 16:30:34 on Jun 17,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading AAAAAAAAAAA.buffer_tx(arch)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading AAAAAAAAAAA.cos_gen(rtl)
+# Loading ieee.numeric_std(body)
+# Loading AAAAAAAAAAA.mod_convolution(rtl)
+# Loading AAAAAAAAAAA.mod_interface_tx(rtl)
+# Loading AAAAAAAAAAA.mod_shaper(rtl)
+# Loading AAAAAAAAAAA.modulator(arch)
+# Loading AAAAAAAAAAA.sender_top(arch)
+# Loading ieee.std_logic_textio(body)
+# Loading AAAAAAAAAAA.sender_top_tb(behavior)
+# Loading AAAAAAAAAAA.sin_gen(rtl)
+# Loading AAAAAAAAAAA.tx_modulation_top(rtl)
+add wave -position insertpoint sim:/sender_top_tb/uut/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: haraldbid  Hostname: harald-E31  ProcessID: 183678
+#           Attempting to use alternate WLF file "./wlft27rm4d".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft27rm4d
+run
+# Compile of sender_top_tb.vhd was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading AAAAAAAAAAA.sender_top_tb(behavior)
+run
+# Compile of sender_top_tb.vhd was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading AAAAAAAAAAA.sender_top_tb(behavior)
+run
+# End time: 21:06:17 on Jun 17,2021, Elapsed time: 4:35:43
+# Errors: 0, Warnings: 1
