@@ -16,12 +16,13 @@ COMPONENT sender_top is
       fifo_bitstream, fifo_empty : in std_logic;
       write, read_en : out std_logic;
       data_i, data_q : out std_logic_vector(13 downto 0);
-      modulation_scheme_select : in std_logic
+      modulation_scheme_select : in std_logic;
+      debug_select : in std_logic
    );
 end component;
  
 signal clk, reset : std_logic := '0';
-signal bitstream, fifo_empty, read_en, write, modulation_scheme_select : std_logic;
+signal bitstream, fifo_empty, read_en, write, modulation_scheme_select, debug_select : std_logic;
 signal data_i, data_q : std_logic_vector(13 downto 0) :=  ( others => '0');
  -- Clock period definitions
 constant clock_period : time := 20 ns;
@@ -42,7 +43,9 @@ uut: component sender_top PORT MAP (
    read_en => read_en,
    data_i => data_i, 
    data_q => data_q, 
-   modulation_scheme_select => modulation_scheme_select);
+   modulation_scheme_select => modulation_scheme_select,
+   debug_select => debug_select
+   );
  
 
 -- Clock process definitions
@@ -60,6 +63,7 @@ stim_proc: process
   
 begin
    
+   debug_select <= '0';
    reset <= '1';
    fifo_empty <= '1';
    wait for 30 ns;
