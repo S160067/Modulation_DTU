@@ -782,3 +782,12 @@ restart -f
 # ** Warning: (vsim-3473) Component instance "debug_inst : debug_mod_input" is not bound.
 #    Time: 0 ps  Iteration: 0  Instance: /sender_top_tb/uut File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/sender_top.vhd
 run
+# Compile of cos_gen.vhd was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading SIM_SENDERTOP_WORK.cos_gen(rtl)
+# ** Warning: (vsim-3473) Component instance "debug_inst : debug_mod_input" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /sender_top File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/sender_top.vhd
+# ** Warning: (vsim-3473) Component instance "debug_inst : debug_mod_input" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /sender_top_tb/uut File: /home/haraldbid/Projects/GIT/modulation_dtu/Modulation_DTU/fpga_design/ReferenceDesign_2021_April/hdl/sender_top.vhd
+run

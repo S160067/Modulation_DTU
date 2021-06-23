@@ -190,9 +190,9 @@ LEDR[2] <= modulation_top:modulation_inst.fifo_read_en
 LEDR[3] <= <GND>
 LEDR[4] <= <GND>
 LEDR[5] <= <GND>
-LEDR[6] <= <GND>
-LEDR[7] <= comb.DB_MAX_OUTPUT_PORT_TYPE
-LEDR[8] <= LEDR[8].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[6] <= modulation_top:modulation_inst.debug_valid
+LEDR[7] <= modulation_top:modulation_inst.debug_data_mod[1]
+LEDR[8] <= modulation_top:modulation_inst.debug_data_mod[0]
 LEDR[9] <= <GND>
 KEY_N[0] => ~NO_FANOUT~
 KEY_N[1] => ~NO_FANOUT~
@@ -260,6 +260,9 @@ fifo_bitstream_out <= reciever_top:reciever_inst.bitstream
 fifo_wr <= reciever_top:reciever_inst.fifo_wr
 fifo_read_en <= sender_top:sender_inst.read_en
 debug_select => sender_top:sender_inst.debug_select
+debug_data_mod[0] <= reciever_top:reciever_inst.debug_data_mod[0]
+debug_data_mod[1] <= reciever_top:reciever_inst.debug_data_mod[1]
+debug_valid <= reciever_top:reciever_inst.debug_valid
 
 
 |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|ip_pll:pll_inst
@@ -2233,7 +2236,7 @@ bitstream <= buffer_rx:buff_inst.bitstream
 fifo_wr <= buffer_rx:buff_inst.fifo_wr
 debug_data_mod[0] <= demodulator:demod_inst.data_out[0]
 debug_data_mod[1] <= demodulator:demod_inst.data_out[1]
-debug_valid <= reciever:receiv_ins.valid
+debug_valid <= demodulator:demod_inst.valid
 
 
 |DE1_SoC_ReferenceTop|fpga_top:fpga_top_inst|modulation_top:modulation_inst|reciever_top:reciever_inst|buffer_rx:buff_inst

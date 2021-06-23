@@ -58,7 +58,7 @@ end component;
 begin
 
 	debug_data_mod <= data_from_mod;
-	debug_valid <= reciev_valid;
+	debug_valid <= demod_valid;
 	
 	buff_inst : component buffer_rx port map(
 		clk => clk, 
