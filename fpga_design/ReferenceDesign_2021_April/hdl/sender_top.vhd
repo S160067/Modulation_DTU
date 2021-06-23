@@ -8,15 +8,13 @@ port (
 	write, read_en : out std_logic;
 	data_i, data_q : out std_logic_vector(13 downto 0);
 	modulation_scheme_select : in std_logic;
-	debug_data_in : in std_logic_vector(1 downto 0);
-	debug_valid : in std_logic
+	debug_select : in std_logic
 	);
 end sender_top;
 
 architecture arch of sender_top is 
 
 -- COMPONENT DECLARATION
-
 component buffer_tx is
 	port (
 		clk, reset, ready : in std_logic;
@@ -62,14 +60,21 @@ COMPONENT cos_gen IS
 	);
 END COMPONENT;
 
-
+component debug_mod_input is
+	port (
+		clk, reset, ready : in std_logic;
+		bitstream : out std_logic_vector(1 downto 0); 
+		valid : out std_logic
+	);
+end component;
+	
 -- SIGNAL DECLARATION
 	signal mod_ready, mod_valid, buf_valid : std_logic;
-	signal buff_data : std_logic_vector(1 downto 0);
+	signal buff_data, mux_out : std_logic_vector(1 downto 0);
 	signal data_mod_i, data_mod_q, data_sin_i, data_cos_q : std_logic_vector(13 downto 0);
-
-	signal mod_valid_in : std_logic;
-	signal mod_data_in : std_logic_vector(1 downto 0);
+	signal debug_data_out : std_logic_vector(1 downto 0);
+	signal debug_data_valid, mux_val : std_logic;
+	
 begin
 
 	write <= mod_valid;
@@ -77,8 +82,8 @@ begin
 	data_i <= data_mod_i when modulation_scheme_select = '0' else data_sin_i;
 	data_q <= data_mod_q when modulation_scheme_select = '0' else data_cos_q;
 
-	mod_data_in <= buff_data when debug_valid = '0' else debug_data_in;	
-	mod_valid_in <= buf_valid when debug_valid = '0' else debug_valid;
+	mux_val <= buf_valid when debug_select = '0' else debug_data_valid;
+	mux_out <= buff_data when debug_select = '0' else debug_data_out;
 
 	buff_inst : component buffer_tx port map(
 		clk => clk,
@@ -93,8 +98,8 @@ begin
 	mod_inst : component modulator port map(
 		clk => clk, 
 		reset => reset, 
-		buf_valid => mod_valid_in,
-		data_in => mod_data_in, 
+		buf_valid => mux_val,
+		data_in => mux_out, 
 		data_i => data_mod_i, 
 		data_q => data_mod_q, 
 		valid => mod_valid,
@@ -112,6 +117,13 @@ begin
 		cos_o => data_cos_q
 	);
 
+	debug_inst : component debug_mod_input port map(
+		clk => clk,
+		reset => reset,
+		ready => mod_ready,
+		bitstream => debug_data_out,
+		valid => debug_data_valid
+	);
 
 
 	

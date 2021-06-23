@@ -13,8 +13,8 @@ port(
 i_rst						    	: in std_logic;
 i_clk 						  	: in std_logic;
 i_data_valid				  	: in std_logic;
-i_element				    	: in signed(G_MANTISSA_SIZE downto 0);
-o_result					    	: out signed(G_MANTISSA_SIZE downto 0);
+i_element				    	: in std_logic_vector(G_MANTISSA_SIZE downto 0);
+o_result					    	: out std_logic_vector(G_MANTISSA_SIZE downto 0);
 o_valid						  	: out std_logic
 );
 
@@ -52,11 +52,12 @@ end mod_conv_rx_new;
 architecture rtl of mod_conv_rx_new is 
 
 type fbarray is array (0 to G_SHIFTREG_SIZE) of signed(G_MANTISSA_SIZE downto 0);
+
 signal s_sregis 			: fbarray := (others=>(others=>'0'));
 signal s_mult				: fbarray := (others=>(others=>'0'));
 signal s_pulse 			: fbarray := (others=>(others=>'0'));
 signal s_sum				: signed(G_MANTISSA_SIZE+4 downto 0);
-
+signal valid_reg, valid_reg2 : std_logic;
 begin
 
 s_pulse(0) <= to_signed(212, s_pulse(0)'length);
@@ -89,10 +90,11 @@ if(i_clk'event and i_clk = '1') then
 
 	if (i_data_valid = '1') then
 
-		s_sregis(0) <= i_element;
+		s_sregis(0) <= signed(i_element);
 		
 	end if;
-	
+	valid_reg <= i_data_valid;
+	valid_reg2 <=valid_reg ;
 	sumvar := (others=> '0');
 	
 	for i in 0 to G_SHIFTREG_SIZE-1 loop
@@ -124,9 +126,9 @@ for i in 0 to G_SHIFTREG_SIZE-1 loop
 s_mult(i) <= mult(s_sregis(i), s_pulse(i));
 
 end loop;
+o_valid <= valid_reg2;
 
-o_result <= s_sum(G_MANTISSA_SIZE downto 0);
-o_valid <= i_data_valid;
+o_result <= std_logic_vector(s_sum(G_MANTISSA_SIZE downto 0));
 
 
 if(i_rst = '1') then

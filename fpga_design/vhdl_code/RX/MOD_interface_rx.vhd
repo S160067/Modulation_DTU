@@ -20,6 +20,7 @@ end Mod_interface_RX;
 
 architecture rtl of Mod_interface_RX is
 --declarations
+
 begin
 --assignments
 
@@ -31,9 +32,9 @@ if(rising_edge(clk)) then
 		data_o <= (others=>'0');
 		valid_o <= '0';
 	else
-		data_o <= re_i & im_i;
-		valid_o <= re_valid_i and im_valid_i;
-	end if;
+      data_o <= re_i & im_i;
+      valid_o <= re_valid_i and im_valid_i;
+end if;
 end if;	
 end process;
 

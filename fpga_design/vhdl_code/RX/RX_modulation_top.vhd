@@ -24,9 +24,7 @@ ENTITY RX_modulation_top IS
 END ENTITY;
 
 ARCHITECTURE rtl OF RX_modulation_top IS
-component mod_deshaper is 
-
-		
+component mod_deconv is 
 		port(
 		i_rst									: in std_logic;
 		i_clk 									: in std_logic;
@@ -50,26 +48,54 @@ component Mod_interface_RX is
     );
 end component;
 
+component mod_conv_rx_new is 
+port(
+i_rst						    : in std_logic;
+i_clk 						  	: in std_logic;
+i_data_valid				  	: in std_logic;
+i_element				    	: in std_logic_vector(DAC_data_width-1 downto 0);
+o_result					    : out std_logic_vector(DAC_data_width-1 downto 0);
+o_valid						  	: out std_logic
+);
+END component;
 signal re, im : std_logic;
 signal im_valid, re_valid : std_logic;
+signal re_sample_conv, im_sample_conv: std_logic_vector(DAC_data_width-1 downto 0);
+signal im_valid_conv, re_valid_conv : std_logic;
 BEGIN
 --assigns
 -----------------------------------------
 --port maps
-
-re_deshaper : mod_deshaper PORT MAP (
+re_deconv : mod_conv_rx_new PORT MAP (
 	 i_rst => reset_i,
 	 i_clk => clk_i,
 	 i_data_valid => re_data_valid,
-	 i_sample => re_sample_i,
-	 o_symbol => re,
-	 o_valid => re_valid
+	 i_element => re_sample_i,
+	 o_result => re_sample_conv,
+	 o_valid => re_valid_conv
 );
-im_deshaper : mod_deshaper PORT MAP (
+im_deconv : mod_conv_rx_new PORT MAP (
 	 i_rst => reset_i,
 	 i_clk => clk_i,
 	 i_data_valid => im_data_valid,
-	 i_sample => im_sample_i,
+	 i_element => im_sample_i,
+	 o_result => im_sample_conv,
+	 o_valid => im_valid_conv
+);
+
+re_deshaper : mod_deconv PORT MAP (
+	 i_rst => reset_i,
+	 i_clk => clk_i,
+	 i_data_valid => re_valid_conv,
+	 i_sample => re_sample_conv,
+	 o_symbol => re,
+	 o_valid => re_valid
+);
+im_deshaper : mod_deconv PORT MAP (
+	 i_rst => reset_i,
+	 i_clk => clk_i,
+	 i_data_valid => im_valid_conv,
+	 i_sample => im_sample_conv,
 	 o_symbol => im,
 	 o_valid => im_valid
 );

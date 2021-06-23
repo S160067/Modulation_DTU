@@ -26,9 +26,7 @@ port (
 			fifo_bitstream_in, fifo_empty, fifo_full : in std_logic;
 			modulation_scheme_select : in std_logic;
 			fifo_bitstream_out, fifo_wr, fifo_read_en : out std_logic;
-			debug_data_mod : out std_logic_vector(1 downto 0);
-			debug_data_in : in std_logic_vector(1 downto 0);
-			debug_valid : in std_logic
+			debug_select : in std_logic
 		);
 end component modulation_top;
 
@@ -53,9 +51,7 @@ port map (
 	fifo_bitstream_in => SW(0), fifo_empty => SW(1), fifo_full => SW(2),
 	modulation_scheme_select => SW(9),
 	fifo_bitstream_out => LEDR(0), fifo_wr => LEDR(1), fifo_read_en => LEDR(2),
-	debug_data_mod => debug_data_out,
-	debug_data_in => debug_data_in,
-	debug_valid => SW(6)
+	debug_select => SW(4)
 	);
 	
 	

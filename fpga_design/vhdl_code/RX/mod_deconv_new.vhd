@@ -12,7 +12,7 @@ entity mod_deconv is
 		i_rst										: in std_logic;
 		i_clk 									: in std_logic;
 		i_data_valid							: in std_logic;
-		i_sample									: in signed(G_MANTISSA_SIZE downto 0);
+		i_sample									: in std_logic_vector(G_MANTISSA_SIZE downto 0);
 		o_symbol									: out std_logic;
 		o_valid									: out std_logic
 		);	

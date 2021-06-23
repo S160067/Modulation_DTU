@@ -1,4 +1,5 @@
-
+library ieee;
+use ieee.std_logic_1164.all;
 entity ctrl_cpu2FPGA is
 	generic (
   	msg_width: integer :=8
@@ -7,14 +8,15 @@ entity ctrl_cpu2FPGA is
    	clk 			: in  std_logic;
    	reset			: in  std_logic;
    	--To blocks
-   	crypto_empty		: out std_logic;
-   	framing_empty	: out std_logic;
-   	mod_empty		  : out std_logic;
+   	crypto_valid		: out std_logic;
+   	framing_valid	: out std_logic;
+   	mod_valid		  : out std_logic;
    	Crypto_msg		: out  std_logic_vector(msg_width-1 downto 0);
    	Framing_msg		: out  std_logic_vector(msg_width-1 downto 0);
    	mod_msg		   	: out  std_logic_vector(msg_width-1 downto 0);
    	--Avalon interface
    	Avalon_data		: in std_logic_vector(msg_width-1 downto 0);
+    avalon_empty  : in std_logic;
    	Avalon_read	: out std_logic
     );
 end ctrl_cpu2FPGA;
@@ -22,12 +24,10 @@ end ctrl_cpu2FPGA;
 architecture rtl of ctrl_fpga2cpu is
 --declarations
 signal empty_vector_array, scheduling_mask, scheduling_array : std_logic_vector(2 downto 0);
-signal crypto_empty, framing_empty, mod_empty : std_logic;
 signal group_id : std_logic_vector(1 downto 0);
 signal mod_write, crypto_write, framing_write : std_logic;
 begin
 --assignments
-empty_vector_array <= crypto_empty & framing_empty & mod_empty;
 group_id <= Avalon_data(msg_width-1 downto msg_width-2);
 --------------------------------------------------
 Decoding: process(clk)
@@ -42,13 +42,22 @@ if(rising_edge(clk)) then
     crypto_write <= '0';
     framing_write<= '0';
     mod_write<= '0';
-    
-		case group_id is
-    when b"01" => crypto_write <= '1';
-    when b"10" => framing_write <= '1'; 
-    when b"11" => mod_write <= '1';      
-    when others => mod_write <= '0';
- 		end case;
+    write_reg <= Avalon_read;
+    if(avalon_empty = '0') then 
+    Avalon_read <= '1';
+    end if;
+    if(read_reg) then
+     if group_id = "01" then
+       Crypto_msg <= Avalon_data;
+       crypto_valid <= '1';
+     elsif group_id = "10" then
+       framing_msg <= Avalon_data;
+       framing_valid <= '1';    
+     elsif group_id = "11" then
+		 mod_msg <= Avalon_data;
+       mod_valid <= '1';
+    end if; 	 
+	 end if;
 	end if;	
 end if;
 end process;
